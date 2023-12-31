@@ -22,7 +22,6 @@ class TextAndBottomSheet extends StatelessWidget{
       onTap: () {
         showModalBottomSheet(
           backgroundColor: ColorsManager.darkGray,
-          constraints: const BoxConstraints.expand(),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(40.r),

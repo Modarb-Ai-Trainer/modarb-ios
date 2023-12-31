@@ -26,9 +26,20 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
+  static TextStyle font20Purple600 = GoogleFonts.poppins(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManager.mainPurple,
+  );
 
   static TextStyle font16White700 = GoogleFonts.montserrat(
     fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManager.lightWhite,
+
+  );
+  static TextStyle font19White700 = GoogleFonts.montserrat(
+    fontSize: 19.sp,
     fontWeight: FontWeight.w700,
     color: ColorsManager.lightWhite,
 
@@ -43,6 +54,31 @@ class TextStyles {
     fontSize: 13.sp,
     fontWeight: FontWeight.w600,
     color: ColorsManager.lightWhite,
+
+  );
+  static TextStyle font23White700 = GoogleFonts.montserrat(
+    fontSize: 23.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManager.lightWhite,
+
+  );
+  static TextStyle font50Purple700 = GoogleFonts.montserrat(
+    fontSize: 50.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManager.lightPurple,
+
+  );
+
+  static TextStyle font20Purple700 = GoogleFonts.montserrat(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManager.lightPurple,
+
+  );
+  static TextStyle font13White400 = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorsManager.lighterWhite,
 
   );
 

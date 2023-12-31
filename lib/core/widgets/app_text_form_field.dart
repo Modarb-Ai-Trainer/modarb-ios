@@ -47,6 +47,7 @@ class AppTextFormField extends StatelessWidget {
         isDense: true,
         contentPadding: contentPadding ?? EdgeInsets.symmetric(vertical: 20.h),
         suffixIcon: suffixIcon,
+        suffixIconColor: Colors.white,
         fillColor: backgroundColor ?? ColorsManager.darkGray,
         filled: true,
       ),

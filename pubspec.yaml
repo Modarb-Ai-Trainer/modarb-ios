@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   # A Flutter package to use fonts from
   google_fonts: ^6.1.0
+  # A Flutter package to Customizable animated page indicator
+  smooth_page_indicator: ^1.1.0
+  # A Flutter package to create a nice ruler picker
+  flutter_ruler_picker: ^1.0.6
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.7
   # State management

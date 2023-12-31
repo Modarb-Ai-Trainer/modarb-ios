@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/theming/styles.dart';
 
 import '../theming/colors.dart';
 
@@ -11,7 +12,7 @@ class AppTextButton extends StatelessWidget {
   final double? buttonWidth;
   final double? buttonHeight;
   final String buttonText;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
   final VoidCallback onPressed;
   const AppTextButton({
     super.key,
@@ -21,8 +22,8 @@ class AppTextButton extends StatelessWidget {
     this.verticalPadding,
     this.buttonHeight,
     this.buttonWidth,
+    this.textStyle,
     required this.buttonText,
-    required this.textStyle,
     required this.onPressed,
   });
 
@@ -46,7 +47,7 @@ class AppTextButton extends StatelessWidget {
       child: Center(
         child: Text(
           buttonText,
-          style: textStyle,
+          style: textStyle ?? TextStyles.font20White600,
         ),
       ),
     );

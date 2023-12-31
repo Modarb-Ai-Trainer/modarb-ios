@@ -18,6 +18,13 @@ class ModarbApp extends StatelessWidget{
         theme: ThemeData.dark().copyWith(
           primaryColor: ColorsManager.mainPurple,
           scaffoldBackgroundColor: ColorsManager.darkGray,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: ColorsManager.darkGray,
+            elevation: 0,
+            iconTheme: IconThemeData(
+              color: Colors.white,
+            ),
+          ),
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.firstSplash,
