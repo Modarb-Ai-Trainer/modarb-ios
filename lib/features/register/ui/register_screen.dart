@@ -21,7 +21,7 @@ class RegisterScreen extends StatelessWidget{
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 5.h),
-            child:  const SingleChildScrollView(
+            child:   const SingleChildScrollView(
               child: Column(
                 children: [
                   CreateAccountText(),
@@ -34,4 +34,5 @@ class RegisterScreen extends StatelessWidget{
       ),
     );
   }
+
 }

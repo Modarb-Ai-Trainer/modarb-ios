@@ -43,7 +43,7 @@ class _GenderAndAgeState extends State<GenderAndAge> {
               child: CupertinoPicker(
                   itemExtent: 32.0,
                   squeeze: .8,
-                  scrollController: FixedExtentScrollController(initialItem: 0),
+                  scrollController: FixedExtentScrollController(initialItem: 20),
                   onSelectedItemChanged: (int index) {
                     setState(() {
                       selectedAge = index + 1; // Add 1 to make the age start from 1

@@ -40,7 +40,7 @@ class AppTextButton extends StatelessWidget {
           backgroundColor ?? ColorsManager.mainPurple,
         ),
         fixedSize: MaterialStateProperty.all(
-          Size( buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 50.h),
+          Size( buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 45.h),
         ),
       ),
       onPressed: onPressed,

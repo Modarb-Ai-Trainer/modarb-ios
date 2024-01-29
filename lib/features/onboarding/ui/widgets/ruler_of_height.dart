@@ -16,7 +16,7 @@ class _RulerOfRulerState extends State<RulerOfHeight> {
 
   RulerPickerController? _rulerPickerController;
 
-  num currentValue = 40;
+  num currentValue = 150;
 
 
   List<RulerRange> ranges = const [

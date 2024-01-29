@@ -33,11 +33,11 @@ class TrainerAfterLoading extends StatelessWidget{
                   const ContainerOfMessage(
                     text: 'Let\'s achieve your health and wellness goals together!',
                   ),
-                  verticalSpace(150),
+                  verticalSpace(200),
                   AppTextButton(
                     buttonText: 'Finish',
                     onPressed: (){
-                      context.pushNamed(Routes.loading);
+                      context.pushNamed(Routes.homeScreen);
                     },
                   ),
                 ],

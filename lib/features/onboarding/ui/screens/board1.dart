@@ -20,7 +20,7 @@ class Board1 extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 410.h,
+            top: 385.h,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.h),
               child: Column(
