@@ -25,7 +25,6 @@ class FormOfRegister extends StatelessWidget{
                blurRadius: 15,
                offset: Offset(0, 5),
                spreadRadius: 0,
-
              )
            ],
          ),

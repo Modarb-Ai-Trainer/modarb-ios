@@ -49,7 +49,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   TextEditingController heightController = TextEditingController();
   TextEditingController weightController = TextEditingController();
   final formKey = GlobalKey<FormState>();
-    bool isObscureText = true;
+  bool isObscureText = true;
 
 
   void emitRegisterStates() async {
