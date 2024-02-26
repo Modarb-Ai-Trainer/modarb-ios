@@ -39,3 +39,5 @@ List<ItemModelWithBody> levelItems = [
       body: 'i’m very experienced with training .Show me something new'
   ),
 ];
+
+List<bool> selectedItems = List.generate(3, (index) => false);

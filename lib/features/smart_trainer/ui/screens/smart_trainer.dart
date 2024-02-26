@@ -4,14 +4,15 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import '../widgets/container_of_message.dart';
 
 class SmartTrainer extends StatelessWidget{
-  const SmartTrainer({Key? key}) : super(key: key);
+  final double bmiResult ;
+  const SmartTrainer({Key? key ,required this.bmiResult}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.0),
+          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.h),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -22,8 +23,8 @@ class SmartTrainer extends StatelessWidget{
                         scale: .8,
                 ),
                 verticalSpace(30),
-                 const ContainerOfMessage(
-                   text: 'Great news! 🎉  Your BMI is 21.48, which falls within a healthy range. Your goal of reaching 58 kg is within reach, and w\'re here to support you every step of the way!',
+                ContainerOfMessage(
+                   text: 'Great news! 🎉  Your BMI is $bmiResult, which falls within a healthy range. Your goal of reaching 58 kg is within reach, and w\'re here to support you every step of the way!',
                   ),
                 verticalSpace(20),
                 const ContainerOfMessage(

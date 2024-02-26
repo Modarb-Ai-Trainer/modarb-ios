@@ -8,8 +8,9 @@ class RegisterRequestBody {
   final String password;
   final String confirmPassword;
   final String gender;
-  final double height;
+  final int height;
   final double weight;
+  final int age;
   @JsonKey(name: 'fitness_level')
   final String fitnessLevel;
   final PreferencesModel? preferences;
@@ -27,9 +28,9 @@ class RegisterRequestBody {
     required this.weight,
     required this.fitnessLevel,
     this.preferences,
+    required this.age,
     required this.injuries,
     required this.dob,
-
   });
 
   Map<String, dynamic> toJson() => _$RegisterRequestBodyToJson(this);

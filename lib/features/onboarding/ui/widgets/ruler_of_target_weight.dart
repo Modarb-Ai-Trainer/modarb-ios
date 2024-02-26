@@ -3,27 +3,26 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ruler_picker/flutter_ruler_picker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/theming/colors.dart';
+import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'package:modarb_app/features/register/logic/register_state.dart';
 import '../../../../core/theming/styles.dart';
-import '../../../register/logic/register_cubit.dart';
 
-class RulerOfHeight extends StatelessWidget{
-   const RulerOfHeight({Key? key}) : super(key: key);
+class RulerOfTargetWeight extends StatelessWidget{
+   const RulerOfTargetWeight({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<RegisterCubit,RegisterState>(
       builder: (context, state) {
         final cubit = context.read<RegisterCubit>();
-
         return Column(
           children: [
             RulerPicker(
-              controller: cubit.rulerOfHeight,
+              controller: cubit.rulerOfTargetWeight,
               onBuildRulerScaleText: (index, value) {
                 return value.toInt().toString();
               },
-              ranges: cubit.rangesOfHeight,
+              ranges:cubit.rangesOfWeight,
               scaleLineStyleList: const [
                 ScaleLineStyle(
                     color: ColorsManager.mainPurple,
@@ -41,14 +40,15 @@ class RulerOfHeight extends StatelessWidget{
                     height: 15,
                     scale: -1)
               ],
+
               onValueChanged: (value) {
-                cubit.onHeightRulerChange(value);
+                cubit.onTargetWeightRulerChange(value);
+
               },
               rulerBackgroundColor: ColorsManager.darkGray,
               width: MediaQuery.of(context).size.width,
               height: 50.h,
               rulerMarginTop: 10,
-
               marker: Container(
                   width: 6,
                   height: 50,
@@ -57,7 +57,7 @@ class RulerOfHeight extends StatelessWidget{
                       borderRadius: BorderRadius.circular(5))),
             ),
             Text(
-              cubit.currentHeight.toStringAsFixed(1)      ,
+              cubit.currentTargetWeight.toStringAsFixed(1),
               style: TextStyles.font28White700.copyWith(
                 color: ColorsManager.mainPurple,
               ),
@@ -65,7 +65,6 @@ class RulerOfHeight extends StatelessWidget{
           ],
         );
       },
-
     );
   }
 }

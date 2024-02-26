@@ -5,20 +5,17 @@ import '../../../../core/theming/styles.dart';
 import '../../data/models/item_Model.dart';
 
 class ItemOfList extends StatelessWidget{
-   const ItemOfList({Key? key, required this.model, required this.isSelected, required this.onSelectionChanged, }) : super(key: key);
+   const ItemOfList({Key? key, required this.model, required this.isSelected, required this.onSelect, }) : super(key: key);
 
   final ItemModel model;
   final bool isSelected;
-   final ValueChanged<bool> onSelectionChanged;
+   final VoidCallback onSelect;
 
 
    @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:(){
-        onSelectionChanged(!isSelected);
-
-      },
+      onTap: onSelect,
       child: Container(
         margin:  EdgeInsets.symmetric(vertical: 6.h),
         padding:  EdgeInsets.symmetric(horizontal: 10.h, vertical: 5.h),

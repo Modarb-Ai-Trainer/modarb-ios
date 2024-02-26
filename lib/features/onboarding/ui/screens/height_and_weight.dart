@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/features/onboarding/ui/widgets/ruler_of_target_weight.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/ruler_of_height.dart';
@@ -24,7 +25,7 @@ class HeightAndWeight extends StatelessWidget{
               ),
             ),
             verticalSpace(20),
-            const RulerOfHeight(),
+             const RulerOfHeight(),
             verticalSpace(40),
             Center(
               child: Text(
@@ -44,9 +45,7 @@ class HeightAndWeight extends StatelessWidget{
               ),
             ),
             verticalSpace(20),
-            const RulerOfWeight(),
-
-
+            const RulerOfTargetWeight(),
           ],
 
         ),

@@ -29,4 +29,18 @@ class RegisterState<T> with _$RegisterState<T> {
   const factory RegisterState.registerLoading() = RegisterLoading;
   const factory RegisterState.registerSuccess(T data) = RegisterSuccess<T>;
   const factory RegisterState.registerError({required String error}) = RegisterError;
+
+
+  const factory RegisterState.goalSelected(String selectedGoal) = GoalSelected;
+  const factory RegisterState.genderSelected(String gender) = GenderSelected;
+  const factory RegisterState.ageChangeSuccess({required num currentValue}) = AgeChangeSuccess;
+  const factory RegisterState.rulerOfHeightChangeSuccess({required num currentValue}) = RulerOfHeightChangeSuccess;
+  const factory RegisterState.rulerOfWeightChangeSuccess({required num currentValue}) = RulerOfWeightChangeSuccess;
+  const factory RegisterState.rulerOfTargetWeightChangeSuccess({required num currentValue}) = RulerOfTargetWeightChangeSuccess;
+  const factory RegisterState.levelSelected(String selectedLevel) = LevelSelected;
+  const factory RegisterState.locationSelected(String selectedLocation) = LocationSelected;
+  const factory RegisterState.equipmentSelected(String selectedEquipments ) = EquipmentSelected;
+  const factory RegisterState.injurySelected(String selectedInjury) = InjurySelected;
+
+
 }

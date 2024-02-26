@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/features/onboarding/ui/screens/fitness_goal.dart';
@@ -6,6 +7,7 @@ import 'package:modarb_app/features/onboarding/ui/screens/fitness_injury.dart';
 import 'package:modarb_app/features/onboarding/ui/screens/fitness_level.dart';
 import 'package:modarb_app/features/onboarding/ui/screens/fitness_location.dart';
 import 'package:modarb_app/features/onboarding/ui/screens/height_and_weight.dart';
+import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import '../../../core/routing/routes.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../../smart_trainer/ui/screens/smart_trainer.dart';
@@ -46,16 +48,16 @@ class _FitnessChoiceState extends State<FitnessChoice> {
           PageView(
             physics: const BouncingScrollPhysics(),
             controller: fitnessController,
-            children: const [
-              FitnessGoal(),
-              GenderAndAge(),
-              HeightAndWeight(),
-              SmartTrainer(),
-              FitnessLevel(),
-              FitnessLocation(),
-              FitnessEquipment(),
-              FitnessInjury(),
-              TrainerBeforeRegister(),
+            children:  [
+              const FitnessGoal(),
+              const GenderAndAge(),
+              const HeightAndWeight(),
+              SmartTrainer(bmiResult: context.read<RegisterCubit>().calculateBMI()),
+              const FitnessLevel(),
+              const FitnessLocation(),
+              const FitnessEquipment(),
+              const FitnessInjury(),
+              const TrainerBeforeRegister(),
             ],
             onPageChanged: (value){
               setState(() {
