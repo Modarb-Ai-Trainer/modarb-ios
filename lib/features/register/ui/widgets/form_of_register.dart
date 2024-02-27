@@ -18,7 +18,7 @@ class FormOfRegister extends StatelessWidget{
        builder:(context, state){
          return Padding(
            padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 35.h),
-           child: Container1(
+           child: Container(
              decoration: BoxDecoration(
                color: ColorsManager.lighterGray,
                borderRadius: BorderRadius.circular(40.r),
@@ -62,15 +62,15 @@ class FormOfRegister extends StatelessWidget{
                      verticalSpace(10.h),
                      AppTextFormField(
                        hintText: 'Password',
-                       backgroundColor:  ColorsManager.lighterGray,
-                       // isObscureText: cubit.isObscureText,
+                       backgroundColor: ColorsManager.lighterGray,
                        controller: context.read<RegisterCubit>().passwordController,
+                       isObscureText: context.watch<RegisterCubit>().isObscureText1,
                        suffixIcon: GestureDetector(
                          onTap: () {
-                           context.read<RegisterCubit>().isObscureText = !context.read<RegisterCubit>().isObscureText;
+                           context.read<RegisterCubit>().toggleObscureText1();
                          },
                          child: Icon(
-                           context.read<RegisterCubit>().isObscureText ? Icons.visibility_off : Icons.visibility,
+                           context.watch<RegisterCubit>().isObscureText1 ? Icons.visibility_off : Icons.visibility,
                          ),
                        ),
                        validator: (value){
@@ -84,13 +84,13 @@ class FormOfRegister extends StatelessWidget{
                        hintText: 'Confirm Password',
                        backgroundColor:  ColorsManager.lighterGray,
                        controller: context.read<RegisterCubit>().confirmPasswordController,
-                       isObscureText: context.read<RegisterCubit>().isObscureText,
+                       isObscureText: context.watch<RegisterCubit>().isObscureText2,
                        suffixIcon: GestureDetector(
                          onTap: () {
-                           context.read<RegisterCubit>().isObscureText = !context.read<RegisterCubit>().isObscureText;
+                           context.read<RegisterCubit>().toggleObscureText2();
                          },
                          child: Icon(
-                           context.read<RegisterCubit>().isObscureText ? Icons.visibility_off : Icons.visibility,
+                           context.watch<RegisterCubit>().isObscureText2 ? Icons.visibility_off : Icons.visibility,
                          ),
                        ),
                        validator: (value){

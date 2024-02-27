@@ -19,7 +19,8 @@ class RegisterCubit extends Cubit<RegisterState> {
   RulerPickerController rulerOfWeight = RulerPickerController();
   RulerPickerController rulerOfTargetWeight = RulerPickerController();
   final formKey = GlobalKey<FormState>();
-  bool isObscureText = true;
+  bool isObscureText1 = false;
+  bool isObscureText2 = false;
   double currentHeight = 100 ;
   double currentWeight = 10 ;
   double currentTargetWeight = 10 ;
@@ -44,6 +45,7 @@ class RegisterCubit extends Cubit<RegisterState> {
     RulerRange(begin: 10, end: 200, scale: 0.1),
 
   ];
+
 
   void onSelectedGoal(String goal) {
     emit(RegisterState.goalSelected(goal));
@@ -139,7 +141,14 @@ class RegisterCubit extends Cubit<RegisterState> {
     print(selectedInjuries);
   }
 
-
+  void toggleObscureText1() {
+    isObscureText1 = !isObscureText1;
+    emit(RegisterState.toggleObscureText(isObscureText1));
+  }
+  void toggleObscureText2() {
+    isObscureText2 = !isObscureText2;
+    emit(RegisterState.toggleObscureText(isObscureText2));
+  }
   void emitRegisterStates() async {
     emit(const RegisterState.registerLoading());
     final response = await _registerRepo.register(

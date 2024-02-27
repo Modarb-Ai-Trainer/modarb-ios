@@ -22,6 +22,7 @@ mixin _$RegisterState<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -41,6 +42,7 @@ mixin _$RegisterState<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -59,6 +61,7 @@ mixin _$RegisterState<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -78,6 +81,7 @@ mixin _$RegisterState<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -99,6 +103,7 @@ mixin _$RegisterState<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -120,6 +125,7 @@ mixin _$RegisterState<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -198,6 +204,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -220,6 +227,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -241,6 +249,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -266,6 +275,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -290,6 +300,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -314,6 +325,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -382,6 +394,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -404,6 +417,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -425,6 +439,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -450,6 +465,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -474,6 +490,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -498,6 +515,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -594,6 +612,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -616,6 +635,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -637,6 +657,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -662,6 +683,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -686,6 +708,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -710,6 +733,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -810,6 +834,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -832,6 +857,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -853,6 +879,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -878,6 +905,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -902,6 +930,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -926,6 +955,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -956,6 +986,231 @@ abstract class RegisterError<T> implements RegisterState<T> {
   @JsonKey(ignore: true)
   _$$RegisterErrorImplCopyWith<T, _$RegisterErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ToggleObscureTextImplCopyWith<T, $Res> {
+  factory _$$ToggleObscureTextImplCopyWith(_$ToggleObscureTextImpl<T> value,
+          $Res Function(_$ToggleObscureTextImpl<T>) then) =
+      __$$ToggleObscureTextImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({bool isObscureText});
+}
+
+/// @nodoc
+class __$$ToggleObscureTextImplCopyWithImpl<T, $Res>
+    extends _$RegisterStateCopyWithImpl<T, $Res, _$ToggleObscureTextImpl<T>>
+    implements _$$ToggleObscureTextImplCopyWith<T, $Res> {
+  __$$ToggleObscureTextImplCopyWithImpl(_$ToggleObscureTextImpl<T> _value,
+      $Res Function(_$ToggleObscureTextImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isObscureText = null,
+  }) {
+    return _then(_$ToggleObscureTextImpl<T>(
+      null == isObscureText
+          ? _value.isObscureText
+          : isObscureText // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
+  const _$ToggleObscureTextImpl(this.isObscureText);
+
+  @override
+  final bool isObscureText;
+
+  @override
+  String toString() {
+    return 'RegisterState<$T>.toggleObscureText(isObscureText: $isObscureText)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ToggleObscureTextImpl<T> &&
+            (identical(other.isObscureText, isObscureText) ||
+                other.isObscureText == isObscureText));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isObscureText);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ToggleObscureTextImplCopyWith<T, _$ToggleObscureTextImpl<T>>
+      get copyWith =>
+          __$$ToggleObscureTextImplCopyWithImpl<T, _$ToggleObscureTextImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() registerLoading,
+    required TResult Function(T data) registerSuccess,
+    required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
+    required TResult Function(String selectedGoal) goalSelected,
+    required TResult Function(String gender) genderSelected,
+    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
+    required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
+    required TResult Function(num currentValue)
+        rulerOfTargetWeightChangeSuccess,
+    required TResult Function(String selectedLevel) levelSelected,
+    required TResult Function(String selectedLocation) locationSelected,
+    required TResult Function(String selectedEquipments) equipmentSelected,
+    required TResult Function(String selectedInjury) injurySelected,
+  }) {
+    return toggleObscureText(isObscureText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? registerLoading,
+    TResult? Function(T data)? registerSuccess,
+    TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
+    TResult? Function(String selectedGoal)? goalSelected,
+    TResult? Function(String gender)? genderSelected,
+    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
+    TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
+    TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
+    TResult? Function(String selectedLevel)? levelSelected,
+    TResult? Function(String selectedLocation)? locationSelected,
+    TResult? Function(String selectedEquipments)? equipmentSelected,
+    TResult? Function(String selectedInjury)? injurySelected,
+  }) {
+    return toggleObscureText?.call(isObscureText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? registerLoading,
+    TResult Function(T data)? registerSuccess,
+    TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
+    TResult Function(String selectedGoal)? goalSelected,
+    TResult Function(String gender)? genderSelected,
+    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
+    TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
+    TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
+    TResult Function(String selectedLevel)? levelSelected,
+    TResult Function(String selectedLocation)? locationSelected,
+    TResult Function(String selectedEquipments)? equipmentSelected,
+    TResult Function(String selectedInjury)? injurySelected,
+    required TResult orElse(),
+  }) {
+    if (toggleObscureText != null) {
+      return toggleObscureText(isObscureText);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(RegisterLoading<T> value) registerLoading,
+    required TResult Function(RegisterSuccess<T> value) registerSuccess,
+    required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
+    required TResult Function(GoalSelected<T> value) goalSelected,
+    required TResult Function(GenderSelected<T> value) genderSelected,
+    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(RulerOfHeightChangeSuccess<T> value)
+        rulerOfHeightChangeSuccess,
+    required TResult Function(RulerOfWeightChangeSuccess<T> value)
+        rulerOfWeightChangeSuccess,
+    required TResult Function(RulerOfTargetWeightChangeSuccess<T> value)
+        rulerOfTargetWeightChangeSuccess,
+    required TResult Function(LevelSelected<T> value) levelSelected,
+    required TResult Function(LocationSelected<T> value) locationSelected,
+    required TResult Function(EquipmentSelected<T> value) equipmentSelected,
+    required TResult Function(InjurySelected<T> value) injurySelected,
+  }) {
+    return toggleObscureText(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(RegisterLoading<T> value)? registerLoading,
+    TResult? Function(RegisterSuccess<T> value)? registerSuccess,
+    TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
+    TResult? Function(GoalSelected<T> value)? goalSelected,
+    TResult? Function(GenderSelected<T> value)? genderSelected,
+    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(RulerOfHeightChangeSuccess<T> value)?
+        rulerOfHeightChangeSuccess,
+    TResult? Function(RulerOfWeightChangeSuccess<T> value)?
+        rulerOfWeightChangeSuccess,
+    TResult? Function(RulerOfTargetWeightChangeSuccess<T> value)?
+        rulerOfTargetWeightChangeSuccess,
+    TResult? Function(LevelSelected<T> value)? levelSelected,
+    TResult? Function(LocationSelected<T> value)? locationSelected,
+    TResult? Function(EquipmentSelected<T> value)? equipmentSelected,
+    TResult? Function(InjurySelected<T> value)? injurySelected,
+  }) {
+    return toggleObscureText?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(RegisterLoading<T> value)? registerLoading,
+    TResult Function(RegisterSuccess<T> value)? registerSuccess,
+    TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
+    TResult Function(GoalSelected<T> value)? goalSelected,
+    TResult Function(GenderSelected<T> value)? genderSelected,
+    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(RulerOfHeightChangeSuccess<T> value)?
+        rulerOfHeightChangeSuccess,
+    TResult Function(RulerOfWeightChangeSuccess<T> value)?
+        rulerOfWeightChangeSuccess,
+    TResult Function(RulerOfTargetWeightChangeSuccess<T> value)?
+        rulerOfTargetWeightChangeSuccess,
+    TResult Function(LevelSelected<T> value)? levelSelected,
+    TResult Function(LocationSelected<T> value)? locationSelected,
+    TResult Function(EquipmentSelected<T> value)? equipmentSelected,
+    TResult Function(InjurySelected<T> value)? injurySelected,
+    required TResult orElse(),
+  }) {
+    if (toggleObscureText != null) {
+      return toggleObscureText(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ToggleObscureText<T> implements RegisterState<T> {
+  const factory ToggleObscureText(final bool isObscureText) =
+      _$ToggleObscureTextImpl<T>;
+
+  bool get isObscureText;
+  @JsonKey(ignore: true)
+  _$$ToggleObscureTextImplCopyWith<T, _$ToggleObscureTextImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1028,6 +1283,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -1050,6 +1306,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -1071,6 +1328,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -1096,6 +1354,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -1120,6 +1379,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1144,6 +1404,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1244,6 +1505,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -1266,6 +1528,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -1287,6 +1550,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -1312,6 +1576,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -1336,6 +1601,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1360,6 +1626,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1461,6 +1728,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -1483,6 +1751,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -1504,6 +1773,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -1529,6 +1799,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -1553,6 +1824,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1577,6 +1849,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1684,6 +1957,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -1706,6 +1980,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -1727,6 +2002,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -1752,6 +2028,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -1776,6 +2053,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1800,6 +2078,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -1908,6 +2187,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -1930,6 +2210,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -1951,6 +2232,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -1976,6 +2258,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -2000,6 +2283,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2024,6 +2308,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2132,6 +2417,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -2154,6 +2440,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -2175,6 +2462,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -2200,6 +2488,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -2224,6 +2513,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2248,6 +2538,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2352,6 +2643,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -2374,6 +2666,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -2395,6 +2688,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -2420,6 +2714,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -2444,6 +2739,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2468,6 +2764,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2570,6 +2867,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -2592,6 +2890,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -2613,6 +2912,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -2638,6 +2938,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -2662,6 +2963,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2686,6 +2988,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2789,6 +3092,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -2811,6 +3115,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -2832,6 +3137,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -2857,6 +3163,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -2881,6 +3188,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -2905,6 +3213,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -3007,6 +3316,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
     required TResult Function(String error) registerError,
+    required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
     required TResult Function(num currentValue) ageChangeSuccess,
@@ -3029,6 +3339,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
     TResult? Function(String error)? registerError,
+    TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
     TResult? Function(num currentValue)? ageChangeSuccess,
@@ -3050,6 +3361,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
     TResult Function(String error)? registerError,
+    TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
     TResult Function(num currentValue)? ageChangeSuccess,
@@ -3075,6 +3387,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterError<T> value) registerError,
+    required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
     required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
@@ -3099,6 +3412,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterError<T> value)? registerError,
+    TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
     TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
@@ -3123,6 +3437,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterError<T> value)? registerError,
+    TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
     TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,

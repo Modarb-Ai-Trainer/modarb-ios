@@ -29,6 +29,7 @@ class RegisterState<T> with _$RegisterState<T> {
   const factory RegisterState.registerLoading() = RegisterLoading;
   const factory RegisterState.registerSuccess(T data) = RegisterSuccess<T>;
   const factory RegisterState.registerError({required String error}) = RegisterError;
+  const factory RegisterState.toggleObscureText(bool isObscureText) = ToggleObscureText;
 
 
   const factory RegisterState.goalSelected(String selectedGoal) = GoalSelected;
