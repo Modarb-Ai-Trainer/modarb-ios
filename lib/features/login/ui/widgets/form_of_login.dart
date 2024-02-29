@@ -1,40 +1,66 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/features/login/logic/login_cubit.dart';
+import 'package:modarb_app/features/login/logic/login_state.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
 
 class FormOfLogin extends StatelessWidget{
-   FormOfLogin({Key? key}) : super(key: key);
+   const FormOfLogin({Key? key}) : super(key: key);
 
-  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 35.h),
-      child: Form(
-        key: formKey,
-        child: Column(
-          children: [
-            AppTextFormField(
-              hintText: 'Email',
-              validator: (value){ },
+    return BlocBuilder<LoginCubit,LoginState>(
+      builder: (context, state){
+        final cubit = context.read<LoginCubit>();
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 35.h),
+          child: Form(
+            key: cubit.formKey,
+            child: Column(
+              children: [
+                AppTextFormField(
+                  hintText: 'Email',
+                  controller: context.read<LoginCubit>().emailController,
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return 'Email mustn\'t be empty';
+                    }
+                  },
+                ),
+                verticalSpace(20.h),
+                AppTextFormField(
+                  hintText: 'Password',
+                  controller: context.read<LoginCubit>().passwordController,
+                  isObscureText: context.watch<LoginCubit>().isObscureText,
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      context.read<LoginCubit>().toggleObscureText();
+                    },
+                    child: Icon(
+                      context.watch<LoginCubit>().isObscureText ? Icons.visibility_off : Icons.visibility,
+                    ),
+                  ),
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return 'Password mustn\'t be empty';
+                    }
+                  },
+                ),
+                verticalSpace(50.h),
+                AppTextButton(
+                  buttonText: 'Login',
+                  textStyle: TextStyles.font20White600,
+                  onPressed: () {},
+                ),
+              ],
             ),
-            verticalSpace(20.h),
-            AppTextFormField(
-              hintText: 'Password',
-              validator: (value){},
-            ),
-            verticalSpace(50.h),
-            AppTextButton(
-              buttonText: 'Login',
-              textStyle: TextStyles.font20White600,
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

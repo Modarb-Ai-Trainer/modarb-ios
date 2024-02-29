@@ -118,12 +118,12 @@ class RegisterCubit extends Cubit<RegisterState> {
     checkedEquipments[index] = isSelected;
 
     // Update the selectedEquipments list based on the checkbox state
-    if (isSelected && !selectedEquipments.contains(equipment)) {
-      selectedEquipments.add(equipment);
-    } else if (!isSelected && selectedEquipments.contains(equipment)) {
-      selectedEquipments.remove(equipment);
+    if (isSelected && !selectedEquipments.contains(equipment.toLowerCase())) {
+      selectedEquipments.add(equipment.toLowerCase());
+    } else if (!isSelected && selectedEquipments.contains(equipment.toLowerCase())) {
+      selectedEquipments.remove(equipment.toLowerCase());
     }
-    emit(RegisterState.equipmentSelected(equipment));
+    emit(RegisterState.equipmentSelected(equipment.toLowerCase()));
     print(selectedEquipments);
   }
 
@@ -132,12 +132,12 @@ class RegisterCubit extends Cubit<RegisterState> {
     checkedInjuries[index] = isSelected;
 
     // Update the selectedEquipments list based on the checkbox state
-    if (isSelected && !selectedInjuries.contains(injury)) {
-      selectedInjuries.add(injury);
-    } else if (!isSelected && selectedInjuries.contains(injury)) {
-      selectedInjuries.remove(injury);
+    if (isSelected && !selectedInjuries.contains(injury.toLowerCase())) {
+      selectedInjuries.add(injury.toLowerCase());
+    } else if (!isSelected && selectedInjuries.contains(injury.toLowerCase())) {
+      selectedInjuries.remove(injury.toLowerCase());
     }
-    emit(RegisterState.injurySelected(injury));
+    emit(RegisterState.injurySelected(injury.toLowerCase()));
     print(selectedInjuries);
   }
 
@@ -149,36 +149,45 @@ class RegisterCubit extends Cubit<RegisterState> {
     isObscureText2 = !isObscureText2;
     emit(RegisterState.toggleObscureText(isObscureText2));
   }
+
   void emitRegisterStates() async {
     emit(const RegisterState.registerLoading());
-    final response = await _registerRepo.register(
-      RegisterRequestBody(
-        name: nameController.text,
-        email: emailController.text,
-        password: passwordController.text,
-        confirmPassword: confirmPasswordController.text,
-        gender: selectedGender,
-        height: rulerOfHeight.value.toInt(),
-        weight: rulerOfWeight.value.toDouble(),
-        age: selectedAge,
-        fitnessLevel: selectedLevel,
-        injuries:selectedInjuries,
-        preferences: PreferencesModel(
-          fitnessGoal: selectedGoal,
-          workoutPlace: selectedLocation,
-          preferredEquipment: selectedEquipments,
-          targetWeight: currentTargetWeight.toInt(),
-          workoutFrequency: 0,
-          preferredDays: [],
+
+    try {
+      final response = await _registerRepo.register(
+        RegisterRequestBody(
+          name: nameController.text,
+          email: emailController.text,
+          password: passwordController.text,
+          confirmPassword: confirmPasswordController.text,
+          gender: selectedGender,
+          height: rulerOfHeight.value.toInt(),
+          weight: rulerOfWeight.value.toDouble(),
+          age: selectedAge,
+          fitnessLevel: selectedLevel.toLowerCase(),
+          injuries:selectedInjuries,
+          preferences: PreferencesModel(
+            fitnessGoal: selectedGoal.toLowerCase(),
+            workoutPlace: selectedLocation.toLowerCase(),
+            preferredEquipment: selectedEquipments,
+            targetWeight: currentTargetWeight.toInt(),
+            workoutFrequency: 0,
+            // preferredDays: [],
+          ),
+
         ),
-        dob: '',
-      ),
-    );
-    response.when(success: (signupResponse) {
-      emit(RegisterState.registerSuccess(signupResponse));
-    }, failure: (error) {
-      emit(RegisterState.registerError(error: error.apiErrorModel.message ?? ''));
-    });
+      );
+
+      response.when(success: (signupResponse) {
+        emit(RegisterState.registerSuccess(signupResponse));
+      }, failure: (error) {
+        emit(RegisterState.registerError(error: error.apiErrorModel.message ?? ''));
+      });
+    } catch (e) {
+      // Handle any caught exceptions here
+      print('An error occurred during registration: $e');
+      emit(const RegisterState.registerError(error: 'An error occurred during registration.'));
+    }
   }
 
 }

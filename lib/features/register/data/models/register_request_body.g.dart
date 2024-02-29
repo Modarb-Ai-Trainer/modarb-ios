@@ -23,7 +23,7 @@ RegisterRequestBody _$RegisterRequestBodyFromJson(Map<String, dynamic> json) =>
       age: json['age'] as int,
       injuries:
           (json['injuries'] as List<dynamic>).map((e) => e as String).toList(),
-      dob: json['dob'] as String,
+      dob: json['dob'] as String?,
     );
 
 Map<String, dynamic> _$RegisterRequestBodyToJson(
@@ -48,8 +48,8 @@ PreferencesModel _$PreferencesModelFromJson(Map<String, dynamic> json) =>
       fitnessGoal: json['fitness_goal'] as String,
       targetWeight: json['target_weight'] as int,
       workoutFrequency: json['workout_frequency'] as int,
-      preferredDays: (json['preferred_days'] as List<dynamic>)
-          .map((e) => e as String)
+      preferredDays: (json['preferred_days'] as List<dynamic>?)
+          ?.map((e) => e as String)
           .toList(),
       workoutPlace: json['workout_place'] as String,
       preferredEquipment: (json['preferred_equipment'] as List<dynamic>)

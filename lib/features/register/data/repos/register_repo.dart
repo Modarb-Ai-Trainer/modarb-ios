@@ -21,30 +21,4 @@ class RegisterRepo{
     }
   }
 
-
-  // Future<Map<String, dynamic>> registerUser(String email,String name ,String password, String passwordConfirm ) async {
-  //
-  //   try {
-  //
-  //     Map<String, dynamic> userData = {
-  //       'email': email,
-  //       'name': name,
-  //       'password': password,
-  //       'password_confirmation': passwordConfirm,
-  //     };
-  //     final response = await _apiService.post(endPoint: 'register', data: userData );
-  //
-  //     if (response.statusCode == 200) {
-  //       return response.data;
-  //     } else {
-  //       throw Exception('Failed to register user. Status code: ${response.statusCode}');
-  //
-  //     }
-  //   } catch (e) {
-  //     throw Exception('Error during registration: $e');
-  //
-  //   }
-  // }
-
-
 }

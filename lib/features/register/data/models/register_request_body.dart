@@ -15,7 +15,7 @@ class RegisterRequestBody {
   final String fitnessLevel;
   final PreferencesModel? preferences;
   final List<String> injuries;
-  final String dob;
+  final String ? dob;
 
 
   RegisterRequestBody({
@@ -30,7 +30,7 @@ class RegisterRequestBody {
     this.preferences,
     required this.age,
     required this.injuries,
-    required this.dob,
+    this.dob,
   });
 
   Map<String, dynamic> toJson() => _$RegisterRequestBodyToJson(this);
@@ -48,7 +48,7 @@ class PreferencesModel {
   @JsonKey(name: 'workout_frequency')
   final int workoutFrequency;
   @JsonKey(name: 'preferred_days')
-  final List<String> preferredDays;
+  final List<String> ? preferredDays;
   @JsonKey(name: 'workout_place')
   final String workoutPlace;
   @JsonKey(name: 'preferred_equipment')
@@ -60,7 +60,7 @@ class PreferencesModel {
     required this.fitnessGoal,
     required this.targetWeight,
     required this.workoutFrequency,
-    required this.preferredDays,
+    this.preferredDays,
     required this.workoutPlace,
     required this.preferredEquipment
   });
