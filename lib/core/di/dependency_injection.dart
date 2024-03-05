@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:modarb_app/features/home/data/repos/home_repo.dart';
+import 'package:modarb_app/features/home/logic/home_cubit.dart';
 import 'package:modarb_app/features/login/data/repos/login_repo.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/register/data/repos/register_repo.dart';
@@ -16,9 +18,13 @@ Future<void> setupGetIt() async {
 
   // Register
   getIt.registerLazySingleton<RegisterRepo>(() => RegisterRepo(getIt()));
-  getIt.registerLazySingleton<RegisterCubit>(() => RegisterCubit(getIt()));
+  getIt.registerFactory<RegisterCubit>(() => RegisterCubit(getIt()));
 
   // Login
   getIt.registerLazySingleton<LoginRepository>(() => LoginRepository(getIt()));
-  getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(getIt()));
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+
+  // Home
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
 }

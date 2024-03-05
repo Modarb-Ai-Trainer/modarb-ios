@@ -12,34 +12,34 @@ part of 'login_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LoginState<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) =>
@@ -47,27 +47,27 @@ mixin _$LoginState<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) =>
@@ -131,9 +131,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) {
     return initial();
@@ -143,9 +143,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) {
     return initial?.call();
@@ -155,9 +155,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) {
@@ -171,9 +171,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) {
     return initial(this);
@@ -183,9 +183,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) {
     return initial?.call(this);
@@ -195,9 +195,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) {
@@ -213,35 +213,35 @@ abstract class _Initial<T> implements LoginState<T> {
 }
 
 /// @nodoc
-abstract class _$$LoginLoadingImplCopyWith<T, $Res> {
-  factory _$$LoginLoadingImplCopyWith(_$LoginLoadingImpl<T> value,
-          $Res Function(_$LoginLoadingImpl<T>) then) =
-      __$$LoginLoadingImplCopyWithImpl<T, $Res>;
+abstract class _$$LoadingImplCopyWith<T, $Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$LoginLoadingImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$LoginLoadingImpl<T>>
-    implements _$$LoginLoadingImplCopyWith<T, $Res> {
-  __$$LoginLoadingImplCopyWithImpl(
-      _$LoginLoadingImpl<T> _value, $Res Function(_$LoginLoadingImpl<T>) _then)
+class __$$LoadingImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
+    implements _$$LoadingImplCopyWith<T, $Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoginLoadingImpl<T> implements LoginLoading<T> {
-  const _$LoginLoadingImpl();
+class _$LoadingImpl<T> implements Loading<T> {
+  const _$LoadingImpl();
 
   @override
   String toString() {
-    return 'LoginState<$T>.loginLoading()';
+    return 'LoginState<$T>.loading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoginLoadingImpl<T>);
+        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
   }
 
   @override
@@ -251,38 +251,38 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) {
-    return loginLoading();
+    return loading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) {
-    return loginLoading?.call();
+    return loading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginLoading != null) {
-      return loginLoading();
+    if (loading != null) {
+      return loading();
     }
     return orElse();
   }
@@ -291,62 +291,62 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) {
-    return loginLoading(this);
+    return loading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) {
-    return loginLoading?.call(this);
+    return loading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginLoading != null) {
-      return loginLoading(this);
+    if (loading != null) {
+      return loading(this);
     }
     return orElse();
   }
 }
 
-abstract class LoginLoading<T> implements LoginState<T> {
-  const factory LoginLoading() = _$LoginLoadingImpl<T>;
+abstract class Loading<T> implements LoginState<T> {
+  const factory Loading() = _$LoadingImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$LoginSuccessImplCopyWith<T, $Res> {
-  factory _$$LoginSuccessImplCopyWith(_$LoginSuccessImpl<T> value,
-          $Res Function(_$LoginSuccessImpl<T>) then) =
-      __$$LoginSuccessImplCopyWithImpl<T, $Res>;
+abstract class _$$SuccessImplCopyWith<T, $Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$LoginSuccessImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$LoginSuccessImpl<T>>
-    implements _$$LoginSuccessImplCopyWith<T, $Res> {
-  __$$LoginSuccessImplCopyWithImpl(
-      _$LoginSuccessImpl<T> _value, $Res Function(_$LoginSuccessImpl<T>) _then)
+class __$$SuccessImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
+    implements _$$SuccessImplCopyWith<T, $Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -354,7 +354,7 @@ class __$$LoginSuccessImplCopyWithImpl<T, $Res>
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(_$LoginSuccessImpl<T>(
+    return _then(_$SuccessImpl<T>(
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -365,22 +365,22 @@ class __$$LoginSuccessImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
-  const _$LoginSuccessImpl(this.data);
+class _$SuccessImpl<T> implements Success<T> {
+  const _$SuccessImpl(this.data);
 
   @override
   final T data;
 
   @override
   String toString() {
-    return 'LoginState<$T>.loginSuccess(data: $data)';
+    return 'LoginState<$T>.success(data: $data)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginSuccessImpl<T> &&
+            other is _$SuccessImpl<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -391,46 +391,45 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginSuccessImplCopyWith<T, _$LoginSuccessImpl<T>> get copyWith =>
-      __$$LoginSuccessImplCopyWithImpl<T, _$LoginSuccessImpl<T>>(
-          this, _$identity);
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      __$$SuccessImplCopyWithImpl<T, _$SuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) {
-    return loginSuccess(data);
+    return success(data);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) {
-    return loginSuccess?.call(data);
+    return success?.call(data);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginSuccess != null) {
-      return loginSuccess(data);
+    if (success != null) {
+      return success(data);
     }
     return orElse();
   }
@@ -439,67 +438,67 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) {
-    return loginSuccess(this);
+    return success(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) {
-    return loginSuccess?.call(this);
+    return success?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginSuccess != null) {
-      return loginSuccess(this);
+    if (success != null) {
+      return success(this);
     }
     return orElse();
   }
 }
 
-abstract class LoginSuccess<T> implements LoginState<T> {
-  const factory LoginSuccess(final T data) = _$LoginSuccessImpl<T>;
+abstract class Success<T> implements LoginState<T> {
+  const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
   @JsonKey(ignore: true)
-  _$$LoginSuccessImplCopyWith<T, _$LoginSuccessImpl<T>> get copyWith =>
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoginErrorImplCopyWith<T, $Res> {
-  factory _$$LoginErrorImplCopyWith(
-          _$LoginErrorImpl<T> value, $Res Function(_$LoginErrorImpl<T>) then) =
-      __$$LoginErrorImplCopyWithImpl<T, $Res>;
+abstract class _$$ErrorImplCopyWith<T, $Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
+      __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$LoginErrorImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$LoginErrorImpl<T>>
-    implements _$$LoginErrorImplCopyWith<T, $Res> {
-  __$$LoginErrorImplCopyWithImpl(
-      _$LoginErrorImpl<T> _value, $Res Function(_$LoginErrorImpl<T>) _then)
+class __$$ErrorImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$ErrorImpl<T>>
+    implements _$$ErrorImplCopyWith<T, $Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl<T> _value, $Res Function(_$ErrorImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -507,7 +506,7 @@ class __$$LoginErrorImplCopyWithImpl<T, $Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$LoginErrorImpl<T>(
+    return _then(_$ErrorImpl<T>(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -518,22 +517,22 @@ class __$$LoginErrorImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$LoginErrorImpl<T> implements LoginError<T> {
-  const _$LoginErrorImpl({required this.error});
+class _$ErrorImpl<T> implements Error<T> {
+  const _$ErrorImpl({required this.error});
 
   @override
   final String error;
 
   @override
   String toString() {
-    return 'LoginState<$T>.loginError(error: $error)';
+    return 'LoginState<$T>.error(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginErrorImpl<T> &&
+            other is _$ErrorImpl<T> &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -543,45 +542,45 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginErrorImplCopyWith<T, _$LoginErrorImpl<T>> get copyWith =>
-      __$$LoginErrorImplCopyWithImpl<T, _$LoginErrorImpl<T>>(this, _$identity);
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
+      __$$ErrorImplCopyWithImpl<T, _$ErrorImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) {
-    return loginError(error);
+    return error(this.error);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) {
-    return loginError?.call(error);
+    return error?.call(this.error);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginError != null) {
-      return loginError(error);
+    if (error != null) {
+      return error(this.error);
     }
     return orElse();
   }
@@ -590,49 +589,49 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) {
-    return loginError(this);
+    return error(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) {
-    return loginError?.call(this);
+    return error?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) {
-    if (loginError != null) {
-      return loginError(this);
+    if (error != null) {
+      return error(this);
     }
     return orElse();
   }
 }
 
-abstract class LoginError<T> implements LoginState<T> {
-  const factory LoginError({required final String error}) = _$LoginErrorImpl<T>;
+abstract class Error<T> implements LoginState<T> {
+  const factory Error({required final String error}) = _$ErrorImpl<T>;
 
   String get error;
   @JsonKey(ignore: true)
-  _$$LoginErrorImplCopyWith<T, _$LoginErrorImpl<T>> get copyWith =>
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -704,9 +703,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loginLoading,
-    required TResult Function(T data) loginSuccess,
-    required TResult Function(String error) loginError,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
     required TResult Function(bool isObscureText) toggleObscureText,
   }) {
     return toggleObscureText(isObscureText);
@@ -716,9 +715,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loginLoading,
-    TResult? Function(T data)? loginSuccess,
-    TResult? Function(String error)? loginError,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
     TResult? Function(bool isObscureText)? toggleObscureText,
   }) {
     return toggleObscureText?.call(isObscureText);
@@ -728,9 +727,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loginLoading,
-    TResult Function(T data)? loginSuccess,
-    TResult Function(String error)? loginError,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
     TResult Function(bool isObscureText)? toggleObscureText,
     required TResult orElse(),
   }) {
@@ -744,9 +743,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(LoginLoading<T> value) loginLoading,
-    required TResult Function(LoginSuccess<T> value) loginSuccess,
-    required TResult Function(LoginError<T> value) loginError,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
   }) {
     return toggleObscureText(this);
@@ -756,9 +755,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(LoginLoading<T> value)? loginLoading,
-    TResult? Function(LoginSuccess<T> value)? loginSuccess,
-    TResult? Function(LoginError<T> value)? loginError,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
   }) {
     return toggleObscureText?.call(this);
@@ -768,9 +767,9 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(LoginLoading<T> value)? loginLoading,
-    TResult Function(LoginSuccess<T> value)? loginSuccess,
-    TResult Function(LoginError<T> value)? loginError,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     required TResult orElse(),
   }) {

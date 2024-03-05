@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://modarb.onrender.com/api/v1/user/';
+    baseUrl ??= 'https://modarb-backend.onrender.com/api/v1/users/';
   }
 
   final Dio _dio;
@@ -23,7 +23,7 @@ class _ApiService implements ApiService {
   @override
   Future<RegisterResponse> register(
       RegisterRequestBody registerRequestBody) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
@@ -46,6 +46,34 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = RegisterResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<LoginResponse> login(LoginRequestBody loginRequestBody) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(loginRequestBody.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<LoginResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'auth/login',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = LoginResponse.fromJson(_result.data!);
     return value;
   }
 

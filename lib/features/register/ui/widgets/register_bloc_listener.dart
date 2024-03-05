@@ -59,9 +59,9 @@ class RegisterBlocListener extends StatelessWidget {
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                primary: Colors.white,
+                foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
-                onSurface: Colors.grey,
+                disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);

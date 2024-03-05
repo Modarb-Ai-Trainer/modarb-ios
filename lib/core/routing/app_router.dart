@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/di/dependency_injection.dart';
 import 'package:modarb_app/core/routing/routes.dart';
-import 'package:modarb_app/features/loading/loading.dart';
+import 'package:modarb_app/features/loading/ui/loading.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/onboarding/ui/fitness_choise.dart';
 import 'package:modarb_app/features/register/ui/register_screen.dart';
@@ -10,7 +10,7 @@ import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_loadi
 import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_register.dart';
 import 'package:modarb_app/features/splash/ui/screens/last_splash.dart';
 import 'package:modarb_app/features/splash/ui/screens/splash_screen.dart';
-import '../../features/home/ui/home_screen.dart';
+import '../../features/home/ui/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 import '../../features/register/logic/register_cubit.dart';
@@ -36,10 +36,7 @@ class AppRouter {
         // this is the route name for login screen
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
-            child: const LoginScreen(),
-          ),
+          builder: (_) => const LoginScreen(),
         );
 
         // this is the route name for onBoarding screens
@@ -79,11 +76,10 @@ class AppRouter {
           builder: (_) => const TrainerAfterLoading(),
         );
 
-      case Routes.homeScreen:
+      case Routes.homePage:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => const HomePage(),
         );
-
 
       default:
         return MaterialPageRoute(

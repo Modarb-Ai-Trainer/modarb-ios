@@ -10,6 +10,6 @@ class Routes {
   static const String loading = '/loading';
   static const String trainerAfterLoading = '/trainerAfterLoading';
 
-  static const String homeScreen = '/homeScreen';
+  static const String homePage = '/homePage';
 
 }

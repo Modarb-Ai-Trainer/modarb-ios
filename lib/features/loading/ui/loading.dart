@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
-import '../../core/theming/styles.dart';
+import '../../../core/theming/styles.dart';
 
 class LoadingScreen extends StatefulWidget{
   const LoadingScreen({Key? key}) : super(key: key);

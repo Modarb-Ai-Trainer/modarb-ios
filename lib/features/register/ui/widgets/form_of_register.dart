@@ -105,7 +105,7 @@ class FormOfRegister extends StatelessWidget{
                        textStyle: TextStyles.font20Purple600,
                        backgroundColor: Colors.white.withOpacity(0.9),
                        onPressed: () {
-                         validateThenDoSignup(context);
+                         validateThenDoRegister(context);
                        },
                      ),
                    ],
@@ -118,7 +118,7 @@ class FormOfRegister extends StatelessWidget{
      );
 
    }
-   void validateThenDoSignup(BuildContext context) {
+   void validateThenDoRegister(BuildContext context) {
      if (context.read<RegisterCubit>().formKey.currentState!.validate()) {
        context.read<RegisterCubit>().emitRegisterStates();
      }

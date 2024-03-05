@@ -10,10 +10,9 @@ class LoginState<T> with _$LoginState<T> {
 
   const factory LoginState.initial() = _Initial;
 
-  const factory LoginState.loginLoading() = LoginLoading;
-  const factory LoginState.loginSuccess(T data) = LoginSuccess<T>;
-  const factory LoginState.loginError({required String error}) = LoginError;
-
+  const factory LoginState.loading() = Loading;
+  const factory LoginState.success(T data) = Success<T>;
+  const factory LoginState.error({required String error}) = Error;
 
   const factory LoginState.toggleObscureText(bool isObscureText) = ToggleObscureText;
 

@@ -1,6 +1,6 @@
 class ApiConstants{
 
-  static const String apiBaseUrl = "https://modarb.onrender.com/api/v1/user/";
+  static const String apiBaseUrl = "https://modarb-backend.onrender.com/api/v1/users/";
   static const String register = "auth/register";
   static const String login = "auth/login";
 }
