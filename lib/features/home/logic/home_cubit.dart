@@ -22,6 +22,9 @@ class HomeCubit extends Cubit<HomeState> {
     const MoreInfoScreen(),
   ];
 
+  List<String> days = ['M','T','W','T','F','S','S'];
+  List<int> points = [10,15,20,25,30,35,40];
+
   void onTabChanged(int index) {
     currentIndexOfPage = index;
     emit(HomeState.tabChanged(index));
