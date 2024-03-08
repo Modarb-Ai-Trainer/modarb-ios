@@ -18,7 +18,7 @@ class ContainerOfWeeks extends StatelessWidget {
         final cubit = context.read<HomeCubit>();
         return Container(
           width: 340.h,
-          height: 260.h,
+          height: 200.h,
           padding: EdgeInsets.all(10.h),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.r),
@@ -33,7 +33,7 @@ class ContainerOfWeeks extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.arrow_back_ios_rounded,
-                      size: 24.sp,
+                      size: 20.sp,
                       color: ColorsManager.mainWhite,
                     ),
                     Text(
@@ -41,7 +41,7 @@ class ContainerOfWeeks extends StatelessWidget {
                       style:TextStyles.font13White700,
                     ),
                     Icon(Icons.arrow_forward_ios,
-                      size: 24.sp,
+                      size: 20.sp,
                       color: ColorsManager.mainWhite,
                     ),
                   ],

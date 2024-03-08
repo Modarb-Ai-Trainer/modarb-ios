@@ -24,10 +24,16 @@ class ModarbApp extends StatelessWidget{
           theme: ThemeData.dark().copyWith(
             primaryColor: ColorsManager.mainPurple,
             scaffoldBackgroundColor: ColorsManager.darkGray,
-            appBarTheme: const AppBarTheme(
+            appBarTheme: AppBarTheme(
               backgroundColor: ColorsManager.darkGray,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+              ),
               elevation: 0,
-              iconTheme: IconThemeData(
+              iconTheme: const IconThemeData(
                 color: Colors.white,
               ),
             ),
