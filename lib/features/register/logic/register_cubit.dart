@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ruler_picker/flutter_ruler_picker.dart';
@@ -18,13 +19,17 @@ class RegisterCubit extends Cubit<RegisterState> {
   RulerPickerController rulerOfHeight = RulerPickerController();
   RulerPickerController rulerOfWeight = RulerPickerController();
   RulerPickerController rulerOfTargetWeight = RulerPickerController();
+  DateTime? selectedDate;
+  String? selectedDateString;
+
+
   final formKey = GlobalKey<FormState>();
   bool isObscureText1 = false;
   bool isObscureText2 = false;
   double currentHeight = 100 ;
   double currentWeight = 10 ;
   double currentTargetWeight = 10 ;
-  int selectedAge = 0;
+  // int selectedAge = 0;
   String selectedGoal = '';
   String selectedGender = '';
   String selectedLevel = '';
@@ -58,12 +63,28 @@ class RegisterCubit extends Cubit<RegisterState> {
     selectedGender = gender;
   }
 
-  void onAgeChange(int value) {
-    final updatedAge = value + 1;
-    emit(RegisterState.ageChangeSuccess(currentValue: updatedAge));
-    selectedAge = updatedAge;
-    print(selectedAge);
+  Future<void> selectOfDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime.now(),
+    );
+    if (picked != null && picked != selectedDate) {
+
+      selectedDate = picked;
+      emit(RegisterState.dateOfBirthChangeSuccess(currentDate: selectedDate!));
+      selectedDateString = DateFormat('yyyy-MM-dd').format(selectedDate!);
+
+    }
   }
+
+  // void onAgeChange(int value) {
+  //   final updatedAge = value + 1;
+  //   emit(RegisterState.ageChangeSuccess(currentValue: updatedAge));
+  //   selectedAge = updatedAge;
+  //   print(selectedAge);
+  // }
 
   void onHeightRulerChange(num value) {
     emit(RegisterState.rulerOfHeightChangeSuccess(currentValue: value));
@@ -163,7 +184,7 @@ class RegisterCubit extends Cubit<RegisterState> {
           gender: selectedGender,
           height: rulerOfHeight.value.toInt(),
           weight: rulerOfWeight.value.toDouble(),
-          age: selectedAge,
+          dob: selectedDateString,
           fitnessLevel: selectedLevel.toLowerCase(),
           injuries:selectedInjuries,
           preferences: PreferencesModel(

@@ -25,7 +25,7 @@ mixin _$RegisterState<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -45,7 +45,7 @@ mixin _$RegisterState<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -64,7 +64,7 @@ mixin _$RegisterState<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -84,7 +84,8 @@ mixin _$RegisterState<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -106,7 +107,8 @@ mixin _$RegisterState<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -128,7 +130,8 @@ mixin _$RegisterState<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -207,7 +210,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -230,7 +233,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -252,7 +255,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -278,7 +281,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -303,7 +307,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -328,7 +333,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -397,7 +403,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -420,7 +426,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -442,7 +448,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -468,7 +474,8 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -493,7 +500,8 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -518,7 +526,8 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -615,7 +624,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -638,7 +647,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -660,7 +669,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -686,7 +695,8 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -711,7 +721,8 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -736,7 +747,8 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -837,7 +849,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -860,7 +872,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -882,7 +894,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -908,7 +920,8 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -933,7 +946,8 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -958,7 +972,8 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1062,7 +1077,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -1085,7 +1100,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1107,7 +1122,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1133,7 +1148,8 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -1158,7 +1174,8 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1183,7 +1200,8 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1286,7 +1304,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -1309,7 +1327,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1331,7 +1349,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1357,7 +1375,8 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -1382,7 +1401,8 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1407,7 +1427,8 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1508,7 +1529,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -1531,7 +1552,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1553,7 +1574,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1579,7 +1600,8 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -1604,7 +1626,8 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1629,7 +1652,8 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1659,67 +1683,70 @@ abstract class GenderSelected<T> implements RegisterState<T> {
 }
 
 /// @nodoc
-abstract class _$$AgeChangeSuccessImplCopyWith<T, $Res> {
-  factory _$$AgeChangeSuccessImplCopyWith(_$AgeChangeSuccessImpl<T> value,
-          $Res Function(_$AgeChangeSuccessImpl<T>) then) =
-      __$$AgeChangeSuccessImplCopyWithImpl<T, $Res>;
+abstract class _$$DateOfBirthChangeSuccessImplCopyWith<T, $Res> {
+  factory _$$DateOfBirthChangeSuccessImplCopyWith(
+          _$DateOfBirthChangeSuccessImpl<T> value,
+          $Res Function(_$DateOfBirthChangeSuccessImpl<T>) then) =
+      __$$DateOfBirthChangeSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({num currentValue});
+  $Res call({DateTime currentDate});
 }
 
 /// @nodoc
-class __$$AgeChangeSuccessImplCopyWithImpl<T, $Res>
-    extends _$RegisterStateCopyWithImpl<T, $Res, _$AgeChangeSuccessImpl<T>>
-    implements _$$AgeChangeSuccessImplCopyWith<T, $Res> {
-  __$$AgeChangeSuccessImplCopyWithImpl(_$AgeChangeSuccessImpl<T> _value,
-      $Res Function(_$AgeChangeSuccessImpl<T>) _then)
+class __$$DateOfBirthChangeSuccessImplCopyWithImpl<T, $Res>
+    extends _$RegisterStateCopyWithImpl<T, $Res,
+        _$DateOfBirthChangeSuccessImpl<T>>
+    implements _$$DateOfBirthChangeSuccessImplCopyWith<T, $Res> {
+  __$$DateOfBirthChangeSuccessImplCopyWithImpl(
+      _$DateOfBirthChangeSuccessImpl<T> _value,
+      $Res Function(_$DateOfBirthChangeSuccessImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentValue = null,
+    Object? currentDate = null,
   }) {
-    return _then(_$AgeChangeSuccessImpl<T>(
-      currentValue: null == currentValue
-          ? _value.currentValue
-          : currentValue // ignore: cast_nullable_to_non_nullable
-              as num,
+    return _then(_$DateOfBirthChangeSuccessImpl<T>(
+      currentDate: null == currentDate
+          ? _value.currentDate
+          : currentDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
 
 /// @nodoc
 
-class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
-  const _$AgeChangeSuccessImpl({required this.currentValue});
+class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
+  const _$DateOfBirthChangeSuccessImpl({required this.currentDate});
 
   @override
-  final num currentValue;
+  final DateTime currentDate;
 
   @override
   String toString() {
-    return 'RegisterState<$T>.ageChangeSuccess(currentValue: $currentValue)';
+    return 'RegisterState<$T>.dateOfBirthChangeSuccess(currentDate: $currentDate)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AgeChangeSuccessImpl<T> &&
-            (identical(other.currentValue, currentValue) ||
-                other.currentValue == currentValue));
+            other is _$DateOfBirthChangeSuccessImpl<T> &&
+            (identical(other.currentDate, currentDate) ||
+                other.currentDate == currentDate));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentValue);
+  int get hashCode => Object.hash(runtimeType, currentDate);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AgeChangeSuccessImplCopyWith<T, _$AgeChangeSuccessImpl<T>> get copyWith =>
-      __$$AgeChangeSuccessImplCopyWithImpl<T, _$AgeChangeSuccessImpl<T>>(
-          this, _$identity);
+  _$$DateOfBirthChangeSuccessImplCopyWith<T, _$DateOfBirthChangeSuccessImpl<T>>
+      get copyWith => __$$DateOfBirthChangeSuccessImplCopyWithImpl<T,
+          _$DateOfBirthChangeSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1731,7 +1758,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -1741,7 +1768,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function(String selectedEquipments) equipmentSelected,
     required TResult Function(String selectedInjury) injurySelected,
   }) {
-    return ageChangeSuccess(currentValue);
+    return dateOfBirthChangeSuccess(currentDate);
   }
 
   @override
@@ -1754,7 +1781,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1763,7 +1790,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function(String selectedEquipments)? equipmentSelected,
     TResult? Function(String selectedInjury)? injurySelected,
   }) {
-    return ageChangeSuccess?.call(currentValue);
+    return dateOfBirthChangeSuccess?.call(currentDate);
   }
 
   @override
@@ -1776,7 +1803,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -1786,8 +1813,8 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function(String selectedInjury)? injurySelected,
     required TResult orElse(),
   }) {
-    if (ageChangeSuccess != null) {
-      return ageChangeSuccess(currentValue);
+    if (dateOfBirthChangeSuccess != null) {
+      return dateOfBirthChangeSuccess(currentDate);
     }
     return orElse();
   }
@@ -1802,7 +1829,8 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -1814,7 +1842,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     required TResult Function(EquipmentSelected<T> value) equipmentSelected,
     required TResult Function(InjurySelected<T> value) injurySelected,
   }) {
-    return ageChangeSuccess(this);
+    return dateOfBirthChangeSuccess(this);
   }
 
   @override
@@ -1827,7 +1855,8 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1839,7 +1868,7 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult? Function(EquipmentSelected<T> value)? equipmentSelected,
     TResult? Function(InjurySelected<T> value)? injurySelected,
   }) {
-    return ageChangeSuccess?.call(this);
+    return dateOfBirthChangeSuccess?.call(this);
   }
 
   @override
@@ -1852,7 +1881,8 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -1865,21 +1895,22 @@ class _$AgeChangeSuccessImpl<T> implements AgeChangeSuccess<T> {
     TResult Function(InjurySelected<T> value)? injurySelected,
     required TResult orElse(),
   }) {
-    if (ageChangeSuccess != null) {
-      return ageChangeSuccess(this);
+    if (dateOfBirthChangeSuccess != null) {
+      return dateOfBirthChangeSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class AgeChangeSuccess<T> implements RegisterState<T> {
-  const factory AgeChangeSuccess({required final num currentValue}) =
-      _$AgeChangeSuccessImpl<T>;
+abstract class DateOfBirthChangeSuccess<T> implements RegisterState<T> {
+  const factory DateOfBirthChangeSuccess(
+          {required final DateTime currentDate}) =
+      _$DateOfBirthChangeSuccessImpl<T>;
 
-  num get currentValue;
+  DateTime get currentDate;
   @JsonKey(ignore: true)
-  _$$AgeChangeSuccessImplCopyWith<T, _$AgeChangeSuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DateOfBirthChangeSuccessImplCopyWith<T, _$DateOfBirthChangeSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1960,7 +1991,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -1983,7 +2014,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2005,7 +2036,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2031,7 +2062,8 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -2056,7 +2088,8 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2081,7 +2114,8 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2190,7 +2224,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -2213,7 +2247,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2235,7 +2269,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2261,7 +2295,8 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -2286,7 +2321,8 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2311,7 +2347,8 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2420,7 +2457,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -2443,7 +2480,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2465,7 +2502,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2491,7 +2528,8 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -2516,7 +2554,8 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2541,7 +2580,8 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2646,7 +2686,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -2669,7 +2709,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2691,7 +2731,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2717,7 +2757,8 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -2742,7 +2783,8 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2767,7 +2809,8 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2870,7 +2913,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -2893,7 +2936,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2915,7 +2958,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -2941,7 +2984,8 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -2966,7 +3010,8 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -2991,7 +3036,8 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -3095,7 +3141,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -3118,7 +3164,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -3140,7 +3186,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -3166,7 +3212,8 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -3191,7 +3238,8 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -3216,7 +3264,8 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?
@@ -3319,7 +3368,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
-    required TResult Function(num currentValue) ageChangeSuccess,
+    required TResult Function(DateTime currentDate) dateOfBirthChangeSuccess,
     required TResult Function(num currentValue) rulerOfHeightChangeSuccess,
     required TResult Function(num currentValue) rulerOfWeightChangeSuccess,
     required TResult Function(num currentValue)
@@ -3342,7 +3391,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
-    TResult? Function(num currentValue)? ageChangeSuccess,
+    TResult? Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult? Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult? Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -3364,7 +3413,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
-    TResult Function(num currentValue)? ageChangeSuccess,
+    TResult Function(DateTime currentDate)? dateOfBirthChangeSuccess,
     TResult Function(num currentValue)? rulerOfHeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfWeightChangeSuccess,
     TResult Function(num currentValue)? rulerOfTargetWeightChangeSuccess,
@@ -3390,7 +3439,8 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     required TResult Function(ToggleObscureText<T> value) toggleObscureText,
     required TResult Function(GoalSelected<T> value) goalSelected,
     required TResult Function(GenderSelected<T> value) genderSelected,
-    required TResult Function(AgeChangeSuccess<T> value) ageChangeSuccess,
+    required TResult Function(DateOfBirthChangeSuccess<T> value)
+        dateOfBirthChangeSuccess,
     required TResult Function(RulerOfHeightChangeSuccess<T> value)
         rulerOfHeightChangeSuccess,
     required TResult Function(RulerOfWeightChangeSuccess<T> value)
@@ -3415,7 +3465,8 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult? Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult? Function(GoalSelected<T> value)? goalSelected,
     TResult? Function(GenderSelected<T> value)? genderSelected,
-    TResult? Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult? Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult? Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult? Function(RulerOfWeightChangeSuccess<T> value)?
@@ -3440,7 +3491,8 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult Function(ToggleObscureText<T> value)? toggleObscureText,
     TResult Function(GoalSelected<T> value)? goalSelected,
     TResult Function(GenderSelected<T> value)? genderSelected,
-    TResult Function(AgeChangeSuccess<T> value)? ageChangeSuccess,
+    TResult Function(DateOfBirthChangeSuccess<T> value)?
+        dateOfBirthChangeSuccess,
     TResult Function(RulerOfHeightChangeSuccess<T> value)?
         rulerOfHeightChangeSuccess,
     TResult Function(RulerOfWeightChangeSuccess<T> value)?

@@ -10,7 +10,6 @@ class RegisterRequestBody {
   final String gender;
   final int height;
   final double weight;
-  final int age;
   @JsonKey(name: 'fitness_level')
   final String fitnessLevel;
   final PreferencesModel? preferences;
@@ -28,7 +27,6 @@ class RegisterRequestBody {
     required this.weight,
     required this.fitnessLevel,
     this.preferences,
-    required this.age,
     required this.injuries,
     this.dob,
   });

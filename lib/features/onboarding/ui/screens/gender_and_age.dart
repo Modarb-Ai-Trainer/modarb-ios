@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,40 +21,46 @@ class GenderAndAge extends StatelessWidget{
            child: Column(
              crossAxisAlignment: CrossAxisAlignment.center,
              children: [
-               Center(
-                 child: Text(
-                   'What’s Your gender ?',
-                   style: TextStyles.font19White700,
-                 ),
+               Text(
+                 'What’s Your gender ?',
+                 style: TextStyles.font19White700,
                ),
                verticalSpace(30),
                 const MaleAndFemale(),
+               verticalSpace(70),
+               Text(
+                 'What’s your date of birth ?',
+                 style: TextStyles.font19White700,
+               ),
                verticalSpace(30),
-               Center(
-                 child: Text(
-                   'How old are you ?',
-                   style: TextStyles.font19White700,
+               TextFormField(
+                 onTap: () => cubit.selectOfDate(context),
+                 decoration: InputDecoration(
+                   hintText: cubit.selectedDate != null
+                       ? '${cubit.selectedDate!.day}/${cubit.selectedDate!.month}/${cubit.selectedDate!.year}'
+                       : 'Select a Date',
                  ),
                ),
-               SizedBox(
-                 height: 250.h,
-                 child: CupertinoPicker(
-                   itemExtent: 32.0,
-                   squeeze: .8,
-                   scrollController: FixedExtentScrollController(initialItem: cubit.selectedAge),
-                   onSelectedItemChanged: (int index) {
-                     cubit.onAgeChange(index);
-                   },
-                   children: List.generate(100, (index) {
-                     return Center(
-                       child: Text(
-                         (index + 1).toString(),
-                         style: TextStyles.font20White600,
-                       ),
-                     );
-                   }),
-                 ),
-               ),
+
+               // SizedBox(
+               //   height: 250.h,
+               //   child: CupertinoPicker(
+               //     itemExtent: 32.0,
+               //     squeeze: .8,
+               //     scrollController: FixedExtentScrollController(initialItem: cubit.selectedAge),
+               //     onSelectedItemChanged: (int index) {
+               //       cubit.onAgeChange(index);
+               //     },
+               //     children: List.generate(100, (index) {
+               //       return Center(
+               //         child: Text(
+               //           (index + 1).toString(),
+               //           style: TextStyles.font20White600,
+               //         ),
+               //       );
+               //     }),
+               //   ),
+               // ),
              ],
            ),
          ),

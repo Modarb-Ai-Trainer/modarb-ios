@@ -34,7 +34,7 @@ class RegisterState<T> with _$RegisterState<T> {
 
   const factory RegisterState.goalSelected(String selectedGoal) = GoalSelected;
   const factory RegisterState.genderSelected(String gender) = GenderSelected;
-  const factory RegisterState.ageChangeSuccess({required num currentValue}) = AgeChangeSuccess;
+  const factory RegisterState.dateOfBirthChangeSuccess({required DateTime currentDate}) = DateOfBirthChangeSuccess;
   const factory RegisterState.rulerOfHeightChangeSuccess({required num currentValue}) = RulerOfHeightChangeSuccess;
   const factory RegisterState.rulerOfWeightChangeSuccess({required num currentValue}) = RulerOfWeightChangeSuccess;
   const factory RegisterState.rulerOfTargetWeightChangeSuccess({required num currentValue}) = RulerOfTargetWeightChangeSuccess;

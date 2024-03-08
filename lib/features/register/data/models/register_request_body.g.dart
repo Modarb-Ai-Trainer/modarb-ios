@@ -20,7 +20,6 @@ RegisterRequestBody _$RegisterRequestBodyFromJson(Map<String, dynamic> json) =>
           ? null
           : PreferencesModel.fromJson(
               json['preferences'] as Map<String, dynamic>),
-      age: json['age'] as int,
       injuries:
           (json['injuries'] as List<dynamic>).map((e) => e as String).toList(),
       dob: json['dob'] as String?,
@@ -36,7 +35,6 @@ Map<String, dynamic> _$RegisterRequestBodyToJson(
       'gender': instance.gender,
       'height': instance.height,
       'weight': instance.weight,
-      'age': instance.age,
       'fitness_level': instance.fitnessLevel,
       'preferences': instance.preferences,
       'injuries': instance.injuries,

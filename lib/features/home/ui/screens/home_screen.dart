@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget{
           'Hey,\n User ',
           style:TextStyles.font13White600,
         ),
-        titleSpacing: 0,
+        titleSpacing: 5,
         actions: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.h),

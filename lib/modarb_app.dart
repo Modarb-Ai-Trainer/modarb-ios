@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
+import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
@@ -18,30 +19,37 @@ class ModarbApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(360, 690),
-      child: BlocProvider(
-        create: (context) => getIt<LoginCubit>(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+          create: (context) => getIt<LoginCubit>(),
+          ),
+          BlocProvider(
+          create: (context) => getIt<RegisterCubit>(),
+          ),
+        ],
         child: MaterialApp(
           theme: ThemeData.dark().copyWith(
             primaryColor: ColorsManager.mainPurple,
             scaffoldBackgroundColor: ColorsManager.darkGray,
-            appBarTheme: AppBarTheme(
+            appBarTheme: const AppBarTheme(
               backgroundColor: ColorsManager.darkGray,
-              shape: const RoundedRectangleBorder(
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 ),
               ),
               elevation: 0,
-              iconTheme: const IconThemeData(
+              iconTheme: IconThemeData(
                 color: Colors.white,
               ),
             ),
           ),
           debugShowCheckedModeBanner: false,
-          // initialRoute: Routes.firstSplash,
-          // onGenerateRoute: appRouter.generateRoute,
-          home: const HomePage(),
+          initialRoute: Routes.firstSplash,
+          onGenerateRoute: appRouter.generateRoute,
+          // home: const HomePage(),
         ),
       ),
     );
