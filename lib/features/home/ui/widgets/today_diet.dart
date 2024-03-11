@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
@@ -6,8 +5,8 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 
-class TodayWorkout extends StatelessWidget{
-  const TodayWorkout({Key? key}) : super(key: key);
+class TodayDiet extends StatelessWidget{
+  const TodayDiet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class TodayWorkout extends StatelessWidget{
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Crush Today’s Workout',
+          'Today’s diet',
           style: TextStyles.font19White700,
         ),
         verticalSpace(20),
@@ -27,7 +26,8 @@ class TodayWorkout extends StatelessWidget{
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.r),
               ),
-              child: Image.asset('assets/images/plans.png',
+              child: Image.asset(
+                'assets/images/plans.png',
                 fit: BoxFit.fill,
 
               ),
@@ -37,36 +37,30 @@ class TodayWorkout extends StatelessWidget{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Text(
+                    '3 meals ',
+                    style: TextStyles.font16White700,
+                  ),
+                  horizontalSpace(40),
+                  Text(
+                      '1 snack',
+                    style: TextStyles.font16White700,
+                  ),
+                  horizontalSpace(50),
                   Container(
                     height: 25.h,
-                    width: 70.w,
+                    width: 100.w,
                     decoration: BoxDecoration(
                       color: ColorsManager.mainPurple,
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child: Center(
                       child: Text(
-                        '30 min',
+                        '2150 Kcal',
                         style: TextStyles.font13White600,
                       ),
                     ),
                   ),
-                  horizontalSpace(25),
-                  Container(
-                    height: 25.h,
-                    width: 90.w,
-                    decoration: BoxDecoration(
-                      color: ColorsManager.mainPurple,
-                      borderRadius: BorderRadius.circular(16.r),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '6 exercise ',
-                        style: TextStyles.font13White600,
-                      ),
-                    ),
-                  ),
-                  horizontalSpace(20),
                 ],
               ),
             ),
@@ -74,14 +68,15 @@ class TodayWorkout extends StatelessWidget{
               bottom: 5.h,
               right: 80.w,
               child: AppTextButton(
-                buttonText: 'continue',
+                buttonText: 'view',
                 buttonWidth: 140.w,
-                buttonHeight: 30.h,
-                backgroundColor: ColorsManager.lighterWhite,
+                buttonHeight: 35.h,
+                colorOfSide: ColorsManager.mainPurple,
+                backgroundColor: Colors.transparent,
                 textColor: ColorsManager.mainPurple,
                 onPressed: (){},
               ),
-            ),
+            )
           ],
         ),
       ],

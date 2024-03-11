@@ -7,6 +7,8 @@ import '../theming/colors.dart';
 class AppTextButton extends StatelessWidget {
   final double? borderRadius;
   final Color? backgroundColor;
+  final Color? textColor;
+  final Color? colorOfSide;
   final double? horizontalPadding;
   final double? verticalPadding;
   final double? buttonWidth;
@@ -25,6 +27,8 @@ class AppTextButton extends StatelessWidget {
     this.textStyle,
     required this.buttonText,
     required this.onPressed,
+    this.textColor,
+    this.colorOfSide,
   });
 
   @override
@@ -34,6 +38,13 @@ class AppTextButton extends StatelessWidget {
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
+          ),
+
+        ),
+        side: MaterialStatePropertyAll(
+          BorderSide(
+            color: colorOfSide ??  Colors.transparent,
+            width: 3.0,
           ),
         ),
         backgroundColor: MaterialStatePropertyAll(
@@ -47,7 +58,10 @@ class AppTextButton extends StatelessWidget {
       child: Center(
         child: Text(
           buttonText,
-          style: textStyle ?? TextStyles.font20White600,
+          textAlign: TextAlign.center,
+          style: (textStyle ?? TextStyles.font20White600).copyWith(
+            color: textColor ?? Colors.white,
+          ),
         ),
       ),
     );

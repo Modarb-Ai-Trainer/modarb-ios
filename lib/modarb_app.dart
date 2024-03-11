@@ -47,9 +47,9 @@ class ModarbApp extends StatelessWidget{
             ),
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.firstSplash,
-          onGenerateRoute: appRouter.generateRoute,
-          // home: const HomePage(),
+          // initialRoute: Routes.firstSplash,
+          // onGenerateRoute: appRouter.generateRoute,
+          home: const HomePage(),
         ),
       ),
     );
