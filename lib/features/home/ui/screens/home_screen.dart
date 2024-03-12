@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/features/home/ui/widgets/circle_progress_of_kcal.dart';
 import 'package:modarb_app/features/home/ui/widgets/container_of_weeks.dart';
+import 'package:modarb_app/features/home/ui/widgets/daily_intake.dart';
 import 'package:modarb_app/features/home/ui/widgets/list_of_plans.dart';
 import 'package:modarb_app/features/home/ui/widgets/today_diet.dart';
 import 'package:modarb_app/features/home/ui/widgets/today_workout.dart';
@@ -52,6 +54,10 @@ class HomeScreen extends StatelessWidget{
               const TodayWorkout(),
               verticalSpace(20),
               const TodayDiet(),
+              verticalSpace(20),
+              const DailyIntake(),
+              verticalSpace(20),
+
 
             ],
           ),

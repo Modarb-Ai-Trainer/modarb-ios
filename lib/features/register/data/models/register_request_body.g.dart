@@ -45,10 +45,6 @@ PreferencesModel _$PreferencesModelFromJson(Map<String, dynamic> json) =>
     PreferencesModel(
       fitnessGoal: json['fitness_goal'] as String,
       targetWeight: json['target_weight'] as int,
-      workoutFrequency: json['workout_frequency'] as int,
-      preferredDays: (json['preferred_days'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
       workoutPlace: json['workout_place'] as String,
       preferredEquipment: (json['preferred_equipment'] as List<dynamic>)
           .map((e) => e as String)
@@ -59,8 +55,6 @@ Map<String, dynamic> _$PreferencesModelToJson(PreferencesModel instance) =>
     <String, dynamic>{
       'fitness_goal': instance.fitnessGoal,
       'target_weight': instance.targetWeight,
-      'workout_frequency': instance.workoutFrequency,
-      'preferred_days': instance.preferredDays,
       'workout_place': instance.workoutPlace,
       'preferred_equipment': instance.preferredEquipment,
     };

@@ -192,8 +192,7 @@ class RegisterCubit extends Cubit<RegisterState> {
             workoutPlace: selectedLocation.toLowerCase(),
             preferredEquipment: selectedEquipments,
             targetWeight: currentTargetWeight.toInt(),
-            workoutFrequency: 0,
-            // preferredDays: [],
+
           ),
 
         ),

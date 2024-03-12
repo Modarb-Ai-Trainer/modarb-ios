@@ -82,6 +82,13 @@ class TextStyles {
 
   );
 
+  static TextStyle font12White600 = GoogleFonts.montserrat(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManager.lighterWhite,
+
+  );
+
 
 
 

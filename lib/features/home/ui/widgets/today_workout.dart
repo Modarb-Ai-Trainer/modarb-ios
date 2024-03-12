@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
@@ -22,7 +21,7 @@ class TodayWorkout extends StatelessWidget{
         Stack(
           children: [
             Container(
-              height: 170.h,
+              height: 180.h,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.r),
@@ -33,6 +32,15 @@ class TodayWorkout extends StatelessWidget{
               ),
             ),
             Positioned(
+              left: 10.h,
+              top: 50.h,
+              child: Text(
+                'Full Body',
+                style: TextStyles.font19White700,
+              ),
+            ),
+            Positioned(
+              right: 10.h,
               top: 80.h,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,7 +59,7 @@ class TodayWorkout extends StatelessWidget{
                       ),
                     ),
                   ),
-                  horizontalSpace(25),
+                  horizontalSpace(30),
                   Container(
                     height: 25.h,
                     width: 90.w,
@@ -66,7 +74,25 @@ class TodayWorkout extends StatelessWidget{
                       ),
                     ),
                   ),
-                  horizontalSpace(20),
+                  horizontalSpace(80),
+                  Stack(
+                     alignment: Alignment.center,
+                     children: [
+                        SizedBox(
+                         width: 40.w,
+                         height: 40.h,
+                         child: const CircularProgressIndicator(
+                           value: 70,
+                           valueColor: AlwaysStoppedAnimation<Color>(ColorsManager.mainPurple),
+                           strokeWidth: 5,
+                         ),
+                       ),
+                       Text(
+                         '70 %',
+                         style: TextStyles.font12White600,
+                       ),
+                     ],
+                   ),
                 ],
               ),
             ),
