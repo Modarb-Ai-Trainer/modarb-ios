@@ -10,24 +10,27 @@ class ListOfPlans extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200.h,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('My Plans',
-            style: TextStyles.font19White700,
-          ),
-          verticalSpace(20),
-          Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context,index) => itemOfPlan(),
-              itemCount: 5,
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 20.h),
+      child: SizedBox(
+        height: 200.h,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('My Plans',
+              style: TextStyles.font19White700,
             ),
-          ),
-        ],
+            verticalSpace(20),
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context,index) => itemOfPlan(),
+                itemCount: 5,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

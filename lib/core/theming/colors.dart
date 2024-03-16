@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class ColorsManager{
   static const Color mainPurple = Color(0xFF6739FF);
   static const Color lightPurple = Color(0xFF997AFF);
+  static const Color lighterPurple = Color(0xFFD0C2FF);
+
   static const Color shadowPurple = Color(0xFF6739FF);
   static const Color mainYellow = Color(0xFFDEAB26);
   static const Color mainWhite = Color(0xFFF0EBFF);
