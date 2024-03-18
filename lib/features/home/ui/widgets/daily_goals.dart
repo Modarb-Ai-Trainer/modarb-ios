@@ -10,7 +10,7 @@ class DailyGoals extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(vertical: 20.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

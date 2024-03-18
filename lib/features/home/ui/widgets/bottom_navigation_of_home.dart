@@ -19,6 +19,7 @@ class BottomNavigationOfHome extends StatelessWidget {
       backgroundColor: ColorsManager.darkGray,
       color: ColorsManager.lightGray,
       buttonBackgroundColor: ColorsManager.mainPurple,
+      height: 60.h,
       items:  [
         CurvedNavigationBarItem(
           child: SvgPicture.asset('assets/icons/Vector_home.svg',
