@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
 class BuildListTile extends StatelessWidget{
   final String title ;
-  final IconData icon;
+  final String image ;
   final VoidCallback onTap;
 
-  const BuildListTile({Key? key, required this.title, required this.icon, required this.onTap}) : super(key: key);
+  const BuildListTile({Key? key, required this.title, required this.onTap, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +29,9 @@ class BuildListTile extends StatelessWidget{
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Row(
               children: [
-                Icon(
-                  icon,
-                  size: 30.sp,
-                  color: ColorsManager.mainPurple,
+                SvgPicture.asset(
+                  image,
+                  height: 25.sp,
                 ),
                 horizontalSpace(15),
                 Text(

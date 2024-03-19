@@ -29,32 +29,32 @@ class MoreInfoScreen extends StatelessWidget{
         children: [
           BuildListTile(
             title: 'My profile',
-            icon: Icons.person,
+            image: 'assets/icons/user.svg',
             onTap: (){},
           ),
           BuildListTile(
             title: 'Progress',
-            icon: Icons.ac_unit,
+            image: 'assets/icons/goal.svg',
             onTap: (){},
           ),
           BuildListTile(
             title: 'Injury Care Center',
-            icon: Icons.ac_unit,
+            image: 'assets/icons/care.svg',
             onTap: (){},
           ),
           BuildListTile(
             title: 'Challenges',
-            icon: Icons.ac_unit,
+           image: 'assets/icons/challenges.svg',
             onTap: (){},
           ),
           BuildListTile(
             title: 'Reminders',
-            icon: Icons.ac_unit,
+            image: 'assets/icons/bell.svg',
             onTap: (){},
           ),
           BuildListTile(
             title: 'Settings',
-            icon: Icons.settings,
+            image: 'assets/icons/setting.svg',
             onTap: (){},
           ),
         ],
