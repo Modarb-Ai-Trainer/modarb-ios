@@ -7,7 +7,6 @@ import 'core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/theming/colors.dart';
-import 'features/home/ui/home_page.dart';
 
 
 class ModarbApp extends StatelessWidget{
@@ -47,9 +46,8 @@ class ModarbApp extends StatelessWidget{
             ),
           ),
           debugShowCheckedModeBanner: false,
-          // initialRoute: Routes.firstSplash,
-          // onGenerateRoute: appRouter.generateRoute,
-          home: const HomePage(),
+          initialRoute: Routes.homePage,
+          onGenerateRoute: appRouter.generateRoute,
         ),
       ),
     );

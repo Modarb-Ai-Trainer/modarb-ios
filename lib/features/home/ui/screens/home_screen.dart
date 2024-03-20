@@ -7,7 +7,7 @@ import 'package:modarb_app/features/home/ui/widgets/daily_goals.dart';
 import 'package:modarb_app/features/home/ui/widgets/daily_intake.dart';
 import 'package:modarb_app/features/home/ui/widgets/list_of_plans.dart';
 import 'package:modarb_app/features/home/ui/widgets/today_diet.dart';
-import 'package:modarb_app/features/home/ui/widgets/today_workout.dart';
+import 'package:modarb_app/features/home/ui/widgets/today_workout_widget.dart';
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen({Key? key}) : super(key: key);
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget{
             children: [
               ContainerOfWeeks(),
               ListOfPlans(),
-              TodayWorkout(),
+              TodayWorkoutWidget(),
               TodayDiet(),
               DailyIntake(),
               DailyGoals(),

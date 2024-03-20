@@ -11,5 +11,8 @@ class Routes {
   static const String trainerAfterLoading = '/trainerAfterLoading';
 
   static const String homePage = '/homePage';
+  static const String todayWorkoutScreen = '/todayWorkoutScreen';
+  static const String nutritionScreen = '/nutritionScreen';
+
 
 }

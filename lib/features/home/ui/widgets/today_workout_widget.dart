@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 
-class TodayWorkout extends StatelessWidget{
-  const TodayWorkout({Key? key}) : super(key: key);
+class TodayWorkoutWidget extends StatelessWidget{
+  const TodayWorkoutWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +109,9 @@ class TodayWorkout extends StatelessWidget{
                   buttonHeight: 30.h,
                   backgroundColor: ColorsManager.lighterWhite,
                   textColor: ColorsManager.mainPurple,
-                  onPressed: (){},
+                  onPressed: (){
+                    context.pushNamed(Routes.todayWorkoutScreen);
+                  },
                 ),
               ),
             ],
