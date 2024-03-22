@@ -4,7 +4,7 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 
-class TodayWorkoutScreen extends StatelessWidget{
+class TodayWorkoutScreen extends StatelessWidget {
   const TodayWorkoutScreen({Key? key}) : super(key: key);
 
   @override
@@ -25,24 +25,25 @@ class TodayWorkoutScreen extends StatelessWidget{
                     fit: BoxFit.cover,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 80.h),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 15.h, vertical: 80.h),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Day 1',
-                          style : TextStyles.font28White700,
+                          style: TextStyles.font28White700,
                         ),
                         Text(
                           'Full-body workout',
-                          style : TextStyles.font23White700,
+                          style: TextStyles.font23White700,
                         ),
                         verticalSpace(20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                                'Exercises\n        6',
+                              'Exercises\n        6',
                               style: TextStyles.font13White700,
                             ),
                             Text(
@@ -65,7 +66,7 @@ class TodayWorkoutScreen extends StatelessWidget{
                       buttonText: 'Start Workout',
                       buttonWidth: 180.w,
                       buttonHeight: 40.h,
-                      onPressed: (){},
+                      onPressed: () {},
                     ),
                   ),
                 ],
@@ -74,35 +75,36 @@ class TodayWorkoutScreen extends StatelessWidget{
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
-                  (BuildContext context , index) => ListTile(
-                    title: Text(
-                      'chest press',
-                      style: TextStyles.font16White700,
+              (BuildContext context, index) => ListTile(
+                title: Text(
+                  'chest press',
+                  style: TextStyles.font16White700,
+                ),
+                subtitle: Text(
+                  '4 sets x  12-15 reps',
+                  style: TextStyles.font12White600,
+                ),
+                leading: SizedBox(
+                  width: 70.w,
+                  height: 60.h,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.r),
+                    child: Image.asset(
+                      'assets/images/Muscles1.png',
+                      fit: BoxFit.fill,
+
                     ),
-                    subtitle: Text(
-                '4 sets x  12-15 reps',
-                style: TextStyles.font12White600,
-              ),
-                    leading: Container(
-                width: 60.w,
-                height: 60.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.r),
-                ),
-                child: Image.asset(
-                  'assets/images/Muscles1.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-                    trailing: AppTextButton(
-                buttonText: 'chest',
-                textStyle: TextStyles.font13White700,
-                borderRadius: 20,
-                buttonWidth: 70.w,
-                buttonHeight: 20.h,
-                onPressed: (){},
-              ),
                   ),
+                ),
+                trailing: AppTextButton(
+                  buttonText: 'chest',
+                  textStyle: TextStyles.font13White700,
+                  borderRadius: 20,
+                  buttonWidth: 70.w,
+                  buttonHeight: 20.h,
+                  onPressed: () {},
+                ),
+              ),
               childCount: 6,
             ),
           ),
