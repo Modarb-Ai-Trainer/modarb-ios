@@ -11,7 +11,6 @@ class TodayWorkoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             expandedHeight: 300.h,
@@ -73,39 +72,41 @@ class TodayWorkoutScreen extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, index) => ListTile(
-                title: Text(
-                  'chest press',
-                  style: TextStyles.font16White700,
-                ),
-                subtitle: Text(
-                  '4 sets x  12-15 reps',
-                  style: TextStyles.font12White600,
-                ),
-                leading: SizedBox(
-                  width: 70.w,
-                  height: 60.h,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.r),
-                    child: Image.asset(
-                      'assets/images/Muscles1.png',
-                      fit: BoxFit.fill,
+          SliverFillRemaining(
+            child: ListView.builder(
+              itemCount: 16,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(
+                    'chest press',
+                    style: TextStyles.font16White700,
+                  ),
+                  subtitle: Text(
+                    '4 sets x  12-15 reps',
+                    style: TextStyles.font12White600,
+                  ),
+                  leading: SizedBox(
+                    width: 70.w,
+                    height: 60.h,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.r),
+                      child: Image.asset(
+                        'assets/images/Muscles1.png',
+                        fit: BoxFit.fill,
 
+                      ),
                     ),
                   ),
-                ),
-                trailing: AppTextButton(
-                  buttonText: 'chest',
-                  textStyle: TextStyles.font13White700,
-                  borderRadius: 20,
-                  buttonWidth: 70.w,
-                  buttonHeight: 20.h,
-                  onPressed: () {},
-                ),
-              ),
-              childCount: 6,
+                  trailing: AppTextButton(
+                    buttonText: 'chest',
+                    textStyle: TextStyles.font13White700,
+                    borderRadius: 20,
+                    buttonWidth: 70.w,
+                    buttonHeight: 20.h,
+                    onPressed: () {},
+                  ),
+                );
+              },
             ),
           ),
         ],
