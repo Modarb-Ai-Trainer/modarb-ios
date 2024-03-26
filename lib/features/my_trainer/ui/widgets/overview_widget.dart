@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_vertical_divider.dart';
@@ -79,6 +80,58 @@ class OverViewWidget extends StatelessWidget{
               fontWeight: FontWeight.w600,
             ),
           ),
+          verticalSpace(35),
+          Row(
+            children: [
+              const AppVerticalDivider(),
+              horizontalSpace(7),
+              Text(
+                'About the plan',
+                style: TextStyles.font16White700,
+              ),
+
+            ],
+          ),
+          verticalSpace(25),
+          Row(
+            children: [
+              SvgPicture.asset('assets/icons/location.svg'),
+              horizontalSpace(10),
+              Text(
+                'home &gym',
+                style: TextStyles.font13White700,
+              ),
+              horizontalSpace(40),
+
+              SvgPicture.asset('assets/icons/train.svg'),
+              horizontalSpace(10),
+              Text(
+                'Equipment Diversity',
+                style: TextStyles.font13White700,
+              ),
+            ],
+          ),
+          verticalSpace(20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SvgPicture.asset('assets/icons/time.svg'),
+              horizontalSpace(10),
+              Text(
+                '30 min / day',
+                style: TextStyles.font13White700,
+              ),
+              horizontalSpace(40),
+              SvgPicture.asset('assets/icons/date .svg'),
+              horizontalSpace(10),
+              Text(
+                '16 day',
+                style: TextStyles.font13White700,
+              ),
+
+            ],
+          ),
+
         ],
       ),
     );

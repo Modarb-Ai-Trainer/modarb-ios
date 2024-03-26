@@ -6,6 +6,7 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/core/widgets/app_text_container.dart';
 
 class TodayWorkoutWidget extends StatelessWidget{
   const TodayWorkoutWidget({Key? key}) : super(key: key);
@@ -49,34 +50,14 @@ class TodayWorkoutWidget extends StatelessWidget{
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 25.h,
-                      width: 70.w,
-                      decoration: BoxDecoration(
-                        color: ColorsManager.mainPurple,
-                        borderRadius: BorderRadius.circular(16.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          '30 min',
-                          style: TextStyles.font13White600,
-                        ),
-                      ),
+                    const AppTextContainer(
+                      text: '30 min',
                     ),
                     horizontalSpace(30),
-                    Container(
-                      height: 25.h,
+                    AppTextContainer(
+                      text: '6 exercise',
                       width: 90.w,
-                      decoration: BoxDecoration(
-                        color: ColorsManager.mainPurple,
-                        borderRadius: BorderRadius.circular(16.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          '6 exercise ',
-                          style: TextStyles.font13White600,
-                        ),
-                      ),
+                      height: 25.h,
                     ),
                     horizontalSpace(80),
                     Stack(

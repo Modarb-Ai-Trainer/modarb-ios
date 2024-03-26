@@ -4,6 +4,7 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/core/widgets/app_vertical_divider.dart';
+import 'package:modarb_app/features/my_trainer/ui/widgets/image_of_plan_widget.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/overview_widget.dart';
 
 class TrainerScreen extends StatefulWidget {
@@ -149,6 +150,7 @@ class _TrainerScreenState extends State<TrainerScreen> {
                 child: Column(
                   children: [
                     OverViewWidget(),
+                    ImageOfPlanWidget(),
                   ],
                 ),
               ),
