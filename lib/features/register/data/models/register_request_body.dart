@@ -43,6 +43,10 @@ class PreferencesModel {
   final String fitnessGoal;
   @JsonKey(name: 'target_weight')
   final int targetWeight;
+  @JsonKey(name: 'workout_frequency')
+  final int? workoutFrequency;
+  @JsonKey(name: 'preferred_days')
+  final List<String>? preferredDays;
   @JsonKey(name: 'workout_place')
   final String workoutPlace;
   @JsonKey(name: 'preferred_equipment')
@@ -51,6 +55,8 @@ class PreferencesModel {
 
 
   PreferencesModel({
+    this.workoutFrequency,
+    this.preferredDays,
     required this.fitnessGoal,
     required this.targetWeight,
     required this.workoutPlace,

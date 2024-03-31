@@ -21,7 +21,8 @@ mixin _$RegisterState<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -41,7 +42,7 @@ mixin _$RegisterState<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -60,7 +61,7 @@ mixin _$RegisterState<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -206,7 +207,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -229,7 +231,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -251,7 +253,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -399,7 +401,8 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -422,7 +425,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -444,7 +447,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -620,7 +623,8 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -643,7 +647,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -665,7 +669,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -783,7 +787,9 @@ abstract class _$$RegisterErrorImplCopyWith<T, $Res> {
           $Res Function(_$RegisterErrorImpl<T>) then) =
       __$$RegisterErrorImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String error});
+  $Res call({NetworkExceptions networkExceptions});
+
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions;
 }
 
 /// @nodoc
@@ -797,28 +803,36 @@ class __$$RegisterErrorImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = null,
+    Object? networkExceptions = null,
   }) {
     return _then(_$RegisterErrorImpl<T>(
-      error: null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == networkExceptions
+          ? _value.networkExceptions
+          : networkExceptions // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions {
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkExceptions, (value) {
+      return _then(_value.copyWith(networkExceptions: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$RegisterErrorImpl<T> implements RegisterError<T> {
-  const _$RegisterErrorImpl({required this.error});
+  const _$RegisterErrorImpl(this.networkExceptions);
 
   @override
-  final String error;
+  final NetworkExceptions networkExceptions;
 
   @override
   String toString() {
-    return 'RegisterState<$T>.registerError(error: $error)';
+    return 'RegisterState<$T>.registerError(networkExceptions: $networkExceptions)';
   }
 
   @override
@@ -826,11 +840,12 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegisterErrorImpl<T> &&
-            (identical(other.error, error) || other.error == error));
+            (identical(other.networkExceptions, networkExceptions) ||
+                other.networkExceptions == networkExceptions));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, error);
+  int get hashCode => Object.hash(runtimeType, networkExceptions);
 
   @JsonKey(ignore: true)
   @override
@@ -845,7 +860,8 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -859,7 +875,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult Function(String selectedEquipments) equipmentSelected,
     required TResult Function(String selectedInjury) injurySelected,
   }) {
-    return registerError(error);
+    return registerError(networkExceptions);
   }
 
   @override
@@ -868,7 +884,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -881,7 +897,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult? Function(String selectedEquipments)? equipmentSelected,
     TResult? Function(String selectedInjury)? injurySelected,
   }) {
-    return registerError?.call(error);
+    return registerError?.call(networkExceptions);
   }
 
   @override
@@ -890,7 +906,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -905,7 +921,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
     required TResult orElse(),
   }) {
     if (registerError != null) {
-      return registerError(error);
+      return registerError(networkExceptions);
     }
     return orElse();
   }
@@ -994,10 +1010,10 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
 }
 
 abstract class RegisterError<T> implements RegisterState<T> {
-  const factory RegisterError({required final String error}) =
+  const factory RegisterError(final NetworkExceptions networkExceptions) =
       _$RegisterErrorImpl<T>;
 
-  String get error;
+  NetworkExceptions get networkExceptions;
   @JsonKey(ignore: true)
   _$$RegisterErrorImplCopyWith<T, _$RegisterErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1073,7 +1089,8 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -1096,7 +1113,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -1118,7 +1135,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -1300,7 +1317,8 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -1323,7 +1341,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -1345,7 +1363,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -1525,7 +1543,8 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -1548,7 +1567,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -1570,7 +1589,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -1754,7 +1773,8 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -1777,7 +1797,7 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -1799,7 +1819,7 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -1987,7 +2007,8 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -2010,7 +2031,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -2032,7 +2053,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -2220,7 +2241,8 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -2243,7 +2265,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -2265,7 +2287,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -2453,7 +2475,8 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -2476,7 +2499,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -2498,7 +2521,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -2682,7 +2705,8 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -2705,7 +2729,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -2727,7 +2751,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -2909,7 +2933,8 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -2932,7 +2957,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -2954,7 +2979,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -3137,7 +3162,8 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -3160,7 +3186,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -3182,7 +3208,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,
@@ -3364,7 +3390,8 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     required TResult Function() initial,
     required TResult Function() registerLoading,
     required TResult Function(T data) registerSuccess,
-    required TResult Function(String error) registerError,
+    required TResult Function(NetworkExceptions networkExceptions)
+        registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
     required TResult Function(String gender) genderSelected,
@@ -3387,7 +3414,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
     TResult? Function(T data)? registerSuccess,
-    TResult? Function(String error)? registerError,
+    TResult? Function(NetworkExceptions networkExceptions)? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
     TResult? Function(String gender)? genderSelected,
@@ -3409,7 +3436,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
     TResult Function()? initial,
     TResult Function()? registerLoading,
     TResult Function(T data)? registerSuccess,
-    TResult Function(String error)? registerError,
+    TResult Function(NetworkExceptions networkExceptions)? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
     TResult Function(String gender)? genderSelected,

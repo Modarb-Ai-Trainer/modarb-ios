@@ -35,7 +35,7 @@ class RegisterBlocListener extends StatelessWidget {
             showSuccessDialog(context);
           },
           registerError: (error) {
-            setupErrorState(context, error);
+            // setupErrorState(context, error);
           },
         );
       },

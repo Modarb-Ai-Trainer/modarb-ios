@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/features/home/ui/screens/todays_workout_screen.dart';
-import 'package:modarb_app/features/home/ui/widgets/today_workout_widget.dart';
 import 'package:modarb_app/features/loading/ui/loading.dart';
+import 'package:modarb_app/features/my_trainer/ui/widgets/week_of_plan_screen.dart';
 import 'package:modarb_app/features/nutrition/ui/nutrition_screen.dart';
 import 'package:modarb_app/features/onboarding/ui/fitness_choise.dart';
 import 'package:modarb_app/features/register/ui/register_screen.dart';
@@ -82,6 +82,11 @@ class AppRouter {
         case Routes.nutritionScreen:
         return MaterialPageRoute(
           builder: (_) => const NutritionScreen(),
+        );
+
+      case Routes.weekOfPlanScreen:
+        return MaterialPageRoute(
+          builder: (_) => const WeekOfPlanScreen(),
         );
 
       default:

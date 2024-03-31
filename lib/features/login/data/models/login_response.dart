@@ -5,9 +5,9 @@ part 'login_response.g.dart';
 @JsonSerializable()
 class LoginResponse {
 
-  int? status;
-  String? message;
-  UserData? data;
+  final int? status;
+  final String? message;
+  final UserData? data;
 
   LoginResponse({this.status,this.message, this.data });
 
@@ -30,38 +30,35 @@ class UserData {
 
 @JsonSerializable()
 class UserModel {
-  PreferencesModel? preferences;
-  @JsonKey(name: '_id')
   String? id;
   String? name;
   String? email;
-  String? password;
+  String? role;
   String? gender;
+  String? age;
   String? height;
   String? weight;
   @JsonKey(name: 'fitness_level')
   String? fitnessLevel;
+  PreferencesModel? preferences;
   List<String>? injuries;
-  String? dob;
-  String? role;
-  @JsonKey(name: '__v')
-  String? v;
+
 
 
 UserModel({
-  this.preferences,
+
   this.id,
   this.name,
   this.email,
-  this.password,
+  this.role,
   this.gender,
+  this.age,
   this.height,
   this.weight,
   this.fitnessLevel,
+  this.preferences,
   this.injuries,
-  this.dob,
-  this.role,
-  this.v,
+
 });
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

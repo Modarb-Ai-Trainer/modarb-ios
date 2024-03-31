@@ -34,6 +34,7 @@ class TextAndBottomSheet extends StatelessWidget{
                 ),
               ),
               context: context,
+
               builder: (context){
                 return const FormOfLogin();
               },

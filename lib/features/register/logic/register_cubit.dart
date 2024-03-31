@@ -201,12 +201,12 @@ class RegisterCubit extends Cubit<RegisterState> {
       response.when(success: (signupResponse) {
         emit(RegisterState.registerSuccess(signupResponse));
       }, failure: (error) {
-        emit(RegisterState.registerError(error: error.apiErrorModel.message ?? ''));
+        // emit(RegisterState.registerError(networkExceptions ));
       });
     } catch (e) {
       // Handle any caught exceptions here
       print('An error occurred during registration: $e');
-      emit(const RegisterState.registerError(error: 'An error occurred during registration.'));
+      // emit(const RegisterState.registerError(error: 'An error occurred during registration.'));
     }
   }
 

@@ -19,19 +19,19 @@ mixin _$ApiResult<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(ErrorHandler errorHandler) failure,
+    required TResult Function(NetworkExceptions networkExceptions) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(ErrorHandler errorHandler)? failure,
+    TResult? Function(NetworkExceptions networkExceptions)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(ErrorHandler errorHandler)? failure,
+    TResult Function(NetworkExceptions networkExceptions)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,7 +140,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(ErrorHandler errorHandler) failure,
+    required TResult Function(NetworkExceptions networkExceptions) failure,
   }) {
     return success(data);
   }
@@ -149,7 +149,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(ErrorHandler errorHandler)? failure,
+    TResult? Function(NetworkExceptions networkExceptions)? failure,
   }) {
     return success?.call(data);
   }
@@ -158,7 +158,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(ErrorHandler errorHandler)? failure,
+    TResult Function(NetworkExceptions networkExceptions)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -214,7 +214,9 @@ abstract class _$$FailureImplCopyWith<T, $Res> {
           _$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
       __$$FailureImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({ErrorHandler errorHandler});
+  $Res call({NetworkExceptions networkExceptions});
+
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions;
 }
 
 /// @nodoc
@@ -228,28 +230,36 @@ class __$$FailureImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? errorHandler = null,
+    Object? networkExceptions = null,
   }) {
     return _then(_$FailureImpl<T>(
-      null == errorHandler
-          ? _value.errorHandler
-          : errorHandler // ignore: cast_nullable_to_non_nullable
-              as ErrorHandler,
+      null == networkExceptions
+          ? _value.networkExceptions
+          : networkExceptions // ignore: cast_nullable_to_non_nullable
+              as NetworkExceptions,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions {
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkExceptions, (value) {
+      return _then(_value.copyWith(networkExceptions: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$FailureImpl<T> implements Failure<T> {
-  const _$FailureImpl(this.errorHandler);
+  const _$FailureImpl(this.networkExceptions);
 
   @override
-  final ErrorHandler errorHandler;
+  final NetworkExceptions networkExceptions;
 
   @override
   String toString() {
-    return 'ApiResult<$T>.failure(errorHandler: $errorHandler)';
+    return 'ApiResult<$T>.failure(networkExceptions: $networkExceptions)';
   }
 
   @override
@@ -257,12 +267,12 @@ class _$FailureImpl<T> implements Failure<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailureImpl<T> &&
-            (identical(other.errorHandler, errorHandler) ||
-                other.errorHandler == errorHandler));
+            (identical(other.networkExceptions, networkExceptions) ||
+                other.networkExceptions == networkExceptions));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, errorHandler);
+  int get hashCode => Object.hash(runtimeType, networkExceptions);
 
   @JsonKey(ignore: true)
   @override
@@ -274,29 +284,29 @@ class _$FailureImpl<T> implements Failure<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(ErrorHandler errorHandler) failure,
+    required TResult Function(NetworkExceptions networkExceptions) failure,
   }) {
-    return failure(errorHandler);
+    return failure(networkExceptions);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(ErrorHandler errorHandler)? failure,
+    TResult? Function(NetworkExceptions networkExceptions)? failure,
   }) {
-    return failure?.call(errorHandler);
+    return failure?.call(networkExceptions);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(ErrorHandler errorHandler)? failure,
+    TResult Function(NetworkExceptions networkExceptions)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
-      return failure(errorHandler);
+      return failure(networkExceptions);
     }
     return orElse();
   }
@@ -334,9 +344,10 @@ class _$FailureImpl<T> implements Failure<T> {
 }
 
 abstract class Failure<T> implements ApiResult<T> {
-  const factory Failure(final ErrorHandler errorHandler) = _$FailureImpl<T>;
+  const factory Failure(final NetworkExceptions networkExceptions) =
+      _$FailureImpl<T>;
 
-  ErrorHandler get errorHandler;
+  NetworkExceptions get networkExceptions;
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;

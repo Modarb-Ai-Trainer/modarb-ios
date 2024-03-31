@@ -51,6 +51,7 @@ class FormOfLogin extends StatelessWidget{
                     if(value!.isEmpty){
                       return 'Password mustn\'t be empty';
                     }
+                    return null;
                   },
                 ),
                 verticalSpace(50.h),

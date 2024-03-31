@@ -35,38 +35,34 @@ Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
     };
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
+      id: json['id'] as String?,
+      name: json['name'] as String?,
+      email: json['email'] as String?,
+      role: json['role'] as String?,
+      gender: json['gender'] as String?,
+      age: json['age'] as String?,
+      height: json['height'] as String?,
+      weight: json['weight'] as String?,
+      fitnessLevel: json['fitness_level'] as String?,
       preferences: json['preferences'] == null
           ? null
           : PreferencesModel.fromJson(
               json['preferences'] as Map<String, dynamic>),
-      id: json['_id'] as String?,
-      name: json['name'] as String?,
-      email: json['email'] as String?,
-      password: json['password'] as String?,
-      gender: json['gender'] as String?,
-      height: json['height'] as String?,
-      weight: json['weight'] as String?,
-      fitnessLevel: json['fitness_level'] as String?,
       injuries: (json['injuries'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      dob: json['dob'] as String?,
-      role: json['role'] as String?,
-      v: json['__v'] as String?,
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
-      'preferences': instance.preferences,
-      '_id': instance.id,
+      'id': instance.id,
       'name': instance.name,
       'email': instance.email,
-      'password': instance.password,
+      'role': instance.role,
       'gender': instance.gender,
+      'age': instance.age,
       'height': instance.height,
       'weight': instance.weight,
       'fitness_level': instance.fitnessLevel,
+      'preferences': instance.preferences,
       'injuries': instance.injuries,
-      'dob': instance.dob,
-      'role': instance.role,
-      '__v': instance.v,
     };
