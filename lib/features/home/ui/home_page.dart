@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/di/dependency_injection.dart';
-import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/features/home/logic/home_cubit.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
 import 'package:modarb_app/features/home/ui/widgets/bottom_navigation_of_home.dart';
