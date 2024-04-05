@@ -6,12 +6,14 @@ import 'package:modarb_app/core/theming/styles.dart';
 class AppTextContainer extends StatelessWidget{
 
   final Color? textColor;
+  final TextStyle? textStyle;
+
   final String text;
   final Color? backgroundColor;
   final double? width;
   final double? height;
 
-  const AppTextContainer({Key? key, this.textColor, required this.text, this.backgroundColor, this.width, this.height}) : super(key: key);
+  const AppTextContainer({Key? key, this.textColor, required this.text, this.backgroundColor, this.width, this.height, this.textStyle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,9 @@ class AppTextContainer extends StatelessWidget{
       child: Center(
         child: Text(
           text,
-          style: TextStyles.font13White600,
+          style: (textStyle ?? TextStyles.font13White600).copyWith(
+            color: textColor ?? Colors.white,
+          ),
         ),
       ),
     );
