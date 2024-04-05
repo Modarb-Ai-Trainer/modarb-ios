@@ -10,70 +10,76 @@ class TargetMuscleTab extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric (horizontal: 10.w, vertical: 15.h),
-      child: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: ColorsManager.lighterGray,
-          borderRadius: BorderRadius.all(Radius.circular(16.0),),
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Muscles Worked',
-                style: TextStyles.font16White700,
-              ),
-              verticalSpace(10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric (horizontal: 10.w, vertical: 15.h),
+          child: Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: ColorsManager.lighterGray,
+              borderRadius: BorderRadius.all(Radius.circular(16.0),),
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        'primary',
-                        style: TextStyles.font16White700,
-                      ),
-                      verticalSpace(10),
-                      const AppTextContainer(
-                          text: 'chest',
-                         ),
-                    ],
+                  Text(
+                    'Muscles Worked',
+                    style: TextStyles.font16White700,
                   ),
-                  Column(
+                  verticalSpace(10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'secondary',
-                        style: TextStyles.font16White700,
+                      Column(
+                        children: [
+                          Text(
+                            'primary',
+                            style: TextStyles.font16White700,
+                          ),
+                          verticalSpace(10),
+                          const AppTextContainer(
+                            text: 'chest',
+                          ),
+                        ],
                       ),
-                      verticalSpace(10),
-                      AppTextContainer(
-                        text: 'shoulders',
-                        width: 100.w,
+                      Column(
+                        children: [
+                          Text(
+                            'secondary',
+                            style: TextStyles.font16White700,
+                          ),
+                          verticalSpace(10),
+                          AppTextContainer(
+                            text: 'shoulders',
+                            width: 100.w,
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
 
+
+                    ],
+                  ),
+                  verticalSpace(30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset('assets/images/chest.png'),
+                      Image.asset('assets/images/shoulder.png'),
+
+                    ],
+                  ),
 
                 ],
               ),
-              verticalSpace(30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset('assets/images/chest.png'),
-                  Image.asset('assets/images/shoulder.png'),
-
-                ],
-              ),
-
-            ],
+            ),
           ),
         ),
-      ),
+      ],
     );
 }
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/theming/colors.dart';
@@ -93,7 +94,7 @@ class ExerciseDetails extends StatelessWidget{
                         text: 'Target muscle',
                       ),
                       Tab(
-                        text: 'instructions',
+                        text: 'Instructions',
                       ),
                       Tab(
                         text: 'Equipment',
@@ -103,7 +104,7 @@ class ExerciseDetails extends StatelessWidget{
                 ),
               ),
               SizedBox(
-                height: 330.h,
+                height: MediaQuery.of(context).size.height ,
                 child: TabBarView(
                   controller: tabController,
                   children: const [
