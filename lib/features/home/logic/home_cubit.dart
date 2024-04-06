@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
-import 'package:modarb_app/features/my_trainer/ui/trainer_screen.dart';
+import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
 import 'package:modarb_app/features/workout/ui/workout_screen.dart';
 import '../../more_info/ui/more_info_screen.dart';
 import '../../nutrition/ui/nutrition_screen.dart';

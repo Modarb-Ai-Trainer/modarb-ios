@@ -3,7 +3,7 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/features/home/ui/screens/todays_workout_screen.dart';
 import 'package:modarb_app/features/loading/ui/loading.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/exercise_details.dart';
-import 'package:modarb_app/features/my_trainer/ui/widgets/week_of_plan_screen.dart';
+import 'package:modarb_app/features/my_trainer/ui/screens/week_of_plan_screen.dart';
 import 'package:modarb_app/features/nutrition/ui/nutrition_screen.dart';
 import 'package:modarb_app/features/onboarding/ui/fitness_choise.dart';
 import 'package:modarb_app/features/register/ui/register_screen.dart';
@@ -13,6 +13,7 @@ import 'package:modarb_app/features/splash/ui/screens/last_splash.dart';
 import 'package:modarb_app/features/splash/ui/screens/splash_screen.dart';
 import '../../features/home/ui/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
+import '../../features/my_trainer/ui/screens/warm_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 
 
@@ -93,6 +94,10 @@ class AppRouter {
         case Routes.exerciseDetails:
         return MaterialPageRoute(
           builder: (_) => const ExerciseDetails(),
+        );
+        case Routes.warmScreen:
+        return MaterialPageRoute(
+          builder: (_) => WarmScreen(),
         );
 
       default:

@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_container.dart';
@@ -27,7 +28,9 @@ class ExerciseDetails extends StatelessWidget{
            Padding(
              padding: const EdgeInsets.all(10.0),
              child: GestureDetector(
-               onTap: (){},
+               onTap: (){
+                 context.pushNamed(Routes.warmScreen);
+               },
                child: AppTextContainer(
                  text: 'Start',
                  textStyle: TextStyles.font16White700,
@@ -39,6 +42,7 @@ class ExerciseDetails extends StatelessWidget{
           ],
         ),
         body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               SizedBox(
