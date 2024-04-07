@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 
 class ListOfPlans extends StatelessWidget {
-
-
 
   const ListOfPlans({Key? key}) : super(key: key);
 
@@ -30,12 +30,21 @@ class ListOfPlans extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   itemOfPlan(
-                    'Workout plan',
-                    'assets/images/plans.png',
+                    text: 'Workout plan',
+                    pathOfImage:'assets/images/plans.png',
+                    onTap: (){
+                      context.pushNamed(Routes.myTrainerScreen);
+                    },
+
+
+
                   ),
                   itemOfPlan(
-                    'Nutrition plan',
-                    'assets/images/nutrition.png',
+                    text:'Nutrition plan',
+                    pathOfImage:'assets/images/nutrition.png',
+                    onTap: (){
+                      context.pushNamed(Routes.nutritionScreen);
+                    },
                   ),
 
                 ],
@@ -48,26 +57,29 @@ class ListOfPlans extends StatelessWidget {
     );
   }
 
-  Widget itemOfPlan(String text,String pathOfImage) => Padding(
-    padding: EdgeInsets.only(right: 14.w),
-    child: Stack(
-      alignment: Alignment.bottomRight,
-      children: [
-        Container(
-          height: 150.h,
-          width: 250.w,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+  Widget itemOfPlan({required String text,required String pathOfImage ,required VoidCallback onTap}) => GestureDetector(
+    onTap: onTap,
+    child: Padding(
+      padding: EdgeInsets.only(right: 14.w),
+      child: Stack(
+        alignment: Alignment.bottomRight,
+        children: [
+          Container(
+            height: 150.h,
+            width: 250.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Image.asset(
+              pathOfImage,
+              fit: BoxFit.cover,),
           ),
-          child: Image.asset(
-            pathOfImage,
-            fit: BoxFit.cover,),
-        ),
-        Text(
-          text,
-          style: TextStyles.font16White700,
-        ),
-      ],
+          Text(
+            text,
+            style: TextStyles.font16White700,
+          ),
+        ],
+      ),
     ),
   );
 }

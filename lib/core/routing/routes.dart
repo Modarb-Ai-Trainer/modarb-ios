@@ -12,6 +12,8 @@ class Routes {
 
   static const String homePage = '/homePage';
   static const String todayWorkoutScreen = '/todayWorkoutScreen';
+
+  static const String myTrainerScreen = '/myTrainerScreen';
   static const String nutritionScreen = '/nutritionScreen';
 
   static const String weekOfPlanScreen = '/weekOfPlanScreen';
