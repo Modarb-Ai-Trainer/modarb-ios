@@ -5,7 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 
-class ListOfPlans extends StatelessWidget{
+class ListOfPlans extends StatelessWidget {
+
+
+
   const ListOfPlans({Key? key}) : super(key: key);
 
   @override
@@ -17,16 +20,26 @@ class ListOfPlans extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('My Plans',
+            Text(
+              'My Plans',
               style: TextStyles.font19White700,
             ),
             verticalSpace(20),
             Expanded(
-              child: ListView.builder(
-                shrinkWrap: true,
+              child: ListView(
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context,index) => itemOfPlan(),
-                itemCount: 5,
+                children: [
+                  itemOfPlan(
+                    'Workout plan',
+                    'assets/images/plans.png',
+                  ),
+                  itemOfPlan(
+                    'Nutrition plan',
+                    'assets/images/nutrition.png',
+                  ),
+
+                ],
+
               ),
             ),
           ],
@@ -35,7 +48,7 @@ class ListOfPlans extends StatelessWidget{
     );
   }
 
-  Widget itemOfPlan() => Padding(
+  Widget itemOfPlan(String text,String pathOfImage) => Padding(
     padding: EdgeInsets.only(right: 14.w),
     child: Stack(
       alignment: Alignment.bottomRight,
@@ -46,11 +59,12 @@ class ListOfPlans extends StatelessWidget{
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Image.asset('assets/images/plans.png',
+          child: Image.asset(
+            pathOfImage,
             fit: BoxFit.cover,),
         ),
         Text(
-            'workout plan',
+          text,
           style: TextStyles.font16White700,
         ),
       ],
