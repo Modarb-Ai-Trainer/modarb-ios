@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/extension.dart';
-import 'package:modarb_app/core/networking/api_error_handler.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
@@ -32,8 +31,8 @@ class LoginBlocListener extends StatelessWidget {
             context.pop();
             context.pushNamed(Routes.homePage);
           },
-          error: (NetworkExceptions error) {
-            setupErrorState(context,NetworkExceptions.getErrorMessage(error));
+          error: (error) {
+            setupErrorState(context, error);
           },
         );
       },

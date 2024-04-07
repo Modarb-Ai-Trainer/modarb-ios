@@ -4,6 +4,7 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/before_Warming.dart';
+import 'package:modarb_app/features/my_trainer/ui/screens/exercise2.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/exersice1.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -24,11 +25,7 @@ class _WarmScreenState extends State<WarmScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
-            top: 20.h,
-            left: 20.h,
-            right: 20.h,
-          ),
+          padding: EdgeInsets.only(top: 20.h,),
           child: Column(
             children: [
               SmoothPageIndicator(
@@ -45,7 +42,7 @@ class _WarmScreenState extends State<WarmScreen> {
 
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
                 child: Row(
                   children: [
                     CircleAvatar(
@@ -72,10 +69,12 @@ class _WarmScreenState extends State<WarmScreen> {
                   physics: const BouncingScrollPhysics(),
                   controller: warmController,
                   children: const [
-                    BeforeWarming(),
-                    Exercise(),
-                    Exercise(),
-                    Exercise(),
+                    /// add the before warming screen in the state
+                    // BeforeWarming(),
+                    Exercise1(),
+                    Exercise2(),
+                    Exercise2(),
+                    Exercise1(),
                   ],
                   onPageChanged: (value){
                     setState(() {
@@ -85,47 +84,50 @@ class _WarmScreenState extends State<WarmScreen> {
 
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  IconButton(
-                    onPressed: (){
-                      warmController.previousPage(
-                        duration: const Duration(
-                          seconds: 1,
-                        ),
-                        curve: Curves.decelerate,
-                      );
-                    },
-                    icon: const Icon(Icons.arrow_circle_left_outlined,
-                      color:ColorsManager.mainPurple,
-                      size: 34,
+              Padding(
+                padding:EdgeInsets.symmetric(horizontal: 20.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: (){
+                        warmController.previousPage(
+                          duration: const Duration(
+                            seconds: 1,
+                          ),
+                          curve: Curves.decelerate,
+                        );
+                      },
+                      icon: const Icon(Icons.arrow_circle_left_outlined,
+                        color:ColorsManager.mainPurple,
+                        size: 34,
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: (){},
-                    icon: const Icon(Icons.check_circle_outline_sharp,
-                      color:ColorsManager.mainPurple,
-                      size: 44,
+                    IconButton(
+                      onPressed: (){},
+                      icon: const Icon(Icons.check_circle_outline_sharp,
+                        color:ColorsManager.mainPurple,
+                        size: 44,
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: (){
-                      warmController.nextPage(
-                        duration: const Duration(
-                          seconds: 1,
-                        ),
-                        curve: Curves.decelerate,
-                      );
-                    },
-                    icon: const Icon(Icons.arrow_circle_right_outlined,
-                      color:ColorsManager.mainPurple,
-                      size: 34,
+                    IconButton(
+                      onPressed: (){
+                        warmController.nextPage(
+                          duration: const Duration(
+                            seconds: 1,
+                          ),
+                          curve: Curves.decelerate,
+                        );
+                      },
+                      icon: const Icon(Icons.arrow_circle_right_outlined,
+                        color:ColorsManager.mainPurple,
+                        size: 34,
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
 
             ],

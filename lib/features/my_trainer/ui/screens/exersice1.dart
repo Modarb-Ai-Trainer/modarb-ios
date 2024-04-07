@@ -3,8 +3,8 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 
-class Exercise extends StatelessWidget{
-  const Exercise({Key? key}) : super(key: key);
+class Exercise1 extends StatelessWidget{
+  const Exercise1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
