@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
@@ -25,6 +26,9 @@ class ModarbApp extends StatelessWidget{
           ),
           BlocProvider(
           create: (context) => getIt<RegisterCubit>(),
+          ),
+          BlocProvider(
+          create: (context) => getIt<TrainerCubit>(),
           ),
         ],
         child: MaterialApp(

@@ -4,6 +4,8 @@ import 'package:modarb_app/features/home/data/repos/home_repo.dart';
 import 'package:modarb_app/features/home/logic/home_cubit.dart';
 import 'package:modarb_app/features/login/data/repos/login_repo.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
+import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/register/data/repos/register_repo.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import '../networking/api_service.dart';
@@ -27,4 +29,8 @@ Future<void> setupGetIt() async {
   // Home
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+
+  // Training
+  getIt.registerLazySingleton<TrainerRepo>(() => TrainerRepo(getIt()));
+  getIt.registerFactory<TrainerCubit>(() => TrainerCubit(getIt()));
 }
