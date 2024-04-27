@@ -20,6 +20,7 @@ class ExerciseDetails extends StatelessWidget{
     TabController? tabController;
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state){
+        final cubit = context.read<TrainerCubit>();
         return DefaultTabController(
           length: 3,
           child: Scaffold(
@@ -35,6 +36,7 @@ class ExerciseDetails extends StatelessWidget{
                   child: GestureDetector(
                     onTap: (){
                       context.pushNamed(Routes.beforeWarming);
+                      cubit.startTimerOfBeforeWarming();
                       Future.delayed(
                           const Duration(seconds: 15),() {
                         context.pushNamed(Routes.warmScreen);

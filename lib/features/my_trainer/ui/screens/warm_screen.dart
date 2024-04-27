@@ -13,7 +13,6 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WarmScreen extends StatelessWidget{
 
-
   const WarmScreen({Key? key}) : super(key: key);
 
   @override

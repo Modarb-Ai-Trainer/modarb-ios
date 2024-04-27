@@ -20,6 +20,7 @@ mixin _$TrainerState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
     required TResult Function() closingTraining,
   }) =>
       throw _privateConstructorUsedError;
@@ -27,6 +28,7 @@ mixin _$TrainerState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
     TResult? Function()? closingTraining,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,6 +36,7 @@ mixin _$TrainerState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
     TResult Function()? closingTraining,
     required TResult orElse(),
   }) =>
@@ -42,6 +45,7 @@ mixin _$TrainerState<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
     required TResult Function(ClosingTraining<T> value) closingTraining,
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +53,7 @@ mixin _$TrainerState<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +61,7 @@ mixin _$TrainerState<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     required TResult orElse(),
   }) =>
@@ -120,6 +126,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
     required TResult Function() closingTraining,
   }) {
     return initial();
@@ -130,6 +137,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
     TResult? Function()? closingTraining,
   }) {
     return initial?.call();
@@ -140,6 +148,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
     TResult Function()? closingTraining,
     required TResult orElse(),
   }) {
@@ -154,6 +163,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
     required TResult Function(ClosingTraining<T> value) closingTraining,
   }) {
     return initial(this);
@@ -164,6 +174,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
   }) {
     return initial?.call(this);
@@ -174,6 +185,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     required TResult orElse(),
   }) {
@@ -228,6 +240,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
     required TResult Function() closingTraining,
   }) {
     return beforeWarming();
@@ -238,6 +251,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
     TResult? Function()? closingTraining,
   }) {
     return beforeWarming?.call();
@@ -248,6 +262,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
     TResult Function()? closingTraining,
     required TResult orElse(),
   }) {
@@ -262,6 +277,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
     required TResult Function(ClosingTraining<T> value) closingTraining,
   }) {
     return beforeWarming(this);
@@ -272,6 +288,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
   }) {
     return beforeWarming?.call(this);
@@ -282,6 +299,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     required TResult orElse(),
   }) {
@@ -294,6 +312,154 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
 
 abstract class BeforeWarming<T> implements TrainerState<T> {
   const factory BeforeWarming() = _$BeforeWarmingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$CounterChangeImplCopyWith<T, $Res> {
+  factory _$$CounterChangeImplCopyWith(_$CounterChangeImpl<T> value,
+          $Res Function(_$CounterChangeImpl<T>) then) =
+      __$$CounterChangeImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int savedCounter});
+}
+
+/// @nodoc
+class __$$CounterChangeImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$CounterChangeImpl<T>>
+    implements _$$CounterChangeImplCopyWith<T, $Res> {
+  __$$CounterChangeImplCopyWithImpl(_$CounterChangeImpl<T> _value,
+      $Res Function(_$CounterChangeImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? savedCounter = null,
+  }) {
+    return _then(_$CounterChangeImpl<T>(
+      savedCounter: null == savedCounter
+          ? _value.savedCounter
+          : savedCounter // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CounterChangeImpl<T> implements CounterChange<T> {
+  const _$CounterChangeImpl({required this.savedCounter});
+
+  @override
+  final int savedCounter;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.counterChange(savedCounter: $savedCounter)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CounterChangeImpl<T> &&
+            (identical(other.savedCounter, savedCounter) ||
+                other.savedCounter == savedCounter));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, savedCounter);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CounterChangeImplCopyWith<T, _$CounterChangeImpl<T>> get copyWith =>
+      __$$CounterChangeImplCopyWithImpl<T, _$CounterChangeImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function() closingTraining,
+  }) {
+    return counterChange(savedCounter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function()? closingTraining,
+  }) {
+    return counterChange?.call(savedCounter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function()? closingTraining,
+    required TResult orElse(),
+  }) {
+    if (counterChange != null) {
+      return counterChange(savedCounter);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+  }) {
+    return counterChange(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+  }) {
+    return counterChange?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    required TResult orElse(),
+  }) {
+    if (counterChange != null) {
+      return counterChange(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CounterChange<T> implements TrainerState<T> {
+  const factory CounterChange({required final int savedCounter}) =
+      _$CounterChangeImpl<T>;
+
+  int get savedCounter;
+  @JsonKey(ignore: true)
+  _$$CounterChangeImplCopyWith<T, _$CounterChangeImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -336,6 +502,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
     required TResult Function() closingTraining,
   }) {
     return closingTraining();
@@ -346,6 +513,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
     TResult? Function()? closingTraining,
   }) {
     return closingTraining?.call();
@@ -356,6 +524,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
     TResult Function()? closingTraining,
     required TResult orElse(),
   }) {
@@ -370,6 +539,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
     required TResult Function(ClosingTraining<T> value) closingTraining,
   }) {
     return closingTraining(this);
@@ -380,6 +550,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
   }) {
     return closingTraining?.call(this);
@@ -390,6 +561,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     required TResult orElse(),
   }) {
