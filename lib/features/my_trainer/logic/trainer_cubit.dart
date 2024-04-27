@@ -13,7 +13,6 @@ class TrainerCubit extends Cubit<TrainerState> {
 
   var warmController = PageController();
   int index = 0;
-  bool isVisible = true;
 
 
   int counter = 15;
@@ -28,6 +27,27 @@ class TrainerCubit extends Cubit<TrainerState> {
         emit(TrainerState.counterChange(savedCounter: newCounter));
       } else {
         _timer.cancel();
+        startTimerOfWarming();
+      }
+    });
+
+  }
+
+
+  int counterOfWarming = 30;
+  int newCounterOfWarming = 30 ;
+  late Timer timerOfWarming;
+
+  void startTimerOfWarming() {
+    timerOfWarming = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (counterOfWarming > 0) {
+        counterOfWarming--;
+        newCounterOfWarming = counterOfWarming;
+        emit(TrainerState.counterChangeOfWarming(newCounter: newCounterOfWarming));
+      } else {
+        timerOfWarming.cancel();
+        emit(const TrainerState.warmingFinished());
+
       }
     });
 

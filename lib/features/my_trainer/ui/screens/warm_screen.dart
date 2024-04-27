@@ -74,8 +74,9 @@ class WarmScreen extends StatelessWidget{
                         Exercise1(),
                         Exercise2(),
                         Exercise2(),
-                        Exercise1(),
+                        Exercise2(),
                       ],
+
                       onPageChanged: (value){
                         cubit.index = value;
                       },

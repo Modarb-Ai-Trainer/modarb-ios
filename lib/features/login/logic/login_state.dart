@@ -1,7 +1,6 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:modarb_app/core/networking/api_error_handler.dart';
 
 part 'login_state.freezed.dart';
 

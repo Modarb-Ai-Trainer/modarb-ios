@@ -10,6 +10,8 @@ class TrainerState <T> with _$TrainerState<T> {
 
   const factory TrainerState.beforeWarming() = BeforeWarming;
   const factory TrainerState.counterChange({required int savedCounter}) = CounterChange;
+  const factory TrainerState.counterChangeOfWarming({required int newCounter}) = CounterChangeOfWarming;
+  const factory TrainerState.warmingFinished() = WarmingFinished;
   const factory TrainerState.closingTraining() = ClosingTraining;
 
 
