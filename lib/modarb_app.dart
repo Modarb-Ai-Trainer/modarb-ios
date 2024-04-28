@@ -50,7 +50,7 @@ class ModarbApp extends StatelessWidget{
             ),
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.homePage,
+          initialRoute: Routes.workoutInsights,
           onGenerateRoute: appRouter.generateRoute,
         ),
       ),
