@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
@@ -118,6 +120,9 @@ class WarmScreen extends StatelessWidget{
                               ),
                               curve: Curves.decelerate,
                             );
+                            if(cubit.index == 3) {
+                              context.pushReplacementNamed(Routes.completeWorkout);
+                            }
                           },
                           icon: const Icon(Icons.arrow_circle_right_outlined,
                             color:ColorsManager.mainPurple,

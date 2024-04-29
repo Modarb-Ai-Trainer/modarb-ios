@@ -9,6 +9,7 @@ import 'package:modarb_app/features/my_trainer/ui/screens/week_of_plan_screen.da
 import 'package:modarb_app/features/nutrition/ui/nutrition_screen.dart';
 import 'package:modarb_app/features/onboarding/ui/fitness_choise.dart';
 import 'package:modarb_app/features/register/ui/register_screen.dart';
+import 'package:modarb_app/features/smart_trainer/ui/screens/smart_trainer_after_complete_workout.dart';
 import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_loading.dart';
 import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_register.dart';
 import 'package:modarb_app/features/splash/ui/screens/last_splash.dart';
@@ -112,6 +113,11 @@ class AppRouter {
         case Routes.warmScreen:
         return MaterialPageRoute(
           builder: (_) => const WarmScreen(),
+        );
+
+        case Routes.completeWorkout:
+        return MaterialPageRoute(
+          builder: (_) => const SmartTrainerAfterCompleteWorkout(),
         );
         case Routes.workoutInsights:
         return MaterialPageRoute(

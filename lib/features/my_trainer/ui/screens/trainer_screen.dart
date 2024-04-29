@@ -4,7 +4,7 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_vertical_divider.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/custom_workout_tab.dart';
-import 'package:modarb_app/features/my_trainer/ui/screens/my_plan_tab.dart';
+import 'package:modarb_app/features/my_trainer/ui/widgets/my_plan_tab.dart';
 
 class TrainerScreen extends StatelessWidget {
   const TrainerScreen({Key? key}) : super(key: key);

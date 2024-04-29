@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
@@ -80,10 +82,11 @@ class WorkoutInsights extends StatelessWidget{
                   verticalSpace(20),
                   AppTextButton(
                       buttonText: 'Finish',
-                      // textStyle: TextStyles.font20Purple600,
                       textColor: ColorsManager.mainPurple,
-                      backgroundColor: Colors.white.withOpacity(0.9),
-                      onPressed: (){}
+                      backgroundColor: Colors.white,
+                      onPressed: (){
+                        context.pushReplacementNamed(Routes.homePage);
+                      }
                   ),
 
                 ],

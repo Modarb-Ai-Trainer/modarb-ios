@@ -22,6 +22,7 @@ class Routes {
 
   static const String beforeWarming = '/beforeWarming';
   static const String warmScreen = '/warmScreen';
+  static const String completeWorkout = '/completeWorkout';
 
   static const String workoutInsights = '/workoutInsights';
 
