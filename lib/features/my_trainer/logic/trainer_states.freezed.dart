@@ -24,6 +24,7 @@ mixin _$TrainerState<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$TrainerState<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,7 @@ mixin _$TrainerState<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +59,7 @@ mixin _$TrainerState<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +70,7 @@ mixin _$TrainerState<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +81,7 @@ mixin _$TrainerState<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -143,6 +149,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return initial();
   }
@@ -156,6 +163,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return initial?.call();
   }
@@ -169,6 +177,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -187,6 +196,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return initial(this);
   }
@@ -200,6 +210,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return initial?.call(this);
   }
@@ -213,6 +224,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -270,6 +282,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return beforeWarming();
   }
@@ -283,6 +296,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return beforeWarming?.call();
   }
@@ -296,6 +310,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -314,6 +329,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return beforeWarming(this);
   }
@@ -327,6 +343,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return beforeWarming?.call(this);
   }
@@ -340,6 +357,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -425,6 +443,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return counterChange(savedCounter);
   }
@@ -438,6 +457,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return counterChange?.call(savedCounter);
   }
@@ -451,6 +471,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -469,6 +490,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return counterChange(this);
   }
@@ -482,6 +504,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return counterChange?.call(this);
   }
@@ -495,6 +518,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -588,6 +612,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return counterChangeOfWarming(newCounter);
   }
@@ -601,6 +626,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return counterChangeOfWarming?.call(newCounter);
   }
@@ -614,6 +640,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -632,6 +659,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return counterChangeOfWarming(this);
   }
@@ -645,6 +673,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return counterChangeOfWarming?.call(this);
   }
@@ -658,6 +687,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -721,6 +751,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return warmingFinished();
   }
@@ -734,6 +765,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return warmingFinished?.call();
   }
@@ -747,6 +779,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -765,6 +798,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return warmingFinished(this);
   }
@@ -778,6 +812,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return warmingFinished?.call(this);
   }
@@ -791,6 +826,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -848,6 +884,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
   }) {
     return closingTraining();
   }
@@ -861,6 +898,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
   }) {
     return closingTraining?.call();
   }
@@ -874,6 +912,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -892,6 +931,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return closingTraining(this);
   }
@@ -905,6 +945,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return closingTraining?.call(this);
   }
@@ -918,6 +959,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -929,4 +971,171 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
 
 abstract class ClosingTraining<T> implements TrainerState<T> {
   const factory ClosingTraining() = _$ClosingTrainingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ChangeSelectionImplCopyWith<T, $Res> {
+  factory _$$ChangeSelectionImplCopyWith(_$ChangeSelectionImpl<T> value,
+          $Res Function(_$ChangeSelectionImpl<T>) then) =
+      __$$ChangeSelectionImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String? newSelect});
+}
+
+/// @nodoc
+class __$$ChangeSelectionImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$ChangeSelectionImpl<T>>
+    implements _$$ChangeSelectionImplCopyWith<T, $Res> {
+  __$$ChangeSelectionImplCopyWithImpl(_$ChangeSelectionImpl<T> _value,
+      $Res Function(_$ChangeSelectionImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? newSelect = freezed,
+  }) {
+    return _then(_$ChangeSelectionImpl<T>(
+      freezed == newSelect
+          ? _value.newSelect
+          : newSelect // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
+  const _$ChangeSelectionImpl(this.newSelect);
+
+  @override
+  final String? newSelect;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.changeSelection(newSelect: $newSelect)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeSelectionImpl<T> &&
+            (identical(other.newSelect, newSelect) ||
+                other.newSelect == newSelect));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, newSelect);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeSelectionImplCopyWith<T, _$ChangeSelectionImpl<T>> get copyWith =>
+      __$$ChangeSelectionImplCopyWithImpl<T, _$ChangeSelectionImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return changeSelection(newSelect);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return changeSelection?.call(newSelect);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (changeSelection != null) {
+      return changeSelection(newSelect);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return changeSelection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return changeSelection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (changeSelection != null) {
+      return changeSelection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeSelection<T> implements TrainerState<T> {
+  const factory ChangeSelection(final String? newSelect) =
+      _$ChangeSelectionImpl<T>;
+
+  String? get newSelect;
+  @JsonKey(ignore: true)
+  _$$ChangeSelectionImplCopyWith<T, _$ChangeSelectionImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

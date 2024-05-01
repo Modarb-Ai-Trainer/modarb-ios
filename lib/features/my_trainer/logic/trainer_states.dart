@@ -14,5 +14,7 @@ class TrainerState <T> with _$TrainerState<T> {
   const factory TrainerState.warmingFinished() = WarmingFinished;
   const factory TrainerState.closingTraining() = ClosingTraining;
 
+  const factory TrainerState.changeSelection(String? newSelect) = ChangeSelection;
+
 
 }

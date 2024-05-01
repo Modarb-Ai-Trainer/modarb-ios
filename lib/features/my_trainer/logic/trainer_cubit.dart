@@ -7,6 +7,7 @@ import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 
 class TrainerCubit extends Cubit<TrainerState> {
 
+
   final TrainerRepo _trainerRepo;
   TrainerCubit(this._trainerRepo) : super(const TrainerState.initial());
 
@@ -57,5 +58,25 @@ class TrainerCubit extends Cubit<TrainerState> {
     emit(const TrainerState.closingTraining());
 
   }
+
+  final List<String> userExercisesList =[];
+
+  String? valueChoose;
+  final List<String>itemsExercisesList =[
+    'All',
+    'Leg',
+    'Shoulder',
+  ];
+
+  void emitChangeSelection(String? value){
+
+    valueChoose = value;
+    emit(TrainerState.changeSelection(valueChoose));
+
+  }
+
+
+
+
 
 }

@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding.dart';
+import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding_exercises.dart';
 
 class CustomWorkoutTab extends StatelessWidget{
   const CustomWorkoutTab({Key? key}) : super(key: key);
@@ -34,8 +36,16 @@ class CustomWorkoutTab extends StatelessWidget{
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: ColorsManager.mainPurple,
         onPressed: () {
-
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            builder: (BuildContext context) {
+              return const SheetOfAdding();
+              // return const SheetOfAddingExercises();
+            },
+          );
         },
         child: const Icon(Icons.add),
       ),
@@ -156,4 +166,5 @@ class CustomWorkoutTab extends StatelessWidget{
       ),
     ),
   );
+
 }
