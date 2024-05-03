@@ -5,7 +5,6 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding.dart';
-import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding_exercises.dart';
 
 class CustomWorkoutTab extends StatelessWidget{
   const CustomWorkoutTab({Key? key}) : super(key: key);
@@ -43,7 +42,6 @@ class CustomWorkoutTab extends StatelessWidget{
             isScrollControlled: true,
             builder: (BuildContext context) {
               return const SheetOfAdding();
-              // return const SheetOfAddingExercises();
             },
           );
         },
