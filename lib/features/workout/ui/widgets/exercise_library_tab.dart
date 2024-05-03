@@ -92,7 +92,7 @@ class ExerciseLibraryTab extends StatelessWidget{
         child: Container(
           width: 100.0,
           height: 50.0,
-          color: Colors.red,
+          color: Colors.transparent,
         ),
     );
   }
