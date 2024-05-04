@@ -26,6 +26,8 @@ class Routes {
 
   static const String workoutInsights = '/workoutInsights';
 
+  static const String exerciseOfCategory = '/exerciseOfCategory';
+
 
 
 }

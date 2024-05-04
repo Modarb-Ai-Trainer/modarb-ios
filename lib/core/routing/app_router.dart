@@ -14,6 +14,7 @@ import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_loadi
 import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_register.dart';
 import 'package:modarb_app/features/splash/ui/screens/last_splash.dart';
 import 'package:modarb_app/features/splash/ui/screens/splash_screen.dart';
+import 'package:modarb_app/features/workout/ui/screens/exercise_of_category.dart';
 import '../../features/home/ui/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
 import '../../features/my_trainer/ui/screens/before_Warming.dart';
@@ -119,9 +120,15 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const SmartTrainerAfterCompleteWorkout(),
         );
+
         case Routes.workoutInsights:
         return MaterialPageRoute(
           builder: (_) => const WorkoutInsights(),
+        );
+
+        case Routes.exerciseOfCategory:
+        return MaterialPageRoute(
+          builder: (_) => const ExerciseOfCategory(),
         );
 
       default:
