@@ -18,5 +18,20 @@ class WorkoutCubit extends Cubit<WorkoutState> {
   }
 
 
+  String? valueChoose;
+  final List<String>itemsExercisesList =[
+    'All',
+    'Leg',
+    'Shoulder',
+  ];
+
+  void emitChangeSelection(String? value){
+
+    valueChoose = value;
+    emit(WorkoutState.changeSelection(valueChoose));
+
+  }
+
+
 
 }

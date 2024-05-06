@@ -11,6 +11,8 @@ class WorkoutState <T> with _$WorkoutState<T> {
 
   const factory WorkoutState.switchChange(bool newValue) = SwitchChange;
 
+  const factory WorkoutState.changeSelection(String? newSelect) = ChangeSelection;
+
 
 
 
