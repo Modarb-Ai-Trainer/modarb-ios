@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NutritionScreen extends StatelessWidget{
-  const NutritionScreen({Key? key}) : super(key: key);
+class DailyRoutineTab extends StatelessWidget{
+  const DailyRoutineTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
