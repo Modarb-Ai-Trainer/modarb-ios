@@ -20,18 +20,27 @@ mixin _$HomeState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +48,27 @@ mixin _$HomeState<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +132,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
   }) {
     return initial();
   }
@@ -123,6 +144,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
   }) {
     return initial?.call();
   }
@@ -132,6 +156,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -145,6 +172,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
   }) {
     return initial(this);
   }
@@ -154,6 +184,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
   }) {
     return initial?.call(this);
   }
@@ -163,6 +196,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +278,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
   }) {
     return tabChanged(index);
   }
@@ -251,6 +290,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
   }) {
     return tabChanged?.call(index);
   }
@@ -260,6 +302,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
     required TResult orElse(),
   }) {
     if (tabChanged != null) {
@@ -273,6 +318,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
   }) {
     return tabChanged(this);
   }
@@ -282,6 +330,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
   }) {
     return tabChanged?.call(this);
   }
@@ -291,6 +342,9 @@ class _$TabChangedImpl<T> implements TabChanged<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
     required TResult orElse(),
   }) {
     if (tabChanged != null) {
@@ -307,4 +361,398 @@ abstract class TabChanged<T> implements HomeState<T> {
   @JsonKey(ignore: true)
   _$$TabChangedImplCopyWith<T, _$TabChangedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeLoadingImplCopyWith<T, $Res> {
+  factory _$$HomeLoadingImplCopyWith(_$HomeLoadingImpl<T> value,
+          $Res Function(_$HomeLoadingImpl<T>) then) =
+      __$$HomeLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$HomeLoadingImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$HomeLoadingImpl<T>>
+    implements _$$HomeLoadingImplCopyWith<T, $Res> {
+  __$$HomeLoadingImplCopyWithImpl(
+      _$HomeLoadingImpl<T> _value, $Res Function(_$HomeLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeLoadingImpl<T> implements HomeLoading<T> {
+  const _$HomeLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.homeLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
+  }) {
+    return homeLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
+  }) {
+    return homeLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeLoading != null) {
+      return homeLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
+  }) {
+    return homeLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
+  }) {
+    return homeLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeLoading != null) {
+      return homeLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeLoading<T> implements HomeState<T> {
+  const factory HomeLoading() = _$HomeLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$HomeSuccessImplCopyWith<T, $Res> {
+  factory _$$HomeSuccessImplCopyWith(_$HomeSuccessImpl<T> value,
+          $Res Function(_$HomeSuccessImpl<T>) then) =
+      __$$HomeSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({HomeResponse homeResponse});
+}
+
+/// @nodoc
+class __$$HomeSuccessImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$HomeSuccessImpl<T>>
+    implements _$$HomeSuccessImplCopyWith<T, $Res> {
+  __$$HomeSuccessImplCopyWithImpl(
+      _$HomeSuccessImpl<T> _value, $Res Function(_$HomeSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? homeResponse = null,
+  }) {
+    return _then(_$HomeSuccessImpl<T>(
+      null == homeResponse
+          ? _value.homeResponse
+          : homeResponse // ignore: cast_nullable_to_non_nullable
+              as HomeResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
+  const _$HomeSuccessImpl(this.homeResponse);
+
+  @override
+  final HomeResponse homeResponse;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.homeSuccess(homeResponse: $homeResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeSuccessImpl<T> &&
+            (identical(other.homeResponse, homeResponse) ||
+                other.homeResponse == homeResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, homeResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomeSuccessImplCopyWith<T, _$HomeSuccessImpl<T>> get copyWith =>
+      __$$HomeSuccessImplCopyWithImpl<T, _$HomeSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
+  }) {
+    return homeSuccess(homeResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
+  }) {
+    return homeSuccess?.call(homeResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeSuccess != null) {
+      return homeSuccess(homeResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
+  }) {
+    return homeSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
+  }) {
+    return homeSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeSuccess != null) {
+      return homeSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeSuccess<T> implements HomeState<T> {
+  const factory HomeSuccess(final HomeResponse homeResponse) =
+      _$HomeSuccessImpl<T>;
+
+  HomeResponse get homeResponse;
+  @JsonKey(ignore: true)
+  _$$HomeSuccessImplCopyWith<T, _$HomeSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeErrorImplCopyWith<T, $Res> {
+  factory _$$HomeErrorImplCopyWith(
+          _$HomeErrorImpl<T> value, $Res Function(_$HomeErrorImpl<T>) then) =
+      __$$HomeErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$HomeErrorImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$HomeErrorImpl<T>>
+    implements _$$HomeErrorImplCopyWith<T, $Res> {
+  __$$HomeErrorImplCopyWithImpl(
+      _$HomeErrorImpl<T> _value, $Res Function(_$HomeErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeErrorImpl<T> implements HomeError<T> {
+  const _$HomeErrorImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.homeError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) tabChanged,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function() homeError,
+  }) {
+    return homeError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? tabChanged,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function()? homeError,
+  }) {
+    return homeError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? tabChanged,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function()? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeError != null) {
+      return homeError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TabChanged<T> value) tabChanged,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeError<T> value) homeError,
+  }) {
+    return homeError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TabChanged<T> value)? tabChanged,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeError<T> value)? homeError,
+  }) {
+    return homeError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TabChanged<T> value)? tabChanged,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeError<T> value)? homeError,
+    required TResult orElse(),
+  }) {
+    if (homeError != null) {
+      return homeError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeError<T> implements HomeState<T> {
+  const factory HomeError() = _$HomeErrorImpl<T>;
 }

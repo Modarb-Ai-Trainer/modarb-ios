@@ -29,4 +29,14 @@ class HomeCubit extends Cubit<HomeState> {
     currentIndexOfPage = index;
     emit(HomeState.tabChanged(index));
   }
+
+  void getHomeData(String token) {
+    emit(const HomeState.homeLoading());
+    _homeRepo.geHomeData(token).then((homeResponse) {
+      emit(HomeState.homeSuccess(homeResponse));
+    }).catchError((error) {
+      print(error.toString());
+      emit(const HomeState.homeError());
+    });
+  }
 }

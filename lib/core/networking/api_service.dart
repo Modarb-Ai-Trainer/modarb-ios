@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:modarb_app/features/home/data/models/home_response.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
@@ -22,5 +23,9 @@ abstract class ApiService {
   Future<LoginResponse> login(
       @Body() LoginRequestBody loginRequestBody,
       );
+
+
+  @GET(ApiConstants.homePage)
+  Future<HomeResponse> getHome(String token);
 
 }
