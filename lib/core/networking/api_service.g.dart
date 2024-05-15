@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://localhost:4000/api/v1/user/';
+    baseUrl ??= 'http://10.0.2.2:4000/api/v1/user/';
   }
 
   final Dio _dio;
@@ -78,7 +78,7 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<HomeResponse> getHome(String token) async {
+  Future<HomeResponse> getHome() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getHomeData('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGUzNWFhY2E4NjZkYzc4YWEwMThhOCIsImVtYWlsIjoidGVzdGluZ191c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJOZXcgVXNlciIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1Mjg4NTQ1LCJleHAiOjE3MTUzNzQ5NDV9.69b9jdOHhnkig5Vbbstgzum8N0jk-PFx_jb5gVEfGVY'),
+      create: (context) => getIt<HomeCubit>()..getHomeData(),
       child: BlocBuilder<HomeCubit,HomeState>(
         builder: (context,state) {
           final cubit = context.read<HomeCubit>();
@@ -20,7 +20,8 @@ class HomePage extends StatelessWidget{
             bottomNavigationBar: BottomNavigationOfHome(
               onTap: (index) {
                 cubit.onTabChanged(index);
-              },),
+              },
+            ),
           );
         },
       ),

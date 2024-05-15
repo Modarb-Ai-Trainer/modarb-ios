@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:modarb_app/core/theming/colors.dart';
-import 'package:modarb_app/core/theming/styles.dart';
+
 import 'package:modarb_app/features/nutrition/ui/widgets/row_of_intaked_and_burned.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/today_intake.dart';
 

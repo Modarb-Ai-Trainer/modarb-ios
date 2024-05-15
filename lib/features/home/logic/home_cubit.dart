@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
 import 'package:modarb_app/features/workout/ui/screens/workout_screen.dart';
@@ -30,13 +31,20 @@ class HomeCubit extends Cubit<HomeState> {
     emit(HomeState.tabChanged(index));
   }
 
-  void getHomeData(String token) {
+
+  HomeResponse? homeResponse;
+  void getHomeData() async {
     emit(const HomeState.homeLoading());
-    _homeRepo.geHomeData(token).then((homeResponse) {
-      emit(HomeState.homeSuccess(homeResponse));
-    }).catchError((error) {
+
+    try {
+      homeResponse = await _homeRepo.geHomeData();
+      emit(HomeState.homeSuccess(homeResponse!));
+    } catch (error) {
       print(error.toString());
       emit(const HomeState.homeError());
-    });
+    }
   }
+
+
+
 }

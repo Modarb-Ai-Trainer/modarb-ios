@@ -41,10 +41,10 @@ class HomeScreen extends StatelessWidget{
           ),
         ],
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
+          padding: EdgeInsets.all(16.h),
+          child: const Column(
             children: [
               ContainerOfWeeks(),
               ListOfPlans(),

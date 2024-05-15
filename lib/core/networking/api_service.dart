@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:modarb_app/features/home/data/models/home_response.dart';
+import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
@@ -13,7 +13,6 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-
   @POST(ApiConstants.register)
   Future<RegisterResponse> register(
       @Body() RegisterRequestBody registerRequestBody,
@@ -26,6 +25,6 @@ abstract class ApiService {
 
 
   @GET(ApiConstants.homePage)
-  Future<HomeResponse> getHome(String token);
+  Future<HomeResponse> getHome();
 
 }

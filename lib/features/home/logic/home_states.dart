@@ -1,6 +1,6 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:modarb_app/features/home/data/models/home_response.dart';
+import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 
 part 'home_states.freezed.dart';
 @freezed
