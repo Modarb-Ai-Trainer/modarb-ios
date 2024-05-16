@@ -98,8 +98,6 @@ class TodayIntake extends StatelessWidget{
                 ],
               ),
             ),
-
-
           ],
         ),
       ],

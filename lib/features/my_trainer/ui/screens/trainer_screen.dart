@@ -8,12 +8,10 @@ import 'package:modarb_app/features/my_trainer/ui/widgets/my_plan_tab.dart';
 
 class TrainerScreen extends StatelessWidget {
   const TrainerScreen({Key? key}) : super(key: key);
-  
 
   @override
   Widget build(BuildContext context) {
     TabController? tabController;
-
     return DefaultTabController(
       length: 2,
       child: Scaffold(

@@ -29,7 +29,7 @@ class DioFactory {
     dio?.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          options.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDJhN2JkYzQ2Y2FmNzNiZDc5YWQ4ZSIsImVtYWlsIjoiYW1yQGFtci5jb20iLCJuYW1lIjoidGVzdCIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1NzM4Mzk5LCJleHAiOjE3MTU4MjQ3OTl9.KV-C-QjPJuENuN5pGzxTGd37ULWaFtTDRlf2O8Mbhlg';
+          options.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDJhN2JkYzQ2Y2FmNzNiZDc5YWQ4ZSIsImVtYWlsIjoiYW1yQGFtci5jb20iLCJuYW1lIjoidGVzdCIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1OTAwMzAyLCJleHAiOjE3MTg0OTIzMDJ9.xK8LzWB0wgljfkJV-MEORqQsLyWI72LWbGla7wyEkec';
           return handler.next(options);
         },
       ),
