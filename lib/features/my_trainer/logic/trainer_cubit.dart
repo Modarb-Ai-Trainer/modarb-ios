@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 
@@ -76,6 +77,18 @@ class TrainerCubit extends Cubit<TrainerState> {
 
 
 
+  WorkoutResponse? workoutResponse;
+  void getWorkoutData(String workoutId) async {
+    emit(const TrainerState.workoutLoading());
+
+    try {
+      workoutResponse = await _trainerRepo.getWorkoutData(workoutId);
+      emit(TrainerState.workoutSuccess(workoutResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.workoutError());
+    }
+  }
 
 
 

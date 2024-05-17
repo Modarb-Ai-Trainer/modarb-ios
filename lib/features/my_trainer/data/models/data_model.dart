@@ -1,8 +1,8 @@
 import 'package:modarb_app/features/my_trainer/data/models/week_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout.dart';
 
-class Data {
-  Data({
+class DataModel{
+  DataModel({
     required this.id,
     required this.user,
     required this.workout,
@@ -16,8 +16,8 @@ class Data {
   final bool? isActive;
   final List<Week> weeks;
 
-  factory Data.fromJson(Map<String, dynamic> json){
-    return Data(
+  factory DataModel.fromJson(Map<String, dynamic> json){
+    return DataModel(
       id: json["id"],
       user: json["user"],
       workout: json["workout"] == null ? null : Workout.fromJson(json["workout"]),

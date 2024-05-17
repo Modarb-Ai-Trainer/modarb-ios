@@ -27,7 +27,7 @@ class MyWorkout {
     "id": id,
     "workout": workout?.toJson(),
     "is_active": isActive,
-    "weeks": weeks.map((x) => x?.toJson()).toList(),
+    "weeks": weeks.map((x) => x.toJson()).toList(),
   };
 
 }

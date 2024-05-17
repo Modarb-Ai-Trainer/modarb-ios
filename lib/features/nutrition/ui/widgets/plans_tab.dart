@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:modarb_app/core/theming/colors.dart';
 
 class PlansTab extends StatelessWidget{
   const PlansTab({Key? key}) : super(key: key);

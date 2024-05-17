@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../features/register/data/models/register_response.dart';
@@ -26,5 +27,8 @@ abstract class ApiService {
 
   @GET(ApiConstants.homePage)
   Future<HomeResponse> getHome();
+
+  @GET(ApiConstants.myWorkouts)
+  Future<WorkoutResponse> getWorkout(@Path("id") String workoutId);
 
 }

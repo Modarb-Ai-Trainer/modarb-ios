@@ -29,7 +29,7 @@ class Week {
     "week_number": weekNumber,
     "week_name": weekName,
     "week_description": weekDescription,
-    "days": days.map((x) => x?.toJson()).toList(),
+    "days": days.map((x) => x.toJson()).toList(),
     "is_done": isDone,
   };
 

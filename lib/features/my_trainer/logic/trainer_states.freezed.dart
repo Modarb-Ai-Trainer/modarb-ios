@@ -25,6 +25,9 @@ mixin _$TrainerState<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$TrainerState<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$TrainerState<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +69,9 @@ mixin _$TrainerState<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +83,9 @@ mixin _$TrainerState<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +97,9 @@ mixin _$TrainerState<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -150,6 +168,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return initial();
   }
@@ -164,6 +185,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return initial?.call();
   }
@@ -178,6 +202,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -197,6 +224,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return initial(this);
   }
@@ -211,6 +241,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return initial?.call(this);
   }
@@ -225,6 +258,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -283,6 +319,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return beforeWarming();
   }
@@ -297,6 +336,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return beforeWarming?.call();
   }
@@ -311,6 +353,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -330,6 +375,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return beforeWarming(this);
   }
@@ -344,6 +392,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return beforeWarming?.call(this);
   }
@@ -358,6 +409,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -444,6 +498,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return counterChange(savedCounter);
   }
@@ -458,6 +515,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return counterChange?.call(savedCounter);
   }
@@ -472,6 +532,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -491,6 +554,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return counterChange(this);
   }
@@ -505,6 +571,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return counterChange?.call(this);
   }
@@ -519,6 +588,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -613,6 +685,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return counterChangeOfWarming(newCounter);
   }
@@ -627,6 +702,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return counterChangeOfWarming?.call(newCounter);
   }
@@ -641,6 +719,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -660,6 +741,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return counterChangeOfWarming(this);
   }
@@ -674,6 +758,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return counterChangeOfWarming?.call(this);
   }
@@ -688,6 +775,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -752,6 +842,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return warmingFinished();
   }
@@ -766,6 +859,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return warmingFinished?.call();
   }
@@ -780,6 +876,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -799,6 +898,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return warmingFinished(this);
   }
@@ -813,6 +915,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return warmingFinished?.call(this);
   }
@@ -827,6 +932,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -885,6 +993,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return closingTraining();
   }
@@ -899,6 +1010,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return closingTraining?.call();
   }
@@ -913,6 +1027,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -932,6 +1049,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return closingTraining(this);
   }
@@ -946,6 +1066,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return closingTraining?.call(this);
   }
@@ -960,6 +1083,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -1046,6 +1172,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
     required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
   }) {
     return changeSelection(newSelect);
   }
@@ -1060,6 +1189,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
     TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
   }) {
     return changeSelection?.call(newSelect);
   }
@@ -1074,6 +1206,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
     TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1093,6 +1228,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
     required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
   }) {
     return changeSelection(this);
   }
@@ -1107,6 +1245,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
   }) {
     return changeSelection?.call(this);
   }
@@ -1121,6 +1262,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
     TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1138,4 +1282,491 @@ abstract class ChangeSelection<T> implements TrainerState<T> {
   @JsonKey(ignore: true)
   _$$ChangeSelectionImplCopyWith<T, _$ChangeSelectionImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkoutLoadingImplCopyWith<T, $Res> {
+  factory _$$WorkoutLoadingImplCopyWith(_$WorkoutLoadingImpl<T> value,
+          $Res Function(_$WorkoutLoadingImpl<T>) then) =
+      __$$WorkoutLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutLoadingImpl<T>>
+    implements _$$WorkoutLoadingImplCopyWith<T, $Res> {
+  __$$WorkoutLoadingImplCopyWithImpl(_$WorkoutLoadingImpl<T> _value,
+      $Res Function(_$WorkoutLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
+  const _$WorkoutLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WorkoutLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+  }) {
+    return workoutLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+  }) {
+    return workoutLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutLoading != null) {
+      return workoutLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+  }) {
+    return workoutLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+  }) {
+    return workoutLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutLoading != null) {
+      return workoutLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutLoading<T> implements TrainerState<T> {
+  const factory WorkoutLoading() = _$WorkoutLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$WorkoutSuccessImplCopyWith<T, $Res> {
+  factory _$$WorkoutSuccessImplCopyWith(_$WorkoutSuccessImpl<T> value,
+          $Res Function(_$WorkoutSuccessImpl<T>) then) =
+      __$$WorkoutSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({WorkoutResponse workoutResponse});
+}
+
+/// @nodoc
+class __$$WorkoutSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutSuccessImpl<T>>
+    implements _$$WorkoutSuccessImplCopyWith<T, $Res> {
+  __$$WorkoutSuccessImplCopyWithImpl(_$WorkoutSuccessImpl<T> _value,
+      $Res Function(_$WorkoutSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workoutResponse = null,
+  }) {
+    return _then(_$WorkoutSuccessImpl<T>(
+      null == workoutResponse
+          ? _value.workoutResponse
+          : workoutResponse // ignore: cast_nullable_to_non_nullable
+              as WorkoutResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
+  const _$WorkoutSuccessImpl(this.workoutResponse);
+
+  @override
+  final WorkoutResponse workoutResponse;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutSuccess(workoutResponse: $workoutResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutSuccessImpl<T> &&
+            (identical(other.workoutResponse, workoutResponse) ||
+                other.workoutResponse == workoutResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, workoutResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkoutSuccessImplCopyWith<T, _$WorkoutSuccessImpl<T>> get copyWith =>
+      __$$WorkoutSuccessImplCopyWithImpl<T, _$WorkoutSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+  }) {
+    return workoutSuccess(workoutResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+  }) {
+    return workoutSuccess?.call(workoutResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutSuccess != null) {
+      return workoutSuccess(workoutResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+  }) {
+    return workoutSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+  }) {
+    return workoutSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutSuccess != null) {
+      return workoutSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutSuccess<T> implements TrainerState<T> {
+  const factory WorkoutSuccess(final WorkoutResponse workoutResponse) =
+      _$WorkoutSuccessImpl<T>;
+
+  WorkoutResponse get workoutResponse;
+  @JsonKey(ignore: true)
+  _$$WorkoutSuccessImplCopyWith<T, _$WorkoutSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkoutErrorImplCopyWith<T, $Res> {
+  factory _$$WorkoutErrorImplCopyWith(_$WorkoutErrorImpl<T> value,
+          $Res Function(_$WorkoutErrorImpl<T>) then) =
+      __$$WorkoutErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutErrorImpl<T>>
+    implements _$$WorkoutErrorImplCopyWith<T, $Res> {
+  __$$WorkoutErrorImplCopyWithImpl(
+      _$WorkoutErrorImpl<T> _value, $Res Function(_$WorkoutErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
+  const _$WorkoutErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WorkoutErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+  }) {
+    return workoutError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+  }) {
+    return workoutError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutError != null) {
+      return workoutError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+  }) {
+    return workoutError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+  }) {
+    return workoutError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    required TResult orElse(),
+  }) {
+    if (workoutError != null) {
+      return workoutError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutError<T> implements TrainerState<T> {
+  const factory WorkoutError() = _$WorkoutErrorImpl<T>;
 }
