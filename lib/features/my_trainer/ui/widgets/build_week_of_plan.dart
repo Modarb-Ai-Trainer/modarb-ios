@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
@@ -7,38 +8,54 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_vertical_divider.dart';
+import 'package:modarb_app/features/my_trainer/data/models/day_model.dart';
+import 'package:modarb_app/features/my_trainer/data/models/week_model.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class BuildWeekOfPlan extends StatelessWidget{
-  const BuildWeekOfPlan({Key? key}) : super(key: key);
+  final int index;
+  final List<Week> listOfWeek;
+  final List<Day> listOfDay;
+
+  const BuildWeekOfPlan({Key? key, required this.index, required this.listOfWeek, required this.listOfDay}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 220.h,
-      width: double.infinity,
-      child: TimelineTile(
-        axis: TimelineAxis.vertical,
-        alignment: TimelineAlign.start,
-        beforeLineStyle: const LineStyle(
-          color: ColorsManager.lightPurple,
-          thickness: 3,
-        ),
-        indicatorStyle: IndicatorStyle(
-          color: Colors.transparent,
-          padding: const EdgeInsets.all(5),
-          iconStyle: IconStyle(
-            color: ColorsManager.lightPurple,
-            iconData: Icons.circle,
-            fontSize: 26.sp,
+    final week = listOfWeek[index];
+    // final day = listOfDay[index];
+
+    return BlocBuilder<TrainerCubit,TrainerState>(
+      builder: (context,state) {
+        return SizedBox(
+          height: 220.h,
+          width: double.infinity,
+          child: TimelineTile(
+            axis: TimelineAxis.vertical,
+            alignment: TimelineAlign.start,
+            beforeLineStyle: const LineStyle(
+              color: ColorsManager.lightPurple,
+              thickness: 3,
+            ),
+            indicatorStyle: IndicatorStyle(
+              color: Colors.transparent,
+              padding: const EdgeInsets.all(5),
+              iconStyle: IconStyle(
+                color: ColorsManager.lightPurple,
+                iconData: Icons.circle,
+                fontSize: 26.sp,
+              ),
+            ),
+            endChild: buildItemOfWeekOpen(context, week,listOfDay),
           ),
-        ),
-        endChild: buildItemOfWeekOpen(context),
-      ),
+        );
+      },
+
     );
   }
 
-  Widget buildItemOfWeekOpen(BuildContext context) {
+  Widget buildItemOfWeekOpen(BuildContext context,week,listOfDay) {
     return GestureDetector(
       onTap: () {
         context.pushNamed(Routes.weekOfPlanScreen);
@@ -64,7 +81,7 @@ class BuildWeekOfPlan extends StatelessWidget{
                   const AppVerticalDivider(),
                   horizontalSpace(10),
                   Text(
-                    'Week 1 : Foundation',
+                    'Week ${index + 1} : ${week.weekName}',
                     style: TextStyles.font16White700,
                   ),
                 ],
@@ -74,7 +91,7 @@ class BuildWeekOfPlan extends StatelessWidget{
                 children: [
                   Flexible(
                     child: Text(
-                      'Start easy in the first week to let your body get used to the workout. It sets the baseline for your progress in the weeks ahead.',
+                      '${week.weekDescription}',
                       style: TextStyles.font13White600,
                       softWrap: true,
                       maxLines: 3,
@@ -90,44 +107,18 @@ class BuildWeekOfPlan extends StatelessWidget{
               ),
               verticalSpace(20),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: ColorsManager.lightPurple,
-                    child: Text(
-                      'D1',
-                      style: TextStyles.font16White700,
+                  SizedBox(
+                    height: 30.h,
+                    width: double.infinity,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder:(context,index) => buildItemOfDay(listOfDay,index),
+                      itemCount: listOfDay.length,
+                      scrollDirection: Axis.horizontal,
                     ),
                   ),
-                  horizontalSpace(5),
-                  CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: ColorsManager.lightPurple,
-                    child: Text(
-                      'D1',
-                      style: TextStyles.font16White700,
-                    ),
-                  ),
-                  horizontalSpace(5),
-                  CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: ColorsManager.lightPurple,
-                    child: Text(
-                      'D1',
-                      style: TextStyles.font16White700,
-                    ),
-                  ),
-                  horizontalSpace(5),
-                  CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: ColorsManager.lightPurple,
-                    child: Text(
-                      'D1',
-                      style: TextStyles.font16White700,
-                    ),
-                  ),
-
                 ],
               ),
             ],
@@ -211,4 +202,16 @@ class BuildWeekOfPlan extends StatelessWidget{
       ),
     );
   }
+
+  Widget buildItemOfDay(listOfDay,index) => Padding(
+    padding: const EdgeInsets.all(2.0),
+    child: CircleAvatar(
+      radius: 15.r,
+      backgroundColor: ColorsManager.lightPurple,
+      child: Text(
+        'D${listOfDay[index].dayNumber}',
+        style: TextStyles.font16White700,
+      ),
+    ),
+  );
 }
