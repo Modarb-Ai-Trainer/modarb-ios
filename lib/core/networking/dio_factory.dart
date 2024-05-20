@@ -16,7 +16,7 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut
         ..options.contentType = Headers.jsonContentType;
-        // ..options.headers['Authorization'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGUzNWFhY2E4NjZkYzc4YWEwMThhOCIsImVtYWlsIjoidGVzdGluZ191c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJOZXcgVXNlciIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1NTU5MTk0LCJleHAiOjE3MTU2NDU1OTR9.-HpSOJc_sFhHbq7k8tNlTwM-nw1PDGE9uaQ7efmb9CM';
+      // ..options.headers['Authorization'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGUzNWFhY2E4NjZkYzc4YWEwMThhOCIsImVtYWlsIjoidGVzdGluZ191c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJOZXcgVXNlciIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1NTU5MTk0LCJleHAiOjE3MTU2NDU1OTR9.-HpSOJc_sFhHbq7k8tNlTwM-nw1PDGE9uaQ7efmb9CM';
       addDioInterceptor();
       return dio!;
     } else {
@@ -25,11 +25,11 @@ class DioFactory {
   }
 
   static void addDioInterceptor() {
-
     dio?.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          options.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDJhN2JkYzQ2Y2FmNzNiZDc5YWQ4ZSIsImVtYWlsIjoiYW1yQGFtci5jb20iLCJuYW1lIjoidGVzdCIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1OTAwMzAyLCJleHAiOjE3MTg0OTIzMDJ9.xK8LzWB0wgljfkJV-MEORqQsLyWI72LWbGla7wyEkec';
+          options.headers['Authorization'] =
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGE0YjE3MGRhNGU0Mjg4NDk4NTlhMiIsImVtYWlsIjoidXNlci0yQGFwcC5jb20iLCJuYW1lIjoiVXNlciAyIiwidHlwZSI6InVzZXIiLCJpYXQiOjE3MTYxNTcwNjIsImV4cCI6MTcxODc0OTA2Mn0.IoMKEH2ci0sr2blU0qxso7jzmSRw-4IdsDT6wI0QGD8';
           return handler.next(options);
         },
       ),

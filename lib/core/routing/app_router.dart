@@ -26,6 +26,7 @@ class AppRouter {
 
   Route generateRoute(RouteSettings settings) {
 
+    final args = settings.arguments as Map<String, dynamic>?;
 
     switch (settings.name) {
 
@@ -84,7 +85,11 @@ class AppRouter {
 
         case Routes.todayWorkoutScreen:
         return MaterialPageRoute(
-          builder: (_) => const TodayWorkoutScreen(),
+          builder: (_) => TodayWorkoutScreen(
+            index: args?['indexOfExercise'],
+            listOfExercise: args?['listOfExercise'] ,
+
+          ),
         );
 
         case Routes.myTrainerScreen:
@@ -99,12 +104,21 @@ class AppRouter {
 
       case Routes.weekOfPlanScreen:
         return MaterialPageRoute(
-          builder: (_) => const WeekOfPlanScreen(),
+          builder: (_) => WeekOfPlanScreen(
+            index: args?['index'],
+            listOfWeek: args?['listOfWeek'],
+            listOfDay: args?['listOfDay'],
+
+          ),
         );
 
         case Routes.exerciseDetails:
         return MaterialPageRoute(
-          builder: (_) => const ExerciseDetails(),
+          builder: (_) =>  ExerciseDetails(
+            index: args?['index'],
+            listOfExercise: args?['listOfExercise'],
+
+          ),
         );
 
         case Routes.beforeWarming:

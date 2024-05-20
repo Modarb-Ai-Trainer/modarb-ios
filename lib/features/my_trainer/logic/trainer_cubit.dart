@@ -96,6 +96,21 @@ class TrainerCubit extends Cubit<TrainerState> {
     }
   }
 
+  int getTotalMinDuration(List<Day> dayModel) {
+    return dayModel
+        .map((day) => day.exercises
+        .map((exercise) => exercise.expectedDurationRange?.min ?? 0)
+        .reduce((value, element) => value + element))
+        .reduce((value, element) => value + element);
+  }
+  int getTotalMaxDuration(List<Day> dayModel) {
+    return dayModel
+        .map((day) => day.exercises
+        .map((exercise) => exercise.expectedDurationRange?.max ?? 0)
+        .reduce((value, element) => value + element))
+        .reduce((value, element) => value + element);
+  }
+
 
 
 

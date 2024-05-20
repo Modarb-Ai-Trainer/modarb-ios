@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 
 class ItemOfTrackMeal extends StatelessWidget{
@@ -23,20 +24,33 @@ class ItemOfTrackMeal extends StatelessWidget{
               fit: BoxFit.fill,),
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                width: 30.w,
+                height: 30.h,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: ColorsManager.lightPurple, // Border color
+                    width: 2, // Border width
+                  ),
+                ),
+                child: Icon(
+                  Icons.add,
+                  size: 20.sp,
+                  color:ColorsManager.lightPurple
+                ),
+              ),
               Text(
-                '',
-                style: TextStyles.font16White700,),
+                'Breakfast',
+                style: TextStyles.font13White700,),
+              Text(
+                '250kcal',
+                style: TextStyles.font13White700,),
             ],
           ),
-          // SizedBox(
-          //   width: 100.w,
-          //   height: 100,
-          //   child: Text(
-          //     'Burn fats and build strength ',
-          //     style: TextStyles.font16White700,
-          //   ),
-          // ),
         ],
       ),
     );

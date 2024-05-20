@@ -6,6 +6,7 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_container.dart';
+import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/equipment_tab.dart';
@@ -13,7 +14,9 @@ import 'package:modarb_app/features/my_trainer/ui/widgets/target_muscle_tab.dart
 import 'instructions_tab.dart';
 
 class ExerciseDetails extends StatelessWidget{
-  const ExerciseDetails({Key? key}) : super(key: key);
+  final int index;
+  final List<Exercise> listOfExercise;
+  const ExerciseDetails({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,7 @@ class ExerciseDetails extends StatelessWidget{
             appBar: AppBar(
               toolbarHeight: 80.h,
               title: Text(
-                'chest press',
+                '${listOfExercise[index].name}',
                 style: TextStyles.font19White700,
               ),
               actions: [
@@ -77,14 +80,16 @@ class ExerciseDetails extends StatelessWidget{
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text(
-                              '    Exercise 1 / 6',
+                              '    Exercise ${index+1} / ${listOfExercise.length}',
                               style: TextStyles.font16White700,
                             ),
-                            Text(
-                              '    4 sets x 12-15 reps',
-                              style: TextStyles.font13White700,
+                            listOfExercise[index].sets != null ? Text(
+                              '       ${listOfExercise[index].sets} sets * ${listOfExercise[index].reps} reps ',
+                              style: TextStyles.font12White600,
+                            ) :Text(
+                              '     ${listOfExercise[index].duration} min ',
+                              style: TextStyles.font12White600,
                             ),
-
                           ],
                         )
                     ),
@@ -122,10 +127,17 @@ class ExerciseDetails extends StatelessWidget{
                     height: MediaQuery.of(context).size.height ,
                     child: TabBarView(
                       controller: tabController,
-                      children: const [
-                        TargetMuscleTab(),
-                        InstructionsTab(),
-                        EquipmentTab(),
+                      children:  [
+                        TargetMuscleTab(
+                          index: index, listOfExercise: listOfExercise,
+
+                        ),
+                        InstructionsTab(
+                          index: index, listOfExercise: listOfExercise,
+                        ),
+                        EquipmentTab(
+                          index: index, listOfExercise: listOfExercise,
+                        ),
                       ],
                     ),
                   ),

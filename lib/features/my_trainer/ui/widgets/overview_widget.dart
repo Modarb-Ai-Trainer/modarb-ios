@@ -74,7 +74,7 @@ class OverViewWidget extends StatelessWidget{
                   const AppVerticalDivider(),
                   horizontalSpace(7),
                   Text(
-                    'Block 1: Establishing the Foundation',
+                    '${cubit.workoutResponse?.data?.workout?.name}',
                     style: TextStyles.font16White700,
                   ),
 

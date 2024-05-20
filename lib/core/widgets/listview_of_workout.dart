@@ -4,26 +4,39 @@ import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 
 class ListViewOfWorkout extends StatelessWidget{
-  const ListViewOfWorkout({Key? key}) : super(key: key);
+  final int index;
+  final List<Exercise> listOfExercise;
+  const ListViewOfWorkout({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 16,
+      itemCount: listOfExercise.length,
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            context.pushNamed(Routes.exerciseDetails);
+            context.pushNamed(
+                Routes.exerciseDetails,
+                arguments:{
+                  'index': index,
+                  'listOfExercise': listOfExercise,
+
+                }
+            );
           },
           child: ListTile(
             title: Text(
-              'chest press',
+              '${listOfExercise[index].name}',
               style: TextStyles.font16White700,
             ),
-            subtitle: Text(
-              '4 sets x  12-15 reps',
+            subtitle: listOfExercise[index].sets != null ? Text(
+              ' ${listOfExercise[index].sets} sets * ${listOfExercise[index].reps} reps ',
+              style: TextStyles.font12White600,
+            ) :Text(
+              '${listOfExercise[index].duration} min ',
               style: TextStyles.font12White600,
             ),
             leading: SizedBox(
@@ -39,12 +52,22 @@ class ListViewOfWorkout extends StatelessWidget{
               ),
             ),
             trailing: AppTextButton(
-              buttonText: 'chest',
+              buttonText: '${listOfExercise[index].category}',
               textStyle: TextStyles.font13White700,
               borderRadius: 20,
               buttonWidth: 70.w,
               buttonHeight: 20.h,
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(
+                  Routes.exerciseDetails,
+                    arguments:{
+                      'index': index,
+                      'listOfExercise': listOfExercise,
+
+                    }
+                );
+
+              },
             ),
           ),
         );

@@ -4,9 +4,12 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/core/widgets/listview_of_workout.dart';
+import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 
 class TodayWorkoutScreen extends StatelessWidget {
-  const TodayWorkoutScreen({Key? key}) : super(key: key);
+  final int index;
+  final List<Exercise> listOfExercise;
+  const TodayWorkoutScreen({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +76,11 @@ class TodayWorkoutScreen extends StatelessWidget {
               ),
             ),
           ),
-          const SliverFillRemaining(
-            child: ListViewOfWorkout(),
+          SliverFillRemaining(
+            child: ListViewOfWorkout(
+              index: index, listOfExercise: listOfExercise,
+
+            ),
           ),
         ],
       ),

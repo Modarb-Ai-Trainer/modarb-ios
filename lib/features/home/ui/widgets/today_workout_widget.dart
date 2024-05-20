@@ -91,7 +91,14 @@ class TodayWorkoutWidget extends StatelessWidget{
                   backgroundColor: ColorsManager.lighterWhite,
                   textColor: ColorsManager.mainPurple,
                   onPressed: (){
-                    context.pushNamed(Routes.todayWorkoutScreen);
+                    context.pushNamed(
+                      Routes.todayWorkoutScreen,
+                        arguments:{
+                          // 'index': index,
+                          // 'listOfExercise': listOfExercise,
+
+                        }
+                    );
                   },
                 ),
               ),

@@ -23,8 +23,6 @@ class BuildWeekOfPlan extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    final week = listOfWeek[index];
-    // final day = listOfDay[index];
 
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
@@ -47,7 +45,7 @@ class BuildWeekOfPlan extends StatelessWidget{
                 fontSize: 26.sp,
               ),
             ),
-            endChild: buildItemOfWeekOpen(context, week,listOfDay),
+            endChild: buildItemOfWeekOpen(context,index,listOfWeek,listOfDay),
           ),
         );
       },
@@ -55,10 +53,18 @@ class BuildWeekOfPlan extends StatelessWidget{
     );
   }
 
-  Widget buildItemOfWeekOpen(BuildContext context,week,listOfDay) {
+  Widget buildItemOfWeekOpen(BuildContext context,index,listOfWeek,listOfDay) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.weekOfPlanScreen);
+        context.pushNamed(
+            Routes.weekOfPlanScreen,
+          arguments:{
+            'index': index,
+            'listOfWeek': listOfWeek,
+            'listOfDay': listOfDay,
+          }
+
+        );
       },
       child: Container(
         width: double.infinity,
@@ -81,17 +87,18 @@ class BuildWeekOfPlan extends StatelessWidget{
                   const AppVerticalDivider(),
                   horizontalSpace(10),
                   Text(
-                    'Week ${index + 1} : ${week.weekName}',
+                    'Week ${index + 1} : ${listOfWeek[index].weekName}',
                     style: TextStyles.font16White700,
                   ),
                 ],
               ),
               verticalSpace(10),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
                     child: Text(
-                      '${week.weekDescription}',
+                      '${listOfWeek[index].weekDescription}',
                       style: TextStyles.font13White600,
                       softWrap: true,
                       maxLines: 3,
@@ -106,20 +113,16 @@ class BuildWeekOfPlan extends StatelessWidget{
                 ],
               ),
               verticalSpace(20),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 30.h,
-                    width: double.infinity,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemBuilder:(context,index) => buildItemOfDay(listOfDay,index),
-                      itemCount: listOfDay.length,
-                      scrollDirection: Axis.horizontal,
-                    ),
-                  ),
-                ],
+              SizedBox(
+                height: 30.h,
+                width: double.infinity,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder:(context,index) => buildItemOfDay(listOfDay,index),
+                  itemCount: listOfDay.length,
+                  scrollDirection: Axis.horizontal,
+                ),
               ),
             ],
           ),

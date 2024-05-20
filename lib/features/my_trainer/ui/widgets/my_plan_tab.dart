@@ -21,30 +21,34 @@ class MyPlanTab extends StatelessWidget {
         final weeks = cubit.weekModel ?? [];
         final days = cubit.dayModel ?? [];
 
-        return SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const OverViewWidget(),
-              const ImageOfPlanWidget(),
-              Padding(
-                padding:EdgeInsets.symmetric(horizontal: 20.w,vertical: 10),
+        return CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(child: OverViewWidget()),
+            const SliverToBoxAdapter(child: ImageOfPlanWidget()),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10),
                 child: Text(
-                    'Block 1 : Your personalized plan',
-                    style: TextStyles.font16White700),
+                  'Block 1: Your personalized plan',
+                  style: TextStyles.font16White700,
+                ),
               ),
-              ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context,index) => BuildWeekOfPlan(listOfWeek: weeks, listOfDay:days ,index: index,),
-                itemCount: weeks.length,
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (context, index) => BuildWeekOfPlan(
+                  listOfWeek: weeks,
+                  listOfDay: days,
+                  index: index,
+                ),
+                childCount: weeks.length,
               ),
-            ],
-          ),
+            ),
+          ],
         );
       },
     );
+
   }
 
 

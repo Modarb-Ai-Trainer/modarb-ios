@@ -18,7 +18,7 @@ class TrainerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     TabController? tabController;
     return BlocProvider(
-      create: (context) => getIt<TrainerCubit>()..getWorkoutData('6642ab457e519e4f03842dec'),
+      create: (context) => getIt<TrainerCubit>()..getWorkoutData('664a4bc90da4e42884989cbd'),
       child: BlocBuilder<TrainerCubit,TrainerState>(
         builder: (context,state){
           return DefaultTabController(
