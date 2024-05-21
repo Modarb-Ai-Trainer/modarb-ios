@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
-import 'widgets/item_of_more_list.dart';
+import 'package:modarb_app/features/more_info/ui/widgets/item_of_more_list.dart';
 
 class MoreInfoScreen extends StatelessWidget{
   const MoreInfoScreen({Key? key}) : super(key: key);

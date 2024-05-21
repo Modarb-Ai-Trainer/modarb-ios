@@ -4,7 +4,7 @@ import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
 import 'package:modarb_app/features/workout/ui/screens/workout_screen.dart';
-import '../../more_info/ui/more_info_screen.dart';
+import '../../more_info/ui/screens/more_info_screen.dart';
 import '../../nutrition/ui/screens/nutrition_screen.dart';
 import '../data/repos/home_repo.dart';
 import '../ui/screens/home_screen.dart';

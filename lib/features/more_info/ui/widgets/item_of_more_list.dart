@@ -7,10 +7,10 @@ import '../../../../core/theming/styles.dart';
 
 class BuildListTile extends StatelessWidget{
   final String title ;
-  final String image ;
+  final String? image ;
   final VoidCallback onTap;
 
-  const BuildListTile({Key? key, required this.title, required this.onTap, required this.image}) : super(key: key);
+  const BuildListTile({Key? key, required this.title, required this.onTap, this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class BuildListTile extends StatelessWidget{
             child: Row(
               children: [
                 SvgPicture.asset(
-                  image,
+                  image!,
                   height: 25.sp,
                 ),
                 horizontalSpace(15),
