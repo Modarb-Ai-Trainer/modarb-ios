@@ -55,8 +55,7 @@ class DailyRoutineTab extends StatelessWidget{
               ),
             ),
             SliverList(
-              delegate: SliverChildBuilderDelegate(
-            (context,index) => TimelineTile(
+              delegate: SliverChildBuilderDelegate((context,index) => TimelineTile(
                   axis: TimelineAxis.vertical,
                   alignment: TimelineAlign.start,
 
