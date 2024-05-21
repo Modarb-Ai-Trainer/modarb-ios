@@ -65,7 +65,7 @@ class RecentlyAddedTab extends StatelessWidget{
               ],
             ),
             verticalSpace(20),
-            const ThinLine(),
+            const DividerLine(),
           ],
         ),
       ),

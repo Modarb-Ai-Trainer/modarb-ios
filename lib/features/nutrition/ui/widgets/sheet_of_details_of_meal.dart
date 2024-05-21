@@ -52,7 +52,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                           ),
                         ],
                       ),
-                      const ThinLine(),
+                      const DividerLine(),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
                         child: Column(
@@ -77,7 +77,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                               ],
                             ),
                             verticalSpace(20),
-                            const ThinLine(),
+                            const DividerLine(),
                           ],
                         ),
                       ),
@@ -131,7 +131,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
             ],
           ),
           verticalSpace(10),
-          const ThinLine(),
+          const DividerLine(),
         ],
       ),
     );

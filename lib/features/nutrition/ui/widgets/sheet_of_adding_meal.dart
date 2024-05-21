@@ -73,7 +73,7 @@ class SheetOfAddingMeal extends StatelessWidget {
               ),
             ),
             verticalSpace(10),
-            const ThinLine(),
+            const DividerLine(),
             Padding(
               padding:EdgeInsets.symmetric(vertical: 10.h),
               child: Container(
