@@ -11,6 +11,7 @@ import 'package:modarb_app/features/home/ui/widgets/daily_intake.dart';
 import 'package:modarb_app/features/home/ui/widgets/list_of_plans.dart';
 import 'package:modarb_app/features/home/ui/widgets/today_diet.dart';
 import 'package:modarb_app/features/home/ui/widgets/today_workout_widget.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,8 +19,11 @@ class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit,HomeState>(
-      builder: (context,state){
+      builder: (context,index){
         final cubit = context.read<HomeCubit>();
+        final cubit2 = context.read<TrainerCubit>();
+        final days = cubit2.dayModel ?? [];
+
         String? userName = cubit.homeResponse?.data?.user?.name;
         return Scaffold(
           appBar: AppBar(
@@ -51,18 +55,19 @@ class HomeScreen extends StatelessWidget{
           body: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(16.h),
-              child: const Column(
+              child: Column(
                 children: [
-                  ContainerOfWeeks(),
-                  ListOfPlans(),
-                  TodayWorkoutWidget(),
-                  TodayDiet(),
-                  DailyIntake(),
-                  DailyGoals(),
+                  const ContainerOfWeeks(),
+                  const ListOfPlans(),
+                  TodayWorkoutWidget( ),
+                  const TodayDiet(),
+                  const DailyIntake(),
+                  const DailyGoals(),
                 ],
               ),
             ),
           ),
+
         );
       },
 

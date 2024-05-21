@@ -61,7 +61,6 @@ class TrainerCubit extends Cubit<TrainerState> {
 
   }
 
-  final List<String> userExercisesList =[];
 
   String? valueChoose;
   final List<String>itemsExercisesList =[
@@ -82,13 +81,17 @@ class TrainerCubit extends Cubit<TrainerState> {
   WorkoutResponse? workoutResponse;
   List<Week>? weekModel;
   List<Day>? dayModel;
+  int currentWeekIndex = 0;
+  int currentDayIndex = 0;
+  // int indexOfList = 0 ;
+
   void getWorkoutData(String workoutId) async {
     emit(const TrainerState.workoutLoading());
 
     try {
       workoutResponse = await _trainerRepo.getWorkoutData(workoutId);
       weekModel = workoutResponse?.data?.weeks;
-      dayModel = workoutResponse?.data?.weeks[index].days;
+      dayModel = workoutResponse?.data?.weeks[currentWeekIndex].days;
       emit(TrainerState.workoutSuccess(workoutResponse!));
     } catch (error) {
       print(error.toString());

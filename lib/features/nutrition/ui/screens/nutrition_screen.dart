@@ -13,41 +13,46 @@ class NutritionScreen extends StatelessWidget{
     TabController? tabController ;
     return  DefaultTabController(
       length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 30.h,
-          automaticallyImplyLeading: false,
-          bottom:TabBar(
-            controller: tabController,
-            dividerHeight: 0,
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicatorPadding: const EdgeInsets.symmetric(horizontal: 20),
-            indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              color: ColorsManager.mainPurple,
+      child: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            toolbarHeight: 70.h,
+            automaticallyImplyLeading: false,
+            title: Text(
+              'NutriGuide',
+            style: TextStyles.font19White700,),
+            bottom:TabBar(
+              controller: tabController,
+              dividerHeight: 0,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorPadding: const EdgeInsets.symmetric(horizontal: 20),
+              indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: ColorsManager.mainPurple,
+              ),
+              tabs: [
+                Tab(
+                  child: Text(
+                    'Daily Routine',
+                    style: TextStyles.font13White700,
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    'Plans',
+                    style: TextStyles.font13White700,
+                  ),
+                ),
+              ],
             ),
-            tabs: [
-              Tab(
-                child: Text(
-                  'Daily Routine',
-                  style: TextStyles.font13White700,
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Plans',
-                  style: TextStyles.font13White700,
-                ),
-              ),
+          ),
+          body: TabBarView(
+            controller: tabController,
+            children: const [
+              DailyRoutineTab(),
+              PlansTab(),
             ],
           ),
-        ),
-        body: TabBarView(
-          controller: tabController,
-          children: const [
-            DailyRoutineTab(),
-            PlansTab(),
-          ],
         ),
       ),
     );

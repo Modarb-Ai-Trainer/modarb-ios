@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/theming/styles.dart';
-import 'package:modarb_app/features/nutrition/ui/widgets/build_meal_of_diet.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/row_of_intaked_and_burned.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/today_intake.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/track_meal.dart';
@@ -27,12 +26,11 @@ class DailyRoutineTab extends StatelessWidget{
                 [
                   const TodayIntake(),
                   const RowOfIntakedAndBurned(),
-                  // const TrackMeal(),
                   Text(
                     'Track meals',
                     style: TextStyles.font19White700,
                   ),
-
+                  
                 ],
               ),
             ),
@@ -47,42 +45,21 @@ class DailyRoutineTab extends StatelessWidget{
                     childCount: 4,
               ),
             ),
-
-            // SliverList(
-            //   delegate: SliverChildBuilderDelegate(
-            //         (BuildContext context, int index) {
-            //       return const BuildMealOfDiet();
-            //     },
-            //     childCount: 5,
-            //   ),
-            // )
-
-            SliverList(delegate: SliverChildListDelegate(
-              [
-                TimelineTile(
-                  axis: TimelineAxis.vertical,
-                  alignment: TimelineAlign.start,
-                  isFirst: true,
-                  beforeLineStyle: const LineStyle(
-                    color: ColorsManager.lightPurple,
-                    thickness: 3,
-                  ),
-                  indicatorStyle: IndicatorStyle(
-                    color: Colors.transparent,
-                    padding: const EdgeInsets.all(5),
-                    iconStyle: IconStyle(
-                      color: ColorsManager.lightPurple,
-                      iconData: Icons.circle,
-                      fontSize: 26.sp,
-                    ),
-                  ),
-                  startChild: buildItemOfMeal(context),
-
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+                child: Text(
+                  'Today’s diet',
+                  style: TextStyles.font19White700,
                 ),
-                TimelineTile(
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+            (context,index) => TimelineTile(
                   axis: TimelineAxis.vertical,
                   alignment: TimelineAlign.start,
-                  isFirst: true,
+
                   beforeLineStyle: const LineStyle(
                     color: ColorsManager.lightPurple,
                     thickness: 3,
@@ -97,11 +74,9 @@ class DailyRoutineTab extends StatelessWidget{
                       fontSize: 26.sp,
                     ),
                   ),
-                  startChild: buildItemOfMeal(context),
-
+                  endChild: buildItemOfMealDiet(context),
                 ),
-
-              ]
+                childCount: 5,
             ),
             ),
           ],
@@ -110,7 +85,7 @@ class DailyRoutineTab extends StatelessWidget{
     );
   }
 
-  Widget buildItemOfMeal(BuildContext context) {
+  Widget buildItemOfMealDiet(BuildContext context) {
     return GestureDetector(
       onTap: () {
         context.pushNamed('');
@@ -124,8 +99,21 @@ class DailyRoutineTab extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'BreakFast',
+                  style: TextStyles.font13White700,),
+                  Text(
+                    '250 kcal',
+                  style: TextStyles.font13White400,),
+                ],
+              ),
+              verticalSpace(20),
+              Row(
                 children: [
                   Image.asset('assets/images/food.png'),
+                  horizontalSpace(20),
                   Column(
                     children: [
                       Text('Glazed duck fillet',
@@ -142,6 +130,8 @@ class DailyRoutineTab extends StatelessWidget{
               Row(
                 children: [
                   Image.asset('assets/images/food.png'),
+                  horizontalSpace(20),
+
                   Column(
                     children: [
                       Text('Glazed duck fillet',

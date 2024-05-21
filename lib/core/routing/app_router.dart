@@ -85,10 +85,9 @@ class AppRouter {
 
         case Routes.todayWorkoutScreen:
         return MaterialPageRoute(
-          builder: (_) => TodayWorkoutScreen(
-            index: args?['indexOfExercise'],
-            listOfExercise: args?['listOfExercise'] ,
-
+          builder: (_) =>  TodayWorkoutScreen(
+            // listOfDay: args?['listOfDay'],
+            // index:  args?['index'],
           ),
         );
 

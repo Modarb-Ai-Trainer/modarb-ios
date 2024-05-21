@@ -26,6 +26,22 @@ class HomeCubit extends Cubit<HomeState> {
   List<String> days = ['M','T','W','T','F','S','S'];
   List<int> points = [10,15,20,25,30,35,40];
 
+
+  // List<Day>? dayModel;
+  // void checkADate(){
+  //   final startDate = DateTime.now();
+  //
+  //   for (var day in dayModel!) {
+  //     for(var isDone is day.isDone){
+  //
+  //       final endDate = startDate.add(Duration(days: day.isDone));
+  //       final formattedEndDate = DateFormat.yMd().format(endDate);
+  //     print('Exercise "${exercise.name}" finishes on: $formattedEndDate');
+  //   }
+  //   }
+  //
+  // }
+
   void onTabChanged(int index) {
     currentIndexOfPage = index;
     emit(HomeState.tabChanged(index));
