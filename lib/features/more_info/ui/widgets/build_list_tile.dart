@@ -8,9 +8,10 @@ import '../../../../core/theming/styles.dart';
 class BuildListTile extends StatelessWidget{
   final String title ;
   final String? image ;
+  final IconData? icon ;
   final VoidCallback onTap;
 
-  const BuildListTile({Key? key, required this.title, required this.onTap, this.image}) : super(key: key);
+  const BuildListTile({Key? key, required this.title, required this.onTap, this.image, this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class BuildListTile extends StatelessWidget{
                 ),
                 const Spacer(),
                 Icon(
-                  Icons.arrow_forward_ios,
+                  icon ?? Icons.arrow_forward_ios,
                     size: 20.sp,
                     color: ColorsManager.lightWhite,
                   ),

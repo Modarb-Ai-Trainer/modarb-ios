@@ -29,5 +29,8 @@ class Routes {
   static const String exerciseOfCategory = '/exerciseOfCategory';
 
 
+  static const String settingScreen = '/settingScreen';
+
+
 
 }
