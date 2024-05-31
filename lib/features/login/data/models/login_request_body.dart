@@ -1,14 +1,22 @@
+class LoginRequestBody {
+  LoginRequestBody({
+    required this.email,
+    required this.password,
+  });
 
-import 'package:json_annotation/json_annotation.dart';
-part 'login_request_body.g.dart';
+  final String? email;
+  final String? password;
 
-@JsonSerializable()
-class LoginRequestBody{
-  final String email;
-  final String password;
+  factory LoginRequestBody.fromJson(Map<String, dynamic> json){
+    return LoginRequestBody(
+      email: json["email"],
+      password: json["password"],
+    );
+  }
 
-  LoginRequestBody({required this.email, required this.password});
-
-  Map<String, dynamic> toJson() => _$LoginRequestBodyToJson(this);
+  Map<String, dynamic> toJson() => {
+    "email": email,
+    "password": password,
+  };
 
 }

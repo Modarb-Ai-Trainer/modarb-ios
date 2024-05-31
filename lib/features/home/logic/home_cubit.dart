@@ -53,7 +53,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.homeLoading());
 
     try {
-      homeResponse = await _homeRepo.geHomeData();
+      homeResponse = await _homeRepo.getHomeData();
       emit(HomeState.homeSuccess(homeResponse!));
     } catch (error) {
       print(error.toString());

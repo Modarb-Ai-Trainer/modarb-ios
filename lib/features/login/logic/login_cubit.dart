@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
+import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/login/data/repos/login_repo.dart';
 import 'package:modarb_app/features/login/logic/login_state.dart';
 
@@ -20,20 +21,38 @@ class LoginCubit extends Cubit<LoginState> {
     emit(LoginState.toggleObscureText(isObscureText));
   }
 
+  // void emitLoginStates() async {
+  //   emit(const LoginState.loading());
+  //   {
+  //     final response = await _loginRepository.login(
+  //       LoginRequestBody(
+  //         email: emailController.text,
+  //         password: passwordController.text,
+  //       ),
+  //     );
+  //     response.when(success: (loginResponse) {
+  //       emit(LoginState.success(loginResponse));
+  //     }, failure: (error) {
+  //       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
+  //     });
+  //   }
+  // }
+
+  LoginResponse ?loginResponse;
   void emitLoginStates() async {
     emit(const LoginState.loading());
-    {
-      final response = await _loginRepository.login(
+    try {
+      loginResponse = await _loginRepository.loginUser(
         LoginRequestBody(
           email: emailController.text,
           password: passwordController.text,
         ),
       );
-      response.when(success: (loginResponse) {
-        emit(LoginState.success(loginResponse));
-      }, failure: (error) {
-        emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
-      });
+      emit(LoginState.success(loginResponse!));
+    } catch(error){
+      print(error.toString());
+      emit(const LoginState.error());
+
     }
   }
 }

@@ -3,7 +3,6 @@ import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/more_info/ui/widgets/build_list_tile.dart';
-
 import '../../../../core/routing/routes.dart';
 
 class MoreInfoScreen extends StatelessWidget{

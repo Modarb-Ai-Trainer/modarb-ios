@@ -11,7 +11,6 @@ import 'core/routing/app_router.dart';
 void main() async{
   Bloc.observer = MyBlocObserver();
   setupGetIt();
-  // To fix texts being hidden bug in flutter_screenutil in release mode.
   await ScreenUtil.ensureScreenSize();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(

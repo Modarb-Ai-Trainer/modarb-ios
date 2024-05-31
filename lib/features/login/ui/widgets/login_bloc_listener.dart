@@ -12,6 +12,9 @@ class LoginBlocListener extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<LoginCubit>();
+    final token = cubit.loginResponse?.data?.token;
+    final name = cubit.loginResponse?.data?.user?.name;
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
       current is Loading || current is Success || current is Error,
@@ -28,11 +31,10 @@ class LoginBlocListener extends StatelessWidget {
             );
           },
           success: (loginResponse) {
-            context.pop();
-            context.pushNamed(Routes.homePage);
+            setupSuccessState(context, token,name);
           },
-          error: (error) {
-            setupErrorState(context, error);
+          error: () {
+            setupErrorState(context);
           },
         );
       },
@@ -40,7 +42,7 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context) {
     context.pop();
     showDialog(
       context: context,
@@ -51,7 +53,7 @@ class LoginBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          'Login failed. Please try again',
           style: TextStyles.font16White700,
         ),
         actions: [
@@ -67,5 +69,29 @@ class LoginBlocListener extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void setupSuccessState(BuildContext context,token,name){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Login successfully $name',
+            style: TextStyles.font16White700,
+          ),
+          backgroundColor: ColorsManager.lighterGray,
+          duration: const Duration(seconds: 3),
+        ),
+    );
+
+    // if(token != null){
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //
+    //   );
+    // }else{
+    //   print('mooooo');
+    // }
+    context.pop();
+    context.pushNamed(Routes.homePage);
+
   }
 }

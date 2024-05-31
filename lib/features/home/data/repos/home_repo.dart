@@ -6,7 +6,7 @@ class HomeRepo{
   final ApiService _apiService ;
   HomeRepo(this._apiService);
 
-  Future<HomeResponse> geHomeData() async {
+  Future<HomeResponse> getHomeData() async {
     try {
       return await _apiService.getHome();
     } catch (error) {
