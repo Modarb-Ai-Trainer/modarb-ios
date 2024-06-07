@@ -19,7 +19,6 @@ class CacheHelper
     return await sharedPreferences!.setDouble(key, value);
   }
 
-
   static getData({required String key}){
     return sharedPreferences?.get(key);
   }
