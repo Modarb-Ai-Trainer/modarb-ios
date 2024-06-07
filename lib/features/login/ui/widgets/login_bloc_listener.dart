@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/networking/cache_helper.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
@@ -12,9 +13,7 @@ class LoginBlocListener extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<LoginCubit>();
-    final token = cubit.loginResponse?.data?.token;
-    final name = cubit.loginResponse?.data?.user?.name;
+    final token = CacheHelper.getData(key: 'userToken');
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
       current is Loading || current is Success || current is Error,
@@ -31,7 +30,7 @@ class LoginBlocListener extends StatelessWidget {
             );
           },
           success: (loginResponse) {
-            setupSuccessState(context, token,name);
+            setupSuccessState(context, token);
           },
           error: () {
             setupErrorState(context);
@@ -71,27 +70,34 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setupSuccessState(BuildContext context,token,name){
-    ScaffoldMessenger.of(context).showSnackBar(
+  void setupSuccessState(BuildContext context,token){
+
+    if(token != null) {
+      ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            'Login successfully $name',
+            'Login successfully',
             style: TextStyles.font16White700,
           ),
           backgroundColor: ColorsManager.lighterGray,
           duration: const Duration(seconds: 3),
         ),
-    );
+      );
+      context.pop();
+      context.pushNamed(Routes.homePage);
+    }else{
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Something Went Wrong',
+            style: TextStyles.font16White700,
+          ),
+          backgroundColor: ColorsManager.lighterGray,
+          duration: const Duration(seconds: 3),
+        ),
+      );
+    }
 
-    // if(token != null){
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //
-    //   );
-    // }else{
-    //   print('mooooo');
-    // }
-    context.pop();
-    context.pushNamed(Routes.homePage);
 
   }
 }

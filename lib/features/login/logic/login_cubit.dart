@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/core/networking/cache_helper.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/login/data/repos/login_repo.dart';
@@ -48,6 +49,12 @@ class LoginCubit extends Cubit<LoginState> {
           password: passwordController.text,
         ),
       );
+
+      final userToken = loginResponse?.data?.token;
+      if (userToken != null) {
+        await CacheHelper.saveData(key: 'userToken', value: userToken);
+      }
+
       emit(LoginState.success(loginResponse!));
     } catch(error){
       print(error.toString());
