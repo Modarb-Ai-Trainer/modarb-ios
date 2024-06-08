@@ -55,14 +55,14 @@ class HomeScreen extends StatelessWidget{
           body: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(16.h),
-              child: Column(
+              child: const Column(
                 children: [
-                  const ContainerOfWeeks(),
-                  const ListOfPlans(),
+                  ContainerOfWeeks(),
+                  ListOfPlans(),
                   TodayWorkoutWidget( ),
-                  const TodayDiet(),
-                  const DailyIntake(),
-                  const DailyGoals(),
+                  TodayDiet(),
+                  DailyIntake(),
+                  DailyGoals(),
                 ],
               ),
             ),

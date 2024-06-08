@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/core/di/dependency_injection.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/features/home/ui/screens/todays_workout_screen.dart';
 import 'package:modarb_app/features/loading/ui/loading.dart';
@@ -15,6 +17,7 @@ import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_loadi
 import 'package:modarb_app/features/smart_trainer/ui/screens/trainer_after_register.dart';
 import 'package:modarb_app/features/splash/ui/screens/last_splash.dart';
 import 'package:modarb_app/features/splash/ui/screens/splash_screen.dart';
+import 'package:modarb_app/features/workout/logic/workout_cubit.dart';
 import 'package:modarb_app/features/workout/ui/screens/exercise_of_category.dart';
 import '../../features/home/ui/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
@@ -86,7 +89,7 @@ class AppRouter {
 
         case Routes.todayWorkoutScreen:
         return MaterialPageRoute(
-          builder: (_) =>  TodayWorkoutScreen(
+          builder: (_) =>  const TodayWorkoutScreen(
             // listOfDay: args?['listOfDay'],
             // index:  args?['index'],
           ),
@@ -142,7 +145,10 @@ class AppRouter {
 
         case Routes.exerciseOfCategory:
         return MaterialPageRoute(
-          builder: (_) => const ExerciseOfCategory(),
+          builder: (_) => BlocProvider(
+              create: ( context) => getIt<WorkoutCubit>(),
+              child: const ExerciseOfCategory()
+          ),
         );
 
         case Routes.settingScreen:

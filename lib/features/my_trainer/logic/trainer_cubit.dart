@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/core/networking/cache_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/day_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/week_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
@@ -83,13 +84,13 @@ class TrainerCubit extends Cubit<TrainerState> {
   List<Day>? dayModel;
   int currentWeekIndex = 0;
   int currentDayIndex = 0;
-  // int indexOfList = 0 ;
 
-  void getWorkoutData(String workoutId) async {
+  void getWorkoutData() async {
     emit(const TrainerState.workoutLoading());
 
     try {
-      workoutResponse = await _trainerRepo.getWorkoutData(workoutId);
+      final myWorkoutId = CacheHelper.getData(key: 'myWorkoutId');
+      workoutResponse = await _trainerRepo.getWorkoutData(myWorkoutId);
       weekModel = workoutResponse?.data?.weeks;
       dayModel = workoutResponse?.data?.weeks[currentWeekIndex].days;
       emit(TrainerState.workoutSuccess(workoutResponse!));

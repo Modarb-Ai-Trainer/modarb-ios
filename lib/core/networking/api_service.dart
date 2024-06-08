@@ -4,6 +4,7 @@ import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
+import 'package:modarb_app/features/workout/data/models/search_response.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../features/register/data/models/register_response.dart';
 import 'api_constants.dart';
@@ -19,10 +20,6 @@ abstract class ApiService {
       @Body() RegisterRequestBody registerRequestBody,
       );
 
-  // @POST(ApiConstants.login)
-  // Future<LoginResponse> login(
-  //     @Body() LoginRequestBody loginRequestBody,
-  //     );
 
   @POST(ApiConstants.login)
   Future<LoginResponse> login(
@@ -36,4 +33,8 @@ abstract class ApiService {
   @GET(ApiConstants.myWorkouts)
   Future<WorkoutResponse> getWorkout(@Path("id") String workoutId);
 
+  @POST(ApiConstants.exercisesSearch)
+  Future<SearchResponse> getSearchData(
+      @Body() String searchQuery,
+      );
 }

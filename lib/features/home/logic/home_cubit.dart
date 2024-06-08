@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/core/networking/cache_helper.dart';
 import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
@@ -27,21 +28,6 @@ class HomeCubit extends Cubit<HomeState> {
   List<int> points = [10,15,20,25,30,35,40];
 
 
-  // List<Day>? dayModel;
-  // void checkADate(){
-  //   final startDate = DateTime.now();
-  //
-  //   for (var day in dayModel!) {
-  //     for(var isDone is day.isDone){
-  //
-  //       final endDate = startDate.add(Duration(days: day.isDone));
-  //       final formattedEndDate = DateFormat.yMd().format(endDate);
-  //     print('Exercise "${exercise.name}" finishes on: $formattedEndDate');
-  //   }
-  //   }
-  //
-  // }
-
   void onTabChanged(int index) {
     currentIndexOfPage = index;
     emit(HomeState.tabChanged(index));
@@ -54,6 +40,11 @@ class HomeCubit extends Cubit<HomeState> {
 
     try {
       homeResponse = await _homeRepo.getHomeData();
+
+      final myWorkoutId = homeResponse?.data?.myWorkout?.id;
+      if (myWorkoutId != null) {
+        await CacheHelper.saveData(key: 'myWorkoutId', value: myWorkoutId);
+      }
       emit(HomeState.homeSuccess(homeResponse!));
     } catch (error) {
       print(error.toString());

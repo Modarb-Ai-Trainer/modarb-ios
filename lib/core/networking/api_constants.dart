@@ -6,6 +6,8 @@ class ApiConstants{
   static const String login = "auth/login";
   static const String homePage = "homePage";
   static const String myWorkouts = "myWorkouts/{id}";
+
+  static const String exercisesSearch = "exercises/search";
 }
 
 class ApiErrors {
