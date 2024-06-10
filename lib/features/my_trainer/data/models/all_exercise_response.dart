@@ -1,7 +1,7 @@
 import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 
-class ExerciseSearchResponse {
-  ExerciseSearchResponse({
+class AllExerciseResponse {
+  AllExerciseResponse({
     required this.status,
     required this.message,
     required this.data,
@@ -13,8 +13,8 @@ class ExerciseSearchResponse {
   final List<Data> data;
   final Meta? meta;
 
-  factory ExerciseSearchResponse.fromJson(Map<String, dynamic> json){
-    return ExerciseSearchResponse(
+  factory AllExerciseResponse.fromJson(Map<String, dynamic> json){
+    return AllExerciseResponse(
       status: json["status"],
       message: json["message"],
       data: json["data"] == null ? [] : List<Data>.from(json["data"]!.map((x) => Data.fromJson(x))),
