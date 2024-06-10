@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modarb_app/core/networking/cache_helper.dart';
+import 'package:modarb_app/core/helper/constant.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/day_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/week_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
@@ -89,7 +90,7 @@ class TrainerCubit extends Cubit<TrainerState> {
     emit(const TrainerState.workoutLoading());
 
     try {
-      final myWorkoutId = CacheHelper.getData(key: 'myWorkoutId');
+      final myWorkoutId = await SharedPrefHelper.getString(SharedPrefKeys.myWorkoutId);
       workoutResponse = await _trainerRepo.getWorkoutData(myWorkoutId);
       weekModel = workoutResponse?.data?.weeks;
       dayModel = workoutResponse?.data?.weeks[currentWeekIndex].days;
@@ -99,6 +100,7 @@ class TrainerCubit extends Cubit<TrainerState> {
       emit(const TrainerState.workoutError());
     }
   }
+
 
   int getTotalMinDuration(List<Day> dayModel) {
     return dayModel
@@ -114,9 +116,6 @@ class TrainerCubit extends Cubit<TrainerState> {
         .reduce((value, element) => value + element))
         .reduce((value, element) => value + element);
   }
-
-
-
 
 
 }

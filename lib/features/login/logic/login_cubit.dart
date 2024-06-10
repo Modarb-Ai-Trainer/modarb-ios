@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modarb_app/core/networking/cache_helper.dart';
+import 'package:modarb_app/core/helper/constant.dart';
+import 'package:modarb_app/core/networking/dio_factory.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/login/data/repos/login_repo.dart';
@@ -22,23 +24,6 @@ class LoginCubit extends Cubit<LoginState> {
     emit(LoginState.toggleObscureText(isObscureText));
   }
 
-  // void emitLoginStates() async {
-  //   emit(const LoginState.loading());
-  //   {
-  //     final response = await _loginRepository.login(
-  //       LoginRequestBody(
-  //         email: emailController.text,
-  //         password: passwordController.text,
-  //       ),
-  //     );
-  //     response.when(success: (loginResponse) {
-  //       emit(LoginState.success(loginResponse));
-  //     }, failure: (error) {
-  //       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
-  //     });
-  //   }
-  // }
-
   LoginResponse ?loginResponse;
   void emitLoginStates() async {
     emit(const LoginState.loading());
@@ -49,10 +34,10 @@ class LoginCubit extends Cubit<LoginState> {
           password: passwordController.text,
         ),
       );
-
-      final userToken = loginResponse?.data?.token;
+      String? userToken = loginResponse?.data?.token;
       if (userToken != null) {
-        await CacheHelper.saveData(key: 'userToken', value: userToken);
+        await saveUserToken(userToken);
+
       }
 
       emit(LoginState.success(loginResponse!));
@@ -61,5 +46,10 @@ class LoginCubit extends Cubit<LoginState> {
       emit(const LoginState.error());
 
     }
+  }
+
+  Future<void> saveUserToken(String token) async {
+    await SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
+    DioFactory.setTokenIntoHeaderAfterLogin(token);
   }
 }

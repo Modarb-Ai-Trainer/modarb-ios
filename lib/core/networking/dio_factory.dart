@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:modarb_app/core/helper/constant.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
@@ -8,7 +10,7 @@ class DioFactory {
   static Dio? dio;
 
   static Dio getDio() {
-    Duration timeOut = const Duration(seconds: 60000);
+    Duration timeOut = const Duration(seconds: 30);
 
     if (dio == null) {
       dio = Dio();
@@ -16,7 +18,6 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut
         ..options.contentType = Headers.jsonContentType;
-      // ..options.headers['Authorization'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGUzNWFhY2E4NjZkYzc4YWEwMThhOCIsImVtYWlsIjoidGVzdGluZ191c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJOZXcgVXNlciIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzE1NTU5MTk0LCJleHAiOjE3MTU2NDU1OTR9.-HpSOJc_sFhHbq7k8tNlTwM-nw1PDGE9uaQ7efmb9CM';
       addDioInterceptor();
       return dio!;
     } else {
@@ -24,12 +25,27 @@ class DioFactory {
     }
   }
 
+  static Future<void> addDioHeaders() async {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer ${await SharedPrefHelper.getString(SharedPrefKeys.userToken)}',
+    };
+  }
+  static void setTokenIntoHeaderAfterLogin(String token) {
+    dio?.options.headers = {
+      'Authorization': 'Bearer $token',
+    };
+  }
+
+
   static void addDioInterceptor() {
     dio?.interceptors.add(
       InterceptorsWrapper(
-        onRequest: (options, handler) {
-          options.headers['Authorization'] =
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGE0YjE3MGRhNGU0Mjg4NDk4NTlhMiIsImVtYWlsIjoidXNlci0yQGFwcC5jb20iLCJuYW1lIjoiVXNlciAyIiwidHlwZSI6InVzZXIiLCJpYXQiOjE3MTYxNTcwNjIsImV4cCI6MTcxODc0OTA2Mn0.IoMKEH2ci0sr2blU0qxso7jzmSRw-4IdsDT6wI0QGD8';
+        onRequest: (options, handler) async {
+          String? token = await SharedPrefHelper.getString(SharedPrefKeys.userToken);
+          if (token != null) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
           return handler.next(options);
         },
       ),
@@ -40,7 +56,11 @@ class DioFactory {
         requestHeader: true,
         responseHeader: true,
       ),
-
     );
+
+
+
   }
+
+
 }

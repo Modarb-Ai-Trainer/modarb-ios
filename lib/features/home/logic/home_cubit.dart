@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modarb_app/core/networking/cache_helper.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/home/data/models/home_response_model.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
 import 'package:modarb_app/features/workout/ui/screens/workout_screen.dart';
+import '../../../core/helper/constant.dart';
 import '../../more_info/ui/screens/more_info_screen.dart';
 import '../../nutrition/ui/screens/nutrition_screen.dart';
 import '../data/repos/home_repo.dart';
@@ -37,13 +38,11 @@ class HomeCubit extends Cubit<HomeState> {
   HomeResponse? homeResponse;
   void getHomeData() async {
     emit(const HomeState.homeLoading());
-
     try {
       homeResponse = await _homeRepo.getHomeData();
-
       final myWorkoutId = homeResponse?.data?.myWorkout?.id;
-      if (myWorkoutId != null) {
-        await CacheHelper.saveData(key: 'myWorkoutId', value: myWorkoutId);
+      if(myWorkoutId != null) {
+        await SharedPrefHelper.setData(SharedPrefKeys.myWorkoutId, myWorkoutId);
       }
       emit(HomeState.homeSuccess(homeResponse!));
     } catch (error) {
@@ -51,6 +50,8 @@ class HomeCubit extends Cubit<HomeState> {
       emit(const HomeState.homeError());
     }
   }
+
+
 
 
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:modarb_app/core/networking/cache_helper.dart';
+import 'package:modarb_app/core/helper/constant.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
@@ -18,7 +19,8 @@ class ModarbApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    final userToken = CacheHelper.getData(key: 'userToken');
+    final userToken = SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+
     return ScreenUtilInit(
       designSize: const Size(360, 690),
       child: MultiBlocProvider(
@@ -59,7 +61,5 @@ class ModarbApp extends StatelessWidget{
       ),
     );
   }
-
-
 
 }

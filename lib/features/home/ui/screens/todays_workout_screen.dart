@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
-import 'package:modarb_app/core/widgets/listview_of_workout.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 

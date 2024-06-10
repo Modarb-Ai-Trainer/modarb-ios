@@ -1,12 +1,12 @@
 class ApiConstants{
 
   // static const String apiBaseUrl = "http://localhost:4000/api/v1/user/";
-  static const String apiBaseUrl = "http://10.0.2.2:4000/api/v1/user/";
+  // static const String apiBaseUrl = "http://10.0.2.2:4000/api/v1/user/";
+  static const String apiBaseUrl = "https://moahmedwafy-modarb-be.hf.space/api/v1/user/";
   static const String register = "auth/register";
   static const String login = "auth/login";
   static const String homePage = "homePage";
   static const String myWorkouts = "myWorkouts/{id}";
-
   static const String exercisesSearch = "exercises/search";
 }
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/extension.dart';
-import 'package:modarb_app/core/networking/cache_helper.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
+import '../../../../core/helper/constant.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
@@ -13,7 +14,7 @@ class LoginBlocListener extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final token = CacheHelper.getData(key: 'userToken');
+    final userToken = SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
       current is Loading || current is Success || current is Error,
@@ -30,7 +31,7 @@ class LoginBlocListener extends StatelessWidget {
             );
           },
           success: (loginResponse) {
-            setupSuccessState(context, token);
+            setupSuccessState(context, userToken);
           },
           error: () {
             setupErrorState(context);
@@ -70,9 +71,9 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setupSuccessState(BuildContext context,token){
+  void setupSuccessState(BuildContext context, userToken){
 
-    if(token != null) {
+    if(userToken != null) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
