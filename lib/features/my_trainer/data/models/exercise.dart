@@ -1,7 +1,3 @@
-import 'package:modarb_app/features/my_trainer/data/models/equipment.dart';
-import 'package:modarb_app/features/my_trainer/data/models/expected_duration_range.dart';
-import 'package:modarb_app/features/my_trainer/data/models/media.dart';
-import 'package:modarb_app/features/my_trainer/data/models/target_muscles.dart';
 
 class Exercise {
   Exercise({
@@ -69,3 +65,105 @@ class Exercise {
   };
 
 }
+
+class Equipment {
+  Equipment({
+    required this.id,
+    required this.name,
+    required this.image,
+    required this.v,
+  });
+
+  final String? id;
+  final String? name;
+  final String? image;
+  final int? v;
+
+  factory Equipment.fromJson(Map<String, dynamic> json){
+    return Equipment(
+      id: json["_id"],
+      name: json["name"],
+      image: json["image"],
+      v: json["__v"],
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    "_id": id,
+    "name": name,
+    "image": image,
+    "__v": v,
+  };
+
+}
+
+class TargetMuscles {
+  TargetMuscles({
+    required this.primary,
+    required this.secondary,
+  });
+
+  final Equipment? primary;
+  final Equipment? secondary;
+
+  factory TargetMuscles.fromJson(Map<String, dynamic> json){
+    return TargetMuscles(
+      primary: json["primary"] == null ? null : Equipment.fromJson(json["primary"]),
+      secondary: json["secondary"] == null ? null : Equipment.fromJson(json["secondary"]),
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    "primary": primary?.toJson(),
+    "secondary": secondary?.toJson(),
+  };
+
+}
+
+class ExpectedDurationRange {
+  ExpectedDurationRange({
+    required this.min,
+    required this.max,
+  });
+
+  final int? min;
+  final int? max;
+
+  factory ExpectedDurationRange.fromJson(Map<String, dynamic> json){
+    return ExpectedDurationRange(
+      min: json["min"],
+      max: json["max"],
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    "min": min,
+    "max": max,
+  };
+
+}
+
+class Media {
+  Media({
+    required this.type,
+    required this.url,
+  });
+
+  final String? type;
+  final String? url;
+
+  factory Media.fromJson(Map<String, dynamic> json){
+    return Media(
+      type: json["type"],
+      url: json["url"],
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    "type": type,
+    "url": url,
+  };
+
+}
+
+

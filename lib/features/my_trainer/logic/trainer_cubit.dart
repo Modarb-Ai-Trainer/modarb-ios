@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
-import 'package:modarb_app/features/my_trainer/data/models/day_model.dart';
-import 'package:modarb_app/features/my_trainer/data/models/week_model.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -67,8 +65,16 @@ class TrainerCubit extends Cubit<TrainerState> {
   String? valueChoose;
   final List<String>itemsExercisesList =[
     'All',
-    'Leg',
-    'Shoulder',
+    'waist',
+    'upper legs',
+    'lower legs',
+    'upper arms',
+    'lower arms',
+    'chest',
+    'back',
+    'neck',
+    'shoulder',
+    'cardio',
   ];
 
   void emitChangeSelection(String? value){
@@ -100,7 +106,6 @@ class TrainerCubit extends Cubit<TrainerState> {
       emit(const TrainerState.workoutError());
     }
   }
-
 
   int getTotalMinDuration(List<Day> dayModel) {
     return dayModel

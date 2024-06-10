@@ -45,6 +45,7 @@ class SheetOfAddingExercises extends StatelessWidget {
               ),
               verticalSpace(10),
               TextFormField(
+                // controller: ,
                 decoration: InputDecoration(
                   hintText: 'search',
                   hintStyle: const TextStyle(
@@ -91,22 +92,22 @@ class SheetOfAddingExercises extends StatelessWidget {
                     return GestureDetector(
                       onTap: () {},
                       child: ListTile(
-                    title: Text(
-                      'chest press',
-                      style: TextStyles.font16White700,
-                    ),
-                    subtitle: Text(
-                      'full-body',
-                      style: TextStyles.font12White600,
-                    ),
-                    leading: SizedBox(
-                      width: 70.w,
-                      height: 60.h,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.r),
-                        child: Image.asset(
-                          'assets/images/Muscles1.png',
-                          fit: BoxFit.fill,
+                        title: Text(
+                          'chest press',
+                          style: TextStyles.font16White700,
+                        ),
+                        subtitle: Text(
+                          'full-body',
+                          style: TextStyles.font12White600,
+                        ),
+                        leading: SizedBox(
+                          width: 70.w,
+                          height: 60.h,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.r),
+                            child: Image.asset(
+                              'assets/images/Muscles1.png',
+                              fit: BoxFit.fill,
 
                         ),
                       ),

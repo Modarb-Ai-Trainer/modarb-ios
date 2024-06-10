@@ -6,7 +6,7 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/core/widgets/listview_of_workout.dart';
-import 'package:modarb_app/features/my_trainer/data/models/day_model.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 
 import '../../logic/trainer_states.dart';
