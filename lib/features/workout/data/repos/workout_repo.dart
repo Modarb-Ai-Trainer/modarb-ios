@@ -8,13 +8,13 @@ class WorkoutRepo{
   WorkoutRepo(this._apiService);
 
 
-  Future<SearchResponse> getSearchData(String searchQuery) async {
-    try {
-      return await _apiService.getSearchData(searchQuery);
-    } catch (error) {
-      throw Exception('Failed to get data: $error');
-    }
-  }
+  // Future<SearchResponse> getSearchData(String searchQuery) async {
+  //   try {
+  //     return await _apiService.getSearchData(searchQuery);
+  //   } catch (error) {
+  //     throw Exception('Failed to get data: $error');
+  //   }
+  // }
 
 
 }

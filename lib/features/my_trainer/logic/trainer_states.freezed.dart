@@ -28,6 +28,14 @@ mixin _$TrainerState<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +50,14 @@ mixin _$TrainerState<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +72,14 @@ mixin _$TrainerState<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +96,15 @@ mixin _$TrainerState<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,6 +119,14 @@ mixin _$TrainerState<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +141,14 @@ mixin _$TrainerState<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,6 +220,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return initial();
   }
@@ -188,6 +245,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return initial?.call();
   }
@@ -205,6 +270,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -227,6 +300,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return initial(this);
   }
@@ -244,6 +326,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return initial?.call(this);
   }
@@ -261,6 +351,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -322,6 +420,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return beforeWarming();
   }
@@ -339,6 +445,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return beforeWarming?.call();
   }
@@ -356,6 +470,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -378,6 +500,15 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return beforeWarming(this);
   }
@@ -395,6 +526,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return beforeWarming?.call(this);
   }
@@ -412,6 +551,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -501,6 +648,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return counterChange(savedCounter);
   }
@@ -518,6 +673,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return counterChange?.call(savedCounter);
   }
@@ -535,6 +698,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -557,6 +728,15 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return counterChange(this);
   }
@@ -574,6 +754,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return counterChange?.call(this);
   }
@@ -591,6 +779,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -688,6 +884,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return counterChangeOfWarming(newCounter);
   }
@@ -705,6 +909,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return counterChangeOfWarming?.call(newCounter);
   }
@@ -722,6 +934,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -744,6 +964,15 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return counterChangeOfWarming(this);
   }
@@ -761,6 +990,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return counterChangeOfWarming?.call(this);
   }
@@ -778,6 +1015,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -845,6 +1090,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return warmingFinished();
   }
@@ -862,6 +1115,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return warmingFinished?.call();
   }
@@ -879,6 +1140,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -901,6 +1170,15 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return warmingFinished(this);
   }
@@ -918,6 +1196,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return warmingFinished?.call(this);
   }
@@ -935,6 +1221,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -996,6 +1290,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return closingTraining();
   }
@@ -1013,6 +1315,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return closingTraining?.call();
   }
@@ -1030,6 +1340,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -1052,6 +1370,15 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return closingTraining(this);
   }
@@ -1069,6 +1396,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return closingTraining?.call(this);
   }
@@ -1086,6 +1421,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -1175,6 +1518,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return changeSelection(newSelect);
   }
@@ -1192,6 +1543,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return changeSelection?.call(newSelect);
   }
@@ -1209,6 +1568,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1231,6 +1598,15 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return changeSelection(this);
   }
@@ -1248,6 +1624,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return changeSelection?.call(this);
   }
@@ -1265,6 +1649,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1332,6 +1724,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return workoutLoading();
   }
@@ -1349,6 +1749,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return workoutLoading?.call();
   }
@@ -1366,6 +1774,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutLoading != null) {
@@ -1388,6 +1804,15 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return workoutLoading(this);
   }
@@ -1405,6 +1830,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return workoutLoading?.call(this);
   }
@@ -1422,6 +1855,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutLoading != null) {
@@ -1511,6 +1952,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return workoutSuccess(workoutResponse);
   }
@@ -1528,6 +1977,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return workoutSuccess?.call(workoutResponse);
   }
@@ -1545,6 +2002,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutSuccess != null) {
@@ -1567,6 +2032,15 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return workoutSuccess(this);
   }
@@ -1584,6 +2058,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return workoutSuccess?.call(this);
   }
@@ -1601,6 +2083,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutSuccess != null) {
@@ -1668,6 +2158,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
   }) {
     return workoutError();
   }
@@ -1685,6 +2183,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
   }) {
     return workoutError?.call();
   }
@@ -1702,6 +2208,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutError != null) {
@@ -1724,6 +2238,15 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
   }) {
     return workoutError(this);
   }
@@ -1741,6 +2264,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
   }) {
     return workoutError?.call(this);
   }
@@ -1758,6 +2289,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     required TResult orElse(),
   }) {
     if (workoutError != null) {
@@ -1769,4 +2308,1286 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
 
 abstract class WorkoutError<T> implements TrainerState<T> {
   const factory WorkoutError() = _$WorkoutErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetExerciseLoadingImplCopyWith<T, $Res> {
+  factory _$$GetExerciseLoadingImplCopyWith(_$GetExerciseLoadingImpl<T> value,
+          $Res Function(_$GetExerciseLoadingImpl<T>) then) =
+      __$$GetExerciseLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetExerciseLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetExerciseLoadingImpl<T>>
+    implements _$$GetExerciseLoadingImplCopyWith<T, $Res> {
+  __$$GetExerciseLoadingImplCopyWithImpl(_$GetExerciseLoadingImpl<T> _value,
+      $Res Function(_$GetExerciseLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
+  const _$GetExerciseLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getExerciseLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetExerciseLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getExerciseLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getExerciseLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseLoading != null) {
+      return getExerciseLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getExerciseLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getExerciseLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseLoading != null) {
+      return getExerciseLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetExerciseLoading<T> implements TrainerState<T> {
+  const factory GetExerciseLoading() = _$GetExerciseLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetExerciseSuccessImplCopyWith<T, $Res> {
+  factory _$$GetExerciseSuccessImplCopyWith(_$GetExerciseSuccessImpl<T> value,
+          $Res Function(_$GetExerciseSuccessImpl<T>) then) =
+      __$$GetExerciseSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({AllExerciseResponse allExerciseResponse});
+}
+
+/// @nodoc
+class __$$GetExerciseSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetExerciseSuccessImpl<T>>
+    implements _$$GetExerciseSuccessImplCopyWith<T, $Res> {
+  __$$GetExerciseSuccessImplCopyWithImpl(_$GetExerciseSuccessImpl<T> _value,
+      $Res Function(_$GetExerciseSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? allExerciseResponse = null,
+  }) {
+    return _then(_$GetExerciseSuccessImpl<T>(
+      null == allExerciseResponse
+          ? _value.allExerciseResponse
+          : allExerciseResponse // ignore: cast_nullable_to_non_nullable
+              as AllExerciseResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
+  const _$GetExerciseSuccessImpl(this.allExerciseResponse);
+
+  @override
+  final AllExerciseResponse allExerciseResponse;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getExerciseSuccess(allExerciseResponse: $allExerciseResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetExerciseSuccessImpl<T> &&
+            (identical(other.allExerciseResponse, allExerciseResponse) ||
+                other.allExerciseResponse == allExerciseResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, allExerciseResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetExerciseSuccessImplCopyWith<T, _$GetExerciseSuccessImpl<T>>
+      get copyWith => __$$GetExerciseSuccessImplCopyWithImpl<T,
+          _$GetExerciseSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getExerciseSuccess(allExerciseResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getExerciseSuccess?.call(allExerciseResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseSuccess != null) {
+      return getExerciseSuccess(allExerciseResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getExerciseSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getExerciseSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseSuccess != null) {
+      return getExerciseSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetExerciseSuccess<T> implements TrainerState<T> {
+  const factory GetExerciseSuccess(
+          final AllExerciseResponse allExerciseResponse) =
+      _$GetExerciseSuccessImpl<T>;
+
+  AllExerciseResponse get allExerciseResponse;
+  @JsonKey(ignore: true)
+  _$$GetExerciseSuccessImplCopyWith<T, _$GetExerciseSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetExerciseErrorImplCopyWith<T, $Res> {
+  factory _$$GetExerciseErrorImplCopyWith(_$GetExerciseErrorImpl<T> value,
+          $Res Function(_$GetExerciseErrorImpl<T>) then) =
+      __$$GetExerciseErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetExerciseErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetExerciseErrorImpl<T>>
+    implements _$$GetExerciseErrorImplCopyWith<T, $Res> {
+  __$$GetExerciseErrorImplCopyWithImpl(_$GetExerciseErrorImpl<T> _value,
+      $Res Function(_$GetExerciseErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
+  const _$GetExerciseErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getExerciseError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetExerciseErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getExerciseError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getExerciseError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseError != null) {
+      return getExerciseError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getExerciseError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getExerciseError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getExerciseError != null) {
+      return getExerciseError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetExerciseError<T> implements TrainerState<T> {
+  const factory GetExerciseError() = _$GetExerciseErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetSearchExerciseLoadingImplCopyWith<T, $Res> {
+  factory _$$GetSearchExerciseLoadingImplCopyWith(
+          _$GetSearchExerciseLoadingImpl<T> value,
+          $Res Function(_$GetSearchExerciseLoadingImpl<T>) then) =
+      __$$GetSearchExerciseLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetSearchExerciseLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res,
+        _$GetSearchExerciseLoadingImpl<T>>
+    implements _$$GetSearchExerciseLoadingImplCopyWith<T, $Res> {
+  __$$GetSearchExerciseLoadingImplCopyWithImpl(
+      _$GetSearchExerciseLoadingImpl<T> _value,
+      $Res Function(_$GetSearchExerciseLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
+  const _$GetSearchExerciseLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getSearchExerciseLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSearchExerciseLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getSearchExerciseLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getSearchExerciseLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseLoading != null) {
+      return getSearchExerciseLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getSearchExerciseLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getSearchExerciseLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseLoading != null) {
+      return getSearchExerciseLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetSearchExerciseLoading<T> implements TrainerState<T> {
+  const factory GetSearchExerciseLoading() = _$GetSearchExerciseLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetSearchExerciseSuccessImplCopyWith<T, $Res> {
+  factory _$$GetSearchExerciseSuccessImplCopyWith(
+          _$GetSearchExerciseSuccessImpl<T> value,
+          $Res Function(_$GetSearchExerciseSuccessImpl<T>) then) =
+      __$$GetSearchExerciseSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({AllExerciseResponse searchExercise});
+}
+
+/// @nodoc
+class __$$GetSearchExerciseSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res,
+        _$GetSearchExerciseSuccessImpl<T>>
+    implements _$$GetSearchExerciseSuccessImplCopyWith<T, $Res> {
+  __$$GetSearchExerciseSuccessImplCopyWithImpl(
+      _$GetSearchExerciseSuccessImpl<T> _value,
+      $Res Function(_$GetSearchExerciseSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? searchExercise = null,
+  }) {
+    return _then(_$GetSearchExerciseSuccessImpl<T>(
+      null == searchExercise
+          ? _value.searchExercise
+          : searchExercise // ignore: cast_nullable_to_non_nullable
+              as AllExerciseResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
+  const _$GetSearchExerciseSuccessImpl(this.searchExercise);
+
+  @override
+  final AllExerciseResponse searchExercise;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getSearchExerciseSuccess(searchExercise: $searchExercise)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSearchExerciseSuccessImpl<T> &&
+            (identical(other.searchExercise, searchExercise) ||
+                other.searchExercise == searchExercise));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, searchExercise);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSearchExerciseSuccessImplCopyWith<T, _$GetSearchExerciseSuccessImpl<T>>
+      get copyWith => __$$GetSearchExerciseSuccessImplCopyWithImpl<T,
+          _$GetSearchExerciseSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getSearchExerciseSuccess(searchExercise);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getSearchExerciseSuccess?.call(searchExercise);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseSuccess != null) {
+      return getSearchExerciseSuccess(searchExercise);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getSearchExerciseSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getSearchExerciseSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseSuccess != null) {
+      return getSearchExerciseSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetSearchExerciseSuccess<T> implements TrainerState<T> {
+  const factory GetSearchExerciseSuccess(
+          final AllExerciseResponse searchExercise) =
+      _$GetSearchExerciseSuccessImpl<T>;
+
+  AllExerciseResponse get searchExercise;
+  @JsonKey(ignore: true)
+  _$$GetSearchExerciseSuccessImplCopyWith<T, _$GetSearchExerciseSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetSearchExerciseErrorImplCopyWith<T, $Res> {
+  factory _$$GetSearchExerciseErrorImplCopyWith(
+          _$GetSearchExerciseErrorImpl<T> value,
+          $Res Function(_$GetSearchExerciseErrorImpl<T>) then) =
+      __$$GetSearchExerciseErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetSearchExerciseErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetSearchExerciseErrorImpl<T>>
+    implements _$$GetSearchExerciseErrorImplCopyWith<T, $Res> {
+  __$$GetSearchExerciseErrorImplCopyWithImpl(
+      _$GetSearchExerciseErrorImpl<T> _value,
+      $Res Function(_$GetSearchExerciseErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
+  const _$GetSearchExerciseErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getSearchExerciseError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSearchExerciseErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+  }) {
+    return getSearchExerciseError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+  }) {
+    return getSearchExerciseError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseError != null) {
+      return getSearchExerciseError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+  }) {
+    return getSearchExerciseError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+  }) {
+    return getSearchExerciseError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (getSearchExerciseError != null) {
+      return getSearchExerciseError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetSearchExerciseError<T> implements TrainerState<T> {
+  const factory GetSearchExerciseError() = _$GetSearchExerciseErrorImpl<T>;
 }

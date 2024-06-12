@@ -132,14 +132,59 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<SearchResponse> getSearchData(String searchQuery) async {
+  Future<AllExerciseResponse> getFilterExercise(
+    int? limit,
+    int? skip,
+    String? filterName,
+    String? filterVal,
+  ) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'limit': limit,
+      r'skip': skip,
+      r'filterName': filterName,
+      r'filterVal': filterVal,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
-    final _data = searchQuery;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<SearchResponse>(Options(
-      method: 'POST',
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<AllExerciseResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'exercises',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = AllExerciseResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<AllExerciseResponse> getSearchExercise(
+    String? searchTerm,
+    String? filter,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'searchTerm': searchTerm,
+      r'filter': filter,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<AllExerciseResponse>(Options(
+      method: 'GET',
       headers: _headers,
       extra: _extra,
     )
@@ -154,7 +199,7 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = SearchResponse.fromJson(_result.data!);
+    final value = AllExerciseResponse.fromJson(_result.data!);
     return value;
   }
 

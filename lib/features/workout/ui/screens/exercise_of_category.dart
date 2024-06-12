@@ -31,7 +31,7 @@ class ExerciseOfCategory extends StatelessWidget{
                         TextFormField(
                                 controller: cubit.searchController,
                                 onSaved: (String? value){
-                                  cubit.getSearchData(value!);
+                                  // cubit.getSearchData(value!);
                                 },
                                 decoration: InputDecoration(
                                   hintText: 'search',

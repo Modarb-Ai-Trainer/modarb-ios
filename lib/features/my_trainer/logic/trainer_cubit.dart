@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
+import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -62,7 +63,6 @@ class TrainerCubit extends Cubit<TrainerState> {
   }
 
 
-  String? valueChoose;
   final List<String>itemsExercisesList =[
     'All',
     'waist',
@@ -77,12 +77,6 @@ class TrainerCubit extends Cubit<TrainerState> {
     'cardio',
   ];
 
-  void emitChangeSelection(String? value){
-
-    valueChoose = value;
-    emit(TrainerState.changeSelection(valueChoose));
-
-  }
 
 
 
@@ -106,6 +100,51 @@ class TrainerCubit extends Cubit<TrainerState> {
       emit(const TrainerState.workoutError());
     }
   }
+
+
+  String? valueChoose = 'All';
+  AllExerciseResponse? allExerciseResponse;
+  void getFilterExercise() async {
+    emit(const TrainerState.getExerciseLoading());
+
+    try {
+      allExerciseResponse = await _trainerRepo.getFilterExercise(
+          limit: 10,
+          skip: 0,
+          filterVal: (valueChoose == 'All') ? null : valueChoose,
+      );
+      emit(TrainerState.getExerciseSuccess(allExerciseResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.getExerciseError());
+    }
+  }
+
+  void emitChangeSelection(String? value){
+
+    valueChoose = value;
+    emit(TrainerState.changeSelection(valueChoose));
+    getFilterExercise();
+
+  }
+
+  final TextEditingController searchController = TextEditingController();
+  AllExerciseResponse? searchExercise;
+  void getSearchExercise() async {
+    emit(const TrainerState.getSearchExerciseLoading());
+
+    try {
+      searchExercise = await _trainerRepo.getSearchExercise(
+        searchTerm: searchController.text,
+        filter: valueChoose,
+      );
+      emit(TrainerState.getSearchExerciseSuccess(searchExercise!));
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.getSearchExerciseError());
+    }
+  }
+
 
   int getTotalMinDuration(List<Day> dayModel) {
     return dayModel

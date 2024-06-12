@@ -42,19 +42,19 @@ class WorkoutCubit extends Cubit<WorkoutState> {
   SearchResponse ?searchResponse ;
   List<DataOfSearch> ?dataModel ;
 
-  void getSearchData(String searchQuery) async {
-    emit(const WorkoutState.searchLoading());
-
-    try {
-
-      searchResponse = await _workoutRepo.getSearchData(searchQuery);
-      dataModel = searchResponse!.data;
-      emit(WorkoutState.searchSuccess(searchResponse!));
-    } catch (error) {
-      print(error.toString());
-      emit(const WorkoutState.searchError());
-    }
-  }
+  // void getSearchData(String searchQuery) async {
+  //   emit(const WorkoutState.searchLoading());
+  //
+  //   try {
+  //
+  //     searchResponse = await _workoutRepo.getSearchData(searchQuery);
+  //     dataModel = searchResponse!.data;
+  //     emit(WorkoutState.searchSuccess(searchResponse!));
+  //   } catch (error) {
+  //     print(error.toString());
+  //     emit(const WorkoutState.searchError());
+  //   }
+  // }
 
 
 

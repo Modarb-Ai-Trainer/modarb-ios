@@ -27,7 +27,7 @@ class SheetOfAddingExercises extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
+            // mainAxisSize: MainAxisSize.min,
             children: [
                Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,7 +45,7 @@ class SheetOfAddingExercises extends StatelessWidget {
               ),
               verticalSpace(10),
               TextFormField(
-                // controller: ,
+                controller: cubit.searchController,
                 decoration: InputDecoration(
                   hintText: 'search',
                   hintStyle: const TextStyle(
@@ -62,13 +62,20 @@ class SheetOfAddingExercises extends StatelessWidget {
                     color: ColorsManager.mainPurple,
                   ),
                 ),
+                onTap: (){
+                  cubit.getSearchExercise();
+                },
+                onChanged: (value){
+                  cubit.getSearchExercise();
+
+                },
               ),
               verticalSpace(10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: DropdownButton(
                   value: cubit.valueChoose,
-                  hint:  cubit.valueChoose == null ? const Text('select item') : Text('${cubit.valueChoose}') ,
+                  hint: Text('${cubit.valueChoose}'),
                   dropdownColor: ColorsManager.lighterGray,
                   icon: const Icon(Icons.arrow_drop_down),
                   iconSize: 33,
@@ -79,25 +86,29 @@ class SheetOfAddingExercises extends StatelessWidget {
                   },
                   items: cubit.itemsExercisesList.map((valueItem){
                     return DropdownMenuItem(
-                      value :valueItem,
+                      value :valueItem ,
                     child : Text(valueItem),
                   );
                   }).toList(),
                 ),
               ),
-              Expanded(
+              if (state is GetExerciseLoading || state is GetSearchExerciseLoading)
+                const Center(child: CircularProgressIndicator()),
+              if(state is GetExerciseSuccess)
+                Expanded(
                 child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: state.allExerciseResponse.data.length,
                   itemBuilder: (context, index) {
+                    var exercise = state.allExerciseResponse.data[index];
                     return GestureDetector(
                       onTap: () {},
                       child: ListTile(
                         title: Text(
-                          'chest press',
+                          exercise.name!,
                           style: TextStyles.font16White700,
                         ),
                         subtitle: Text(
-                          'full-body',
+                          exercise.category!,
                           style: TextStyles.font12White600,
                         ),
                         leading: SizedBox(
@@ -118,6 +129,43 @@ class SheetOfAddingExercises extends StatelessWidget {
                     },
                 ),
               ),
+              if(state is GetSearchExerciseSuccess)
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: state.searchExercise.data.length,
+                    itemBuilder: (context, index) {
+                      var exercise = state.searchExercise.data[index];
+                      return GestureDetector(
+                        onTap: () {},
+                        child: ListTile(
+                          title: Text(
+                            exercise.name!,
+                            style: TextStyles.font16White700,
+                          ),
+                          subtitle: Text(
+                            exercise.category!,
+                            style: TextStyles.font12White600,
+                          ),
+                          leading: SizedBox(
+                            width: 70.w,
+                            height: 60.h,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10.r),
+                              child: Image.asset(
+                                'assets/images/Muscles1.png',
+                                fit: BoxFit.fill,
+
+                              ),
+                            ),
+                          ),
+
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              if (state is GetExerciseError || state is GetSearchExerciseError)
+              const Center(child: Text('Error loading exercises')),
             ],
           ),
         );

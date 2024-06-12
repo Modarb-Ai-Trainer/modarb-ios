@@ -19,7 +19,7 @@ class ModarbApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    final userToken = SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+    final userToken = SharedPrefHelper.getString(SharedPrefKeys.userToken);
 
     return ScreenUtilInit(
       designSize: const Size(360, 690),

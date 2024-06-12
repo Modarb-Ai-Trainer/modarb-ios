@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 part 'trainer_states.freezed.dart';
 
@@ -20,6 +21,16 @@ class TrainerState <T> with _$TrainerState<T> {
   const factory TrainerState.workoutLoading() = WorkoutLoading;
   const factory TrainerState.workoutSuccess(WorkoutResponse workoutResponse) = WorkoutSuccess;
   const factory TrainerState.workoutError() = WorkoutError;
+
+
+  const factory TrainerState.getExerciseLoading() = GetExerciseLoading;
+  const factory TrainerState.getExerciseSuccess(AllExerciseResponse allExerciseResponse) = GetExerciseSuccess;
+  const factory TrainerState.getExerciseError() = GetExerciseError;
+
+  const factory TrainerState.getSearchExerciseLoading() = GetSearchExerciseLoading;
+  const factory TrainerState.getSearchExerciseSuccess(AllExerciseResponse searchExercise) = GetSearchExerciseSuccess;
+  const factory TrainerState.getSearchExerciseError() = GetSearchExerciseError;
+
 
 
 }
