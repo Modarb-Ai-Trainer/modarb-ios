@@ -150,8 +150,13 @@ class TrainerCubit extends Cubit<TrainerState> {
 
   List<String> resultSelected =[];
 
-  void updateSelectedExercises(List<String> exercises) {
-    resultSelected = exercises;
+  void updateSelectedExercises(List<String> newExercises) {
+    // resultSelected = newExercises;
+    for (String exercise in newExercises) {
+      if (!resultSelected.contains(exercise)) {
+        resultSelected.add(exercise);
+      }
+    }
     emit(TrainerState.exerciseUpdated(resultSelected));
   }
 
