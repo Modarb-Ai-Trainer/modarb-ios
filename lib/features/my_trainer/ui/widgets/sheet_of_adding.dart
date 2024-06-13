@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
@@ -16,9 +17,7 @@ class SheetOfAdding extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         var cubit = context.read<TrainerCubit>();
-
         return Container(
-          height: 500,
           decoration: const BoxDecoration(
             color: ColorsManager.darkGray,
             borderRadius: BorderRadius.only(
@@ -29,7 +28,7 @@ class SheetOfAdding extends StatelessWidget{
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
+            // mainAxisSize: MainAxisSize.min,
             children: [
               IconButton(
                 onPressed: (){
@@ -41,13 +40,19 @@ class SheetOfAdding extends StatelessWidget{
               GestureDetector(
                 onTap: (){
                   cubit.getFilterExercise();
-                  showModalBottomSheet(
+                  final result = showModalBottomSheet<List<String>>(
                     context: context,
                     isScrollControlled: true,
                     builder: (BuildContext context) {
                       return const SheetOfAddingExercises();
                     },
-                  );
+                  ) as List<String>;
+                  if (result.isNotEmpty) {
+                    cubit.updateSelectedExercises(result);
+                  }else{
+                    const Center(child: Text('No data here to show '));
+
+                }
                 },
                 child: Row(
                   children: [
@@ -71,10 +76,46 @@ class SheetOfAdding extends StatelessWidget{
                   ],
                 ),
               ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: cubit.resultSelected.length,
+                  itemBuilder: (context,index) => itemOfListExercise(context,cubit.resultSelected),
+                ),
+              )
             ],
           ),
         );
       },
     );
   }
+  Widget itemOfListExercise(BuildContext context,exercise) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 6.h),
+      decoration: const BoxDecoration(
+        color: Colors.transparent,
+      ),
+      child: ListTile(
+        title: Text(
+          exercise.name!,
+          style: TextStyles.font16White700,
+        ),
+        subtitle: Text(
+          exercise.category!,
+          style: TextStyles.font12White600,
+        ),
+        leading: SizedBox(
+          width: 70.w,
+          height: 60.h,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10.r),
+            child: Image.asset(
+              'assets/images/Muscles1.png',
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
 }

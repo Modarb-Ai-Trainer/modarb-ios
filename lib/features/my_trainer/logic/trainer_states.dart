@@ -33,4 +33,8 @@ class TrainerState <T> with _$TrainerState<T> {
 
 
 
+  const factory TrainerState.exerciseUpdated(List<String> exercises) = ExerciseUpdated;
+
+
+
 }

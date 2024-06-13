@@ -113,6 +113,8 @@ class TrainerCubit extends Cubit<TrainerState> {
           skip: 0,
           filterVal: (valueChoose == 'All') ? null : valueChoose,
       );
+      // checkedExercise = List<bool>.filled(allExerciseResponse!.data.length, false);
+
       emit(TrainerState.getExerciseSuccess(allExerciseResponse!));
     } catch (error) {
       print(error.toString());
@@ -138,6 +140,7 @@ class TrainerCubit extends Cubit<TrainerState> {
         searchTerm: searchController.text,
         filter: valueChoose,
       );
+
       emit(TrainerState.getSearchExerciseSuccess(searchExercise!));
     } catch (error) {
       print(error.toString());
@@ -145,6 +148,12 @@ class TrainerCubit extends Cubit<TrainerState> {
     }
   }
 
+  List<String> resultSelected =[];
+
+  void updateSelectedExercises(List<String> exercises) {
+    resultSelected = exercises;
+    emit(TrainerState.exerciseUpdated(resultSelected));
+  }
 
   int getTotalMinDuration(List<Day> dayModel) {
     return dayModel
@@ -161,5 +170,5 @@ class TrainerCubit extends Cubit<TrainerState> {
         .reduce((value, element) => value + element);
   }
 
-
 }
+
