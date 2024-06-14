@@ -5,6 +5,7 @@ import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding_exercises.dart';
@@ -40,8 +41,8 @@ class SheetOfAdding extends StatelessWidget{
                       builder: (BuildContext context) {
                         return const SheetOfAddingExercises();
                       },
-                    ) as List<String>;
-                    if (result.isNotEmpty) {
+                    );
+                    if (result!.isNotEmpty) {
                       cubit.updateSelectedExercises(result);
                     }else{
                       const Center(child: Text('No data here to show '));
@@ -74,19 +75,75 @@ class SheetOfAdding extends StatelessWidget{
                   ),
                 ),
                 verticalSpace(20),
-                if(state is ExerciseUpdated)
+                if(cubit.resultSelected.isNotEmpty)
                   Expanded(
                     child: ListView.builder(
                     itemCount: cubit.resultSelected.length,
                     itemBuilder: (context,index) => itemOfListExercise(context,cubit.resultSelected,index),
                     ),
-                )
+                                  ),
+                if(cubit.resultSelected.isNotEmpty)
+                  Align(
+                    alignment: AlignmentDirectional.bottomStart,
+                    child: AppTextButton(
+                    buttonText: 'Save as template',
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          backgroundColor: ColorsManager.darkGray,
+                          content: Text(
+                            'Template Name',
+                            style: TextStyles.font16White700,
+                          ),
+                          actions: [
+                            TextFormField(
+                              controller: cubit.templateController,
+                              decoration: InputDecoration(
+                                hintText: 'New Template',
+                                hintStyle: const TextStyle(color: Colors.white),
+                                filled: true,
+                                fillColor: Colors.grey.shade600,
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+
+                            ),
+                            Center(
+                              child: TextButton(
+                                  child: Text(
+                                    'Save',
+                                  style: TextStyles.font13White600.copyWith(
+                                    color: ColorsManager.mainPurple,
+                                    fontSize: 16,
+                                  ),
+                                  ),
+                                onPressed: (){
+                                    cubit.saveTemplate();
+                                    context.pop();
+                                    context.pop();
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+
+                    },
+                                    ),
+                  ),
+
               ],
             ),
+
           ),
         );
       },
     );
+
+
   }
   Widget itemOfListExercise(context,exercise,index) {
     return Container(
@@ -119,3 +176,4 @@ class SheetOfAdding extends StatelessWidget{
   }
 
 }
+

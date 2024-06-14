@@ -37,6 +37,7 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +61,7 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,6 +85,7 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -109,6 +112,7 @@ mixin _$TrainerState<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -132,6 +136,7 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -155,6 +160,7 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -235,6 +241,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return initial();
   }
@@ -261,6 +268,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return initial?.call();
   }
@@ -287,6 +295,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -319,6 +328,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return initial(this);
   }
@@ -345,6 +355,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return initial?.call(this);
   }
@@ -371,6 +382,7 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -441,6 +453,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return beforeWarming();
   }
@@ -467,6 +480,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return beforeWarming?.call();
   }
@@ -493,6 +507,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -525,6 +540,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return beforeWarming(this);
   }
@@ -551,6 +567,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return beforeWarming?.call(this);
   }
@@ -577,6 +594,7 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (beforeWarming != null) {
@@ -675,6 +693,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return counterChange(savedCounter);
   }
@@ -701,6 +720,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return counterChange?.call(savedCounter);
   }
@@ -727,6 +747,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -759,6 +780,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return counterChange(this);
   }
@@ -785,6 +807,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return counterChange?.call(this);
   }
@@ -811,6 +834,7 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (counterChange != null) {
@@ -917,6 +941,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return counterChangeOfWarming(newCounter);
   }
@@ -943,6 +968,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return counterChangeOfWarming?.call(newCounter);
   }
@@ -969,6 +995,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -1001,6 +1028,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return counterChangeOfWarming(this);
   }
@@ -1027,6 +1055,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return counterChangeOfWarming?.call(this);
   }
@@ -1053,6 +1082,7 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (counterChangeOfWarming != null) {
@@ -1129,6 +1159,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return warmingFinished();
   }
@@ -1155,6 +1186,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return warmingFinished?.call();
   }
@@ -1181,6 +1213,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -1213,6 +1246,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return warmingFinished(this);
   }
@@ -1239,6 +1273,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return warmingFinished?.call(this);
   }
@@ -1265,6 +1300,7 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (warmingFinished != null) {
@@ -1335,6 +1371,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return closingTraining();
   }
@@ -1361,6 +1398,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return closingTraining?.call();
   }
@@ -1387,6 +1425,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -1419,6 +1458,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return closingTraining(this);
   }
@@ -1445,6 +1485,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return closingTraining?.call(this);
   }
@@ -1471,6 +1512,7 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (closingTraining != null) {
@@ -1569,6 +1611,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return changeSelection(newSelect);
   }
@@ -1595,6 +1638,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return changeSelection?.call(newSelect);
   }
@@ -1621,6 +1665,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1653,6 +1698,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return changeSelection(this);
   }
@@ -1679,6 +1725,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return changeSelection?.call(this);
   }
@@ -1705,6 +1752,7 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -1781,6 +1829,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return workoutLoading();
   }
@@ -1807,6 +1856,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return workoutLoading?.call();
   }
@@ -1833,6 +1883,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutLoading != null) {
@@ -1865,6 +1916,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return workoutLoading(this);
   }
@@ -1891,6 +1943,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return workoutLoading?.call(this);
   }
@@ -1917,6 +1970,7 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutLoading != null) {
@@ -2015,6 +2069,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return workoutSuccess(workoutResponse);
   }
@@ -2041,6 +2096,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return workoutSuccess?.call(workoutResponse);
   }
@@ -2067,6 +2123,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutSuccess != null) {
@@ -2099,6 +2156,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return workoutSuccess(this);
   }
@@ -2125,6 +2183,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return workoutSuccess?.call(this);
   }
@@ -2151,6 +2210,7 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutSuccess != null) {
@@ -2227,6 +2287,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return workoutError();
   }
@@ -2253,6 +2314,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return workoutError?.call();
   }
@@ -2279,6 +2341,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutError != null) {
@@ -2311,6 +2374,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return workoutError(this);
   }
@@ -2337,6 +2401,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return workoutError?.call(this);
   }
@@ -2363,6 +2428,7 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (workoutError != null) {
@@ -2434,6 +2500,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getExerciseLoading();
   }
@@ -2460,6 +2527,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getExerciseLoading?.call();
   }
@@ -2486,6 +2554,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseLoading != null) {
@@ -2518,6 +2587,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getExerciseLoading(this);
   }
@@ -2544,6 +2614,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getExerciseLoading?.call(this);
   }
@@ -2570,6 +2641,7 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseLoading != null) {
@@ -2668,6 +2740,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getExerciseSuccess(allExerciseResponse);
   }
@@ -2694,6 +2767,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getExerciseSuccess?.call(allExerciseResponse);
   }
@@ -2720,6 +2794,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseSuccess != null) {
@@ -2752,6 +2827,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getExerciseSuccess(this);
   }
@@ -2778,6 +2854,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getExerciseSuccess?.call(this);
   }
@@ -2804,6 +2881,7 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseSuccess != null) {
@@ -2882,6 +2960,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getExerciseError();
   }
@@ -2908,6 +2987,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getExerciseError?.call();
   }
@@ -2934,6 +3014,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseError != null) {
@@ -2966,6 +3047,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getExerciseError(this);
   }
@@ -2992,6 +3074,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getExerciseError?.call(this);
   }
@@ -3018,6 +3101,7 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getExerciseError != null) {
@@ -3092,6 +3176,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getSearchExerciseLoading();
   }
@@ -3118,6 +3203,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getSearchExerciseLoading?.call();
   }
@@ -3144,6 +3230,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseLoading != null) {
@@ -3176,6 +3263,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getSearchExerciseLoading(this);
   }
@@ -3202,6 +3290,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getSearchExerciseLoading?.call(this);
   }
@@ -3228,6 +3317,7 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseLoading != null) {
@@ -3329,6 +3419,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getSearchExerciseSuccess(searchExercise);
   }
@@ -3355,6 +3446,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getSearchExerciseSuccess?.call(searchExercise);
   }
@@ -3381,6 +3473,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseSuccess != null) {
@@ -3413,6 +3506,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getSearchExerciseSuccess(this);
   }
@@ -3439,6 +3533,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getSearchExerciseSuccess?.call(this);
   }
@@ -3465,6 +3560,7 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseSuccess != null) {
@@ -3545,6 +3641,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return getSearchExerciseError();
   }
@@ -3571,6 +3668,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return getSearchExerciseError?.call();
   }
@@ -3597,6 +3695,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseError != null) {
@@ -3629,6 +3728,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return getSearchExerciseError(this);
   }
@@ -3655,6 +3755,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return getSearchExerciseError?.call(this);
   }
@@ -3681,6 +3782,7 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (getSearchExerciseError != null) {
@@ -3786,6 +3888,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
     required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
     return exerciseUpdated(exercises);
   }
@@ -3812,6 +3915,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
     return exerciseUpdated?.call(exercises);
   }
@@ -3838,6 +3942,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
     TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
   }) {
     if (exerciseUpdated != null) {
@@ -3870,6 +3975,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
     return exerciseUpdated(this);
   }
@@ -3896,6 +4002,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
     return exerciseUpdated?.call(this);
   }
@@ -3922,6 +4029,7 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
   }) {
     if (exerciseUpdated != null) {
@@ -3938,5 +4046,258 @@ abstract class ExerciseUpdated<T> implements TrainerState<T> {
   List<String> get exercises;
   @JsonKey(ignore: true)
   _$$ExerciseUpdatedImplCopyWith<T, _$ExerciseUpdatedImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TemplateUpdatedImplCopyWith<T, $Res> {
+  factory _$$TemplateUpdatedImplCopyWith(_$TemplateUpdatedImpl<T> value,
+          $Res Function(_$TemplateUpdatedImpl<T>) then) =
+      __$$TemplateUpdatedImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({List<TemplateModel> templateList});
+}
+
+/// @nodoc
+class __$$TemplateUpdatedImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$TemplateUpdatedImpl<T>>
+    implements _$$TemplateUpdatedImplCopyWith<T, $Res> {
+  __$$TemplateUpdatedImplCopyWithImpl(_$TemplateUpdatedImpl<T> _value,
+      $Res Function(_$TemplateUpdatedImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? templateList = null,
+  }) {
+    return _then(_$TemplateUpdatedImpl<T>(
+      null == templateList
+          ? _value._templateList
+          : templateList // ignore: cast_nullable_to_non_nullable
+              as List<TemplateModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
+  const _$TemplateUpdatedImpl(final List<TemplateModel> templateList)
+      : _templateList = templateList;
+
+  final List<TemplateModel> _templateList;
+  @override
+  List<TemplateModel> get templateList {
+    if (_templateList is EqualUnmodifiableListView) return _templateList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_templateList);
+  }
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.templateUpdated(templateList: $templateList)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TemplateUpdatedImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other._templateList, _templateList));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_templateList));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TemplateUpdatedImplCopyWith<T, _$TemplateUpdatedImpl<T>> get copyWith =>
+      __$$TemplateUpdatedImplCopyWithImpl<T, _$TemplateUpdatedImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return templateUpdated(templateList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return templateUpdated?.call(templateList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (templateUpdated != null) {
+      return templateUpdated(templateList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return templateUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return templateUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (templateUpdated != null) {
+      return templateUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TemplateUpdated<T> implements TrainerState<T> {
+  const factory TemplateUpdated(final List<TemplateModel> templateList) =
+      _$TemplateUpdatedImpl<T>;
+
+  List<TemplateModel> get templateList;
+  @JsonKey(ignore: true)
+  _$$TemplateUpdatedImplCopyWith<T, _$TemplateUpdatedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

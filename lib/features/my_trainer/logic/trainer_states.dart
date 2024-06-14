@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 part 'trainer_states.freezed.dart';
 
 @freezed
@@ -34,6 +35,7 @@ class TrainerState <T> with _$TrainerState<T> {
 
 
   const factory TrainerState.exerciseUpdated(List<String> exercises) = ExerciseUpdated;
+  const factory TrainerState.templateUpdated(List<TemplateModel> templateList) = TemplateUpdated;
 
 
 

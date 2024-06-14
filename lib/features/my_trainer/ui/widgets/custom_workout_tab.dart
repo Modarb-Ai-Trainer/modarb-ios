@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
+import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/sheet_of_adding.dart';
 
 class CustomWorkoutTab extends StatelessWidget{
@@ -11,47 +14,63 @@ class CustomWorkoutTab extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 20.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                  'Your saved templates',
-                  style: TextStyles.font19White700
-              ),
-              verticalSpace(10),
-              ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 2,
-                itemBuilder:(context, index) => itemOfTemplate(),
-              )
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: ColorsManager.mainPurple,
-        onPressed: () {
-          showModalBottomSheet(
-            context: context,
-            isScrollControlled: true,
-            builder: (BuildContext context) {
-              return const SheetOfAdding();
-            },
-          );
-        },
-        child: const Icon(Icons.add),
-      ),
+    return BlocBuilder<TrainerCubit,TrainerState>(
+     builder: (context,state){
+       var cubit = context.read<TrainerCubit>();
 
+       return Scaffold(
+         body: SingleChildScrollView(
+           child: Padding(
+             padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 20.h),
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                 Text(
+                     'Your saved templates',
+                     style: TextStyles.font19White700
+                 ),
+                 verticalSpace(10),
+                 // if(state is TemplateUpdated)
+                 if(cubit.templateList.isNotEmpty)
+                   Expanded(
+                     child: ListView.builder(
+                     scrollDirection: Axis.vertical,
+                     shrinkWrap: true,
+                     physics: const NeverScrollableScrollPhysics(),
+                     itemCount: cubit.templateList.length,
+                     itemBuilder:(context, index) => itemOfTemplate(cubit.templateList[index]),
+                     ),
+                   ),
+                 if(cubit.templateList.isEmpty)
+                    Center(
+                     child: Text('No templates saved yet', style: TextStyles.font16White700),
+                   ),
+               ],
+             ),
+           ),
+         ),
+         floatingActionButton: FloatingActionButton(
+           backgroundColor: ColorsManager.mainPurple,
+           onPressed: () async {
+              await showModalBottomSheet(
+               context: context,
+               isScrollControlled: true,
+               builder: (BuildContext context) {
+                 return const SheetOfAdding();
+               },
+
+             );
+
+           },
+           child: const Icon(Icons.add),
+         ),
+
+       );
+     },
     );
   }
 
-  Widget itemOfTemplate() => Padding(
+  Widget itemOfTemplate(template) => Padding(
     padding: EdgeInsets.symmetric(vertical: 10.h),
     child: Container(
       width: double.infinity,
@@ -69,7 +88,7 @@ class CustomWorkoutTab extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Quick workout',
+                  template.nameOfTemplate,
                   style: TextStyles.font13White700,
                 ),
                 const Icon(Icons.more_horiz_sharp,

@@ -62,6 +62,20 @@ class TrainerCubit extends Cubit<TrainerState> {
 
   }
 
+  int getTotalMinDuration(List<Day> dayModel) {
+    return dayModel
+        .map((day) => day.exercises
+        .map((exercise) => exercise.expectedDurationRange?.min ?? 0)
+        .reduce((value, element) => value + element))
+        .reduce((value, element) => value + element);
+  }
+  int getTotalMaxDuration(List<Day> dayModel) {
+    return dayModel
+        .map((day) => day.exercises
+        .map((exercise) => exercise.expectedDurationRange?.max ?? 0)
+        .reduce((value, element) => value + element))
+        .reduce((value, element) => value + element);
+  }
 
   final List<String>itemsExercisesList =[
     'All',
@@ -113,7 +127,6 @@ class TrainerCubit extends Cubit<TrainerState> {
           skip: 0,
           filterVal: (valueChoose == 'All') ? null : valueChoose,
       );
-      // checkedExercise = List<bool>.filled(allExerciseResponse!.data.length, false);
 
       emit(TrainerState.getExerciseSuccess(allExerciseResponse!));
     } catch (error) {
@@ -131,6 +144,7 @@ class TrainerCubit extends Cubit<TrainerState> {
   }
 
   final TextEditingController searchController = TextEditingController();
+  TextEditingController templateController = TextEditingController();
   AllExerciseResponse? searchExercise;
   void getSearchExercise() async {
     emit(const TrainerState.getSearchExerciseLoading());
@@ -151,7 +165,6 @@ class TrainerCubit extends Cubit<TrainerState> {
   List<String> resultSelected =[];
 
   void updateSelectedExercises(List<String> newExercises) {
-    // resultSelected = newExercises;
     for (String exercise in newExercises) {
       if (!resultSelected.contains(exercise)) {
         resultSelected.add(exercise);
@@ -160,20 +173,34 @@ class TrainerCubit extends Cubit<TrainerState> {
     emit(TrainerState.exerciseUpdated(resultSelected));
   }
 
-  int getTotalMinDuration(List<Day> dayModel) {
-    return dayModel
-        .map((day) => day.exercises
-        .map((exercise) => exercise.expectedDurationRange?.min ?? 0)
-        .reduce((value, element) => value + element))
-        .reduce((value, element) => value + element);
-  }
-  int getTotalMaxDuration(List<Day> dayModel) {
-    return dayModel
-        .map((day) => day.exercises
-        .map((exercise) => exercise.expectedDurationRange?.max ?? 0)
-        .reduce((value, element) => value + element))
-        .reduce((value, element) => value + element);
+
+  TemplateModel? template;
+  List<TemplateModel> templateList =[];
+  List<String>? savedResultSelected;
+  void saveTemplate(){
+    savedResultSelected = List<String>.from(resultSelected);
+    template = TemplateModel(
+        exercise: savedResultSelected,
+        nameOfTemplate: templateController.text,
+    );
+    // print(savedResultSelected?.length);
+    templateList.add(template!);
+    print(templateList);
+    emit(TrainerState.templateUpdated(templateList));
+    // resultSelected.clear();
+    // templateController.clear();
   }
 
+
+
+}
+
+class TemplateModel{
+  String nameOfTemplate;
+  List<String> ?exercise;
+  TemplateModel({
+    required this.exercise,
+    required this.nameOfTemplate,
+});
 }
 
