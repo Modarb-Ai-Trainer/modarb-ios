@@ -95,10 +95,9 @@ class TrainerCubit extends Cubit<TrainerState> {
 
 
   WorkoutResponse? workoutResponse;
-  List<Week>? weekModel;
-  List<Day>? dayModel;
+  Week? weekModel;
+  Day? dayModel ;
   int currentWeekIndex = 0;
-  int currentDayIndex = 0;
 
   void getWorkoutData() async {
     emit(const TrainerState.workoutLoading());
@@ -106,8 +105,8 @@ class TrainerCubit extends Cubit<TrainerState> {
     try {
       final myWorkoutId = await SharedPrefHelper.getString(SharedPrefKeys.myWorkoutId);
       workoutResponse = await _trainerRepo.getWorkoutData(myWorkoutId);
-      weekModel = workoutResponse?.data?.weeks;
-      dayModel = workoutResponse?.data?.weeks[currentWeekIndex].days;
+      weekModel = workoutResponse?.data?.weeks[currentWeekIndex];
+      dayModel = workoutResponse?.data?.weeks[currentWeekIndex].days[currentWeekIndex];
       emit(TrainerState.workoutSuccess(workoutResponse!));
     } catch (error) {
       print(error.toString());

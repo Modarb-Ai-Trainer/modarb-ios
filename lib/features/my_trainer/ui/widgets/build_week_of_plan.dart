@@ -8,23 +8,21 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_vertical_divider.dart';
-import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class BuildWeekOfPlan extends StatelessWidget{
   final int index;
-  final List<Week> listOfWeek;
-  final List<Day> listOfDay;
-
-  const BuildWeekOfPlan({Key? key, required this.index, required this.listOfWeek, required this.listOfDay}) : super(key: key);
+  const BuildWeekOfPlan({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
+        final cubit = context.read<TrainerCubit>();
+
         return SizedBox(
           height: 220.h,
           width: double.infinity,
@@ -44,7 +42,7 @@ class BuildWeekOfPlan extends StatelessWidget{
                 fontSize: 26.sp,
               ),
             ),
-            endChild: buildItemOfWeekOpen(context,index,listOfWeek,listOfDay),
+            endChild: buildItemOfWeekOpen(context,index,cubit.workoutResponse?.data?.weeks,cubit.workoutResponse?.data?.weeks[index].days),
           ),
         );
       },
@@ -205,15 +203,12 @@ class BuildWeekOfPlan extends StatelessWidget{
     );
   }
 
-  Widget buildItemOfDay(listOfDay,index) => Padding(
-    padding: const EdgeInsets.all(2.0),
-    child: CircleAvatar(
-      radius: 15.r,
-      backgroundColor: ColorsManager.lightPurple,
-      child: Text(
-        'D${listOfDay[index].dayNumber}',
-        style: TextStyles.font16White700,
-      ),
+  Widget buildItemOfDay(listOfDay,index) => CircleAvatar(
+    radius: 20.r,
+    backgroundColor: ColorsManager.lightPurple,
+    child: Text(
+      'D${listOfDay[index].dayNumber}',
+      style: TextStyles.font16White700,
     ),
   );
 }

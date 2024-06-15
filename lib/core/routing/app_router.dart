@@ -147,7 +147,9 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
               create: ( context) => getIt<WorkoutCubit>(),
-              child: const ExerciseOfCategory()
+              child: ExerciseOfCategory(
+                nameOfCategory: args?['nameOfCategory'],
+              )
           ),
         );
 

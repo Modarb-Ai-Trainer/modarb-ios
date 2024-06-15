@@ -21,9 +21,14 @@ mixin _$WorkoutState<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,9 +36,13 @@ mixin _$WorkoutState<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,9 +50,12 @@ mixin _$WorkoutState<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,9 +64,14 @@ mixin _$WorkoutState<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,9 +79,12 @@ mixin _$WorkoutState<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,9 +92,12 @@ mixin _$WorkoutState<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -139,9 +162,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
     return initial();
   }
@@ -152,9 +180,13 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
     return initial?.call();
   }
@@ -165,9 +197,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -182,9 +217,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
     return initial(this);
   }
@@ -195,9 +235,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
     return initial?.call(this);
   }
@@ -208,9 +251,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -293,9 +339,14 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
     return switchChange(newValue);
   }
@@ -306,9 +357,13 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
     return switchChange?.call(newValue);
   }
@@ -319,9 +374,12 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
     if (switchChange != null) {
@@ -336,9 +394,14 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
     return switchChange(this);
   }
@@ -349,9 +412,12 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
     return switchChange?.call(this);
   }
@@ -362,9 +428,12 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
     if (switchChange != null) {
@@ -452,9 +521,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
     return changeSelection(newSelect);
   }
@@ -465,9 +539,13 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
     return changeSelection?.call(newSelect);
   }
@@ -478,9 +556,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -495,9 +576,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
     return changeSelection(this);
   }
@@ -508,9 +594,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
     return changeSelection?.call(this);
   }
@@ -521,9 +610,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -544,35 +636,35 @@ abstract class ChangeSelection<T> implements WorkoutState<T> {
 }
 
 /// @nodoc
-abstract class _$$SearchLoadingImplCopyWith<T, $Res> {
-  factory _$$SearchLoadingImplCopyWith(_$SearchLoadingImpl<T> value,
-          $Res Function(_$SearchLoadingImpl<T>) then) =
-      __$$SearchLoadingImplCopyWithImpl<T, $Res>;
+abstract class _$$ExerciseLoadingImplCopyWith<T, $Res> {
+  factory _$$ExerciseLoadingImplCopyWith(_$ExerciseLoadingImpl<T> value,
+          $Res Function(_$ExerciseLoadingImpl<T>) then) =
+      __$$ExerciseLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$SearchLoadingImplCopyWithImpl<T, $Res>
-    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchLoadingImpl<T>>
-    implements _$$SearchLoadingImplCopyWith<T, $Res> {
-  __$$SearchLoadingImplCopyWithImpl(_$SearchLoadingImpl<T> _value,
-      $Res Function(_$SearchLoadingImpl<T>) _then)
+class __$$ExerciseLoadingImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$ExerciseLoadingImpl<T>>
+    implements _$$ExerciseLoadingImplCopyWith<T, $Res> {
+  __$$ExerciseLoadingImplCopyWithImpl(_$ExerciseLoadingImpl<T> _value,
+      $Res Function(_$ExerciseLoadingImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SearchLoadingImpl<T> implements SearchLoading<T> {
-  const _$SearchLoadingImpl();
+class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
+  const _$ExerciseLoadingImpl();
 
   @override
   String toString() {
-    return 'WorkoutState<$T>.searchLoading()';
+    return 'WorkoutState<$T>.exerciseLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchLoadingImpl<T>);
+        (other.runtimeType == runtimeType && other is _$ExerciseLoadingImpl<T>);
   }
 
   @override
@@ -584,11 +676,16 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
-    return searchLoading();
+    return exerciseLoading();
   }
 
   @override
@@ -597,11 +694,15 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
-    return searchLoading?.call();
+    return exerciseLoading?.call();
   }
 
   @override
@@ -610,13 +711,16 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchLoading != null) {
-      return searchLoading();
+    if (exerciseLoading != null) {
+      return exerciseLoading();
     }
     return orElse();
   }
@@ -627,11 +731,16 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
-    return searchLoading(this);
+    return exerciseLoading(this);
   }
 
   @override
@@ -640,11 +749,14 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
-    return searchLoading?.call(this);
+    return exerciseLoading?.call(this);
   }
 
   @override
@@ -653,83 +765,86 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchLoading != null) {
-      return searchLoading(this);
+    if (exerciseLoading != null) {
+      return exerciseLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class SearchLoading<T> implements WorkoutState<T> {
-  const factory SearchLoading() = _$SearchLoadingImpl<T>;
+abstract class ExerciseLoading<T> implements WorkoutState<T> {
+  const factory ExerciseLoading() = _$ExerciseLoadingImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$SearchSuccessImplCopyWith<T, $Res> {
-  factory _$$SearchSuccessImplCopyWith(_$SearchSuccessImpl<T> value,
-          $Res Function(_$SearchSuccessImpl<T>) then) =
-      __$$SearchSuccessImplCopyWithImpl<T, $Res>;
+abstract class _$$ExerciseSuccessImplCopyWith<T, $Res> {
+  factory _$$ExerciseSuccessImplCopyWith(_$ExerciseSuccessImpl<T> value,
+          $Res Function(_$ExerciseSuccessImpl<T>) then) =
+      __$$ExerciseSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({SearchResponse searchResponse});
+  $Res call({AllExerciseResponse allExerciseResponse});
 }
 
 /// @nodoc
-class __$$SearchSuccessImplCopyWithImpl<T, $Res>
-    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchSuccessImpl<T>>
-    implements _$$SearchSuccessImplCopyWith<T, $Res> {
-  __$$SearchSuccessImplCopyWithImpl(_$SearchSuccessImpl<T> _value,
-      $Res Function(_$SearchSuccessImpl<T>) _then)
+class __$$ExerciseSuccessImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$ExerciseSuccessImpl<T>>
+    implements _$$ExerciseSuccessImplCopyWith<T, $Res> {
+  __$$ExerciseSuccessImplCopyWithImpl(_$ExerciseSuccessImpl<T> _value,
+      $Res Function(_$ExerciseSuccessImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? searchResponse = null,
+    Object? allExerciseResponse = null,
   }) {
-    return _then(_$SearchSuccessImpl<T>(
-      null == searchResponse
-          ? _value.searchResponse
-          : searchResponse // ignore: cast_nullable_to_non_nullable
-              as SearchResponse,
+    return _then(_$ExerciseSuccessImpl<T>(
+      null == allExerciseResponse
+          ? _value.allExerciseResponse
+          : allExerciseResponse // ignore: cast_nullable_to_non_nullable
+              as AllExerciseResponse,
     ));
   }
 }
 
 /// @nodoc
 
-class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
-  const _$SearchSuccessImpl(this.searchResponse);
+class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
+  const _$ExerciseSuccessImpl(this.allExerciseResponse);
 
   @override
-  final SearchResponse searchResponse;
+  final AllExerciseResponse allExerciseResponse;
 
   @override
   String toString() {
-    return 'WorkoutState<$T>.searchSuccess(searchResponse: $searchResponse)';
+    return 'WorkoutState<$T>.exerciseSuccess(allExerciseResponse: $allExerciseResponse)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchSuccessImpl<T> &&
-            (identical(other.searchResponse, searchResponse) ||
-                other.searchResponse == searchResponse));
+            other is _$ExerciseSuccessImpl<T> &&
+            (identical(other.allExerciseResponse, allExerciseResponse) ||
+                other.allExerciseResponse == allExerciseResponse));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, searchResponse);
+  int get hashCode => Object.hash(runtimeType, allExerciseResponse);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuccessImplCopyWith<T, _$SearchSuccessImpl<T>> get copyWith =>
-      __$$SearchSuccessImplCopyWithImpl<T, _$SearchSuccessImpl<T>>(
+  _$$ExerciseSuccessImplCopyWith<T, _$ExerciseSuccessImpl<T>> get copyWith =>
+      __$$ExerciseSuccessImplCopyWithImpl<T, _$ExerciseSuccessImpl<T>>(
           this, _$identity);
 
   @override
@@ -738,11 +853,16 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
-    return searchSuccess(searchResponse);
+    return exerciseSuccess(allExerciseResponse);
   }
 
   @override
@@ -751,11 +871,15 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
-    return searchSuccess?.call(searchResponse);
+    return exerciseSuccess?.call(allExerciseResponse);
   }
 
   @override
@@ -764,13 +888,16 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchSuccess != null) {
-      return searchSuccess(searchResponse);
+    if (exerciseSuccess != null) {
+      return exerciseSuccess(allExerciseResponse);
     }
     return orElse();
   }
@@ -781,11 +908,16 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
-    return searchSuccess(this);
+    return exerciseSuccess(this);
   }
 
   @override
@@ -794,11 +926,14 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
-    return searchSuccess?.call(this);
+    return exerciseSuccess?.call(this);
   }
 
   @override
@@ -807,58 +942,61 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchSuccess != null) {
-      return searchSuccess(this);
+    if (exerciseSuccess != null) {
+      return exerciseSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class SearchSuccess<T> implements WorkoutState<T> {
-  const factory SearchSuccess(final SearchResponse searchResponse) =
-      _$SearchSuccessImpl<T>;
+abstract class ExerciseSuccess<T> implements WorkoutState<T> {
+  const factory ExerciseSuccess(final AllExerciseResponse allExerciseResponse) =
+      _$ExerciseSuccessImpl<T>;
 
-  SearchResponse get searchResponse;
+  AllExerciseResponse get allExerciseResponse;
   @JsonKey(ignore: true)
-  _$$SearchSuccessImplCopyWith<T, _$SearchSuccessImpl<T>> get copyWith =>
+  _$$ExerciseSuccessImplCopyWith<T, _$ExerciseSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SearchErrorImplCopyWith<T, $Res> {
-  factory _$$SearchErrorImplCopyWith(_$SearchErrorImpl<T> value,
-          $Res Function(_$SearchErrorImpl<T>) then) =
-      __$$SearchErrorImplCopyWithImpl<T, $Res>;
+abstract class _$$ExerciseErrorImplCopyWith<T, $Res> {
+  factory _$$ExerciseErrorImplCopyWith(_$ExerciseErrorImpl<T> value,
+          $Res Function(_$ExerciseErrorImpl<T>) then) =
+      __$$ExerciseErrorImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$SearchErrorImplCopyWithImpl<T, $Res>
-    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchErrorImpl<T>>
-    implements _$$SearchErrorImplCopyWith<T, $Res> {
-  __$$SearchErrorImplCopyWithImpl(
-      _$SearchErrorImpl<T> _value, $Res Function(_$SearchErrorImpl<T>) _then)
+class __$$ExerciseErrorImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$ExerciseErrorImpl<T>>
+    implements _$$ExerciseErrorImplCopyWith<T, $Res> {
+  __$$ExerciseErrorImplCopyWithImpl(_$ExerciseErrorImpl<T> _value,
+      $Res Function(_$ExerciseErrorImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SearchErrorImpl<T> implements SearchError<T> {
-  const _$SearchErrorImpl();
+class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
+  const _$ExerciseErrorImpl();
 
   @override
   String toString() {
-    return 'WorkoutState<$T>.searchError()';
+    return 'WorkoutState<$T>.exerciseError()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchErrorImpl<T>);
+        (other.runtimeType == runtimeType && other is _$ExerciseErrorImpl<T>);
   }
 
   @override
@@ -870,11 +1008,16 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     required TResult Function() initial,
     required TResult Function(bool newValue) switchChange,
     required TResult Function(String? newSelect) changeSelection,
-    required TResult Function() searchLoading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function() searchError,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
   }) {
-    return searchError();
+    return exerciseError();
   }
 
   @override
@@ -883,11 +1026,15 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     TResult? Function()? initial,
     TResult? Function(bool newValue)? switchChange,
     TResult? Function(String? newSelect)? changeSelection,
-    TResult? Function()? searchLoading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function()? searchError,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
   }) {
-    return searchError?.call();
+    return exerciseError?.call();
   }
 
   @override
@@ -896,13 +1043,16 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     TResult Function()? initial,
     TResult Function(bool newValue)? switchChange,
     TResult Function(String? newSelect)? changeSelection,
-    TResult Function()? searchLoading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function()? searchError,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchError != null) {
-      return searchError();
+    if (exerciseError != null) {
+      return exerciseError();
     }
     return orElse();
   }
@@ -913,11 +1063,16 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(SwitchChange<T> value) switchChange,
     required TResult Function(ChangeSelection<T> value) changeSelection,
-    required TResult Function(SearchLoading<T> value) searchLoading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchError<T> value) searchError,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
   }) {
-    return searchError(this);
+    return exerciseError(this);
   }
 
   @override
@@ -926,11 +1081,14 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(SwitchChange<T> value)? switchChange,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
-    TResult? Function(SearchLoading<T> value)? searchLoading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchError<T> value)? searchError,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
   }) {
-    return searchError?.call(this);
+    return exerciseError?.call(this);
   }
 
   @override
@@ -939,18 +1097,509 @@ class _$SearchErrorImpl<T> implements SearchError<T> {
     TResult Function(_Initial<T> value)? initial,
     TResult Function(SwitchChange<T> value)? switchChange,
     TResult Function(ChangeSelection<T> value)? changeSelection,
-    TResult Function(SearchLoading<T> value)? searchLoading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchError<T> value)? searchError,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
     required TResult orElse(),
   }) {
-    if (searchError != null) {
-      return searchError(this);
+    if (exerciseError != null) {
+      return exerciseError(this);
     }
     return orElse();
   }
 }
 
-abstract class SearchError<T> implements WorkoutState<T> {
-  const factory SearchError() = _$SearchErrorImpl<T>;
+abstract class ExerciseError<T> implements WorkoutState<T> {
+  const factory ExerciseError() = _$ExerciseErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SearchExerciseLoadingImplCopyWith<T, $Res> {
+  factory _$$SearchExerciseLoadingImplCopyWith(
+          _$SearchExerciseLoadingImpl<T> value,
+          $Res Function(_$SearchExerciseLoadingImpl<T>) then) =
+      __$$SearchExerciseLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SearchExerciseLoadingImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchExerciseLoadingImpl<T>>
+    implements _$$SearchExerciseLoadingImplCopyWith<T, $Res> {
+  __$$SearchExerciseLoadingImplCopyWithImpl(
+      _$SearchExerciseLoadingImpl<T> _value,
+      $Res Function(_$SearchExerciseLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
+  const _$SearchExerciseLoadingImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.searchExerciseLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchExerciseLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+  }) {
+    return searchExerciseLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+  }) {
+    return searchExerciseLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseLoading != null) {
+      return searchExerciseLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+  }) {
+    return searchExerciseLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+  }) {
+    return searchExerciseLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseLoading != null) {
+      return searchExerciseLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchExerciseLoading<T> implements WorkoutState<T> {
+  const factory SearchExerciseLoading() = _$SearchExerciseLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SearchExerciseSuccessImplCopyWith<T, $Res> {
+  factory _$$SearchExerciseSuccessImplCopyWith(
+          _$SearchExerciseSuccessImpl<T> value,
+          $Res Function(_$SearchExerciseSuccessImpl<T>) then) =
+      __$$SearchExerciseSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({AllExerciseResponse searchExercise});
+}
+
+/// @nodoc
+class __$$SearchExerciseSuccessImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchExerciseSuccessImpl<T>>
+    implements _$$SearchExerciseSuccessImplCopyWith<T, $Res> {
+  __$$SearchExerciseSuccessImplCopyWithImpl(
+      _$SearchExerciseSuccessImpl<T> _value,
+      $Res Function(_$SearchExerciseSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? searchExercise = null,
+  }) {
+    return _then(_$SearchExerciseSuccessImpl<T>(
+      null == searchExercise
+          ? _value.searchExercise
+          : searchExercise // ignore: cast_nullable_to_non_nullable
+              as AllExerciseResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
+  const _$SearchExerciseSuccessImpl(this.searchExercise);
+
+  @override
+  final AllExerciseResponse searchExercise;
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.searchExerciseSuccess(searchExercise: $searchExercise)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchExerciseSuccessImpl<T> &&
+            (identical(other.searchExercise, searchExercise) ||
+                other.searchExercise == searchExercise));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, searchExercise);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchExerciseSuccessImplCopyWith<T, _$SearchExerciseSuccessImpl<T>>
+      get copyWith => __$$SearchExerciseSuccessImplCopyWithImpl<T,
+          _$SearchExerciseSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+  }) {
+    return searchExerciseSuccess(searchExercise);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+  }) {
+    return searchExerciseSuccess?.call(searchExercise);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseSuccess != null) {
+      return searchExerciseSuccess(searchExercise);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+  }) {
+    return searchExerciseSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+  }) {
+    return searchExerciseSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseSuccess != null) {
+      return searchExerciseSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchExerciseSuccess<T> implements WorkoutState<T> {
+  const factory SearchExerciseSuccess(
+          final AllExerciseResponse searchExercise) =
+      _$SearchExerciseSuccessImpl<T>;
+
+  AllExerciseResponse get searchExercise;
+  @JsonKey(ignore: true)
+  _$$SearchExerciseSuccessImplCopyWith<T, _$SearchExerciseSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchExerciseErrorImplCopyWith<T, $Res> {
+  factory _$$SearchExerciseErrorImplCopyWith(_$SearchExerciseErrorImpl<T> value,
+          $Res Function(_$SearchExerciseErrorImpl<T>) then) =
+      __$$SearchExerciseErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SearchExerciseErrorImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$SearchExerciseErrorImpl<T>>
+    implements _$$SearchExerciseErrorImplCopyWith<T, $Res> {
+  __$$SearchExerciseErrorImplCopyWithImpl(_$SearchExerciseErrorImpl<T> _value,
+      $Res Function(_$SearchExerciseErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
+  const _$SearchExerciseErrorImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.searchExerciseError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchExerciseErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+  }) {
+    return searchExerciseError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+  }) {
+    return searchExerciseError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseError != null) {
+      return searchExerciseError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+  }) {
+    return searchExerciseError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+  }) {
+    return searchExerciseError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    required TResult orElse(),
+  }) {
+    if (searchExerciseError != null) {
+      return searchExerciseError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchExerciseError<T> implements WorkoutState<T> {
+  const factory SearchExerciseError() = _$SearchExerciseErrorImpl<T>;
 }

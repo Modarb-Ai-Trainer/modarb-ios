@@ -18,8 +18,6 @@ class MyPlanTab extends StatelessWidget {
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
-        final weeks = cubit.weekModel ?? [];
-        final days = cubit.dayModel ?? [];
 
         return CustomScrollView(
           slivers: [
@@ -37,11 +35,9 @@ class MyPlanTab extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                     (context, index) => BuildWeekOfPlan(
-                  listOfWeek: weeks,
-                  listOfDay: days,
-                  index: index,
+                      index: index,
                 ),
-                childCount: weeks.length,
+                childCount: cubit.workoutResponse?.data?.weeks.length,
               ),
             ),
           ],
