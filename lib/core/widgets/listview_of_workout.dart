@@ -22,8 +22,7 @@ class ListViewOfWorkout extends StatelessWidget{
                 Routes.exerciseDetails,
                 arguments:{
                   'index': index,
-                  'listOfExercise': listOfExercise,
-
+                  'listOfExercise': listOfExercise ,
                 }
             );
           },

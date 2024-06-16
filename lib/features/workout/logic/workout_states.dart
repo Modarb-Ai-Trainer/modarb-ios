@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
-import 'package:modarb_app/features/workout/data/models/search_response.dart';
 part 'workout_states.freezed.dart';
 
 @freezed

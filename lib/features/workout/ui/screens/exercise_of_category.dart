@@ -78,8 +78,8 @@ class ExerciseOfCategory extends StatelessWidget{
                     childAspectRatio: 0.7,
                   ),
                   delegate: SliverChildBuilderDelegate(
-                        (BuildContext context, int index) => itemOfList(context,cubit.allExerciseResponse?.data[index],index),
-                    childCount: cubit.allExerciseResponse?.data.length,
+                        (BuildContext context, int index) => itemOfList(context,cubit.allExerciseResponse?.data,index),
+                    childCount: cubit.allExerciseResponse?.data?.length,
                   ),
                 ),
                 if(state is  SearchExerciseSuccess)
@@ -91,8 +91,8 @@ class ExerciseOfCategory extends StatelessWidget{
                       childAspectRatio: 0.7,
                     ),
                     delegate: SliverChildBuilderDelegate(
-                          (BuildContext context, int index) => itemOfList(context,cubit.searchExercise?.data[index],index),
-                      childCount: cubit.searchExercise?.data.length,
+                          (BuildContext context, int index) => itemOfList(context,cubit.searchExercise?.data?[index],index),
+                      childCount: cubit.searchExercise?.data?.length,
                     ),
                   ),
                 if(state is ExerciseError || state is SearchExerciseError)
@@ -110,13 +110,13 @@ class ExerciseOfCategory extends StatelessWidget{
 
   Widget itemOfList(BuildContext context,model,index) =>  GestureDetector(
     onTap: (){
-      context.pushNamed(
-        Routes.exerciseDetails,
-          arguments:{
-          'index' : index,
-            'listOfExercise' : model ,
-        }
-      );
+     context.pushNamed(
+         Routes.exerciseInDetails,
+       arguments: {
+         'index' : index,
+         'model' : model
+       }
+     );
 
     },
     child: Padding(
@@ -132,7 +132,7 @@ class ExerciseOfCategory extends StatelessWidget{
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.w),
               child: Text(
-                model.name,
+                model[index].name,
                 style:TextStyles.font13White700,
               ),
             ),

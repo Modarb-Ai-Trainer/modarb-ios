@@ -9,13 +9,13 @@ class HomeResponse {
 
   final int? status;
   final String? message;
-  final Data? data;
+  final DataModel? data;
 
   factory HomeResponse.fromJson(Map<String, dynamic> json){
     return HomeResponse(
       status: json["status"],
       message: json["message"],
-      data: json["data"] == null ? null : Data.fromJson(json["data"]),
+      data: json["data"] == null ? null : DataModel.fromJson(json["data"]),
     );
   }
 

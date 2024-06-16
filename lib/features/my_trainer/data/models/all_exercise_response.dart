@@ -10,7 +10,7 @@ class AllExerciseResponse {
 
   final int? status;
   final String? message;
-  final List<Data> data;
+  final List<Data>? data;
   final Meta? meta;
 
   factory AllExerciseResponse.fromJson(Map<String, dynamic> json){
@@ -25,7 +25,7 @@ class AllExerciseResponse {
   Map<String, dynamic> toJson() => {
     "status": status,
     "message": message,
-    "data": data.map((x) => x.toJson()).toList(),
+    "data": data?.map((x) => x.toJson()).toList(),
     "meta": meta?.toJson(),
   };
 

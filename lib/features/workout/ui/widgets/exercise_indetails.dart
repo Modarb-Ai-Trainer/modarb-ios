@@ -1,59 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:modarb_app/core/helper/extension.dart';
-import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
-import 'package:modarb_app/core/widgets/app_text_container.dart';
-import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
-import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
-import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
-import 'package:modarb_app/features/my_trainer/ui/widgets/equipment_tab.dart';
-import 'package:modarb_app/features/my_trainer/ui/widgets/target_muscle_tab.dart';
-import 'instructions_tab.dart';
+import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
+import 'package:modarb_app/features/workout/logic/workout_cubit.dart';
+import 'package:modarb_app/features/workout/logic/workout_states.dart';
+import 'package:modarb_app/features/workout/ui/widgets/equipment_tab.dart';
+import 'package:modarb_app/features/workout/ui/widgets/instructions_tab.dart';
+import 'package:modarb_app/features/workout/ui/widgets/target_muscle_tab.dart';
 
-class ExerciseDetails extends StatelessWidget{
-  final int? index;
-  final List<Exercise>? listOfExercise;
-  const ExerciseDetails({Key? key,this.index, this.listOfExercise}) : super(key: key);
+class ExerciseInDetails extends StatelessWidget{
+  final int index;
+  final List<Data>? model;
+  const ExerciseInDetails({Key? key,required this.index, this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     TabController? tabController;
-    return BlocBuilder<TrainerCubit,TrainerState>(
+    return BlocBuilder<WorkoutCubit,WorkoutState>(
       builder: (context,state){
-        final cubit = context.read<TrainerCubit>();
         return DefaultTabController(
           length: 3,
           child: Scaffold(
             appBar: AppBar(
               toolbarHeight: 80.h,
               title: Text(
-                '${listOfExercise?[index!].name}',
+                '${model?[index].name}',
+                // '${listOfExercise?[index!].name}',
                 style: TextStyles.font19White700,
               ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: GestureDetector(
-                    onTap: (){
-                      context.pushNamed(Routes.beforeWarming);
-                      cubit.startTimerOfBeforeWarming();
-                      Future.delayed(
-                          const Duration(seconds: 15),() {
-                        context.pushNamed(Routes.warmScreen);
-                      });
-                    },
-                    child: AppTextContainer(
-                      text: 'Start',
-                      textStyle: TextStyles.font16White700,
-                      width: 90.w,
-                      height: 30.h,
-                    ),
-                  ),
-                ),
-              ],
             ),
             body: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
@@ -80,14 +56,14 @@ class ExerciseDetails extends StatelessWidget{
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text(
-                              '    Exercise ${index!+1} / ${listOfExercise?.length}',
+                              '    Exercise ${index+1} / ${model?.length}',
                               style: TextStyles.font16White700,
                             ),
-                            listOfExercise?[index!].sets != null ? Text(
-                              '       ${listOfExercise?[index!].sets} sets * ${listOfExercise?[index!].reps} reps ',
+                            model?[index].sets != null ? Text(
+                              '       ${model?[index].sets} sets * ${model?[index].reps} reps ',
                               style: TextStyles.font12White600,
                             ) :Text(
-                              '     ${listOfExercise?[index!].duration} min ',
+                              '     ${model?[index].duration} min ',
                               style: TextStyles.font12White600,
                             ),
                           ],
@@ -128,15 +104,15 @@ class ExerciseDetails extends StatelessWidget{
                     child: TabBarView(
                       controller: tabController,
                       children:  [
-                        TargetMuscleTab(
-                          index: index!, listOfExercise: listOfExercise!,
+                        TargetTab(
+                          index: index, model: model!,
 
                         ),
                         InstructionsTab(
-                          index: index!, listOfExercise: listOfExercise!,
+                          index: index, model: model!,
                         ),
                         EquipmentTab(
-                          index: index!, listOfExercise: listOfExercise!,
+                          index: index, model: model!,
                         ),
                       ],
                     ),

@@ -273,13 +273,13 @@ class _SheetOfAddingExercisesState extends State<SheetOfAddingExercises> {
                 Expanded(
                   child: ListView.builder(
                     itemCount: state is GetExerciseSuccess
-                        ? state.allExerciseResponse.data.length
-                        : (state as GetSearchExerciseSuccess).searchExercise.data.length,
+                        ? state.allExerciseResponse.data?.length
+                        : (state as GetSearchExerciseSuccess).searchExercise.data?.length,
                     itemBuilder: (context, index) {
                       bool isSelected = selectedExercise[index];
                       var exercise = state is GetExerciseSuccess
-                          ? state.allExerciseResponse.data[index]
-                          : (state as GetSearchExerciseSuccess).searchExercise.data[index];
+                          ? state.allExerciseResponse.data![index]
+                          : (state as GetSearchExerciseSuccess).searchExercise.data?[index];
                       return itemOfListExercise(context, isSelected, exercise, index);
                     },
                   ),
