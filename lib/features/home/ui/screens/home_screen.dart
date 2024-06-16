@@ -22,8 +22,6 @@ class HomeScreen extends StatelessWidget{
       builder: (context,index){
         final cubit = context.read<HomeCubit>();
         final cubit2 = context.read<TrainerCubit>();
-        final days = cubit2.dayModel ?? [];
-
         String? userName = cubit.homeResponse?.data?.user?.name;
         return Scaffold(
           appBar: AppBar(
