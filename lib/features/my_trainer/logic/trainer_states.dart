@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 part 'trainer_states.freezed.dart';
@@ -17,6 +19,9 @@ class TrainerState <T> with _$TrainerState<T> {
   const factory TrainerState.warmingFinished() = WarmingFinished;
   const factory TrainerState.closingTraining() = ClosingTraining;
 
+  const factory TrainerState.counterChangeOfExercise({required int exerciseTime}) = CounterChangeOfExercise;
+  const factory TrainerState.exerciseFinished() = ExerciseFinished;
+
   const factory TrainerState.changeSelection(String? newSelect) = ChangeSelection;
 
   const factory TrainerState.workoutLoading() = WorkoutLoading;
@@ -31,6 +36,16 @@ class TrainerState <T> with _$TrainerState<T> {
   const factory TrainerState.getSearchExerciseLoading() = GetSearchExerciseLoading;
   const factory TrainerState.getSearchExerciseSuccess(AllExerciseResponse searchExercise) = GetSearchExerciseSuccess;
   const factory TrainerState.getSearchExerciseError() = GetSearchExerciseError;
+
+
+  const factory TrainerState.createCustomPlanLoading() = CreateCustomPlanLoading;
+  const factory TrainerState.createCustomPlanSuccess(TemplateResponse templateResponse) = CreateCustomPlanSuccess;
+  const factory TrainerState.createCustomPlanError() = CreateCustomPlanError;
+
+
+  const factory TrainerState.getCustomPlanLoading() = GetCustomPlanLoading;
+  const factory TrainerState.getCustomPlanSuccess(AllTemplateResponse allTemplateResponse) = GetCustomPlanSuccess;
+  const factory TrainerState.getCustomPlanError() = GetCustomPlanError;
 
 
 

@@ -131,7 +131,11 @@ class AppRouter {
 
         case Routes.warmScreen:
         return MaterialPageRoute(
-          builder: (_) => const WarmScreen(),
+          builder: (_) => WarmScreen(
+            index: args?['index'],
+            listOfExercise: args?['listOfExercise'],
+
+          ),
         );
 
         case Routes.completeWorkout:

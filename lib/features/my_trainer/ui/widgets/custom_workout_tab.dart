@@ -17,37 +17,50 @@ class CustomWorkoutTab extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
      builder: (context,state){
        var cubit = context.read<TrainerCubit>();
-
+       if(cubit.allTemplateResponse == null) {
+         cubit.getCustomPlan();
+       }
        return Scaffold(
-         body: SingleChildScrollView(
-           child: Padding(
-             padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 20.h),
-             child: Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
-               children: [
-                 Text(
-                     'Your saved templates',
-                     style: TextStyles.font19White700
-                 ),
-                 verticalSpace(10),
-                 // if(state is TemplateUpdated)
-                 if(cubit.templateList.isNotEmpty)
-                   Expanded(
-                     child: ListView.builder(
-                     scrollDirection: Axis.vertical,
-                     shrinkWrap: true,
-                     physics: const NeverScrollableScrollPhysics(),
-                     itemCount: cubit.templateList.length,
-                     itemBuilder:(context, index) => itemOfTemplate(cubit.templateList[index]),
-                     ),
-                   ),
-                 if(cubit.templateList.isEmpty)
-                    Center(
-                     child: Text('No templates saved yet', style: TextStyles.font16White700),
-                   ),
-               ],
-             ),
-           ),
+         body: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 20.h),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                        'Your saved templates',
+                        style: TextStyles.font19White700
+                    ),
+                    verticalSpace(10),
+                  ],
+                ),
+              ),
+            ),
+            if(cubit.allTemplateResponse != null)
+              SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                  (context,index) => itemOfTemplate(cubit.allTemplateResponse?.data, index),
+              childCount: cubit.allTemplateResponse?.data.length,
+
+            ),
+              ),
+            if(state is GetCustomPlanLoading)
+              const SliverToBoxAdapter(
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+
+              ),
+            if(cubit.allTemplateResponse == null)
+              SliverToBoxAdapter(
+                child: Center(
+                  child: Text('No templates saved yet', style: TextStyles.font16White700),
+                ),
+
+              ),
+          ],
          ),
          floatingActionButton: FloatingActionButton(
            backgroundColor: ColorsManager.mainPurple,
@@ -70,8 +83,8 @@ class CustomWorkoutTab extends StatelessWidget{
     );
   }
 
-  Widget itemOfTemplate(template) => Padding(
-    padding: EdgeInsets.symmetric(vertical: 10.h),
+  Widget itemOfTemplate(template,index) => Padding(
+    padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 15.w),
     child: Container(
       width: double.infinity,
       height: 230.h,
@@ -88,7 +101,7 @@ class CustomWorkoutTab extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  template.nameOfTemplate,
+                  template[index].name,
                   style: TextStyles.font13White700,
                 ),
                 const Icon(Icons.more_horiz_sharp,
@@ -98,7 +111,7 @@ class CustomWorkoutTab extends StatelessWidget{
             ),
             verticalSpace(10),
             Text(
-              'Tuesday , 12 Dec',
+              template[index].creationDate,
               style: TextStyles.font12White600,
 
             ),
@@ -140,48 +153,37 @@ class CustomWorkoutTab extends StatelessWidget{
               ],
             ),
             verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Chest press',
-                  style: TextStyles.font12White600,
-                ),
-                Text('15 kg  -4 x 15',
-                  style: TextStyles.font12White600,
-                ),
-
-              ],
-            ),
-            verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Deadlift',
-                  style: TextStyles.font12White600,
-                ),
-                Text('10 kg  -4 x 15',
-                  style: TextStyles.font12White600,
-                ),
-
-              ],
-            ),
-            verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('tricep extension cable',
-                  style: TextStyles.font12White600,
-                ),
-                Text('20 kg  -4 x 15',
-                  style: TextStyles.font12White600,
-                ),
-
-              ],
+            Expanded(
+              child: ListView.builder(
+                itemCount: template[index].exercises.length,
+                  itemBuilder:(context,index) => itemOfRow(template,index),
+              ),
             ),
           ],
         ),
       ),
     ),
   );
+
+
+  Widget itemOfRow(template,index) =>Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          template[index].exercises[index].name,
+          style: TextStyles.font12White600,
+        ),
+        Text(
+         '${ template[index].exercises[index].duration} seconds',
+          style: TextStyles.font12White600,
+        ),
+
+      ],
+    ),
+  );
+
+
 
 }

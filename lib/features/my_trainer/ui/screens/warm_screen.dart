@@ -6,6 +6,7 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/exercise2.dart';
@@ -15,7 +16,10 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WarmScreen extends StatelessWidget{
 
-  const WarmScreen({Key? key}) : super(key: key);
+  final int index;
+  final List<Exercise>? listOfExercise;
+
+  const WarmScreen({Key? key, required this.index, this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,11 +62,11 @@ class WarmScreen extends StatelessWidget{
                           ),
                         ),
                         horizontalSpace(40),
-                        Text(
-                          'Warms up',
-                          style: TextStyles.font19White700,
-
-                        ),
+                        // Text(
+                        //   'Warms up',
+                        //   style: TextStyles.font19White700,
+                        //
+                        // ),
                       ],
                     ),
                   ),
@@ -72,11 +76,21 @@ class WarmScreen extends StatelessWidget{
                     child: PageView(
                       physics: const BouncingScrollPhysics(),
                       controller: cubit.warmController,
-                      children: const [
-                        Exercise1(),
-                        Exercise2(),
-                        Exercise2(),
-                        Exercise2(),
+                      children: [
+                        const Exercise1(),
+                        Exercise2(
+                          index: index,
+                          listOfExercise:listOfExercise ,
+                        ),
+                        Exercise2(
+                          index: index,
+                          listOfExercise: listOfExercise,
+                        ),
+                        Exercise2(
+                          index: index,
+                          listOfExercise:listOfExercise ,
+
+                        ),
                       ],
 
                       onPageChanged: (value){

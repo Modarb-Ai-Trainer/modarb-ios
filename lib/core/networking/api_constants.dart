@@ -9,6 +9,7 @@ class ApiConstants{
   static const String myWorkouts = "myWorkouts/{id}";
   static const String allExercise = "exercises";
   static const String exercisesSearch = "exercises/search";
+  static const String templates = "templates";
 }
 
 class ApiErrors {

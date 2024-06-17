@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -61,6 +63,24 @@ class TrainerCubit extends Cubit<TrainerState> {
     emit(const TrainerState.closingTraining());
 
   }
+
+  int counterOfExercise = 10 ;
+  int ?newCounterOfExercise ;
+  late Timer timerOfExercise;
+  void startTimerOfExercise() {
+    timerOfExercise = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (counterOfExercise > 0) {
+        counterOfExercise --;
+        newCounterOfExercise = counterOfExercise;
+        emit(TrainerState.counterChangeOfExercise(exerciseTime: newCounterOfExercise!));
+      } else {
+        timerOfExercise.cancel();
+        emit(const TrainerState.exerciseFinished());
+      }
+    });
+
+  }
+
 
   int getTotalMinDuration(List<Day> dayModel) {
     return dayModel
@@ -169,26 +189,66 @@ class TrainerCubit extends Cubit<TrainerState> {
         resultSelected.add(exercise);
       }
     }
+
     emit(TrainerState.exerciseUpdated(resultSelected));
   }
 
 
-  TemplateModel? template;
-  List<TemplateModel> templateList =[];
-  List<String>? savedResultSelected;
-  void saveTemplate(){
-    savedResultSelected = List<String>.from(resultSelected);
-    template = TemplateModel(
-        exercise: savedResultSelected,
-        nameOfTemplate: templateController.text,
-    );
-    // print(savedResultSelected?.length);
-    templateList.add(template!);
-    print(templateList);
-    emit(TrainerState.templateUpdated(templateList));
-    // resultSelected.clear();
-    // templateController.clear();
+  // TemplateModel? template;
+  // List<TemplateModel> templateList =[];
+  // List<String>? savedResultSelected;
+  // void saveTemplate(){
+  //   savedResultSelected = List<String>.from(resultSelected);
+  //   template = TemplateModel(
+  //       exercise: savedResultSelected,
+  //       nameOfTemplate: templateController.text,
+  //   );
+  //   // print(savedResultSelected?.length);
+  //   templateList.add(template!);
+  //   print(templateList);
+  //   emit(TrainerState.templateUpdated(templateList));
+  //   // resultSelected.clear();
+  //   // templateController.clear();
+  // }
+
+
+
+/// new
+  TemplateResponse ?templateResponse;
+  void createCustomPlan() async {
+    emit(const TrainerState.createCustomPlanLoading());
+
+    try {
+      templateResponse = await _trainerRepo.createCustomPlan(
+        name: templateController.text,
+        user: '',
+        creationDate: '1/5/2002',
+        exercises: resultSelected,
+      );
+
+      emit(TrainerState.createCustomPlanSuccess(templateResponse!));
+      // templateController.clear();
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.createCustomPlanError());
+    }
   }
+
+
+  AllTemplateResponse ?allTemplateResponse;
+  void getCustomPlan() async {
+    emit(const TrainerState.getCustomPlanLoading());
+
+    try {
+      allTemplateResponse = await _trainerRepo.getCustomPlan();
+
+      emit(TrainerState.getCustomPlanSuccess(allTemplateResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.getCustomPlanError());
+    }
+  }
+
 
 
 

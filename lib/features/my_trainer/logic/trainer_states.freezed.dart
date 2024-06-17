@@ -24,6 +24,8 @@ mixin _$TrainerState<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -36,6 +38,14 @@ mixin _$TrainerState<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) =>
@@ -48,6 +58,8 @@ mixin _$TrainerState<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -60,6 +72,14 @@ mixin _$TrainerState<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) =>
@@ -72,6 +92,8 @@ mixin _$TrainerState<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -84,6 +106,14 @@ mixin _$TrainerState<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -98,6 +128,9 @@ mixin _$TrainerState<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -111,6 +144,17 @@ mixin _$TrainerState<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) =>
@@ -123,6 +167,9 @@ mixin _$TrainerState<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -135,6 +182,14 @@ mixin _$TrainerState<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) =>
@@ -147,6 +202,8 @@ mixin _$TrainerState<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -159,6 +216,12 @@ mixin _$TrainerState<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -228,6 +291,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -240,6 +305,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -255,6 +328,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -267,6 +342,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -282,6 +365,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -294,6 +379,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -314,6 +407,9 @@ class _$InitialImpl<T> implements _Initial<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -327,6 +423,17 @@ class _$InitialImpl<T> implements _Initial<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -342,6 +449,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -354,6 +464,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -369,6 +487,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -381,6 +501,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -440,6 +566,8 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -452,6 +580,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -467,6 +603,8 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -479,6 +617,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -494,6 +640,8 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -506,6 +654,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -526,6 +682,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -539,6 +698,17 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -554,6 +724,9 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -566,6 +739,14 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -581,6 +762,8 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -593,6 +776,12 @@ class _$BeforeWarmingImpl<T> implements BeforeWarming<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -680,6 +869,8 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -692,6 +883,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -707,6 +906,8 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -719,6 +920,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -734,6 +943,8 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -746,6 +957,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -766,6 +985,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -779,6 +1001,17 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -794,6 +1027,9 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -806,6 +1042,14 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -821,6 +1065,8 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -833,6 +1079,12 @@ class _$CounterChangeImpl<T> implements CounterChange<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -928,6 +1180,8 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -940,6 +1194,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -955,6 +1217,8 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -967,6 +1231,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -982,6 +1254,8 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -994,6 +1268,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -1014,6 +1296,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -1027,6 +1312,17 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -1042,6 +1338,9 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1054,6 +1353,14 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -1069,6 +1376,8 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1081,6 +1390,12 @@ class _$CounterChangeOfWarmingImpl<T> implements CounterChangeOfWarming<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -1146,6 +1461,8 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -1158,6 +1475,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -1173,6 +1498,8 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1185,6 +1512,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -1200,6 +1535,8 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1212,6 +1549,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -1232,6 +1577,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -1245,6 +1593,17 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -1260,6 +1619,9 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1272,6 +1634,14 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -1287,6 +1657,8 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1299,6 +1671,12 @@ class _$WarmingFinishedImpl<T> implements WarmingFinished<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -1358,6 +1736,8 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -1370,6 +1750,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -1385,6 +1773,8 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1397,6 +1787,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -1412,6 +1810,8 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1424,6 +1824,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -1444,6 +1852,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -1457,6 +1868,17 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -1472,6 +1894,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1484,6 +1909,14 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -1499,6 +1932,8 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1511,6 +1946,12 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -1524,6 +1965,594 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
 
 abstract class ClosingTraining<T> implements TrainerState<T> {
   const factory ClosingTraining() = _$ClosingTrainingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$CounterChangeOfExerciseImplCopyWith<T, $Res> {
+  factory _$$CounterChangeOfExerciseImplCopyWith(
+          _$CounterChangeOfExerciseImpl<T> value,
+          $Res Function(_$CounterChangeOfExerciseImpl<T>) then) =
+      __$$CounterChangeOfExerciseImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int exerciseTime});
+}
+
+/// @nodoc
+class __$$CounterChangeOfExerciseImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res,
+        _$CounterChangeOfExerciseImpl<T>>
+    implements _$$CounterChangeOfExerciseImplCopyWith<T, $Res> {
+  __$$CounterChangeOfExerciseImplCopyWithImpl(
+      _$CounterChangeOfExerciseImpl<T> _value,
+      $Res Function(_$CounterChangeOfExerciseImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? exerciseTime = null,
+  }) {
+    return _then(_$CounterChangeOfExerciseImpl<T>(
+      exerciseTime: null == exerciseTime
+          ? _value.exerciseTime
+          : exerciseTime // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
+  const _$CounterChangeOfExerciseImpl({required this.exerciseTime});
+
+  @override
+  final int exerciseTime;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.counterChangeOfExercise(exerciseTime: $exerciseTime)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CounterChangeOfExerciseImpl<T> &&
+            (identical(other.exerciseTime, exerciseTime) ||
+                other.exerciseTime == exerciseTime));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, exerciseTime);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CounterChangeOfExerciseImplCopyWith<T, _$CounterChangeOfExerciseImpl<T>>
+      get copyWith => __$$CounterChangeOfExerciseImplCopyWithImpl<T,
+          _$CounterChangeOfExerciseImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return counterChangeOfExercise(exerciseTime);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return counterChangeOfExercise?.call(exerciseTime);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (counterChangeOfExercise != null) {
+      return counterChangeOfExercise(exerciseTime);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return counterChangeOfExercise(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return counterChangeOfExercise?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (counterChangeOfExercise != null) {
+      return counterChangeOfExercise(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CounterChangeOfExercise<T> implements TrainerState<T> {
+  const factory CounterChangeOfExercise({required final int exerciseTime}) =
+      _$CounterChangeOfExerciseImpl<T>;
+
+  int get exerciseTime;
+  @JsonKey(ignore: true)
+  _$$CounterChangeOfExerciseImplCopyWith<T, _$CounterChangeOfExerciseImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ExerciseFinishedImplCopyWith<T, $Res> {
+  factory _$$ExerciseFinishedImplCopyWith(_$ExerciseFinishedImpl<T> value,
+          $Res Function(_$ExerciseFinishedImpl<T>) then) =
+      __$$ExerciseFinishedImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$ExerciseFinishedImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$ExerciseFinishedImpl<T>>
+    implements _$$ExerciseFinishedImplCopyWith<T, $Res> {
+  __$$ExerciseFinishedImplCopyWithImpl(_$ExerciseFinishedImpl<T> _value,
+      $Res Function(_$ExerciseFinishedImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
+  const _$ExerciseFinishedImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.exerciseFinished()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExerciseFinishedImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return exerciseFinished();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return exerciseFinished?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (exerciseFinished != null) {
+      return exerciseFinished();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return exerciseFinished(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return exerciseFinished?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (exerciseFinished != null) {
+      return exerciseFinished(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ExerciseFinished<T> implements TrainerState<T> {
+  const factory ExerciseFinished() = _$ExerciseFinishedImpl<T>;
 }
 
 /// @nodoc
@@ -1598,6 +2627,8 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -1610,6 +2641,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -1625,6 +2664,8 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1637,6 +2678,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -1652,6 +2701,8 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1664,6 +2715,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -1684,6 +2743,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -1697,6 +2759,17 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -1712,6 +2785,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1724,6 +2800,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -1739,6 +2823,8 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1751,6 +2837,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -1816,6 +2908,8 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -1828,6 +2922,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -1843,6 +2945,8 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1855,6 +2959,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -1870,6 +2982,8 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -1882,6 +2996,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -1902,6 +3024,9 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -1915,6 +3040,17 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -1930,6 +3066,9 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1942,6 +3081,14 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -1957,6 +3104,8 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -1969,6 +3118,12 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -2056,6 +3211,8 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -2068,6 +3225,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -2083,6 +3248,8 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2095,6 +3262,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -2110,6 +3285,8 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2122,6 +3299,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -2142,6 +3327,9 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -2155,6 +3343,17 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -2170,6 +3369,9 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2182,6 +3384,14 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -2197,6 +3407,8 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2209,6 +3421,12 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -2274,6 +3492,8 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -2286,6 +3506,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -2301,6 +3529,8 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2313,6 +3543,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -2328,6 +3566,8 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2340,6 +3580,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -2360,6 +3608,9 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -2373,6 +3624,17 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -2388,6 +3650,9 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2400,6 +3665,14 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -2415,6 +3688,8 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2427,6 +3702,12 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -2487,6 +3768,8 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -2499,6 +3782,14 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -2514,6 +3805,8 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2526,6 +3819,14 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -2541,6 +3842,8 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2553,6 +3856,14 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -2573,6 +3884,9 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -2586,6 +3900,17 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -2601,6 +3926,9 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2613,6 +3941,14 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -2628,6 +3964,8 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2640,6 +3978,12 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -2727,6 +4071,8 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -2739,6 +4085,14 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -2754,6 +4108,8 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2766,6 +4122,14 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -2781,6 +4145,8 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2793,6 +4159,14 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -2813,6 +4187,9 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -2826,6 +4203,17 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -2841,6 +4229,9 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2853,6 +4244,14 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -2868,6 +4267,8 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -2880,6 +4281,12 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -2947,6 +4354,8 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -2959,6 +4368,14 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -2974,6 +4391,8 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -2986,6 +4405,14 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -3001,6 +4428,8 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3013,6 +4442,14 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -3033,6 +4470,9 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -3046,6 +4486,17 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -3061,6 +4512,9 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3073,6 +4527,14 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -3088,6 +4550,8 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3100,6 +4564,12 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -3163,6 +4633,8 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -3175,6 +4647,14 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -3190,6 +4670,8 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3202,6 +4684,14 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -3217,6 +4707,8 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3229,6 +4721,14 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -3249,6 +4749,9 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -3262,6 +4765,17 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -3277,6 +4791,9 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3289,6 +4806,14 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -3304,6 +4829,8 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3316,6 +4843,12 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -3406,6 +4939,8 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -3418,6 +4953,14 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -3433,6 +4976,8 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3445,6 +4990,14 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -3460,6 +5013,8 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3472,6 +5027,14 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -3492,6 +5055,9 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -3505,6 +5071,17 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -3520,6 +5097,9 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3532,6 +5112,14 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -3547,6 +5135,8 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3559,6 +5149,12 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -3628,6 +5224,8 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -3640,6 +5238,14 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -3655,6 +5261,8 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3667,6 +5275,14 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -3682,6 +5298,8 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3694,6 +5312,14 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -3714,6 +5340,9 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -3727,6 +5356,17 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -3742,6 +5382,9 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3754,6 +5397,14 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -3769,6 +5420,8 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -3781,6 +5434,12 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -3794,6 +5453,1740 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
 
 abstract class GetSearchExerciseError<T> implements TrainerState<T> {
   const factory GetSearchExerciseError() = _$GetSearchExerciseErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$CreateCustomPlanLoadingImplCopyWith<T, $Res> {
+  factory _$$CreateCustomPlanLoadingImplCopyWith(
+          _$CreateCustomPlanLoadingImpl<T> value,
+          $Res Function(_$CreateCustomPlanLoadingImpl<T>) then) =
+      __$$CreateCustomPlanLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$CreateCustomPlanLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res,
+        _$CreateCustomPlanLoadingImpl<T>>
+    implements _$$CreateCustomPlanLoadingImplCopyWith<T, $Res> {
+  __$$CreateCustomPlanLoadingImplCopyWithImpl(
+      _$CreateCustomPlanLoadingImpl<T> _value,
+      $Res Function(_$CreateCustomPlanLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
+  const _$CreateCustomPlanLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.createCustomPlanLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCustomPlanLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return createCustomPlanLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return createCustomPlanLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanLoading != null) {
+      return createCustomPlanLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return createCustomPlanLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return createCustomPlanLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanLoading != null) {
+      return createCustomPlanLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCustomPlanLoading<T> implements TrainerState<T> {
+  const factory CreateCustomPlanLoading() = _$CreateCustomPlanLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$CreateCustomPlanSuccessImplCopyWith<T, $Res> {
+  factory _$$CreateCustomPlanSuccessImplCopyWith(
+          _$CreateCustomPlanSuccessImpl<T> value,
+          $Res Function(_$CreateCustomPlanSuccessImpl<T>) then) =
+      __$$CreateCustomPlanSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({TemplateResponse templateResponse});
+}
+
+/// @nodoc
+class __$$CreateCustomPlanSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res,
+        _$CreateCustomPlanSuccessImpl<T>>
+    implements _$$CreateCustomPlanSuccessImplCopyWith<T, $Res> {
+  __$$CreateCustomPlanSuccessImplCopyWithImpl(
+      _$CreateCustomPlanSuccessImpl<T> _value,
+      $Res Function(_$CreateCustomPlanSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? templateResponse = null,
+  }) {
+    return _then(_$CreateCustomPlanSuccessImpl<T>(
+      null == templateResponse
+          ? _value.templateResponse
+          : templateResponse // ignore: cast_nullable_to_non_nullable
+              as TemplateResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
+  const _$CreateCustomPlanSuccessImpl(this.templateResponse);
+
+  @override
+  final TemplateResponse templateResponse;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.createCustomPlanSuccess(templateResponse: $templateResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCustomPlanSuccessImpl<T> &&
+            (identical(other.templateResponse, templateResponse) ||
+                other.templateResponse == templateResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, templateResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCustomPlanSuccessImplCopyWith<T, _$CreateCustomPlanSuccessImpl<T>>
+      get copyWith => __$$CreateCustomPlanSuccessImplCopyWithImpl<T,
+          _$CreateCustomPlanSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return createCustomPlanSuccess(templateResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return createCustomPlanSuccess?.call(templateResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanSuccess != null) {
+      return createCustomPlanSuccess(templateResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return createCustomPlanSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return createCustomPlanSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanSuccess != null) {
+      return createCustomPlanSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCustomPlanSuccess<T> implements TrainerState<T> {
+  const factory CreateCustomPlanSuccess(
+          final TemplateResponse templateResponse) =
+      _$CreateCustomPlanSuccessImpl<T>;
+
+  TemplateResponse get templateResponse;
+  @JsonKey(ignore: true)
+  _$$CreateCustomPlanSuccessImplCopyWith<T, _$CreateCustomPlanSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CreateCustomPlanErrorImplCopyWith<T, $Res> {
+  factory _$$CreateCustomPlanErrorImplCopyWith(
+          _$CreateCustomPlanErrorImpl<T> value,
+          $Res Function(_$CreateCustomPlanErrorImpl<T>) then) =
+      __$$CreateCustomPlanErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$CreateCustomPlanErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$CreateCustomPlanErrorImpl<T>>
+    implements _$$CreateCustomPlanErrorImplCopyWith<T, $Res> {
+  __$$CreateCustomPlanErrorImplCopyWithImpl(
+      _$CreateCustomPlanErrorImpl<T> _value,
+      $Res Function(_$CreateCustomPlanErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
+  const _$CreateCustomPlanErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.createCustomPlanError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCustomPlanErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return createCustomPlanError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return createCustomPlanError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanError != null) {
+      return createCustomPlanError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return createCustomPlanError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return createCustomPlanError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (createCustomPlanError != null) {
+      return createCustomPlanError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCustomPlanError<T> implements TrainerState<T> {
+  const factory CreateCustomPlanError() = _$CreateCustomPlanErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetCustomPlanLoadingImplCopyWith<T, $Res> {
+  factory _$$GetCustomPlanLoadingImplCopyWith(
+          _$GetCustomPlanLoadingImpl<T> value,
+          $Res Function(_$GetCustomPlanLoadingImpl<T>) then) =
+      __$$GetCustomPlanLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetCustomPlanLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetCustomPlanLoadingImpl<T>>
+    implements _$$GetCustomPlanLoadingImplCopyWith<T, $Res> {
+  __$$GetCustomPlanLoadingImplCopyWithImpl(_$GetCustomPlanLoadingImpl<T> _value,
+      $Res Function(_$GetCustomPlanLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
+  const _$GetCustomPlanLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getCustomPlanLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCustomPlanLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return getCustomPlanLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return getCustomPlanLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanLoading != null) {
+      return getCustomPlanLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return getCustomPlanLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return getCustomPlanLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanLoading != null) {
+      return getCustomPlanLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCustomPlanLoading<T> implements TrainerState<T> {
+  const factory GetCustomPlanLoading() = _$GetCustomPlanLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetCustomPlanSuccessImplCopyWith<T, $Res> {
+  factory _$$GetCustomPlanSuccessImplCopyWith(
+          _$GetCustomPlanSuccessImpl<T> value,
+          $Res Function(_$GetCustomPlanSuccessImpl<T>) then) =
+      __$$GetCustomPlanSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({AllTemplateResponse allTemplateResponse});
+}
+
+/// @nodoc
+class __$$GetCustomPlanSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetCustomPlanSuccessImpl<T>>
+    implements _$$GetCustomPlanSuccessImplCopyWith<T, $Res> {
+  __$$GetCustomPlanSuccessImplCopyWithImpl(_$GetCustomPlanSuccessImpl<T> _value,
+      $Res Function(_$GetCustomPlanSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? allTemplateResponse = null,
+  }) {
+    return _then(_$GetCustomPlanSuccessImpl<T>(
+      null == allTemplateResponse
+          ? _value.allTemplateResponse
+          : allTemplateResponse // ignore: cast_nullable_to_non_nullable
+              as AllTemplateResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
+  const _$GetCustomPlanSuccessImpl(this.allTemplateResponse);
+
+  @override
+  final AllTemplateResponse allTemplateResponse;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getCustomPlanSuccess(allTemplateResponse: $allTemplateResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCustomPlanSuccessImpl<T> &&
+            (identical(other.allTemplateResponse, allTemplateResponse) ||
+                other.allTemplateResponse == allTemplateResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, allTemplateResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCustomPlanSuccessImplCopyWith<T, _$GetCustomPlanSuccessImpl<T>>
+      get copyWith => __$$GetCustomPlanSuccessImplCopyWithImpl<T,
+          _$GetCustomPlanSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return getCustomPlanSuccess(allTemplateResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return getCustomPlanSuccess?.call(allTemplateResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanSuccess != null) {
+      return getCustomPlanSuccess(allTemplateResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return getCustomPlanSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return getCustomPlanSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanSuccess != null) {
+      return getCustomPlanSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCustomPlanSuccess<T> implements TrainerState<T> {
+  const factory GetCustomPlanSuccess(
+          final AllTemplateResponse allTemplateResponse) =
+      _$GetCustomPlanSuccessImpl<T>;
+
+  AllTemplateResponse get allTemplateResponse;
+  @JsonKey(ignore: true)
+  _$$GetCustomPlanSuccessImplCopyWith<T, _$GetCustomPlanSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCustomPlanErrorImplCopyWith<T, $Res> {
+  factory _$$GetCustomPlanErrorImplCopyWith(_$GetCustomPlanErrorImpl<T> value,
+          $Res Function(_$GetCustomPlanErrorImpl<T>) then) =
+      __$$GetCustomPlanErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetCustomPlanErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$GetCustomPlanErrorImpl<T>>
+    implements _$$GetCustomPlanErrorImplCopyWith<T, $Res> {
+  __$$GetCustomPlanErrorImplCopyWithImpl(_$GetCustomPlanErrorImpl<T> _value,
+      $Res Function(_$GetCustomPlanErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
+  const _$GetCustomPlanErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.getCustomPlanError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCustomPlanErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() beforeWarming,
+    required TResult Function(int savedCounter) counterChange,
+    required TResult Function(int newCounter) counterChangeOfWarming,
+    required TResult Function() warmingFinished,
+    required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+    required TResult Function(List<TemplateModel> templateList) templateUpdated,
+  }) {
+    return getCustomPlanError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? beforeWarming,
+    TResult? Function(int savedCounter)? counterChange,
+    TResult? Function(int newCounter)? counterChangeOfWarming,
+    TResult? Function()? warmingFinished,
+    TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+    TResult? Function(List<TemplateModel> templateList)? templateUpdated,
+  }) {
+    return getCustomPlanError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? beforeWarming,
+    TResult Function(int savedCounter)? counterChange,
+    TResult Function(int newCounter)? counterChangeOfWarming,
+    TResult Function()? warmingFinished,
+    TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    TResult Function(List<TemplateModel> templateList)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanError != null) {
+      return getCustomPlanError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(BeforeWarming<T> value) beforeWarming,
+    required TResult Function(CounterChange<T> value) counterChange,
+    required TResult Function(CounterChangeOfWarming<T> value)
+        counterChangeOfWarming,
+    required TResult Function(WarmingFinished<T> value) warmingFinished,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+    required TResult Function(TemplateUpdated<T> value) templateUpdated,
+  }) {
+    return getCustomPlanError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(BeforeWarming<T> value)? beforeWarming,
+    TResult? Function(CounterChange<T> value)? counterChange,
+    TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult? Function(WarmingFinished<T> value)? warmingFinished,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult? Function(TemplateUpdated<T> value)? templateUpdated,
+  }) {
+    return getCustomPlanError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(BeforeWarming<T> value)? beforeWarming,
+    TResult Function(CounterChange<T> value)? counterChange,
+    TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
+    TResult Function(WarmingFinished<T> value)? warmingFinished,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    TResult Function(TemplateUpdated<T> value)? templateUpdated,
+    required TResult orElse(),
+  }) {
+    if (getCustomPlanError != null) {
+      return getCustomPlanError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCustomPlanError<T> implements TrainerState<T> {
+  const factory GetCustomPlanError() = _$GetCustomPlanErrorImpl<T>;
 }
 
 /// @nodoc
@@ -3875,6 +7268,8 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -3887,6 +7282,14 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -3902,6 +7305,8 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3914,6 +7319,14 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -3929,6 +7342,8 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -3941,6 +7356,14 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -3961,6 +7384,9 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -3974,6 +7400,17 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -3989,6 +7426,9 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -4001,6 +7441,14 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -4016,6 +7464,8 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -4028,6 +7478,12 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),
@@ -4128,6 +7584,8 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     required TResult Function(int newCounter) counterChangeOfWarming,
     required TResult Function() warmingFinished,
     required TResult Function() closingTraining,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
     required TResult Function(String? newSelect) changeSelection,
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
@@ -4140,6 +7598,14 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         getSearchExerciseSuccess,
     required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
     required TResult Function(List<String> exercises) exerciseUpdated,
     required TResult Function(List<TemplateModel> templateList) templateUpdated,
   }) {
@@ -4155,6 +7621,8 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult? Function(int newCounter)? counterChangeOfWarming,
     TResult? Function()? warmingFinished,
     TResult? Function()? closingTraining,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
     TResult? Function(String? newSelect)? changeSelection,
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -4167,6 +7635,14 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
     TResult? Function(List<String> exercises)? exerciseUpdated,
     TResult? Function(List<TemplateModel> templateList)? templateUpdated,
   }) {
@@ -4182,6 +7658,8 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult Function(int newCounter)? counterChangeOfWarming,
     TResult Function()? warmingFinished,
     TResult Function()? closingTraining,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
     TResult Function(String? newSelect)? changeSelection,
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
@@ -4194,6 +7672,14 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult Function(AllExerciseResponse searchExercise)?
         getSearchExerciseSuccess,
     TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
     TResult Function(List<String> exercises)? exerciseUpdated,
     TResult Function(List<TemplateModel> templateList)? templateUpdated,
     required TResult orElse(),
@@ -4214,6 +7700,9 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
         counterChangeOfWarming,
     required TResult Function(WarmingFinished<T> value) warmingFinished,
     required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
     required TResult Function(ChangeSelection<T> value) changeSelection,
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
@@ -4227,6 +7716,17 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
         getSearchExerciseSuccess,
     required TResult Function(GetSearchExerciseError<T> value)
         getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
     required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
     required TResult Function(TemplateUpdated<T> value) templateUpdated,
   }) {
@@ -4242,6 +7742,9 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult? Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult? Function(WarmingFinished<T> value)? warmingFinished,
     TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -4254,6 +7757,14 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult? Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult? Function(TemplateUpdated<T> value)? templateUpdated,
   }) {
@@ -4269,6 +7780,8 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult Function(CounterChangeOfWarming<T> value)? counterChangeOfWarming,
     TResult Function(WarmingFinished<T> value)? warmingFinished,
     TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
@@ -4281,6 +7794,12 @@ class _$TemplateUpdatedImpl<T> implements TemplateUpdated<T> {
     TResult Function(GetSearchExerciseSuccess<T> value)?
         getSearchExerciseSuccess,
     TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
     TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
     TResult Function(TemplateUpdated<T> value)? templateUpdated,
     required TResult orElse(),

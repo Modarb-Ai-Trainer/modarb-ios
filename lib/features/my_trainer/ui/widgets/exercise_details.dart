@@ -42,7 +42,13 @@ class ExerciseDetails extends StatelessWidget{
                       cubit.startTimerOfBeforeWarming();
                       Future.delayed(
                           const Duration(seconds: 15),() {
-                        context.pushNamed(Routes.warmScreen);
+                        context.pushNamed(
+                            Routes.warmScreen,
+                          arguments: {
+                              'index' : index,
+                            'listOfExercise' : listOfExercise,
+                        }
+                        );
                       });
                     },
                     child: AppTextContainer(

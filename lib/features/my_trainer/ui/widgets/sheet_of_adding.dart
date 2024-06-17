@@ -81,7 +81,7 @@ class SheetOfAdding extends StatelessWidget{
                     itemCount: cubit.resultSelected.length,
                     itemBuilder: (context,index) => itemOfListExercise(context,cubit.resultSelected,index),
                     ),
-                                  ),
+                  ),
                 if(cubit.resultSelected.isNotEmpty)
                   Align(
                     alignment: AlignmentDirectional.bottomStart,
@@ -121,7 +121,7 @@ class SheetOfAdding extends StatelessWidget{
                                   ),
                                   ),
                                 onPressed: (){
-                                    cubit.saveTemplate();
+                                    cubit.createCustomPlan();
                                     context.pop();
                                     context.pop();
                                 },
