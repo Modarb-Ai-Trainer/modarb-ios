@@ -6,6 +6,7 @@ import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
+import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
 import 'package:modarb_app/features/workout/data/models/enroll_request_body.dart';
 import 'package:modarb_app/features/workout/data/models/enroll_response.dart';
@@ -69,6 +70,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.templates)
   Future<AllTemplateResponse> getCustomPlan();
+
+  @GET(ApiConstants.todayIntake)
+  Future<TodayIntakeResponse> getTodayIntake();
 
 
 
