@@ -1,5 +1,8 @@
 import 'package:modarb_app/core/networking/api_service.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_request_body.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_response.dart';
+import 'package:modarb_app/features/workout/data/models/workout_program_response.dart';
 
 class WorkoutRepo{
 
@@ -22,4 +25,26 @@ class WorkoutRepo{
       throw Exception('Failed to get data: $error');
     }
   }
+
+
+
+
+  Future<WorkoutProgramResponse> getWorkoutPrograms() async {
+    try {
+      return await _apiService.getWorkoutPrograms();
+    } catch (error) {
+      throw Exception('Failed to get data: $error');
+    }
+  }
+  Future<EnrollResponse> enrollPrograms(EnrollRequestBody enrollRequestBody) async {
+    try {
+      return await _apiService.enrollPrograms(enrollRequestBody);
+    } catch (error) {
+      throw Exception('Failed to get data: $error');
+    }
+  }
+
+
+
+
 }

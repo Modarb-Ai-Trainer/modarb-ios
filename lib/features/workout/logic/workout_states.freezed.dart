@@ -29,6 +29,14 @@ mixin _$WorkoutState<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,6 +51,13 @@ mixin _$WorkoutState<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +71,13 @@ mixin _$WorkoutState<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +94,17 @@ mixin _$WorkoutState<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +118,12 @@ mixin _$WorkoutState<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +137,12 @@ mixin _$WorkoutState<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +215,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return initial();
   }
@@ -187,6 +240,13 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return initial?.call();
   }
@@ -203,6 +263,13 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -225,6 +292,17 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return initial(this);
   }
@@ -241,6 +319,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return initial?.call(this);
   }
@@ -257,6 +341,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -347,6 +437,14 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return switchChange(newValue);
   }
@@ -364,6 +462,13 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return switchChange?.call(newValue);
   }
@@ -380,6 +485,13 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (switchChange != null) {
@@ -402,6 +514,17 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return switchChange(this);
   }
@@ -418,6 +541,12 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return switchChange?.call(this);
   }
@@ -434,6 +563,12 @@ class _$SwitchChangeImpl<T> implements SwitchChange<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (switchChange != null) {
@@ -529,6 +664,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return changeSelection(newSelect);
   }
@@ -546,6 +689,13 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return changeSelection?.call(newSelect);
   }
@@ -562,6 +712,13 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -584,6 +741,17 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return changeSelection(this);
   }
@@ -600,6 +768,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return changeSelection?.call(this);
   }
@@ -616,6 +790,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (changeSelection != null) {
@@ -684,6 +864,14 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return exerciseLoading();
   }
@@ -701,6 +889,13 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return exerciseLoading?.call();
   }
@@ -717,6 +912,13 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseLoading != null) {
@@ -739,6 +941,17 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return exerciseLoading(this);
   }
@@ -755,6 +968,12 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return exerciseLoading?.call(this);
   }
@@ -771,6 +990,12 @@ class _$ExerciseLoadingImpl<T> implements ExerciseLoading<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseLoading != null) {
@@ -861,6 +1086,14 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return exerciseSuccess(allExerciseResponse);
   }
@@ -878,6 +1111,13 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return exerciseSuccess?.call(allExerciseResponse);
   }
@@ -894,6 +1134,13 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseSuccess != null) {
@@ -916,6 +1163,17 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return exerciseSuccess(this);
   }
@@ -932,6 +1190,12 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return exerciseSuccess?.call(this);
   }
@@ -948,6 +1212,12 @@ class _$ExerciseSuccessImpl<T> implements ExerciseSuccess<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseSuccess != null) {
@@ -1016,6 +1286,14 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return exerciseError();
   }
@@ -1033,6 +1311,13 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return exerciseError?.call();
   }
@@ -1049,6 +1334,13 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseError != null) {
@@ -1071,6 +1363,17 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return exerciseError(this);
   }
@@ -1087,6 +1390,12 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return exerciseError?.call(this);
   }
@@ -1103,6 +1412,12 @@ class _$ExerciseErrorImpl<T> implements ExerciseError<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (exerciseError != null) {
@@ -1168,6 +1483,14 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return searchExerciseLoading();
   }
@@ -1185,6 +1508,13 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return searchExerciseLoading?.call();
   }
@@ -1201,6 +1531,13 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseLoading != null) {
@@ -1223,6 +1560,17 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return searchExerciseLoading(this);
   }
@@ -1239,6 +1587,12 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return searchExerciseLoading?.call(this);
   }
@@ -1255,6 +1609,12 @@ class _$SearchExerciseLoadingImpl<T> implements SearchExerciseLoading<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseLoading != null) {
@@ -1347,6 +1707,14 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return searchExerciseSuccess(searchExercise);
   }
@@ -1364,6 +1732,13 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return searchExerciseSuccess?.call(searchExercise);
   }
@@ -1380,6 +1755,13 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseSuccess != null) {
@@ -1402,6 +1784,17 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return searchExerciseSuccess(this);
   }
@@ -1418,6 +1811,12 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return searchExerciseSuccess?.call(this);
   }
@@ -1434,6 +1833,12 @@ class _$SearchExerciseSuccessImpl<T> implements SearchExerciseSuccess<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseSuccess != null) {
@@ -1504,6 +1909,14 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     required TResult Function(AllExerciseResponse searchExercise)
         searchExerciseSuccess,
     required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
   }) {
     return searchExerciseError();
   }
@@ -1521,6 +1934,13 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     TResult? Function(AllExerciseResponse searchExercise)?
         searchExerciseSuccess,
     TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
   }) {
     return searchExerciseError?.call();
   }
@@ -1537,6 +1957,13 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     TResult Function()? searchExerciseLoading,
     TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
     TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseError != null) {
@@ -1559,6 +1986,17 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     required TResult Function(SearchExerciseSuccess<T> value)
         searchExerciseSuccess,
     required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
   }) {
     return searchExerciseError(this);
   }
@@ -1575,6 +2013,12 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
   }) {
     return searchExerciseError?.call(this);
   }
@@ -1591,6 +2035,12 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
     TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
     TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
     TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
     required TResult orElse(),
   }) {
     if (searchExerciseError != null) {
@@ -1602,4 +2052,1250 @@ class _$SearchExerciseErrorImpl<T> implements SearchExerciseError<T> {
 
 abstract class SearchExerciseError<T> implements WorkoutState<T> {
   const factory SearchExerciseError() = _$SearchExerciseErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgramsLoadingImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgramsLoadingImplCopyWith(
+          _$WorkoutProgramsLoadingImpl<T> value,
+          $Res Function(_$WorkoutProgramsLoadingImpl<T>) then) =
+      __$$WorkoutProgramsLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutProgramsLoadingImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$WorkoutProgramsLoadingImpl<T>>
+    implements _$$WorkoutProgramsLoadingImplCopyWith<T, $Res> {
+  __$$WorkoutProgramsLoadingImplCopyWithImpl(
+      _$WorkoutProgramsLoadingImpl<T> _value,
+      $Res Function(_$WorkoutProgramsLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutProgramsLoadingImpl<T> implements WorkoutProgramsLoading<T> {
+  const _$WorkoutProgramsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.workoutProgramsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgramsLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return workoutProgramsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return workoutProgramsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsLoading != null) {
+      return workoutProgramsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return workoutProgramsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return workoutProgramsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsLoading != null) {
+      return workoutProgramsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgramsLoading<T> implements WorkoutState<T> {
+  const factory WorkoutProgramsLoading() = _$WorkoutProgramsLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgramsSuccessImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgramsSuccessImplCopyWith(
+          _$WorkoutProgramsSuccessImpl<T> value,
+          $Res Function(_$WorkoutProgramsSuccessImpl<T>) then) =
+      __$$WorkoutProgramsSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({WorkoutProgramResponse? workoutProgramResponse});
+}
+
+/// @nodoc
+class __$$WorkoutProgramsSuccessImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$WorkoutProgramsSuccessImpl<T>>
+    implements _$$WorkoutProgramsSuccessImplCopyWith<T, $Res> {
+  __$$WorkoutProgramsSuccessImplCopyWithImpl(
+      _$WorkoutProgramsSuccessImpl<T> _value,
+      $Res Function(_$WorkoutProgramsSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workoutProgramResponse = freezed,
+  }) {
+    return _then(_$WorkoutProgramsSuccessImpl<T>(
+      freezed == workoutProgramResponse
+          ? _value.workoutProgramResponse
+          : workoutProgramResponse // ignore: cast_nullable_to_non_nullable
+              as WorkoutProgramResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkoutProgramsSuccessImpl<T> implements WorkoutProgramsSuccess<T> {
+  const _$WorkoutProgramsSuccessImpl(this.workoutProgramResponse);
+
+  @override
+  final WorkoutProgramResponse? workoutProgramResponse;
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.workoutProgramsSuccess(workoutProgramResponse: $workoutProgramResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgramsSuccessImpl<T> &&
+            (identical(other.workoutProgramResponse, workoutProgramResponse) ||
+                other.workoutProgramResponse == workoutProgramResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, workoutProgramResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkoutProgramsSuccessImplCopyWith<T, _$WorkoutProgramsSuccessImpl<T>>
+      get copyWith => __$$WorkoutProgramsSuccessImplCopyWithImpl<T,
+          _$WorkoutProgramsSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return workoutProgramsSuccess(workoutProgramResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return workoutProgramsSuccess?.call(workoutProgramResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsSuccess != null) {
+      return workoutProgramsSuccess(workoutProgramResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return workoutProgramsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return workoutProgramsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsSuccess != null) {
+      return workoutProgramsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgramsSuccess<T> implements WorkoutState<T> {
+  const factory WorkoutProgramsSuccess(
+          final WorkoutProgramResponse? workoutProgramResponse) =
+      _$WorkoutProgramsSuccessImpl<T>;
+
+  WorkoutProgramResponse? get workoutProgramResponse;
+  @JsonKey(ignore: true)
+  _$$WorkoutProgramsSuccessImplCopyWith<T, _$WorkoutProgramsSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgramsErrorImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgramsErrorImplCopyWith(
+          _$WorkoutProgramsErrorImpl<T> value,
+          $Res Function(_$WorkoutProgramsErrorImpl<T>) then) =
+      __$$WorkoutProgramsErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutProgramsErrorImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$WorkoutProgramsErrorImpl<T>>
+    implements _$$WorkoutProgramsErrorImplCopyWith<T, $Res> {
+  __$$WorkoutProgramsErrorImplCopyWithImpl(_$WorkoutProgramsErrorImpl<T> _value,
+      $Res Function(_$WorkoutProgramsErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutProgramsErrorImpl<T> implements WorkoutProgramsError<T> {
+  const _$WorkoutProgramsErrorImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.workoutProgramsError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgramsErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return workoutProgramsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return workoutProgramsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsError != null) {
+      return workoutProgramsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return workoutProgramsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return workoutProgramsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (workoutProgramsError != null) {
+      return workoutProgramsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgramsError<T> implements WorkoutState<T> {
+  const factory WorkoutProgramsError() = _$WorkoutProgramsErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$EnrollProgramsLoadingImplCopyWith<T, $Res> {
+  factory _$$EnrollProgramsLoadingImplCopyWith(
+          _$EnrollProgramsLoadingImpl<T> value,
+          $Res Function(_$EnrollProgramsLoadingImpl<T>) then) =
+      __$$EnrollProgramsLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$EnrollProgramsLoadingImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$EnrollProgramsLoadingImpl<T>>
+    implements _$$EnrollProgramsLoadingImplCopyWith<T, $Res> {
+  __$$EnrollProgramsLoadingImplCopyWithImpl(
+      _$EnrollProgramsLoadingImpl<T> _value,
+      $Res Function(_$EnrollProgramsLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EnrollProgramsLoadingImpl<T> implements EnrollProgramsLoading<T> {
+  const _$EnrollProgramsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.enrollProgramsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollProgramsLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return enrollProgramsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return enrollProgramsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsLoading != null) {
+      return enrollProgramsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return enrollProgramsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return enrollProgramsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsLoading != null) {
+      return enrollProgramsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EnrollProgramsLoading<T> implements WorkoutState<T> {
+  const factory EnrollProgramsLoading() = _$EnrollProgramsLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$EnrollProgramsSuccessImplCopyWith<T, $Res> {
+  factory _$$EnrollProgramsSuccessImplCopyWith(
+          _$EnrollProgramsSuccessImpl<T> value,
+          $Res Function(_$EnrollProgramsSuccessImpl<T>) then) =
+      __$$EnrollProgramsSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({EnrollResponse? enrollResponse});
+}
+
+/// @nodoc
+class __$$EnrollProgramsSuccessImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$EnrollProgramsSuccessImpl<T>>
+    implements _$$EnrollProgramsSuccessImplCopyWith<T, $Res> {
+  __$$EnrollProgramsSuccessImplCopyWithImpl(
+      _$EnrollProgramsSuccessImpl<T> _value,
+      $Res Function(_$EnrollProgramsSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? enrollResponse = freezed,
+  }) {
+    return _then(_$EnrollProgramsSuccessImpl<T>(
+      freezed == enrollResponse
+          ? _value.enrollResponse
+          : enrollResponse // ignore: cast_nullable_to_non_nullable
+              as EnrollResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EnrollProgramsSuccessImpl<T> implements EnrollProgramsSuccess<T> {
+  const _$EnrollProgramsSuccessImpl(this.enrollResponse);
+
+  @override
+  final EnrollResponse? enrollResponse;
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.enrollProgramsSuccess(enrollResponse: $enrollResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollProgramsSuccessImpl<T> &&
+            (identical(other.enrollResponse, enrollResponse) ||
+                other.enrollResponse == enrollResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, enrollResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EnrollProgramsSuccessImplCopyWith<T, _$EnrollProgramsSuccessImpl<T>>
+      get copyWith => __$$EnrollProgramsSuccessImplCopyWithImpl<T,
+          _$EnrollProgramsSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return enrollProgramsSuccess(enrollResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return enrollProgramsSuccess?.call(enrollResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsSuccess != null) {
+      return enrollProgramsSuccess(enrollResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return enrollProgramsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return enrollProgramsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsSuccess != null) {
+      return enrollProgramsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EnrollProgramsSuccess<T> implements WorkoutState<T> {
+  const factory EnrollProgramsSuccess(final EnrollResponse? enrollResponse) =
+      _$EnrollProgramsSuccessImpl<T>;
+
+  EnrollResponse? get enrollResponse;
+  @JsonKey(ignore: true)
+  _$$EnrollProgramsSuccessImplCopyWith<T, _$EnrollProgramsSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EnrollProgramsErrorImplCopyWith<T, $Res> {
+  factory _$$EnrollProgramsErrorImplCopyWith(_$EnrollProgramsErrorImpl<T> value,
+          $Res Function(_$EnrollProgramsErrorImpl<T>) then) =
+      __$$EnrollProgramsErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$EnrollProgramsErrorImplCopyWithImpl<T, $Res>
+    extends _$WorkoutStateCopyWithImpl<T, $Res, _$EnrollProgramsErrorImpl<T>>
+    implements _$$EnrollProgramsErrorImplCopyWith<T, $Res> {
+  __$$EnrollProgramsErrorImplCopyWithImpl(_$EnrollProgramsErrorImpl<T> _value,
+      $Res Function(_$EnrollProgramsErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EnrollProgramsErrorImpl<T> implements EnrollProgramsError<T> {
+  const _$EnrollProgramsErrorImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutState<$T>.enrollProgramsError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnrollProgramsErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool newValue) switchChange,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() exerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        exerciseSuccess,
+    required TResult Function() exerciseError,
+    required TResult Function() searchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        searchExerciseSuccess,
+    required TResult Function() searchExerciseError,
+    required TResult Function() workoutProgramsLoading,
+    required TResult Function(WorkoutProgramResponse? workoutProgramResponse)
+        workoutProgramsSuccess,
+    required TResult Function() workoutProgramsError,
+    required TResult Function() enrollProgramsLoading,
+    required TResult Function(EnrollResponse? enrollResponse)
+        enrollProgramsSuccess,
+    required TResult Function() enrollProgramsError,
+  }) {
+    return enrollProgramsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(bool newValue)? switchChange,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? exerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult? Function()? exerciseError,
+    TResult? Function()? searchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        searchExerciseSuccess,
+    TResult? Function()? searchExerciseError,
+    TResult? Function()? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult? Function()? workoutProgramsError,
+    TResult? Function()? enrollProgramsLoading,
+    TResult? Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult? Function()? enrollProgramsError,
+  }) {
+    return enrollProgramsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool newValue)? switchChange,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? exerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)? exerciseSuccess,
+    TResult Function()? exerciseError,
+    TResult Function()? searchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)? searchExerciseSuccess,
+    TResult Function()? searchExerciseError,
+    TResult Function()? workoutProgramsLoading,
+    TResult Function(WorkoutProgramResponse? workoutProgramResponse)?
+        workoutProgramsSuccess,
+    TResult Function()? workoutProgramsError,
+    TResult Function()? enrollProgramsLoading,
+    TResult Function(EnrollResponse? enrollResponse)? enrollProgramsSuccess,
+    TResult Function()? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsError != null) {
+      return enrollProgramsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SwitchChange<T> value) switchChange,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(ExerciseLoading<T> value) exerciseLoading,
+    required TResult Function(ExerciseSuccess<T> value) exerciseSuccess,
+    required TResult Function(ExerciseError<T> value) exerciseError,
+    required TResult Function(SearchExerciseLoading<T> value)
+        searchExerciseLoading,
+    required TResult Function(SearchExerciseSuccess<T> value)
+        searchExerciseSuccess,
+    required TResult Function(SearchExerciseError<T> value) searchExerciseError,
+    required TResult Function(WorkoutProgramsLoading<T> value)
+        workoutProgramsLoading,
+    required TResult Function(WorkoutProgramsSuccess<T> value)
+        workoutProgramsSuccess,
+    required TResult Function(WorkoutProgramsError<T> value)
+        workoutProgramsError,
+    required TResult Function(EnrollProgramsLoading<T> value)
+        enrollProgramsLoading,
+    required TResult Function(EnrollProgramsSuccess<T> value)
+        enrollProgramsSuccess,
+    required TResult Function(EnrollProgramsError<T> value) enrollProgramsError,
+  }) {
+    return enrollProgramsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SwitchChange<T> value)? switchChange,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult? Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult? Function(ExerciseError<T> value)? exerciseError,
+    TResult? Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult? Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult? Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult? Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult? Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult? Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult? Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult? Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult? Function(EnrollProgramsError<T> value)? enrollProgramsError,
+  }) {
+    return enrollProgramsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SwitchChange<T> value)? switchChange,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(ExerciseLoading<T> value)? exerciseLoading,
+    TResult Function(ExerciseSuccess<T> value)? exerciseSuccess,
+    TResult Function(ExerciseError<T> value)? exerciseError,
+    TResult Function(SearchExerciseLoading<T> value)? searchExerciseLoading,
+    TResult Function(SearchExerciseSuccess<T> value)? searchExerciseSuccess,
+    TResult Function(SearchExerciseError<T> value)? searchExerciseError,
+    TResult Function(WorkoutProgramsLoading<T> value)? workoutProgramsLoading,
+    TResult Function(WorkoutProgramsSuccess<T> value)? workoutProgramsSuccess,
+    TResult Function(WorkoutProgramsError<T> value)? workoutProgramsError,
+    TResult Function(EnrollProgramsLoading<T> value)? enrollProgramsLoading,
+    TResult Function(EnrollProgramsSuccess<T> value)? enrollProgramsSuccess,
+    TResult Function(EnrollProgramsError<T> value)? enrollProgramsError,
+    required TResult orElse(),
+  }) {
+    if (enrollProgramsError != null) {
+      return enrollProgramsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EnrollProgramsError<T> implements WorkoutState<T> {
+  const factory EnrollProgramsError() = _$EnrollProgramsErrorImpl<T>;
 }

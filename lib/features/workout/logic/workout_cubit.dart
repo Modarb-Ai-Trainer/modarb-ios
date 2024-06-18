@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_request_body.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_response.dart';
+import 'package:modarb_app/features/workout/data/models/workout_program_response.dart';
 import 'package:modarb_app/features/workout/data/repos/workout_repo.dart';
 import 'package:modarb_app/features/workout/logic/workout_states.dart';
 
@@ -70,6 +73,40 @@ class WorkoutCubit extends Cubit<WorkoutState> {
       emit(const WorkoutState.searchExerciseError());
     }
   }
+
+
+  WorkoutProgramResponse ? workoutProgramResponse;
+  void getWorkoutPrograms() async {
+    emit(const WorkoutState.workoutProgramsLoading());
+    try {
+      workoutProgramResponse = await _workoutRepo.getWorkoutPrograms();
+
+      emit(WorkoutState.workoutProgramsSuccess(workoutProgramResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const WorkoutState.workoutProgramsError());
+    }
+  }
+
+
+  EnrollResponse ? enrollResponse;
+  void enrollPrograms(String? workout) async {
+    emit(const WorkoutState.enrollProgramsLoading());
+    try {
+      enrollResponse = await _workoutRepo.enrollPrograms(
+          EnrollRequestBody(
+              workout: workout,
+
+          )
+      );
+
+      emit(WorkoutState.enrollProgramsSuccess(enrollResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const WorkoutState.enrollProgramsError());
+    }
+  }
+
 
 
 }

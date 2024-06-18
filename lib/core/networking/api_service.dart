@@ -7,6 +7,9 @@ import 'package:modarb_app/features/my_trainer/data/models/all_template_response
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_request_body.dart';
+import 'package:modarb_app/features/workout/data/models/enroll_response.dart';
+import 'package:modarb_app/features/workout/data/models/workout_program_response.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../features/my_trainer/data/models/template_request_body.dart';
 import '../../features/register/data/models/register_response.dart';
@@ -33,8 +36,16 @@ abstract class ApiService {
   @GET(ApiConstants.homePage)
   Future<HomeResponse> getHome();
 
-  @GET(ApiConstants.myWorkouts)
+  @GET(ApiConstants.myWorkoutsWithId)
   Future<WorkoutResponse> getWorkout(@Path("id") String workoutId);
+
+  @GET(ApiConstants.workouts)
+  Future<WorkoutProgramResponse> getWorkoutPrograms();
+
+  @POST(ApiConstants.myWorkouts)
+  Future<EnrollResponse> enrollPrograms(
+      @Body() EnrollRequestBody enrollRequestBody,
+      );
 
   @GET(ApiConstants.allExercise)
   Future<AllExerciseResponse> getFilterExercise(
@@ -50,14 +61,6 @@ abstract class ApiService {
       @Query("filter") String? filter,
       );
 
-  // @POST(ApiConstants.templates)
-  // Future<TemplateResponse> createCustomPlan(
-  //     @Query("name") String name,
-  //     @Query("user") String user,
-  //     @Query("creationDate") String creationDate,
-  //     @Query("exercises") List<String> exercises,
-  //     );
-
   @POST(ApiConstants.templates)
   Future<TemplateResponse>createCustomPlan(
       @Body() TemplateRequestBody templateRequestBody,
@@ -66,4 +69,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.templates)
   Future<AllTemplateResponse> getCustomPlan();
+
+
+
+
+
 }

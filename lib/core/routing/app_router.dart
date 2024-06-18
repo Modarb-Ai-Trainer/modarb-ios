@@ -25,6 +25,7 @@ import '../../features/login/ui/login_screen.dart';
 import '../../features/my_trainer/ui/screens/before_Warming.dart';
 import '../../features/my_trainer/ui/screens/warm_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
+import '../../features/workout/ui/widgets/workout_program_enroll.dart';
 
 
 class AppRouter {
@@ -169,6 +170,13 @@ class AppRouter {
         case Routes.settingScreen:
         return MaterialPageRoute(
           builder: (_) => const SettingScreen(),
+        );
+
+        case Routes.workoutProgramEnroll:
+        return MaterialPageRoute(
+          builder: (_) => WorkoutProgramEnroll(
+            index: args?['index'],
+          ),
         );
 
       default:

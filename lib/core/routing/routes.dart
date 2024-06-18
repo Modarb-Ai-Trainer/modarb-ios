@@ -28,6 +28,7 @@ class Routes {
 
   static const String exerciseOfCategory = '/exerciseOfCategory';
   static const String exerciseInDetails = '/exerciseInDetails';
+  static const String workoutProgramEnroll = '/workoutProgramEnroll';
 
 
   static const String settingScreen = '/settingScreen';
