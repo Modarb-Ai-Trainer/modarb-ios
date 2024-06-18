@@ -5,6 +5,7 @@ import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
+import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'package:modarb_app/features/workout/logic/workout_cubit.dart';
 import 'core/di/dependency_injection.dart';
@@ -37,6 +38,9 @@ class ModarbApp extends StatelessWidget{
           ),
           BlocProvider(
           create: (context) => getIt<WorkoutCubit>(),
+          ),
+          BlocProvider(
+          create: (context) => getIt<NutritionCubit>()..getTodayIntake(),
           ),
         ],
         child: MaterialApp(

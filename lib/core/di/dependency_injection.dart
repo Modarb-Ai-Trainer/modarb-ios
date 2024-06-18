@@ -6,6 +6,8 @@ import 'package:modarb_app/features/login/data/repos/login_repo.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
+import 'package:modarb_app/features/nutrition/data/repos/nutrition_repo.dart';
+import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/register/data/repos/register_repo.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'package:modarb_app/features/workout/data/repos/workout_repo.dart';
@@ -39,4 +41,8 @@ Future<void> setupGetIt() async {
   // WorkOut
   getIt.registerLazySingleton<WorkoutRepo>(() => WorkoutRepo(getIt()));
   getIt.registerFactory<WorkoutCubit>(() => WorkoutCubit(getIt()));
+
+  // Nutrition
+  getIt.registerLazySingleton<NutritionRepo>(() => NutritionRepo(getIt()));
+  getIt.registerFactory<NutritionCubit>(() => NutritionCubit(getIt()));
 }

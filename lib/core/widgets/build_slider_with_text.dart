@@ -8,10 +8,11 @@ import '../theming/colors.dart';
 class BuildSliderWithText extends StatelessWidget{
 
   final double value;
+  final double all;
    final ValueChanged<double> onChanged;
    final String labelText;
 
-   const BuildSliderWithText({Key? key, required this.value, required this.onChanged, required this.labelText}) : super(key: key);
+   const BuildSliderWithText({Key? key, required this.value, required this.onChanged, required this.labelText, required this.all}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class BuildSliderWithText extends StatelessWidget{
               trackHeight: 5,
               thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
               overlayShape: RoundSliderOverlayShape(
-                overlayRadius: 10.0, // Set the size of the slider overlay
+                overlayRadius: 10.0,
               ),
 
             ),
@@ -44,7 +45,7 @@ class BuildSliderWithText extends StatelessWidget{
             ),
           ),
           Text(
-            ' $value /200 g ',
+            ' $value / $all g ',
             style: TextStyles.font13White600,
           ),
         ],
