@@ -323,9 +323,9 @@ class _SheetOfAddingExercisesState extends State<SheetOfAddingExercises> {
           setState(() {
             selectedExercise[index] = !selectedExercise[index]; // Toggle selection
             if (selectedExercise[index]) {
-              selectedExercisesList.add(exercise.name);
+              selectedExercisesList.add(exercise.id);
             } else {
-              selectedExercisesList.remove(exercise.name);
+              selectedExercisesList.remove(exercise.id);
             }
             print(selectedExercisesList);
           });

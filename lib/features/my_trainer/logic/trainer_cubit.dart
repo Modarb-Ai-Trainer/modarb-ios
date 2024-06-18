@@ -6,6 +6,7 @@ import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
+import 'package:modarb_app/features/my_trainer/data/models/template_request_body.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/data/repos/trainer_repo.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -194,40 +195,28 @@ class TrainerCubit extends Cubit<TrainerState> {
   }
 
 
-  // TemplateModel? template;
-  // List<TemplateModel> templateList =[];
-  // List<String>? savedResultSelected;
-  // void saveTemplate(){
-  //   savedResultSelected = List<String>.from(resultSelected);
-  //   template = TemplateModel(
-  //       exercise: savedResultSelected,
-  //       nameOfTemplate: templateController.text,
-  //   );
-  //   // print(savedResultSelected?.length);
-  //   templateList.add(template!);
-  //   print(templateList);
-  //   emit(TrainerState.templateUpdated(templateList));
-  //   // resultSelected.clear();
-  //   // templateController.clear();
-  // }
-
-
-
 /// new
+
   TemplateResponse ?templateResponse;
   void createCustomPlan() async {
     emit(const TrainerState.createCustomPlanLoading());
 
     try {
+      final userId = await SharedPrefHelper.getString(SharedPrefKeys.userId);
+
       templateResponse = await _trainerRepo.createCustomPlan(
-        name: templateController.text,
-        user: '',
-        creationDate: '1/5/2002',
-        exercises: resultSelected,
+          TemplateRequestBody(
+            user: userId,
+            name:templateController.text ,
+            exercises: resultSelected,
+
+          ),
       );
 
       emit(TrainerState.createCustomPlanSuccess(templateResponse!));
-      // templateController.clear();
+      getCustomPlan();
+      templateController.clear();
+      resultSelected.clear();
     } catch (error) {
       print(error.toString());
       emit(const TrainerState.createCustomPlanError());
@@ -249,17 +238,6 @@ class TrainerCubit extends Cubit<TrainerState> {
     }
   }
 
-
-
-
 }
 
-class TemplateModel{
-  String nameOfTemplate;
-  List<String> ?exercise;
-  TemplateModel({
-    required this.exercise,
-    required this.nameOfTemplate,
-});
-}
 

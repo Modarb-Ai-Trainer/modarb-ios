@@ -205,21 +205,12 @@ class _ApiService implements ApiService {
 
   @override
   Future<TemplateResponse> createCustomPlan(
-    String? name,
-    String? user,
-    String? creationDate,
-    List<String>? exercises,
-  ) async {
+      TemplateRequestBody templateRequestBody) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'name': name,
-      r'user': user,
-      r'creationDate': creationDate,
-      r'exercises': exercises,
-    };
-    queryParameters.removeWhere((k, v) => v == null);
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final _data = <String, dynamic>{};
+    _data.addAll(templateRequestBody.toJson());
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<TemplateResponse>(Options(
       method: 'POST',

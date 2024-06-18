@@ -17,7 +17,7 @@ class CustomWorkoutTab extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
      builder: (context,state){
        var cubit = context.read<TrainerCubit>();
-       if(cubit.allTemplateResponse == null) {
+       if(cubit.allTemplateResponse?.data == null) {
          cubit.getCustomPlan();
        }
        return Scaffold(
@@ -33,12 +33,11 @@ class CustomWorkoutTab extends StatelessWidget{
                         'Your saved templates',
                         style: TextStyles.font19White700
                     ),
-                    verticalSpace(10),
                   ],
                 ),
               ),
             ),
-            if(cubit.allTemplateResponse != null)
+            if( state is CreateCustomPlanSuccess || cubit.allTemplateResponse?.data != null)
               SliverList(
                   delegate: SliverChildBuilderDelegate(
                   (context,index) => itemOfTemplate(cubit.allTemplateResponse?.data, index),
@@ -53,7 +52,7 @@ class CustomWorkoutTab extends StatelessWidget{
                 ),
 
               ),
-            if(cubit.allTemplateResponse == null)
+            if(cubit.allTemplateResponse?.data == null )
               SliverToBoxAdapter(
                 child: Center(
                   child: Text('No templates saved yet', style: TextStyles.font16White700),
@@ -73,6 +72,7 @@ class CustomWorkoutTab extends StatelessWidget{
                },
 
              );
+              cubit.getCustomPlan();
 
            },
            child: const Icon(Icons.add),
@@ -85,98 +85,108 @@ class CustomWorkoutTab extends StatelessWidget{
 
   Widget itemOfTemplate(template,index) => Padding(
     padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 15.w),
-    child: Container(
-      width: double.infinity,
-      height: 230.h,
-      decoration: BoxDecoration(
-        color: ColorsManager.lighterGray,
-        borderRadius: BorderRadius.circular(16.r),
-      ),
-      child: Padding(
-        padding:const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  template[index].name,
-                  style: TextStyles.font13White700,
-                ),
-                const Icon(Icons.more_horiz_sharp,
-                  color: ColorsManager.mainPurple,
-                ),
-              ],
-            ),
-            verticalSpace(10),
-            Text(
-              template[index].creationDate,
-              style: TextStyles.font12White600,
-
-            ),
-            verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SvgPicture.asset('assets/icons/timer.svg'),
-                Text(
-                  '30 min',
-                  style: TextStyles.font12White600,
-                ),
-                horizontalSpace(3),
-                SvgPicture.asset('assets/icons/weight.svg'),
-                Text('50 kg',
-                  style: TextStyles.font12White600,
-                ),
-                horizontalSpace(3),
-
-                SvgPicture.asset('assets/icons/Page.svg'),
-                Text('16 reps',
-                  style: TextStyles.font12White600,
-                ),
-
-
-              ],
-            ),
-            verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Exercises',
-                  style: TextStyles.font13White700,
-                ),
-                Text('sets             ',
-                  style: TextStyles.font13White700,
-                ),
-
-              ],
-            ),
-            verticalSpace(10),
-            Expanded(
-              child: ListView.builder(
-                itemCount: template[index].exercises.length,
-                  itemBuilder:(context,index) => itemOfRow(template,index),
+    child: Flexible(
+      child: Container(
+        width: double.infinity,
+        height: 300.h,
+        decoration: BoxDecoration(
+          color: ColorsManager.lighterGray,
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        child: Padding(
+          padding:const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    template[index].name,
+                    style: TextStyles.font13White700,
+                  ),
+                  const Icon(Icons.more_horiz_sharp,
+                    color: ColorsManager.mainPurple,
+                  ),
+                ],
               ),
-            ),
-          ],
+              verticalSpace(10),
+              Text(
+                template[index].creationDate,
+                style: TextStyles.font12White600,
+
+              ),
+              verticalSpace(10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SvgPicture.asset('assets/icons/timer.svg'),
+                  Text(
+                    'min',
+                    style: TextStyles.font12White600,
+                  ),
+                  horizontalSpace(3),
+                  SvgPicture.asset('assets/icons/weight.svg'),
+                  Text(
+                    'kg',
+                    style: TextStyles.font12White600,
+                  ),
+                  horizontalSpace(3),
+
+                  SvgPicture.asset('assets/icons/Page.svg'),
+                  Text('reps',
+                    style: TextStyles.font12White600,
+                  ),
+
+
+                ],
+              ),
+              verticalSpace(10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Exercises',
+                    style: TextStyles.font13White700,
+                  ),
+                  Text('sets             ',
+                    style: TextStyles.font13White700,
+                  ),
+
+                ],
+              ),
+              verticalSpace(10),
+              Expanded(
+                child: ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: template[index].exercises.length,
+                    itemBuilder:(context,exerciseIndex) => itemOfRow(template[index].exercises,exerciseIndex),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
   );
 
 
-  Widget itemOfRow(template,index) =>Padding(
+  Widget itemOfRow(exercises,index) =>Padding(
     padding: const EdgeInsets.all(8.0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          template[index].exercises[index].name,
-          style: TextStyles.font12White600,
+        Expanded(
+          child: Text(
+            exercises[index].name,
+            style: TextStyles.font12White600,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
-        Text(
-         '${ template[index].exercises[index].duration} seconds',
+        exercises[index].duration == 0 ? Text(
+          '${exercises[index].reps} reps and ${exercises[index].sets} sets ',
+          style: TextStyles.font12White600,
+        ) : Text(
+          '${exercises[index].duration} seconds',
           style: TextStyles.font12White600,
         ),
 

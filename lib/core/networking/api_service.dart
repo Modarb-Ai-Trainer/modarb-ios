@@ -8,6 +8,7 @@ import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
 import 'package:retrofit/retrofit.dart';
+import '../../features/my_trainer/data/models/template_request_body.dart';
 import '../../features/register/data/models/register_response.dart';
 import 'api_constants.dart';
 part 'api_service.g.dart';
@@ -49,13 +50,19 @@ abstract class ApiService {
       @Query("filter") String? filter,
       );
 
+  // @POST(ApiConstants.templates)
+  // Future<TemplateResponse> createCustomPlan(
+  //     @Query("name") String name,
+  //     @Query("user") String user,
+  //     @Query("creationDate") String creationDate,
+  //     @Query("exercises") List<String> exercises,
+  //     );
+
   @POST(ApiConstants.templates)
-  Future<TemplateResponse> createCustomPlan(
-      @Query("name") String? name,
-      @Query("user") String? user,
-      @Query("creationDate") String? creationDate,
-      @Query("exercises") List<String>? exercises,
+  Future<TemplateResponse>createCustomPlan(
+      @Body() TemplateRequestBody templateRequestBody,
       );
+
 
   @GET(ApiConstants.templates)
   Future<AllTemplateResponse> getCustomPlan();

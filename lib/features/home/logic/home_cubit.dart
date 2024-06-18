@@ -40,6 +40,10 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.homeLoading());
     try {
       homeResponse = await _homeRepo.getHomeData();
+      final userId = homeResponse?.data?.user?.id;
+      if(userId != null) {
+        await SharedPrefHelper.setData(SharedPrefKeys.userId, userId);
+      }
       final myWorkoutId = homeResponse?.data?.myWorkout?.id;
       if(myWorkoutId != null) {
         await SharedPrefHelper.setData(SharedPrefKeys.myWorkoutId, myWorkoutId);
