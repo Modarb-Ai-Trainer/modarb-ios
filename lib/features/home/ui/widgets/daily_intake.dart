@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/core/widgets/build_slider_with_text.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 
@@ -102,20 +103,21 @@ class DailyIntake extends StatelessWidget{
                   bottom: 30.h,
                   left: 8.w,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      buildSliderWithText(
+                      BuildSliderWithText(
                         value: cubit.todayIntakeResponse?.data?.carbsConsumed?.toDouble() ?? 0.0,
                         all: cubit.todayIntakeResponse?.data?.carbsGoal?.toDouble() ?? 0.0,
                         onChanged: (value) {},
                         labelText: 'Carbs',
                       ),
-                      buildSliderWithText(
+                      BuildSliderWithText(
                         value: cubit.todayIntakeResponse?.data?.proteinConsumed?.toDouble() ?? 0.0,
                         all: cubit.todayIntakeResponse?.data?.proteinGoal?.toDouble() ?? 0.0,
                         onChanged: (value) {},
                         labelText: 'Protein ',
                       ),
-                      buildSliderWithText(
+                      BuildSliderWithText(
                         value: cubit.todayIntakeResponse?.data?.fatConsumed?.toDouble() ?? 0.0,
                         all: cubit.todayIntakeResponse?.data?.fatGoal?.toDouble() ?? 0.0,
                         onChanged: (value) {},
@@ -135,46 +137,4 @@ class DailyIntake extends StatelessWidget{
     );
   }
 
-  Widget buildSliderWithText({
-    required double value,
-    required double all,
-    required ValueChanged<double> onChanged,
-    required String labelText,
-  }) {
-    return SizedBox(
-      width: 105.w,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            labelText,
-            style: TextStyles.font16White700,
-          ),
-          verticalSpace(5),
-          SliderTheme(
-            data: const SliderThemeData(
-              trackHeight: 5,
-              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 6),
-              overlayShape: RoundSliderOverlayShape(
-                overlayRadius: 10.0, // Set the size of the slider overlay
-              ),
-
-            ),
-            child: Slider(
-              value: value,
-              onChanged: onChanged,
-              min: 0,
-              max: 100,
-              label: '$value',
-              activeColor: ColorsManager.mainPurple,
-            ),
-          ),
-          Text(
-            ' $value /$all g ',
-            style: const TextStyle(fontSize: 16),
-          ),
-        ],
-      ),
-    );
-  }
 }

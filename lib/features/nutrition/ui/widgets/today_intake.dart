@@ -88,7 +88,7 @@ class TodayIntake extends StatelessWidget{
                 ),
                 Positioned(
                   bottom: 10.h,
-                  right: 8.w,
+                  right: 20.w,
                   child: Column(
                     children: [
                       BuildSliderWithText(

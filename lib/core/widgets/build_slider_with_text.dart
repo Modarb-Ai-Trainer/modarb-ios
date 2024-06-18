@@ -17,7 +17,7 @@ class BuildSliderWithText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 140.w,
+      width: 100.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -39,7 +39,7 @@ class BuildSliderWithText extends StatelessWidget{
               value: value,
               onChanged: onChanged,
               min: 0,
-              max: 100,
+              max: all,
               label: '$value',
               activeColor: ColorsManager.mainPurple,
             ),
