@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 
@@ -28,7 +30,9 @@ class OtherPlans extends StatelessWidget{
               ),
               SliverList(delegate: SliverChildBuilderDelegate(
                   (context,index) => GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      context.pushNamed(Routes.detailsOfPlan);
+                    },
                     child: Stack(
                       children: [
                         Padding(

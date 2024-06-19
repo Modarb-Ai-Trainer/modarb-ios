@@ -10,6 +10,7 @@ import 'package:modarb_app/features/my_trainer/ui/screens/workout_insights.dart'
 import 'package:modarb_app/features/my_trainer/ui/widgets/exercise_details.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/week_of_plan_screen.dart';
 import 'package:modarb_app/features/nutrition/ui/screens/nutrition_screen.dart';
+import 'package:modarb_app/features/nutrition/ui/widgets/details_of_plan.dart';
 import 'package:modarb_app/features/onboarding/ui/fitness_choise.dart';
 import 'package:modarb_app/features/register/ui/register_screen.dart';
 import 'package:modarb_app/features/smart_trainer/ui/screens/smart_trainer_after_complete_workout.dart';
@@ -177,6 +178,11 @@ class AppRouter {
           builder: (_) => WorkoutProgramEnroll(
             index: args?['index'],
           ),
+        );
+
+        case Routes.detailsOfPlan:
+        return MaterialPageRoute(
+          builder: (_) => DetailsOfPlan(),
         );
 
       default:
