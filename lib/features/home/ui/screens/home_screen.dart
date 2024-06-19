@@ -26,15 +26,16 @@ class HomeScreen extends StatelessWidget{
             toolbarHeight: 70.h,
             leading: Padding(
               padding: EdgeInsets.all(6.h),
-              child: const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/avatar.png'),
+              child:  const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/avatar.png',
+                ),
               ),
             ),
             title:Text(
               'Hey,\n $userName ',
               style:TextStyles.font13White600,
             ),
-            titleSpacing: 5,
+            titleSpacing: 10,
             actions: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.h),

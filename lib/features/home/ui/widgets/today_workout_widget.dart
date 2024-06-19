@@ -92,9 +92,10 @@ class TodayWorkoutWidget extends StatelessWidget{
                     bottom: 5.h,
                     right: 80.w,
                     child: AppTextButton(
-                      buttonText: 'continue',
+                      buttonText: 'Continue',
+                      textStyle: TextStyles.font19White700,
                       buttonWidth: 140.w,
-                      buttonHeight: 30.h,
+                      buttonHeight: 40.h,
                       backgroundColor: ColorsManager.lighterWhite,
                       textColor: ColorsManager.mainPurple,
                       onPressed: (){

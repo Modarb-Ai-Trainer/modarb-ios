@@ -8,7 +8,6 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 
 class ListOfPlans extends StatelessWidget {
-
   const ListOfPlans({Key? key}) : super(key: key);
 
   @override
@@ -35,8 +34,6 @@ class ListOfPlans extends StatelessWidget {
                     onTap: (){
                       context.pushNamed(Routes.myTrainerScreen);
                     },
-
-
 
                   ),
                   itemOfPlan(
@@ -74,9 +71,12 @@ class ListOfPlans extends StatelessWidget {
               pathOfImage,
               fit: BoxFit.cover,),
           ),
-          Text(
-            text,
-            style: TextStyles.font16White700,
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              text,
+              style: TextStyles.font16White700,
+            ),
           ),
         ],
       ),

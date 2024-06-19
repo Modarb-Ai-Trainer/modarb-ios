@@ -17,11 +17,11 @@ class ContainerOfWeeks extends StatelessWidget {
       builder: (context,state){
         final cubit = context.read<HomeCubit>();
         return Container(
-          width: 340.h,
-          height: 200.h,
+          width: double.infinity,
+          height: 220.h,
           padding: EdgeInsets.all(10.h),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.r),
+            borderRadius: BorderRadius.circular(16.r),
             color: ColorsManager.lightGray,
           ),
           child: Column(
@@ -59,8 +59,9 @@ class ContainerOfWeeks extends StatelessWidget {
               ),
               AppTextButton(
                 buttonText: 'Claim reward',
-                buttonWidth: 170.w,
-                borderRadius: 20.r,
+                textStyle: TextStyles.font16White700,
+                buttonHeight: 40,
+                buttonWidth: 160.w,
                 onPressed: (){},
               ),
 
