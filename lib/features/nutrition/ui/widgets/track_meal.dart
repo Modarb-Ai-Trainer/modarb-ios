@@ -5,7 +5,10 @@ import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/sheet_of_adding_meal.dart';
 
 class ItemOfTrackMeal extends StatelessWidget{
-  const ItemOfTrackMeal({Key? key}) : super(key: key);
+  final List<String> imageAssets;
+  final List<String> nameOfMeals;
+  final int index;
+  const ItemOfTrackMeal({Key? key, required this.imageAssets, required this.index, required this.nameOfMeals}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,21 +35,20 @@ class ItemOfTrackMeal extends StatelessWidget{
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Image.asset(
-                'assets/images/plans.png',
+                imageAssets[index],
                 fit: BoxFit.fill,),
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 30.w,
-                  height: 30.h,
+                  width: 25.w,
+                  height: 25.h,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
                       color: ColorsManager.lightPurple, // Border color
-                      width: 2, // Border width
+                      width: 3, // Border width
                     ),
                   ),
                   child: Icon(
@@ -56,11 +58,9 @@ class ItemOfTrackMeal extends StatelessWidget{
                   ),
                 ),
                 Text(
-                  'Breakfast',
-                  style: TextStyles.font13White700,),
-                Text(
-                  '250kcal',
-                  style: TextStyles.font13White700,),
+                  nameOfMeals[index],
+                  style: TextStyles.font16White700,),
+
               ],
             ),
           ],

@@ -15,4 +15,7 @@ class NutritionState <T> with _$NutritionState<T> {
   const factory NutritionState.todayIntakeError() = TodayIntakeError;
 
 
+  const factory NutritionState.changeSelection(String? newSelect) = ChangeSelection;
+
+
 }
