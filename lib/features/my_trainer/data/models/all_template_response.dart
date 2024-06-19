@@ -21,7 +21,7 @@ class AllTemplateResponse {
   }
 
   Map<String, dynamic> toJson() => {
-    "data": data.map((x) => x?.toJson()).toList(),
+    "data": data.map((x) => x.toJson()).toList(),
     "message": message,
     "status": status,
     "meta": meta?.toJson(),
@@ -59,7 +59,7 @@ class Datum {
     "name": name,
     "user": user,
     "creationDate": creationDate,
-    "exercises": exercises.map((x) => x?.toJson()).toList(),
+    "exercises": exercises.map((x) => x.toJson()).toList(),
   };
 
 }

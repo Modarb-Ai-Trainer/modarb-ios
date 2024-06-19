@@ -15,7 +15,10 @@ class WorkoutScreen extends StatelessWidget{
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 30.h,
+          toolbarHeight: 70.h,
+          title: Text(
+            'Workouts',
+            style: TextStyles.font19White700,),
           automaticallyImplyLeading: false,
           bottom:TabBar(
             controller: tabController,

@@ -43,7 +43,7 @@ class TodayDiet extends StatelessWidget{
                   ),
                   Positioned(
                     top: 100.h,
-                    left: 10.w,
+                    left: 5.w,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -51,12 +51,12 @@ class TodayDiet extends StatelessWidget{
                           ' ${cubit.homeResponse?.data?.myMealPlan?.today?.numberOfMeals} meals ',
                           style: TextStyles.font16White700,
                         ),
-                        horizontalSpace(30),
+                        horizontalSpace(25),
                         Text(
                           ' ${cubit.homeResponse?.data?.myMealPlan?.today?.numberOfSnacks} snack',
                           style: TextStyles.font16White700,
                         ),
-                        horizontalSpace(50),
+                        horizontalSpace(25),
                         Container(
                           height: 25.h,
                           width: 80.w,
@@ -81,6 +81,7 @@ class TodayDiet extends StatelessWidget{
                       buttonText: 'view',
                       buttonWidth: 120.w,
                       buttonHeight: 40.h,
+
                       colorOfSide: ColorsManager.mainPurple,
                       backgroundColor: Colors.transparent,
                       textColor: ColorsManager.mainPurple,

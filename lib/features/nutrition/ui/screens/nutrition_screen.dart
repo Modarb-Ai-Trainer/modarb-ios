@@ -19,7 +19,7 @@ class NutritionScreen extends StatelessWidget{
             toolbarHeight: 70.h,
             automaticallyImplyLeading: false,
             title: Text(
-              'NutriGuide',
+              'Nutrition Guide',
             style: TextStyles.font19White700,),
             bottom:TabBar(
               controller: tabController,

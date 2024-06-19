@@ -5,7 +5,6 @@ import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
-import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
