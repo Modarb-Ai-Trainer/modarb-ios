@@ -17,6 +17,15 @@ class OtherPlans extends StatelessWidget{
         return Scaffold(
           body:  CustomScrollView(
             slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.w,),
+                  child: Text(
+                    'Available plans',
+                    style: TextStyles.font16White700,
+                  ),
+                ),
+              ),
               SliverList(delegate: SliverChildBuilderDelegate(
                   (context,index) => GestureDetector(
                     onTap: (){},
