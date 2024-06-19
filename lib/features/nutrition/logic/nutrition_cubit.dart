@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/repos/nutrition_repo.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 
@@ -41,8 +42,8 @@ class NutritionCubit extends Cubit<NutritionState> {
   List<String> nameOfMeals =[
     'Breakfast',
     'Lunch',
-    'Snack',
     'Dinner',
+    'Snack',
   ];
 
   List<String> nameOfDays =[
@@ -66,4 +67,18 @@ class NutritionCubit extends Cubit<NutritionState> {
     emit(NutritionState.changeSelection(valueChoose));
 
   }
+
+  TodayMealResponse ? todayMealResponse;
+  void getTodayMeal() async {
+    emit(const NutritionState.todayMealLoading());
+    try {
+      todayMealResponse = await _nutritionRepo.getTodayMeal();
+
+      emit(NutritionState.todayMealSuccess(todayMealResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.todayMealError());
+    }
+  }
+
 }

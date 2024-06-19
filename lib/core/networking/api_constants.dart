@@ -11,6 +11,7 @@ class ApiConstants{
   static const String exercisesSearch = "exercises/search";
   static const String templates = "templates";
   static const String todayIntake = "nutri-guide/todays-intake";
+  static const String todayMeal = "nutri-guide/today-meals";
 }
 
 class ApiErrors {

@@ -20,6 +20,10 @@ class DailyRoutineTab extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
       builder: (context,state){
         final cubit = context.read<NutritionCubit>();
+        if(cubit.todayMealResponse ==null){
+          cubit.getTodayMeal();
+        }
+        final model = cubit.todayMealResponse?.data;
 
         return Scaffold(
           body: Padding(
@@ -64,7 +68,14 @@ class DailyRoutineTab extends StatelessWidget{
                     ),
                   ),
                 ),
-                SliverList(
+                if(state is TodayMealLoading)
+                  const SliverToBoxAdapter(
+                    child: Center(
+                      child: CircularProgressIndicator()
+                    ),
+                  ),
+                if(state is TodayMealSuccess)
+                  SliverList(
                   delegate: SliverChildBuilderDelegate((context,index) => TimelineTile(
                     axis: TimelineAxis.vertical,
                     alignment: TimelineAlign.start,
@@ -75,18 +86,28 @@ class DailyRoutineTab extends StatelessWidget{
                     indicatorStyle: IndicatorStyle(
                       color: Colors.transparent,
                       drawGap: true,
-                      padding: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(3),
                       iconStyle: IconStyle(
                         color: ColorsManager.lightPurple,
                         iconData: Icons.circle,
                         fontSize: 22.sp,
                       ),
                     ),
-                    endChild: buildItemOfMealDiet(context,cubit,index),
+                    endChild: buildItemOfMealDiet(context,cubit,model,index),
                   ),
                     childCount: 4,
                   ),
                 ),
+                if(state is TodayMealLoading)
+                  SliverToBoxAdapter(
+                    child: Center(
+                      child: Text(
+                        'No data here to show',
+                        style: TextStyles.font19White700,
+                      ),
+                    ),
+                  ),
+
               ],
             ),
           ),
@@ -95,20 +116,44 @@ class DailyRoutineTab extends StatelessWidget{
     );
   }
 
-  Widget buildItemOfMealDiet(BuildContext context, cubit,index) {
+  Widget buildItemOfMealDiet(BuildContext context, cubit, model ,int index) {
     return GestureDetector(
       onTap: () {
         showDialog(
           context: context,
           builder: (BuildContext context) {
-            return const AlertDialog(
-              title: Text('Progress Indicator'),
-             content: Column(
-               children: [
-                 Text('Progress Indicator'),
-                 Text('Progress Indicator')
-               ],
+            return AlertDialog(
+
+              title: Text(' Name : ${model.days[0].meals[index].name}',
+                style: TextStyles.font16White700,
+              ),
+             content: SizedBox(
+               height: 100,
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   Text(
+                     'Calories : ${model.days[0].meals[index].calories}',
+                     style: TextStyles.font16White700,
+                   ),
+                   Text('Carbs : ${model.days[0].meals[index].carbs}',
+                     style: TextStyles.font16White700,),
+                   Text('Proteins : ${model.days[0].meals[index].proteins}',
+                     style: TextStyles.font16White700,),
+                   Text('Fats : ${model.days[0].meals[index].fats}',
+                     style: TextStyles.font16White700,),
+                 ],
+               ),
              ),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text('Close',
+                    style: TextStyles.font16White700,),
+                ),
+              ],
             );
           },
         );
@@ -125,31 +170,31 @@ class DailyRoutineTab extends StatelessWidget{
                 cubit.nameOfMeals[index],
                 style: TextStyles.font16White700,
               ),
-              verticalSpace(5),
+              verticalSpace(7),
               Row(
                 children: [
                   Expanded(
                     child: SizedBox(
-                      height: 100.h,
-                      width: 100.w,
-                      child: Image.asset(
-                        'assets/images/lunch_meal_2.png',
+                      height: 90.h,
+                      width: 90.w,
+                      child: Image.network(
+                        '${model.days[0].meals[index].image}',
                         scale: 1,
                     
                       ),
                     ),
                   ),
-                  horizontalSpace(20),
+                  horizontalSpace(10),
                   Expanded(
                     child: Column(
                       children: [
                         Text(
-                          'Glazed duck fillet',
+                          '${model.days[0].meals[index].name}',
                           style: TextStyles.font13White700,
-                          overflow: TextOverflow.ellipsis,
+                          overflow: TextOverflow.fade,
                           ),
-                        Text('20 g',
-                            style: TextStyles.font13White400
+                        Text('${model.days[0].meals[index].calories} g',
+                            style: TextStyles.font13White700
                         ),
                       ],
                     ),
