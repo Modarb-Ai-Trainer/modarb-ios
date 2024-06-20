@@ -85,8 +85,22 @@ class SheetOfDetailsOfFinally extends StatelessWidget{
                 child: AppTextButton(
                   buttonText: 'Confirm',
                   onPressed: () {
-                    Navigator.pop(context);
-                    Navigator.pop(context);
+                    cubit.enrollMeal();
+                    if(cubit.enrollMealResponse?.status == 200){
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            '${cubit.enrollMealResponse?.message}',
+                            style: TextStyles.font16White700,
+                          ),
+                          backgroundColor: ColorsManager.lighterGray,
+                          duration: const Duration(seconds: 5),
+                        ),
+                      );
+                      Navigator.pop(context);
+                      Navigator.pop(context);
+                    }
+
                   },
                 ),
               ),

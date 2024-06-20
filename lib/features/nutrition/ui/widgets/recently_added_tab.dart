@@ -5,6 +5,7 @@ import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/horizontal_line.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/sheet_of_details_of_meal.dart';
@@ -17,7 +18,7 @@ class RecentlyAddedTab extends StatefulWidget {
 }
 
 class _RecentlyAddedTabState extends State<RecentlyAddedTab> {
-  final List<dynamic> selectedItems = [];
+  final List<Datum> selectedItems = [];
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class _RecentlyAddedTabState extends State<RecentlyAddedTab> {
               const SliverToBoxAdapter(
                 child: Center(child: CircularProgressIndicator()),
               ),
-            if (cubit.ingredientsResponse != null && state is GetIngredientsSuccess)
+            if (cubit.ingredientsResponse != null )
               SliverList(
                 delegate: SliverChildBuilderDelegate(
                       (context, index) => itemOfSuggestList(
@@ -72,6 +73,7 @@ class _RecentlyAddedTabState extends State<RecentlyAddedTab> {
       },
     );
   }
+
 
   Widget itemOfSuggestList(context, model, index, cubit) {
     final isSelected = selectedItems.contains(model[index]);

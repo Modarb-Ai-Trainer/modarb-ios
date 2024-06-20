@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_body.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
-import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/repos/nutrition_repo.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
+import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 
 class NutritionCubit extends Cubit<NutritionState> {
 
@@ -114,17 +116,26 @@ class NutritionCubit extends Cubit<NutritionState> {
 
 
 
-  List<dynamic> selectedItems = [];
 
-
-  void updateSelectedExercises(List<dynamic> newExercises) {
-    for (String exercise in newExercises) {
-      if (!selectedItems.contains(exercise)) {
-        selectedItems.add(exercise);
-      }
-    }
-
-    // emit(TrainerState.exerciseUpdated(resultSelected));
+  List<Ingredientt> convertToIngredientList(List<Datum> data) {
+    return data.map((datum) => Ingredientt(id: datum.id, noServings: 0)).toList();
   }
+  List<Datum> selectedItems = [];
+  EnrollMealResponse? enrollMealResponse;
+  void enrollMeal() async {
+    emit(const NutritionState.enrollMealLoading());
+    try {
+      enrollMealResponse = await _nutritionRepo.enrollMeal(
+        EnrollMealRequestBody(ingredients: convertToIngredientList(selectedItems)),
+      );
+
+      emit(NutritionState.enrollMealSuccess(enrollMealResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.enrollMealError());
+    }
+  }
+
+
 
 }

@@ -14,7 +14,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
   final String nameOfiIngredients;
   final int index;
   final List<Datum> data;
-  final List<dynamic> listOfSelected;
+  final List<Datum> listOfSelected;
 
   const SheetOfDetailsOfMeal({Key? key, required this.nameOfiIngredients, required this.data, required this.index, required this.listOfSelected}) : super(key: key);
 
