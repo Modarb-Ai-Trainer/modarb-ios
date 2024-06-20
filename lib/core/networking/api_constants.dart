@@ -15,6 +15,7 @@ class ApiConstants{
   static const String ingredients = "ingredients";
   static const String ingredientsSearch = "ingredients/search";
   static const String enrollMeal = "meals/eat-custom-meal";
+  static const String mealPlans = "mealPlans";
 }
 
 class ApiErrors {

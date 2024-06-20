@@ -10,6 +10,7 @@ import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_bo
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 import 'package:modarb_app/features/register/data/models/register_request_body.dart';
@@ -90,13 +91,13 @@ abstract class ApiService {
       @Query("searchTerm") String? searchTerm,
       );
 
-
   @POST(ApiConstants.enrollMeal)
   Future<EnrollMealResponse> enrollMeal(
-     @Body() EnrollMealRequestBody enrollMealRequestBody
+      @Body() EnrollMealRequestBody enrollMealRequestBody
       );
 
-
+  @GET(ApiConstants.mealPlans)
+  Future<MealPlansResponse> getMealPlan();
 
 
 

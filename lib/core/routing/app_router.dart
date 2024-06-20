@@ -182,7 +182,10 @@ class AppRouter {
 
         case Routes.detailsOfPlan:
         return MaterialPageRoute(
-          builder: (_) => DetailsOfPlan(),
+          builder: (_) => DetailsOfPlan(
+            index: args?['index'],
+
+          ),
         );
 
       default:

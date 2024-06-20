@@ -16,6 +16,9 @@ class OtherPlans extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
       builder: (context,state) {
         final cubit = context.read<NutritionCubit>();
+        if(cubit.mealPlansResponse?.data == null){
+          cubit.getMealPlan();
+        }
         return Scaffold(
           body:  CustomScrollView(
             slivers: [
@@ -31,7 +34,12 @@ class OtherPlans extends StatelessWidget{
               SliverList(delegate: SliverChildBuilderDelegate(
                   (context,index) => GestureDetector(
                     onTap: (){
-                      context.pushNamed(Routes.detailsOfPlan);
+                      context.pushNamed(
+                        Routes.detailsOfPlan,
+                        arguments: {
+                          'index' : index,
+                        }
+                      );
                     },
                     child: Stack(
                       children: [
@@ -42,20 +50,13 @@ class OtherPlans extends StatelessWidget{
                         Positioned(
                           bottom: 30.h,
                           left: 20.h,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Standarddddd',
-                                style: TextStyles.font16White700,
-                              ),
-                              Text(
-                                'EatAll Essence : Unrestricted Nutrition',
-                                style: TextStyles.font13White600,
-                              ),
-                            ],
+                          child: Text(
+                            '${cubit.mealPlansResponse?.data[index].description}',
+                            style: TextStyles.font16White700,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
+
                       ],
                     ),
                   ),
