@@ -1,4 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 part 'nutrition_state.freezed.dart';
@@ -19,6 +21,14 @@ class NutritionState <T> with _$NutritionState<T> {
   const factory NutritionState.todayMealLoading() = TodayMealLoading;
   const factory NutritionState.todayMealSuccess(TodayMealResponse ? todayMealResponse) = TodayMealSuccess;
   const factory NutritionState.todayMealError() = TodayMealError;
+
+  const factory NutritionState.getIngredientsLoading() = GetIngredientsLoading;
+  const factory NutritionState.getIngredientsSuccess(IngredientsResponse ? ingredientsResponse) = GetIngredientsSuccess;
+  const factory NutritionState.getIngredientsError() = GetIngredientsError;
+
+  const factory NutritionState.getIngredientsSearchLoading() = GetIngredientsSearchLoading;
+  const factory NutritionState.getIngredientsSearchSuccess(IngredientsSearchResponse ? ingredientsSearchResponse) = GetIngredientsSearchSuccess;
+  const factory NutritionState.getIngredientsSearchError() = GetIngredientsSearchError;
 
 
   const factory NutritionState.changeSelection(String? newSelect) = ChangeSelection;

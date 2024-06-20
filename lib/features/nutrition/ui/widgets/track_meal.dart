@@ -20,7 +20,9 @@ class ItemOfTrackMeal extends StatelessWidget{
             context: context,
             isScrollControlled: true,
             builder: (BuildContext context) {
-              return const SheetOfAddingMeal();
+              return SheetOfAddingMeal(
+                nameOfMeals: nameOfMeals[index],
+              );
             },
           );
 

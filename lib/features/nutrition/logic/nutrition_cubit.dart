@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/repos/nutrition_repo.dart';
@@ -78,6 +81,34 @@ class NutritionCubit extends Cubit<NutritionState> {
     } catch (error) {
       print(error.toString());
       emit(const NutritionState.todayMealError());
+    }
+  }
+
+
+  IngredientsResponse ? ingredientsResponse;
+  void getIngredients() async {
+    emit(const NutritionState.getIngredientsLoading());
+    try {
+      ingredientsResponse = await _nutritionRepo.getIngredients();
+
+      emit(NutritionState.getIngredientsSuccess(ingredientsResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.getIngredientsError());
+    }
+  }
+
+  TextEditingController searchController = TextEditingController();
+  IngredientsSearchResponse ? ingredientsSearchResponse;
+  void getIngredientsSearch() async {
+    emit(const NutritionState.getIngredientsSearchLoading());
+    try {
+      ingredientsSearchResponse = await _nutritionRepo.getIngredientsSearch(searchController.text);
+
+      emit(NutritionState.getIngredientsSearchSuccess(ingredientsSearchResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.getIngredientsSearchError());
     }
   }
 

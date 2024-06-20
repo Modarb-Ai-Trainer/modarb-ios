@@ -123,7 +123,7 @@ class DailyRoutineTab extends StatelessWidget{
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-
+              backgroundColor: ColorsManager.darkGray,
               title: Text(' Name : ${model.days[0].meals[index].name}',
                 style: TextStyles.font16White700,
               ),

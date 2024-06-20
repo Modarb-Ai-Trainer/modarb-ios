@@ -5,20 +5,21 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/core/widgets/horizontal_line.dart';
+import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/sheet_of_finally.dart';
 
 class SheetOfDetailsOfMeal extends StatelessWidget{
-  const SheetOfDetailsOfMeal({Key? key}) : super(key: key);
+  final String nameOfiIngredients;
+  final int index;
+  final List<Datum> data;
+
+  const SheetOfDetailsOfMeal({Key? key, required this.nameOfiIngredients, required this.data, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return  Container(
       decoration: const BoxDecoration(
         color: ColorsManager.darkGray,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(16),
-          topRight: Radius.circular(16),
-        ),
       ),
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
       child: Column(
@@ -41,7 +42,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                             icon: const Icon(Icons.arrow_back),
                           ),
                           Text(
-                            'Honey',
+                            nameOfiIngredients,
                             style: TextStyles.font16White700,
                           ),
                           IconButton(
@@ -64,6 +65,10 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                                   'serving size',
                                   style: TextStyles.font16White700,
                                 ),
+                                Text(
+                                  '${data[index].servingSize} g',
+                                  style: TextStyles.font16White700,
+                                ),
                               ],
                             ),
                             verticalSpace(20),
@@ -72,6 +77,10 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                               children: [
                                 Text(
                                   'Number of serving',
+                                  style: TextStyles.font16White700,
+                                ),
+                                Text(
+                                  '${data[index].servingsCount}',
                                   style: TextStyles.font16White700,
                                 ),
                               ],
@@ -85,10 +94,22 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
                   ),
                 ),
                 SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                        (context, index) => itemOfList(),
-                    childCount: 5,
-                  ),
+                  delegate: SliverChildListDelegate(
+                    [
+                      itemOfList(
+                          'Calories','${data[index].calories} kcal',
+                      ),
+                      itemOfList(
+                          'Carbs','${data[index].carbs}',
+                      ),
+                      itemOfList(
+                          'Protein','${data[index].proteins} mg',
+                      ),
+                      itemOfList(
+                          'Fats','${data[index].fats} mg',
+                      ),
+                    ],
+                  )
                 ),
               ],
             ),
@@ -113,7 +134,7 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
       ),
     );
   }
-  Widget itemOfList(){
+  Widget itemOfList(name, value){
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 10.w),
       child: Column(
@@ -122,10 +143,10 @@ class SheetOfDetailsOfMeal extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'calories',
+                name,
               style: TextStyles.font16White700,),
               Text(
-                '64 kcal',
+                value,
               style: TextStyles.font16White700,),
 
             ],

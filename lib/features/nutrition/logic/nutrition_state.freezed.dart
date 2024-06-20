@@ -27,6 +27,15 @@ mixin _$NutritionState<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -40,6 +49,14 @@ mixin _$NutritionState<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -53,6 +70,14 @@ mixin _$NutritionState<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -66,6 +91,17 @@ mixin _$NutritionState<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -78,6 +114,15 @@ mixin _$NutritionState<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -90,6 +135,15 @@ mixin _$NutritionState<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -161,6 +215,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return initial();
@@ -177,6 +240,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return initial?.call();
@@ -193,6 +264,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -212,6 +291,17 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return initial(this);
@@ -227,6 +317,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return initial?.call(this);
@@ -242,6 +341,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -304,6 +412,15 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeLoading();
@@ -320,6 +437,14 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeLoading?.call();
@@ -336,6 +461,14 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -355,6 +488,17 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeLoading(this);
@@ -370,6 +514,15 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeLoading?.call(this);
@@ -385,6 +538,15 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -474,6 +636,15 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeSuccess(todayIntakeResponse);
@@ -490,6 +661,14 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(todayIntakeResponse);
@@ -506,6 +685,14 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -525,6 +712,17 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeSuccess(this);
@@ -540,6 +738,15 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(this);
@@ -555,6 +762,15 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -624,6 +840,15 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeError();
@@ -640,6 +865,14 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeError?.call();
@@ -656,6 +889,14 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -675,6 +916,17 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeError(this);
@@ -690,6 +942,15 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeError?.call(this);
@@ -705,6 +966,15 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -767,6 +1037,15 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealLoading();
@@ -783,6 +1062,14 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealLoading?.call();
@@ -799,6 +1086,14 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -818,6 +1113,17 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealLoading(this);
@@ -833,6 +1139,15 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealLoading?.call(this);
@@ -848,6 +1163,15 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -937,6 +1261,15 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealSuccess(todayMealResponse);
@@ -953,6 +1286,14 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealSuccess?.call(todayMealResponse);
@@ -969,6 +1310,14 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -988,6 +1337,17 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealSuccess(this);
@@ -1003,6 +1363,15 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealSuccess?.call(this);
@@ -1018,6 +1387,15 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1085,6 +1463,15 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealError();
@@ -1101,6 +1488,14 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealError?.call();
@@ -1117,6 +1512,14 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1136,6 +1539,17 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealError(this);
@@ -1151,6 +1565,15 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealError?.call(this);
@@ -1166,6 +1589,15 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1178,6 +1610,1279 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
 
 abstract class TodayMealError<T> implements NutritionState<T> {
   const factory TodayMealError() = _$TodayMealErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsLoadingImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsLoadingImplCopyWith(
+          _$GetIngredientsLoadingImpl<T> value,
+          $Res Function(_$GetIngredientsLoadingImpl<T>) then) =
+      __$$GetIngredientsLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetIngredientsLoadingImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$GetIngredientsLoadingImpl<T>>
+    implements _$$GetIngredientsLoadingImplCopyWith<T, $Res> {
+  __$$GetIngredientsLoadingImplCopyWithImpl(
+      _$GetIngredientsLoadingImpl<T> _value,
+      $Res Function(_$GetIngredientsLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
+  const _$GetIngredientsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsLoading != null) {
+      return getIngredientsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsLoading != null) {
+      return getIngredientsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsLoading<T> implements NutritionState<T> {
+  const factory GetIngredientsLoading() = _$GetIngredientsLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsSuccessImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsSuccessImplCopyWith(
+          _$GetIngredientsSuccessImpl<T> value,
+          $Res Function(_$GetIngredientsSuccessImpl<T>) then) =
+      __$$GetIngredientsSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({IngredientsResponse? ingredientsResponse});
+}
+
+/// @nodoc
+class __$$GetIngredientsSuccessImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$GetIngredientsSuccessImpl<T>>
+    implements _$$GetIngredientsSuccessImplCopyWith<T, $Res> {
+  __$$GetIngredientsSuccessImplCopyWithImpl(
+      _$GetIngredientsSuccessImpl<T> _value,
+      $Res Function(_$GetIngredientsSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ingredientsResponse = freezed,
+  }) {
+    return _then(_$GetIngredientsSuccessImpl<T>(
+      freezed == ingredientsResponse
+          ? _value.ingredientsResponse
+          : ingredientsResponse // ignore: cast_nullable_to_non_nullable
+              as IngredientsResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
+  const _$GetIngredientsSuccessImpl(this.ingredientsResponse);
+
+  @override
+  final IngredientsResponse? ingredientsResponse;
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsSuccess(ingredientsResponse: $ingredientsResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsSuccessImpl<T> &&
+            (identical(other.ingredientsResponse, ingredientsResponse) ||
+                other.ingredientsResponse == ingredientsResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, ingredientsResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetIngredientsSuccessImplCopyWith<T, _$GetIngredientsSuccessImpl<T>>
+      get copyWith => __$$GetIngredientsSuccessImplCopyWithImpl<T,
+          _$GetIngredientsSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsSuccess(ingredientsResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsSuccess?.call(ingredientsResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSuccess != null) {
+      return getIngredientsSuccess(ingredientsResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSuccess != null) {
+      return getIngredientsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsSuccess<T> implements NutritionState<T> {
+  const factory GetIngredientsSuccess(
+          final IngredientsResponse? ingredientsResponse) =
+      _$GetIngredientsSuccessImpl<T>;
+
+  IngredientsResponse? get ingredientsResponse;
+  @JsonKey(ignore: true)
+  _$$GetIngredientsSuccessImplCopyWith<T, _$GetIngredientsSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsErrorImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsErrorImplCopyWith(_$GetIngredientsErrorImpl<T> value,
+          $Res Function(_$GetIngredientsErrorImpl<T>) then) =
+      __$$GetIngredientsErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetIngredientsErrorImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetIngredientsErrorImpl<T>>
+    implements _$$GetIngredientsErrorImplCopyWith<T, $Res> {
+  __$$GetIngredientsErrorImplCopyWithImpl(_$GetIngredientsErrorImpl<T> _value,
+      $Res Function(_$GetIngredientsErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
+  const _$GetIngredientsErrorImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsError != null) {
+      return getIngredientsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsError != null) {
+      return getIngredientsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsError<T> implements NutritionState<T> {
+  const factory GetIngredientsError() = _$GetIngredientsErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsSearchLoadingImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsSearchLoadingImplCopyWith(
+          _$GetIngredientsSearchLoadingImpl<T> value,
+          $Res Function(_$GetIngredientsSearchLoadingImpl<T>) then) =
+      __$$GetIngredientsSearchLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetIngredientsSearchLoadingImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$GetIngredientsSearchLoadingImpl<T>>
+    implements _$$GetIngredientsSearchLoadingImplCopyWith<T, $Res> {
+  __$$GetIngredientsSearchLoadingImplCopyWithImpl(
+      _$GetIngredientsSearchLoadingImpl<T> _value,
+      $Res Function(_$GetIngredientsSearchLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetIngredientsSearchLoadingImpl<T>
+    implements GetIngredientsSearchLoading<T> {
+  const _$GetIngredientsSearchLoadingImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsSearchLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsSearchLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsSearchLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsSearchLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchLoading != null) {
+      return getIngredientsSearchLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsSearchLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsSearchLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchLoading != null) {
+      return getIngredientsSearchLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsSearchLoading<T> implements NutritionState<T> {
+  const factory GetIngredientsSearchLoading() =
+      _$GetIngredientsSearchLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsSearchSuccessImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsSearchSuccessImplCopyWith(
+          _$GetIngredientsSearchSuccessImpl<T> value,
+          $Res Function(_$GetIngredientsSearchSuccessImpl<T>) then) =
+      __$$GetIngredientsSearchSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({IngredientsSearchResponse? ingredientsSearchResponse});
+}
+
+/// @nodoc
+class __$$GetIngredientsSearchSuccessImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$GetIngredientsSearchSuccessImpl<T>>
+    implements _$$GetIngredientsSearchSuccessImplCopyWith<T, $Res> {
+  __$$GetIngredientsSearchSuccessImplCopyWithImpl(
+      _$GetIngredientsSearchSuccessImpl<T> _value,
+      $Res Function(_$GetIngredientsSearchSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ingredientsSearchResponse = freezed,
+  }) {
+    return _then(_$GetIngredientsSearchSuccessImpl<T>(
+      freezed == ingredientsSearchResponse
+          ? _value.ingredientsSearchResponse
+          : ingredientsSearchResponse // ignore: cast_nullable_to_non_nullable
+              as IngredientsSearchResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetIngredientsSearchSuccessImpl<T>
+    implements GetIngredientsSearchSuccess<T> {
+  const _$GetIngredientsSearchSuccessImpl(this.ingredientsSearchResponse);
+
+  @override
+  final IngredientsSearchResponse? ingredientsSearchResponse;
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsSearchSuccess(ingredientsSearchResponse: $ingredientsSearchResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsSearchSuccessImpl<T> &&
+            (identical(other.ingredientsSearchResponse,
+                    ingredientsSearchResponse) ||
+                other.ingredientsSearchResponse == ingredientsSearchResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, ingredientsSearchResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetIngredientsSearchSuccessImplCopyWith<T,
+          _$GetIngredientsSearchSuccessImpl<T>>
+      get copyWith => __$$GetIngredientsSearchSuccessImplCopyWithImpl<T,
+          _$GetIngredientsSearchSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsSearchSuccess(ingredientsSearchResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsSearchSuccess?.call(ingredientsSearchResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchSuccess != null) {
+      return getIngredientsSearchSuccess(ingredientsSearchResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsSearchSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsSearchSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchSuccess != null) {
+      return getIngredientsSearchSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsSearchSuccess<T> implements NutritionState<T> {
+  const factory GetIngredientsSearchSuccess(
+          final IngredientsSearchResponse? ingredientsSearchResponse) =
+      _$GetIngredientsSearchSuccessImpl<T>;
+
+  IngredientsSearchResponse? get ingredientsSearchResponse;
+  @JsonKey(ignore: true)
+  _$$GetIngredientsSearchSuccessImplCopyWith<T,
+          _$GetIngredientsSearchSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetIngredientsSearchErrorImplCopyWith<T, $Res> {
+  factory _$$GetIngredientsSearchErrorImplCopyWith(
+          _$GetIngredientsSearchErrorImpl<T> value,
+          $Res Function(_$GetIngredientsSearchErrorImpl<T>) then) =
+      __$$GetIngredientsSearchErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetIngredientsSearchErrorImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$GetIngredientsSearchErrorImpl<T>>
+    implements _$$GetIngredientsSearchErrorImplCopyWith<T, $Res> {
+  __$$GetIngredientsSearchErrorImplCopyWithImpl(
+      _$GetIngredientsSearchErrorImpl<T> _value,
+      $Res Function(_$GetIngredientsSearchErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetIngredientsSearchErrorImpl<T>
+    implements GetIngredientsSearchError<T> {
+  const _$GetIngredientsSearchErrorImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getIngredientsSearchError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetIngredientsSearchErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getIngredientsSearchError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getIngredientsSearchError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchError != null) {
+      return getIngredientsSearchError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getIngredientsSearchError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getIngredientsSearchError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getIngredientsSearchError != null) {
+      return getIngredientsSearchError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetIngredientsSearchError<T> implements NutritionState<T> {
+  const factory GetIngredientsSearchError() =
+      _$GetIngredientsSearchErrorImpl<T>;
 }
 
 /// @nodoc
@@ -1255,6 +2960,15 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(TodayMealResponse? todayMealResponse)
         todayMealSuccess,
     required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return changeSelection(newSelect);
@@ -1271,6 +2985,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function()? todayMealLoading,
     TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return changeSelection?.call(newSelect);
@@ -1287,6 +3009,14 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? todayMealLoading,
     TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
     TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1306,6 +3036,17 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(TodayMealLoading<T> value) todayMealLoading,
     required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
     required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return changeSelection(this);
@@ -1321,6 +3062,15 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return changeSelection?.call(this);
@@ -1336,6 +3086,15 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(TodayMealLoading<T> value)? todayMealLoading,
     TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
     TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
