@@ -68,13 +68,13 @@ class DailyRoutineTab extends StatelessWidget{
                     ),
                   ),
                 ),
-                if(state is TodayMealLoading)
+                if(state is TodayMealLoading || cubit.todayMealResponse == null)
                   const SliverToBoxAdapter(
                     child: Center(
                       child: CircularProgressIndicator()
                     ),
                   ),
-                if(state is TodayMealSuccess)
+                if(cubit.todayMealResponse != null)
                   SliverList(
                   delegate: SliverChildBuilderDelegate((context,index) => TimelineTile(
                     axis: TimelineAxis.vertical,

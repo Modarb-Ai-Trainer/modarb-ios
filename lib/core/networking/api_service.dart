@@ -6,6 +6,8 @@ import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_request_body.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_body.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
@@ -99,6 +101,10 @@ abstract class ApiService {
   @GET(ApiConstants.mealPlans)
   Future<MealPlansResponse> getMealPlan();
 
+  @POST(ApiConstants.myMealPlan)
+  Future<EnrollMealPlansResponse> enrollMealPlan(
+      @Body() EnrollMealPlansRequestBody ?enrollMealPlansRequestBody ,
+      );
 
 
 }

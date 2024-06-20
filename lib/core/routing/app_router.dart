@@ -21,7 +21,7 @@ import 'package:modarb_app/features/splash/ui/screens/splash_screen.dart';
 import 'package:modarb_app/features/workout/logic/workout_cubit.dart';
 import 'package:modarb_app/features/workout/ui/screens/exercise_of_category.dart';
 import 'package:modarb_app/features/workout/ui/widgets/exercise_indetails.dart';
-import '../../features/home/ui/home_page.dart';
+import '../../features/home/ui/screens/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
 import '../../features/my_trainer/ui/screens/before_Warming.dart';
 import '../../features/my_trainer/ui/screens/warm_screen.dart';

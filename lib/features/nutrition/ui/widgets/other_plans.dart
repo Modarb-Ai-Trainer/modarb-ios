@@ -60,7 +60,7 @@ class OtherPlans extends StatelessWidget{
                       ],
                     ),
                   ),
-                childCount: 5,
+                childCount: cubit.mealPlansResponse?.data.length ,
               ),
               ),
             ],

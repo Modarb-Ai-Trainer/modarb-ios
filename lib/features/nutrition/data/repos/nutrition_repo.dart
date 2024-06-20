@@ -1,4 +1,6 @@
 import 'package:modarb_app/core/networking/api_service.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_request_body.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_body.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
@@ -54,6 +56,14 @@ class NutritionRepo{
   Future<MealPlansResponse> getMealPlan() async {
     try {
       return await _apiService.getMealPlan();
+    } catch (error) {
+      throw Exception('Failed to get data: $error');
+    }
+  }
+
+  Future<EnrollMealPlansResponse> enrollMealPlan(EnrollMealPlansRequestBody? enrollMealPlansRequestBody) async {
+    try {
+      return await _apiService.enrollMealPlan(enrollMealPlansRequestBody);
     } catch (error) {
       throw Exception('Failed to get data: $error');
     }

@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
@@ -14,6 +15,7 @@ class NutritionState <T> with _$NutritionState<T> {
 
 
   const factory NutritionState.initial() = _Initial;
+
 
   const factory NutritionState.todayIntakeLoading() = TodayIntakeLoading;
   const factory NutritionState.todayIntakeSuccess(TodayIntakeResponse ? todayIntakeResponse) = TodayIntakeSuccess;
@@ -40,6 +42,10 @@ class NutritionState <T> with _$NutritionState<T> {
   const factory NutritionState.getMealPlanLoading() = GetMealPlanLoading;
   const factory NutritionState.getMealPlanSuccess(MealPlansResponse? mealPlansResponse) = GetMealPlanSuccess;
   const factory NutritionState.getMealPlanError() = GetMealPlanError;
+
+  const factory NutritionState.enrollMealPlanLoading() = EnrollMealPlanLoading;
+  const factory NutritionState.enrollMealPlanSuccess(EnrollMealPlansResponse? enrollMealPlansResponse) = EnrollMealPlanSuccess;
+  const factory NutritionState.enrollMealPlanError() = EnrollMealPlanError;
 
 
   const factory NutritionState.changeSelection(String? newSelect) = ChangeSelection;

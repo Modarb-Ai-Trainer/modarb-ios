@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_request_body.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_body.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
@@ -149,6 +151,19 @@ class NutritionCubit extends Cubit<NutritionState> {
     } catch (error) {
       print(error.toString());
       emit(const NutritionState.getMealPlanError());
+    }
+  }
+
+  EnrollMealPlansResponse? enrollMealPlansResponse;
+  void enrollMealPlan(EnrollMealPlansRequestBody? enrollMealPlansRequestBody) async {
+    emit(const NutritionState.enrollMealPlanLoading());
+    try {
+      enrollMealPlansResponse = await _nutritionRepo.enrollMealPlan(enrollMealPlansRequestBody);
+
+      emit(NutritionState.enrollMealPlanSuccess(enrollMealPlansResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.enrollMealPlanError());
     }
   }
 

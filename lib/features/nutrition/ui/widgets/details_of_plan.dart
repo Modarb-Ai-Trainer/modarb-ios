@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_request_body.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 
@@ -73,29 +75,46 @@ class DetailsOfPlan extends StatelessWidget{
                     verticalSpace(20),
 
                     Text('Level: ${cubit.mealPlansResponse?.data[index].level}',style: TextStyles.font16White700,),
-
                     verticalSpace(20),
-                    Text('Key Features:',style: TextStyles.font16White700,),
-                    verticalSpace(10),
-                    Text(
-                      '${cubit.mealPlansResponse?.data[index].keyFeatures[index].title} : ${cubit.mealPlansResponse?.data[index].keyFeatures[index].description}',
-                      style: TextStyles.font13White600,),
-                    verticalSpace(10),
-                    Text(
-                      '${cubit.mealPlansResponse?.data[index].keyFeatures[index+1].title} : ${cubit.mealPlansResponse?.data[index].keyFeatures[index+1].description}',
-                      style: TextStyles.font13White600,),
-
                   ],
                 ),
               ),
-              verticalSpace(80),
+              verticalSpace(100),
               Center(
                 child: AppTextButton(
                   buttonText: 'Enroll plan',
                   buttonWidth: 200.w,
-                  onPressed: (){
-
+                  onPressed: () {
+                    cubit.enrollMealPlan(
+                      EnrollMealPlansRequestBody(mealPlan: '${cubit
+                          .mealPlansResponse?.data[index].id}'),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          ' Enroll plan Successfully',
+                          style: TextStyles.font16White700,
+                        ),
+                        backgroundColor: ColorsManager.lighterGray,
+                        duration: const Duration(seconds: 5),
+                      ),
+                    );
+                    Navigator.pop(context);
                   },
+                  //   if(state is EnrollMealPlanSuccess){
+                  //     ScaffoldMessenger.of(context).showSnackBar(
+                  //       SnackBar(
+                  //         content: Text(
+                  //           ' Enroll plan Successfully',
+                  //           style: TextStyles.font16White700,
+                  //         ),
+                  //         backgroundColor: ColorsManager.lighterGray,
+                  //         duration: const Duration(seconds: 5),
+                  //       ),
+                  //     );
+                  //     Navigator.pop(context);
+                  //   }
+                  // },
                 ),
               ),
             ],
