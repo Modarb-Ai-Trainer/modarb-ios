@@ -51,7 +51,7 @@ class AppTextButton extends StatelessWidget {
           backgroundColor ?? ColorsManager.mainPurple,
         ),
         fixedSize: MaterialStateProperty.all(
-          Size( buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 45.h),
+          Size( buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 40.h),
         ),
       ),
       onPressed: onPressed,
@@ -59,7 +59,7 @@ class AppTextButton extends StatelessWidget {
         child: Text(
           buttonText,
           textAlign: TextAlign.center,
-          style: (textStyle ?? TextStyles.font20White600).copyWith(
+          style: (textStyle ?? TextStyles.font19White700).copyWith(
             color: textColor ?? Colors.white,
           ),
         ),

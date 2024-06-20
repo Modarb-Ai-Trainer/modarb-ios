@@ -5,11 +5,13 @@ import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
+import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/core/widgets/horizontal_line.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/my_saved_meals_tab.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/recently_added_tab.dart';
+import 'package:modarb_app/features/nutrition/ui/widgets/sheet_of_finally.dart';
 
 class SheetOfAddingMeal extends StatelessWidget {
   final String nameOfMeals;
@@ -121,6 +123,21 @@ class SheetOfAddingMeal extends StatelessWidget {
                         MySavedMeals(),
                       ],
                     ),
+                  ),
+                  AppTextButton(
+                    buttonText: 'Save meal',
+                    onPressed: (){
+                      showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        builder: (BuildContext context) {
+                          return SheetOfDetailsOfFinally(
+                            nameOfMeals: nameOfMeals,
+
+                          );
+                        },
+                      );
+                    },
                   ),
 
                 ],

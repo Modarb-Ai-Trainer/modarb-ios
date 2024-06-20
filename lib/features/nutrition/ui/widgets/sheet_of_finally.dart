@@ -1,110 +1,118 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
+import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 
 class SheetOfDetailsOfFinally extends StatelessWidget{
-  const SheetOfDetailsOfFinally({Key? key}) : super(key: key);
+  final String nameOfMeals;
+
+  const SheetOfDetailsOfFinally({Key? key, required this.nameOfMeals}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: ColorsManager.darkGray,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(16),
-          topRight: Radius.circular(16),
-        ),
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
-      child: Column(
-        children: [
-          Expanded(
-            child: CustomScrollView(
-              slivers: [
-                SliverToBoxAdapter(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return BlocBuilder<NutritionCubit,NutritionState>(
+      builder: (context,state){
+        final cubit = context.read<NutritionCubit>();
+
+        return Container(
+          decoration: const BoxDecoration(
+            color: ColorsManager.darkGray,
+
+          ),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
+          child: Column(
+            children: [
+              Expanded(
+                child: CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: const Icon(Icons.arrow_back),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                icon: const Icon(Icons.arrow_back),
+                              ),
+                              Text(
+                                nameOfMeals,
+                                style: TextStyles.font19White700,
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                icon: const Icon(Icons.close),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Breakfast',
-                            style: TextStyles.font19White700,
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: const Icon(Icons.close),
+                          Align(
+                            alignment: AlignmentDirectional.topEnd,
+                            child: AppTextButton(
+                              buttonText: 'Add food',
+                              textStyle: TextStyles.font16White700,
+                              buttonHeight: 30.h,
+                              buttonWidth: 120.w,
+                              onPressed: (){
+                                Navigator.pop(context);
+
+                              },
+                            ),
                           ),
                         ],
                       ),
-                      Align(
-                        alignment: AlignmentDirectional.topEnd,
-                        child: AppTextButton(
-                          buttonText: 'Add food',
-                          textStyle: TextStyles.font16White700,
-                          buttonHeight: 30.h,
-                          buttonWidth: 120.w,
-                          onPressed: (){
-                            Navigator.pop(context);
-
-                          },
-                        ),
+                    ),
+                    SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                            (context, index) => itemOfList(cubit.selectedItems,index),
+                        childCount: cubit.selectedItems.length,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                        (context, index) => itemOfList(),
-                    childCount: 5,
-                  ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.h),
+                child: AppTextButton(
+                  buttonText: 'Confirm',
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.pop(context);
+                  },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 15.h),
-            child: AppTextButton(
-              buttonText: 'Save my meal',
-              onPressed: () {
-                Navigator.pop(context);
-                Navigator.pop(context);
-              },
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
-  Widget itemOfList(){
+  Widget itemOfList(list,index){
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Honey',
+            '${list[index].name}',
             style: TextStyles.font16White700,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '1 cup 21g',
+                '${list[index].carbs} carbs, ${list[index].proteins} proteins,  ${list[index].fats} fats ',
                 style: TextStyles.font13White600,),
               Text(
-                '64 kcal',
+                '${list[index].calories} kcal',
                 style: TextStyles.font13White600,),
 
             ],

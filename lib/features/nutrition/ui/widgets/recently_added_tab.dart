@@ -9,105 +9,138 @@ import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_state.dart';
 import 'package:modarb_app/features/nutrition/ui/widgets/sheet_of_details_of_meal.dart';
 
-class RecentlyAddedTab extends StatelessWidget{
+class RecentlyAddedTab extends StatefulWidget {
   const RecentlyAddedTab({Key? key}) : super(key: key);
 
   @override
+  _RecentlyAddedTabState createState() => _RecentlyAddedTabState();
+}
+
+class _RecentlyAddedTabState extends State<RecentlyAddedTab> {
+  final List<dynamic> selectedItems = [];
+
+  @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NutritionCubit,NutritionState>(
-     builder: (context,state){
-       final cubit = context.read<NutritionCubit>();
-       if(cubit.ingredientsResponse == null){
-         cubit.getIngredients();
-       }
-       return CustomScrollView(
-         slivers: [
-           if(state is GetIngredientsLoading || state is GetIngredientsSearchLoading)
-             const SliverToBoxAdapter(
-               child: Center(
-                   child: CircularProgressIndicator()
-               ),
-             ),
-           if(cubit.ingredientsResponse != null && state is GetIngredientsSuccess)
-             SliverList(delegate: SliverChildBuilderDelegate(
-                 (context,index) => itemOfSuggestList(context,cubit.ingredientsResponse?.data,index),
-             childCount: cubit.ingredientsResponse?.data.length,
+    return BlocBuilder<NutritionCubit, NutritionState>(
+      builder: (context, state) {
+        final cubit = context.read<NutritionCubit>();
+        if (cubit.ingredientsResponse == null) {
+          cubit.getIngredients();
+        }
+        return CustomScrollView(
+          slivers: [
+            if (state is GetIngredientsLoading || state is GetIngredientsSearchLoading)
+              const SliverToBoxAdapter(
+                child: Center(child: CircularProgressIndicator()),
+              ),
+            if (cubit.ingredientsResponse != null && state is GetIngredientsSuccess)
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                      (context, index) => itemOfSuggestList(
+                    context,
+                    cubit.ingredientsResponse?.data,
+                    index,
+                    cubit,
+                  ),
+                  childCount: cubit.ingredientsResponse?.data.length,
+                ),
+              ),
+            if (cubit.ingredientsSearchResponse != null && state is GetIngredientsSearchSuccess)
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                      (context, index) => itemOfSuggestList(
+                    context,
+                    cubit.ingredientsSearchResponse?.data,
+                    index,
+                    cubit,
+                  ),
+                  childCount: cubit.ingredientsSearchResponse?.data.length,
+                ),
+              ),
+            if (state is GetIngredientsError || state is GetIngredientsSearchError)
+              SliverToBoxAdapter(
+                child: Center(
+                  child: Text(
+                    'No data here to show',
+                    style: TextStyles.font19White700,
+                  ),
+                ),
+              ),
 
-           )
-             ),
-           if(cubit.ingredientsSearchResponse != null && state is GetIngredientsSearchSuccess)
-             SliverList(delegate: SliverChildBuilderDelegate(
-                   (context,index) => itemOfSuggestList(context,cubit.ingredientsSearchResponse?.data,index),
-               childCount: cubit.ingredientsSearchResponse?.data.length,
-
-             )
-             ),
-           if(state is GetIngredientsError || state is GetIngredientsSearchError)
-             SliverToBoxAdapter(
-               child: Center(
-                 child: Text(
-                   'No data here to show',
-                   style: TextStyles.font19White700,
-                 ),
-               ),
-             ),
-         ],
-       );
-     },
+          ],
+        );
+      },
     );
   }
 
-  Widget itemOfSuggestList(context, model,index){
+  Widget itemOfSuggestList(context, model, index, cubit) {
+    final isSelected = selectedItems.contains(model[index]);
     return GestureDetector(
-      onTap: (){
+      onTap: () {
+        setState(() {
+          if (isSelected) {
+            selectedItems.remove(model[index]);
+          } else {
+            selectedItems.add(model[index]);
+          }
+
+        });
         showModalBottomSheet(
           context: context,
           isScrollControlled: true,
           builder: (BuildContext context) {
-            return  SheetOfDetailsOfMeal(
+            return SheetOfDetailsOfMeal(
               nameOfiIngredients: model[index].name,
               data: model,
-              index: index,
+              index: index, listOfSelected: selectedItems,
             );
           },
         );
-
       },
       child: Padding(
-        padding:  EdgeInsets.symmetric(vertical: 10.h),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: 30.w,
-                  height: 30.h,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: ColorsManager.lightPurple, // Border color
-                      width: 2, // Border width
+        padding: EdgeInsets.symmetric(vertical: 10.h),
+        child: Container(
+          decoration: BoxDecoration(
+            color: isSelected ? ColorsManager.lighterGray : Colors.transparent,
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 30.w,
+                    height: 30.h,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: ColorsManager.lightPurple, // Border color
+                        width: 2, // Border width
+                      ),
                     ),
-                  ),
-                  child: Icon(
+                    child: isSelected ? Icon(
+                      Icons.check,
+                      size: 22.sp,
+                      color: ColorsManager.lightPurple,
+                    ) :  Icon(
                       Icons.add,
                       size: 20.sp,
-                      color:ColorsManager.lightPurple
+                      color: ColorsManager.lightPurple,
+                    ),
                   ),
-                ),
-                horizontalSpace(10),
-                Expanded(
-                  child: Text(
-                    '${model[index].name}',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyles.font13White700,),
-                )
-
-              ],
-            ),
-            verticalSpace(20),
-            const DividerLine(),
-          ],
+                  horizontalSpace(10),
+                  Expanded(
+                    child: Text(
+                      '${model[index].name}',
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyles.font13White700,
+                    ),
+                  ),
+                ],
+              ),
+              verticalSpace(20),
+              const DividerLine(),
+            ],
+          ),
         ),
       ),
     );

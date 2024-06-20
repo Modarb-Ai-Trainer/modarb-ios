@@ -112,4 +112,19 @@ class NutritionCubit extends Cubit<NutritionState> {
     }
   }
 
+
+
+  List<dynamic> selectedItems = [];
+
+
+  void updateSelectedExercises(List<dynamic> newExercises) {
+    for (String exercise in newExercises) {
+      if (!selectedItems.contains(exercise)) {
+        selectedItems.add(exercise);
+      }
+    }
+
+    // emit(TrainerState.exerciseUpdated(resultSelected));
+  }
+
 }

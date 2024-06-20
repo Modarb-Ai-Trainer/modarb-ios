@@ -25,7 +25,6 @@ class ItemOfTrackMeal extends StatelessWidget{
               );
             },
           );
-
         },
         child: Stack(
           alignment: Alignment.center,
