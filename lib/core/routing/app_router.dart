@@ -4,7 +4,6 @@ import 'package:modarb_app/core/di/dependency_injection.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/features/home/ui/screens/todays_workout_screen.dart';
 import 'package:modarb_app/features/loading/ui/loading.dart';
-import 'package:modarb_app/features/more_info/ui/screens/setting_screen.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/trainer_screen.dart';
 import 'package:modarb_app/features/my_trainer/ui/screens/workout_insights.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/exercise_details.dart';
@@ -91,10 +90,7 @@ class AppRouter {
 
         case Routes.todayWorkoutScreen:
         return MaterialPageRoute(
-          builder: (_) =>  const TodayWorkoutScreen(
-            // listOfDay: args?['listOfDay'],
-            // index:  args?['index'],
-          ),
+          builder: (_) =>  const TodayWorkoutScreen(),
         );
 
         case Routes.myTrainerScreen:
@@ -173,11 +169,6 @@ class AppRouter {
                 nameOfCategory: args?['nameOfCategory'],
               )
           ),
-        );
-
-        case Routes.settingScreen:
-        return MaterialPageRoute(
-          builder: (_) => const SettingScreen(),
         );
 
         case Routes.workoutProgramEnroll:

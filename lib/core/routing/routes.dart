@@ -31,8 +31,5 @@ class Routes {
   static const String detailsOfPlan = '/detailsOfPlan';
 
 
-  static const String settingScreen = '/settingScreen';
-
-
 
 }

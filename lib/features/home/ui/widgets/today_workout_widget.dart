@@ -58,11 +58,11 @@ class TodayWorkoutWidget extends StatelessWidget{
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const AppTextContainer(
-                          text: '30 min',
+                          text: '40 s',
                         ),
                         horizontalSpace(30),
                         AppTextContainer(
-                          text: '6 exercise',
+                          text: '2 exercise',
                           width: 90.w,
                           height: 25.h,
                         ),

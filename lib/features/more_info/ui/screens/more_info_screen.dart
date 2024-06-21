@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/networking/shared_pref_helper.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/more_info/ui/widgets/build_list_tile.dart';
-import '../../../../core/routing/routes.dart';
 
 class MoreInfoScreen extends StatelessWidget{
   const MoreInfoScreen({Key? key}) : super(key: key);
@@ -12,17 +14,17 @@ class MoreInfoScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 70,
+        toolbarHeight: 70.h,
         title: Text('More',
         style: TextStyles.font23White700,
         ),
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(1.0), // Adjust the height of the line
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.h), // Adjust the height of the line
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.h),
             child: Divider(
               color: ColorsManager.lightWhite,
-              height: 1.0,
+              height: 1.h,
             ),
           ),
         ),
@@ -57,10 +59,11 @@ class MoreInfoScreen extends StatelessWidget{
                   onTap: (){},
                 ),
               BuildListTile(
-                  title: 'Settings',
+                  title: 'Log out',
                   image: 'assets/icons/setting.svg',
-                  onTap: (){
-                    context.pushNamed(Routes.settingScreen);
+                  onTap: () async {
+                    await SharedPrefHelper.clearAllData();
+                    context.pushNamedAndRemoveUntil(Routes.firstSplash,predicate: (Route<dynamic> route) => false);
                   },
                 ),
             ]

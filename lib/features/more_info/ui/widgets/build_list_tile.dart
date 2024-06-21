@@ -20,7 +20,7 @@ class BuildListTile extends StatelessWidget{
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         child: Container(
-          height: 60.h,
+          height: 50.h,
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.r),
@@ -32,12 +32,12 @@ class BuildListTile extends StatelessWidget{
               children: [
                 SvgPicture.asset(
                   image!,
-                  height: 25.sp,
+                  height: 22.h,
                 ),
                 horizontalSpace(15),
                 Text(
                   title,
-                  style: TextStyles.font19White700,
+                  style: TextStyles.font16White700,
                 ),
                 const Spacer(),
                 Icon(

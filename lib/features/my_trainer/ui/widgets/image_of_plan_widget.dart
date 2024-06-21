@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
@@ -49,7 +51,7 @@ class ImageOfPlanWidget extends StatelessWidget{
                     ),
                     verticalSpace(15),
                     AppTextContainer(
-                      text: '${cubit.workoutResponse?.data?.workout?.minPerDay} min',
+                      text: '${cubit.workoutResponse?.data?.workout?.minPerDay} s',
                     ),
                     verticalSpace(15),
                     AppTextContainer(
@@ -66,7 +68,10 @@ class ImageOfPlanWidget extends StatelessWidget{
                       textColor: ColorsManager.mainWhite,
                       textStyle: TextStyles.font16White700,
                       onPressed: (){
+                        context.pushNamed(
+                          Routes.todayWorkoutScreen,
 
+                        );
                       },
                     ),
                   ],
