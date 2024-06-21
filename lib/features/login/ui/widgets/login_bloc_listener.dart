@@ -81,11 +81,11 @@ class LoginBlocListener extends StatelessWidget {
             style: TextStyles.font16White700,
           ),
           backgroundColor: ColorsManager.lighterGray,
-          duration: const Duration(seconds: 3),
+          duration: const Duration(seconds: 5),
         ),
       );
       context.pop();
-      context.pushNamed(Routes.homePage);
+      context.pushNamedAndRemoveUntil(Routes.homePage, predicate: (Route<dynamic> route) => false);
     }else{
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

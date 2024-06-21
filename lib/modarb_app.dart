@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
+import 'package:modarb_app/features/home/logic/home_cubit.dart';
 import 'package:modarb_app/features/login/logic/login_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/nutrition/logic/nutrition_cubit.dart';
@@ -34,7 +35,10 @@ class ModarbApp extends StatelessWidget{
           create: (context) => getIt<RegisterCubit>(),
           ),
           BlocProvider(
-          create: (context) => getIt<TrainerCubit>(),
+          create: (context) => getIt<HomeCubit>(),
+          ),
+          BlocProvider(
+          create: (context) => getIt<TrainerCubit>()..getWorkoutData(),
           ),
           BlocProvider(
           create: (context) => getIt<WorkoutCubit>(),

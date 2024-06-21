@@ -37,7 +37,7 @@ class TrainerAfterLoading extends StatelessWidget{
                   AppTextButton(
                     buttonText: 'Finish',
                     onPressed: (){
-                      context.pushNamed(Routes.homePage);
+                      context.pushNamedAndRemoveUntil(Routes.homePage, predicate: (Route<dynamic> route) => false);
                     },
                   ),
                 ],

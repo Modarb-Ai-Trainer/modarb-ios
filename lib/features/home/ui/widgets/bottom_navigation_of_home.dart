@@ -26,22 +26,23 @@ class BottomNavigationOfHome extends StatelessWidget {
             height: 26.sp,
           ),
           label: 'Home',
+
         ),
         CurvedNavigationBarItem(
           child: SvgPicture.asset('assets/icons/Vector_trainer.svg',
-            height: 28.sp,
+            height: 28.h,
           ),
           label: 'My trainer',
         ),
         CurvedNavigationBarItem(
           child: SvgPicture.asset('assets/icons/Vector_workout.svg',
-            height: 28.sp,
+            height: 28.h,
           ),
           label: 'Workouts',
         ),
         CurvedNavigationBarItem(
           child:SvgPicture.asset('assets/icons/vector_nutri.svg',
-            height: 28.sp,
+            height: 28.h,
           ),
           label: 'NutriGuide',
         ),

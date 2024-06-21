@@ -89,16 +89,30 @@ class WarmScreen extends StatelessWidget{
                       children: [
                         IconButton(
                           onPressed: (){
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                  'Unable to come back to completed exercise!',
-                                  style: TextStyles.font16White700,
+                            if(state is CounterChangeOfExercise){
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Exercise is not finished yet !',
+                                    style: TextStyles.font16White700,
+                                  ),
+                                  backgroundColor: ColorsManager.lighterGray,
+                                  duration: const Duration(seconds: 5),
                                 ),
-                                backgroundColor: ColorsManager.lighterGray,
-                                duration: const Duration(seconds: 5),
-                              ),
-                            );
+                              );
+                            }else{
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Unable to come back to completed exercise!',
+                                    style: TextStyles.font16White700,
+                                  ),
+                                  backgroundColor: ColorsManager.lighterGray,
+                                  duration: const Duration(seconds: 5),
+                                ),
+                              );
+                            }
+
                           },
                           icon: const Icon(Icons.arrow_circle_left_outlined,
                             color:ColorsManager.mainPurple,
@@ -109,12 +123,13 @@ class WarmScreen extends StatelessWidget{
                           onPressed: (){
                             cubit.isDone = true;
                             if(cubit.index == listOfExercise.length - 1){
-                              context.pushReplacementNamed(Routes.completeWorkout,
+                              context.pushNamedAndRemoveUntil(Routes.completeWorkout,
                                   arguments: {
                                     'index' : index,
                                     'listOfExercise' :listOfExercise,
                                     'listOfDay' :listOfDay,
-                                  }
+                                  },
+                                predicate: (Route<dynamic> route) => false,
                                   );
                             }else if(state is CounterChangeOfExercise){
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -172,7 +187,6 @@ class WarmScreen extends StatelessWidget{
                             size: 34,
                           ),
                         ),
-
                       ],
                     ),
                   ),

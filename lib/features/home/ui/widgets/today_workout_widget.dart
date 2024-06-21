@@ -19,7 +19,7 @@ class TodayWorkoutWidget extends StatelessWidget{
   Widget build(BuildContext context) {
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (BuildContext context, state) {
-        // final cubit = context.read<TrainerCubit>();
+        final cubit = context.read<TrainerCubit>();
         return Padding(
           padding: EdgeInsets.symmetric(vertical: 20.h),
           child: Column(
@@ -66,25 +66,6 @@ class TodayWorkoutWidget extends StatelessWidget{
                           width: 90.w,
                           height: 25.h,
                         ),
-                        horizontalSpace(80),
-                        Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            SizedBox(
-                              width: 40.w,
-                              height: 40.h,
-                              child: const CircularProgressIndicator(
-                                value: 70,
-                                valueColor: AlwaysStoppedAnimation<Color>(ColorsManager.mainPurple),
-                                strokeWidth: 5,
-                              ),
-                            ),
-                            Text(
-                              '70 %',
-                              style: TextStyles.font12White600,
-                            ),
-                          ],
-                        ),
                       ],
                     ),
                   ),
@@ -93,9 +74,9 @@ class TodayWorkoutWidget extends StatelessWidget{
                     right: 80.w,
                     child: AppTextButton(
                       buttonText: 'Continue',
-                      textStyle: TextStyles.font19White700,
+                      textStyle: TextStyles.font16White700,
                       buttonWidth: 140.w,
-                      buttonHeight: 40.h,
+                      buttonHeight: 30.h,
                       colorOfSide: ColorsManager.mainPurple,
                       backgroundColor: Colors.transparent,
                       // backgroundColor: ColorsManager.lighterWhite,

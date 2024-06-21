@@ -66,7 +66,7 @@ class TodayDiet extends StatelessWidget{
                           ),
                           child: Center(
                             child: Text(
-                              ' ${cubit.homeResponse?.data?.myMealPlan?.today?.totalCalories} Kcal',
+                              ' ${cubit.homeResponse?.data?.myMealPlan?.today?.totalCalories?.toInt()} Kcal',
                               style: TextStyles.font13White600,
                             ),
                           ),
@@ -80,7 +80,7 @@ class TodayDiet extends StatelessWidget{
                     child: AppTextButton(
                       buttonText: 'view',
                       buttonWidth: 120.w,
-                      buttonHeight: 40.h,
+                      buttonHeight: 30.h,
 
                       colorOfSide: ColorsManager.mainPurple,
                       backgroundColor: Colors.transparent,

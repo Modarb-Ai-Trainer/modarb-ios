@@ -42,8 +42,6 @@ class ExerciseStart extends StatelessWidget{
 
             listOfExercise?[index].duration != 0 ?  Text(
               '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
-
-              // ' 00 : ${cubit.newCounterOfExercise}',
               style: TextStyles.font19White700,
             ) :  Text(
               '${listOfExercise?[index].reps} reps',
@@ -51,23 +49,6 @@ class ExerciseStart extends StatelessWidget{
                 color: ColorsManager.lightPurple,
               ),
             ),
-
-            // if(listOfExercise?[index].duration != null)
-            //    Text(
-            //      '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
-            //
-            //      // ' 00 : ${cubit.newCounterOfExercise}',
-            //      style: TextStyles.font19White700,
-            //    ),
-            // if( listOfExercise?[index].reps != null)
-            //   Text(
-            //     '${listOfExercise?[index].reps} reps',
-            //     style: TextStyles.font28White700.copyWith(
-            //       color: ColorsManager.lightPurple,
-            //     ),
-            //   ),
-
-
 
           ],
         );

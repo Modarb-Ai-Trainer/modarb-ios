@@ -53,7 +53,7 @@ class ImageOfPlanWidget extends StatelessWidget{
                     ),
                     verticalSpace(15),
                     AppTextContainer(
-                      text: '6 exercise',
+                      text: '2 exercise',
                       width: 90.w,
                       height: 25.h,
                     ),
@@ -65,7 +65,9 @@ class ImageOfPlanWidget extends StatelessWidget{
                       backgroundColor: ColorsManager.mainPurple,
                       textColor: ColorsManager.mainWhite,
                       textStyle: TextStyles.font16White700,
-                      onPressed: (){},
+                      onPressed: (){
+
+                      },
                     ),
                   ],
                 ),

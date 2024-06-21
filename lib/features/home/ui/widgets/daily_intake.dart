@@ -65,7 +65,7 @@ class DailyIntake extends StatelessWidget{
                             ),
                           ),
                           CircleAvatar(
-                            radius: 55,
+                            radius: 55.r,
                             child: Container(
                               decoration: const BoxDecoration(
                                   color: ColorsManager.mainPurple,

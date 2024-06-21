@@ -73,7 +73,7 @@ class WorkoutInsights extends StatelessWidget{
                             style:TextStyles.font13White700,
                           ),
                           Text(
-                            'Duration Range\n  $totalMin -$totalMax min',
+                            'Duration Range\n  $totalMin -$totalMax s',
                             style: TextStyles.font13White700,
                           ),
                         ],
@@ -101,7 +101,7 @@ class WorkoutInsights extends StatelessWidget{
                           textColor: ColorsManager.mainPurple,
                           backgroundColor: Colors.white,
                           onPressed: (){
-                            context.pushReplacementNamed(Routes.homePage);
+                            context.pushNamedAndRemoveUntil(Routes.homePage, predicate: (Route<dynamic> route) => false);
                           }
                       ),
                     ],

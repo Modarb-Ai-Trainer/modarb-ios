@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/core/widgets/listview_of_workout.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 
 
 class TodayWorkoutScreen extends StatelessWidget {
-
 
   const TodayWorkoutScreen({Key? key}) : super(key: key);
 
@@ -18,8 +18,7 @@ class TodayWorkoutScreen extends StatelessWidget {
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (BuildContext context, state) {
         final cubit = context.read<TrainerCubit>();
-        // final listOfExercise = cubit.dayModel.exercises;
-
+        final listOfDay = cubit.workoutResponse?.data?.weeks[0].days;
         return Scaffold(
           body: CustomScrollView(
             slivers: [
@@ -41,11 +40,11 @@ class TodayWorkoutScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Day 1',
+                              'Day ${cubit.workoutResponse?.data?.weeks[0].days[0].dayNumber}',
                               style: TextStyles.font28White700,
                             ),
                             Text(
-                              'Full-body workout',
+                              '${listOfDay?[0].dayType} workout',
                               style: TextStyles.font23White700,
                             ),
                             verticalSpace(20),
@@ -53,15 +52,18 @@ class TodayWorkoutScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Exercises\n        6',
+                                  'Exercises\n        ${listOfDay?[0].totalNumberExercises}',
                                   style: TextStyles.font13White700,
                                 ),
-                                Text(
-                                  'sets\n  20',
+                                listOfDay?[0].exercises[0].sets != null ? Text(
+                                  ' sets\n ${ listOfDay?[0].exercises[0].sets} ',
                                   style: TextStyles.font13White700,
+                                ) :Text(
+                                  'sets \n   0',
+                                  style:TextStyles.font13White700,
                                 ),
                                 Text(
-                                  'Duration\n40-50 min',
+                                  'Duration Range\n ${listOfDay?[0].exercises[0].duration} s',
                                   style: TextStyles.font13White700,
                                 ),
                               ],
@@ -83,12 +85,12 @@ class TodayWorkoutScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              // SliverFillRemaining(
-              //   child: ListViewOfWorkout(
-              //     index: index, listOfExercise:listOfDay[index].exercises,
-              //
-              //   ),
-              // ),
+              SliverFillRemaining(
+                child: ListViewOfWorkout(
+                  index: 0, listOfExercise:listOfDay![0].exercises, listOfDay: listOfDay,
+
+                ),
+              ),
             ],
           ),
         );

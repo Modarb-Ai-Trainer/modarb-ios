@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget{
               'Hey,\n $userName ',
               style:TextStyles.font13White600,
             ),
-            titleSpacing: 10,
+            titleSpacing: 2,
             actions: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.h),
