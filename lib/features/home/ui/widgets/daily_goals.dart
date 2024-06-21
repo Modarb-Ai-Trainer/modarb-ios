@@ -116,7 +116,7 @@ class DailyGoals extends StatelessWidget{
                               ),
                               verticalSpace(10),
                               Text(
-                                '2500 \n/8000',
+                                '  ${cubit.dailyGoalsResponse?.data?.stepsDone}\n/ ${cubit.dailyGoalsResponse?.data?.stepsGoal}',
                                 style: TextStyles.font13White700,
                               ),
                             ],
@@ -156,7 +156,7 @@ class DailyGoals extends StatelessWidget{
                                   size: 20.sp,),
                                 horizontalSpace(2),
                                 Text(
-                                  '450',
+                                  '${cubit.dailyGoalsResponse?.data?.exercisesCals?.toInt()}',
                                   style: TextStyles.font16White700,
                                 ),
                                 horizontalSpace(5),
@@ -176,12 +176,12 @@ class DailyGoals extends StatelessWidget{
                                 horizontalSpace(5),
 
                                 Text(
-                                  '1:30',
+                                  '${cubit.dailyGoalsResponse?.data?.exercisesHours}',
                                   style: TextStyles.font16White700,
                                 ),
                                 horizontalSpace(5),
                                 Text(
-                                  'hr',
+                                  'min',
                                   style: TextStyles.font13White400,
                                 ),
                               ],
