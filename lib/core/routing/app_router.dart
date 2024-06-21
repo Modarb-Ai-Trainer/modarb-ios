@@ -23,7 +23,6 @@ import 'package:modarb_app/features/workout/ui/screens/exercise_of_category.dart
 import 'package:modarb_app/features/workout/ui/widgets/exercise_indetails.dart';
 import '../../features/home/ui/screens/home_page.dart';
 import '../../features/login/ui/login_screen.dart';
-import '../../features/my_trainer/ui/screens/before_Warming.dart';
 import '../../features/my_trainer/ui/screens/warm_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
 import '../../features/workout/ui/widgets/workout_program_enroll.dart';
@@ -126,10 +125,7 @@ class AppRouter {
           ),
         );
 
-        case Routes.beforeWarming:
-        return MaterialPageRoute(
-          builder: (_) => const BeforeWarming(),
-        );
+
 
         case Routes.warmScreen:
         return MaterialPageRoute(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
@@ -8,16 +7,14 @@ import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 
-class Exercise2 extends StatelessWidget{
+class ExerciseStart extends StatelessWidget{
   final int index;
   final List<Exercise>? listOfExercise;
 
-  const Exercise2({Key? key, required this.index, this.listOfExercise}) : super(key: key);
+  const ExerciseStart({Key? key, required this.index, this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var setController = PageController();
-
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
@@ -34,17 +31,16 @@ class Exercise2 extends StatelessWidget{
                 fit: BoxFit.fill,
               ),
             ),
-            verticalSpace(10),
+            verticalSpace(30),
             Text(
               '${listOfExercise?[index].name}',
-              // 'Chest press',
               style: TextStyles.font19White700,
             ),
-            verticalSpace(40),
+            verticalSpace(30),
             if(listOfExercise?[index].duration != null)
                Text(
-                   '${cubit.newCounterOfExercise}',
-                 style: TextStyles.font16White700,
+                   ' 00 : ${cubit.newCounterOfExercise}',
+                 style: TextStyles.font19White700,
                ),
             if( listOfExercise?[index].reps != null)
               Text(
@@ -53,24 +49,7 @@ class Exercise2 extends StatelessWidget{
                   color: ColorsManager.lightPurple,
                 ),
               ),
-            verticalSpace(20),
-            SizedBox(
-              height: 50.h,
-              child: PageView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                controller: setController,
-                itemCount: 4,
-                itemBuilder: (BuildContext context, int index) {
-                  return Center(
-                    child: Text(
-                      'set ${index + 1} / 4',
-                      style: TextStyles.font13White700,
-                    ),
-                  );
-                },
 
-              ),
-            ),
           ],
         );
       },

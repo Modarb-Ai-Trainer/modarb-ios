@@ -24,7 +24,7 @@ class WeekOfPlanScreen extends StatelessWidget{
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
-                expandedHeight: 250.h,
+                expandedHeight: 200.h,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Padding(
                     padding: EdgeInsets.only(

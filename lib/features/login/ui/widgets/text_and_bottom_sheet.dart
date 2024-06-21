@@ -34,7 +34,7 @@ class TextAndBottomSheet extends StatelessWidget{
                 ),
               ),
               context: context,
-
+              isScrollControlled: true,
               builder: (context){
                 return const FormOfLogin();
               },

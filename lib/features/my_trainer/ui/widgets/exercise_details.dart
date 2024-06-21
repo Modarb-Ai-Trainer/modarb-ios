@@ -38,18 +38,13 @@ class ExerciseDetails extends StatelessWidget{
                   padding: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: (){
-                      context.pushNamed(Routes.beforeWarming);
-                      cubit.startTimerOfBeforeWarming();
-                      Future.delayed(
-                          const Duration(seconds: 15),() {
-                        context.pushNamed(
-                            Routes.warmScreen,
+                      context.pushNamed(
+                          Routes.warmScreen,
                           arguments: {
-                              'index' : index,
+                            'index' : index,
                             'listOfExercise' : listOfExercise,
-                        }
-                        );
-                      });
+                          }
+                      );
                     },
                     child: AppTextContainer(
                       text: 'Start',

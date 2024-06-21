@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
@@ -26,38 +27,26 @@ class TrainerCubit extends Cubit<TrainerState> {
   int newCounter = 15 ;
   late Timer _timer;
 
-  void startTimerOfBeforeWarming() {
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (counter > 0) {
-        counter--;
-        newCounter = counter;
-        emit(TrainerState.counterChange(savedCounter: newCounter));
-      } else {
-        _timer.cancel();
-        startTimerOfWarming();
-      }
-    });
+  // void startTimerOfBeforeWarming() {
+  //   _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+  //     if (counter > 0) {
+  //       counter--;
+  //       newCounter = counter;
+  //       emit(TrainerState.counterChange(savedCounter: newCounter));
+  //     } else {
+  //       _timer.cancel();
+  //       startTimerOfWarming();
+  //     }
+  //   });
+  //
+  // }
 
-  }
-
-
-  int counterOfWarming = 30;
-  int newCounterOfWarming = 30 ;
-  late Timer timerOfWarming;
-
-  void startTimerOfWarming() {
-    timerOfWarming = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (counterOfWarming > 0) {
-        counterOfWarming--;
-        newCounterOfWarming = counterOfWarming;
-        emit(TrainerState.counterChangeOfWarming(newCounter: newCounterOfWarming));
-      } else {
-        timerOfWarming.cancel();
-        emit(const TrainerState.warmingFinished());
-
-      }
-    });
-
+  FlutterTts flutterTts = FlutterTts();
+  final String text= 'Exercise instructions : you will do this for seconds ';
+  Future<void> startSpeak() async {
+    await flutterTts.setLanguage("en-US");
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(text);
   }
 
   void emitClosingTrainer(){
@@ -134,6 +123,10 @@ class TrainerCubit extends Cubit<TrainerState> {
       emit(const TrainerState.workoutError());
     }
   }
+
+  bool isDone = false;
+
+
 
 
   String? valueChoose = 'All';

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/helper/spacing.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
@@ -83,7 +85,15 @@ class ListOfExercises extends StatelessWidget{
                   child: AppTextButton(
                       buttonText: 'Start',
                       buttonWidth: 180.w,
-                      onPressed: () {}
+                      onPressed: () {
+                        context.pushNamed(
+                            Routes.exerciseDetails,
+                            arguments:{
+                              'index': index,
+                              'listOfExercise': listOfDay[index].exercises ,
+                            }
+                        );
+                      }
                   ),
                 ),
                 verticalSpace(15),

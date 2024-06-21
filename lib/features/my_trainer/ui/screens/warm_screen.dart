@@ -2,23 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
-import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
-import 'package:modarb_app/features/my_trainer/ui/screens/exercise2.dart';
-import 'package:modarb_app/features/my_trainer/ui/screens/exersice1.dart';
+import 'package:modarb_app/features/my_trainer/ui/screens/exercise_start.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/training_bloc_listener.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WarmScreen extends StatelessWidget{
 
   final int index;
-  final List<Exercise>? listOfExercise;
+  final List<Exercise> listOfExercise;
 
-  const WarmScreen({Key? key, required this.index, this.listOfExercise}) : super(key: key);
+  const WarmScreen({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,72 +28,54 @@ class WarmScreen extends StatelessWidget{
         return Scaffold(
           body: SafeArea(
             child: Padding(
-              padding: EdgeInsets.only(top: 20.h,),
+              padding: EdgeInsets.only(top: 8.h,),
               child: Column(
                 children: [
                   const TrainingBlocListener(),
-                  SmoothPageIndicator(
-                    controller: cubit.warmController,
-                    effect:  const ExpandingDotsEffect(
-                      dotHeight: 8,
-                      expansionFactor: 1.5,
-                      spacing: 15 ,
-                      dotWidth: 60,
-                      dotColor: Colors.grey,
-                      activeDotColor: ColorsManager.mainPurple,
-                    ),
-                    count: 4,
-
-                  ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+                    padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 8.h),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CircleAvatar(
                           backgroundColor: ColorsManager.lightPurple,
                           child: IconButton(
                             onPressed: (){
-                              cubit.emitClosingTrainer();
+                              cubit.startSpeak();
+                              // cubit.emitClosingTrainer();
                             },
                             icon: const Icon(Icons.close),
                           ),
                         ),
-                        horizontalSpace(40),
-                        // Text(
-                        //   'Warms up',
-                        //   style: TextStyles.font19White700,
-                        //
-                        // ),
+                        SmoothPageIndicator(
+                          controller: cubit.warmController,
+                          effect:  const ExpandingDotsEffect(
+                            dotHeight: 8,
+                            expansionFactor: 1.5,
+                            spacing: 15 ,
+                            dotWidth: 60,
+                            dotColor: Colors.grey,
+                            activeDotColor: ColorsManager.mainPurple,
+                          ),
+                          count: listOfExercise.length,
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(
                     height: 500.h,
                     width: double.infinity,
-                    child: PageView(
+                    child: PageView.builder(
                       physics: const BouncingScrollPhysics(),
                       controller: cubit.warmController,
-                      children: [
-                        const Exercise1(),
-                        Exercise2(
-                          index: index,
-                          listOfExercise:listOfExercise ,
-                        ),
-                        Exercise2(
-                          index: index,
-                          listOfExercise: listOfExercise,
-                        ),
-                        Exercise2(
-                          index: index,
-                          listOfExercise:listOfExercise ,
-
-                        ),
-                      ],
-
+                      itemBuilder: (BuildContext context, int index) => ExerciseStart(
+                        index: index,
+                        listOfExercise:listOfExercise ,
+                      ),
+                      itemCount: listOfExercise.length,
                       onPageChanged: (value){
                         cubit.index = value;
                       },
-
                     ),
                   ),
                   Padding(
@@ -119,8 +99,11 @@ class WarmScreen extends StatelessWidget{
                           ),
                         ),
                         IconButton(
-                          onPressed: (){},
-                          icon: const Icon(Icons.check_circle_outline_sharp,
+                          onPressed: (){
+                            cubit.isDone = true;
+                          },
+                          icon: const Icon(
+                            Icons.check_circle_outline_sharp,
                             color:ColorsManager.mainPurple,
                             size: 44,
                           ),
