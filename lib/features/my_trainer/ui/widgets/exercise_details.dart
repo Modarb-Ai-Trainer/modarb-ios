@@ -11,12 +11,15 @@ import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/equipment_tab.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/target_muscle_tab.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
+
 import 'instructions_tab.dart';
 
 class ExerciseDetails extends StatelessWidget{
   final int? index;
   final List<Exercise>? listOfExercise;
-  const ExerciseDetails({Key? key,this.index, this.listOfExercise}) : super(key: key);
+  final List<Day> listOfDay;
+  const ExerciseDetails({Key? key,this.index, this.listOfExercise, required this.listOfDay}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +46,7 @@ class ExerciseDetails extends StatelessWidget{
                           arguments: {
                             'index' : index,
                             'listOfExercise' : listOfExercise,
+                            'listOfDay' : listOfDay,
                           }
                       );
                     },

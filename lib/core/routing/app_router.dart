@@ -122,6 +122,7 @@ class AppRouter {
           builder: (_) =>  ExerciseDetails(
             index : args?['index'],
             listOfExercise: args?['listOfExercise'],
+            listOfDay: args?['listOfDay'],
           ),
         );
 
@@ -132,18 +133,28 @@ class AppRouter {
           builder: (_) => WarmScreen(
             index: args?['index'],
             listOfExercise: args?['listOfExercise'],
+            listOfDay: args?['listOfDay'],
 
           ),
         );
 
         case Routes.completeWorkout:
         return MaterialPageRoute(
-          builder: (_) => const SmartTrainerAfterCompleteWorkout(),
+          builder: (_) => SmartTrainerAfterCompleteWorkout(
+            index: args?['index'],
+            listOfExercise: args?['listOfExercise'],
+            listOfDay: args?['listOfDay'],
+          ),
         );
 
         case Routes.workoutInsights:
         return MaterialPageRoute(
-          builder: (_) => const WorkoutInsights(),
+          builder: (_) =>  WorkoutInsights(
+            index: args?['index'],
+            listOfExercise: args?['listOfExercise'],
+            listOfDay: args?['listOfDay'],
+
+          ),
         );
 
       case Routes.exerciseInDetails:

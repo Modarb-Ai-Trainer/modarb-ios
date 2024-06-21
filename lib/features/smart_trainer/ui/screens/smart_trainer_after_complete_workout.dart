@@ -7,11 +7,16 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
+import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
 
 class SmartTrainerAfterCompleteWorkout extends StatelessWidget{
-  const SmartTrainerAfterCompleteWorkout({Key? key}) : super(key: key);
+  final int index;
+  final List<Exercise> listOfExercise;
+  final List<Day> listOfDay;
+  const SmartTrainerAfterCompleteWorkout({Key? key, required this.index, required this.listOfExercise, required this.listOfDay}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +50,13 @@ class SmartTrainerAfterCompleteWorkout extends StatelessWidget{
                       AppTextButton(
                           buttonText: 'Finish',
                           onPressed: (){
-                            context.pushReplacementNamed(Routes.workoutInsights);
+                            context.pushReplacementNamed(Routes.workoutInsights,
+                            arguments: {
+                              'index' : index,
+                              'listOfExercise' :listOfExercise,
+                              'listOfDay' :listOfDay,
+                            }
+                            );
                           }
                       ),
                     ],

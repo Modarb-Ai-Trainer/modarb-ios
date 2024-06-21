@@ -41,7 +41,7 @@ class WeekOfPlanScreen extends StatelessWidget{
                             const AppVerticalDivider(),
                             horizontalSpace(10),
                             Text(
-                              'Week ${index + 1} : ${listOfWeek[index].weekName}',
+                              'Week : ${listOfWeek[index].weekName}',
                               style: TextStyles.font16White700,
                             ),
                           ],

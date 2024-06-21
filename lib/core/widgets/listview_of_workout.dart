@@ -5,11 +5,13 @@ import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/core/widgets/app_text_button.dart';
 import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 
 class ListViewOfWorkout extends StatelessWidget{
   final int index;
   final List<Exercise> listOfExercise;
-  const ListViewOfWorkout({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
+  final List<Day> listOfDay;
+  const ListViewOfWorkout({Key? key, required this.index, required this.listOfExercise, required this.listOfDay}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class ListViewOfWorkout extends StatelessWidget{
                 arguments:{
                   'index': index,
                   'listOfExercise': listOfExercise ,
+                  'listOfDay': listOfDay ,
                 }
             );
           },
@@ -62,6 +65,8 @@ class ListViewOfWorkout extends StatelessWidget{
                     arguments:{
                       'index': index,
                       'listOfExercise': listOfExercise,
+                      'listOfDay': listOfDay ,
+
 
                     }
                 );

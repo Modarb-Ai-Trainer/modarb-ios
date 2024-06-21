@@ -12,12 +12,15 @@ import 'package:modarb_app/features/my_trainer/ui/screens/exercise_start.dart';
 import 'package:modarb_app/features/my_trainer/ui/widgets/training_bloc_listener.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
+
 class WarmScreen extends StatelessWidget{
 
   final int index;
   final List<Exercise> listOfExercise;
+  final List<Day> listOfDay;
 
-  const WarmScreen({Key? key, required this.index, required this.listOfExercise}) : super(key: key);
+  const WarmScreen({Key? key, required this.index, required this.listOfExercise, required this.listOfDay}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +45,7 @@ class WarmScreen extends StatelessWidget{
                           backgroundColor: ColorsManager.lightPurple,
                           child: IconButton(
                             onPressed: (){
-                              // cubit.startSpeak();
-                              // cubit.emitClosingTrainer();
+                              cubit.emitClosingTrainer();
                             },
                             icon: const Icon(Icons.close),
                           ),
@@ -107,7 +109,13 @@ class WarmScreen extends StatelessWidget{
                           onPressed: (){
                             cubit.isDone = true;
                             if(cubit.index == listOfExercise.length - 1){
-                              context.pushReplacementNamed(Routes.completeWorkout);
+                              context.pushReplacementNamed(Routes.completeWorkout,
+                                  arguments: {
+                                    'index' : index,
+                                    'listOfExercise' :listOfExercise,
+                                    'listOfDay' :listOfDay,
+                                  }
+                                  );
                             }else if(state is CounterChangeOfExercise){
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(

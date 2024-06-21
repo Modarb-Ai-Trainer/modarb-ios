@@ -76,6 +76,7 @@ class ListOfExercises extends StatelessWidget{
                     child: ListViewOfWorkout(
                       index: index,
                       listOfExercise: listOfDay[index].exercises,
+                      listOfDay: listOfDay ,
 
                     )
                 ),
@@ -91,6 +92,7 @@ class ListOfExercises extends StatelessWidget{
                             arguments:{
                               'index': index,
                               'listOfExercise': listOfDay[index].exercises ,
+                              'listOfDay' :listOfDay,
                             }
                         );
                       }
