@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
@@ -22,54 +21,48 @@ class TrainerCubit extends Cubit<TrainerState> {
   var warmController = PageController();
   int index = 0;
 
-
-  int counter = 15;
-  int newCounter = 15 ;
-  late Timer _timer;
-
-  // void startTimerOfBeforeWarming() {
-  //   _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-  //     if (counter > 0) {
-  //       counter--;
-  //       newCounter = counter;
-  //       emit(TrainerState.counterChange(savedCounter: newCounter));
-  //     } else {
-  //       _timer.cancel();
-  //       startTimerOfWarming();
-  //     }
-  //   });
-  //
-  // }
-
-  FlutterTts flutterTts = FlutterTts();
-  final String text= 'Exercise instructions : you will do this for seconds ';
-  Future<void> startSpeak() async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1.0);
-    await flutterTts.speak(text);
-  }
-
   void emitClosingTrainer(){
     emit(const TrainerState.closingTraining());
 
   }
 
-  int counterOfExercise = 10 ;
-  int ?newCounterOfExercise ;
-  late Timer timerOfExercise;
-  void startTimerOfExercise() {
-    timerOfExercise = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (counterOfExercise > 0) {
-        counterOfExercise --;
-        newCounterOfExercise = counterOfExercise;
-        emit(TrainerState.counterChangeOfExercise(exerciseTime: newCounterOfExercise!));
+
+
+  int counter = 0;
+  bool exerciseIsDone = false;
+  Timer? _timer;
+
+  int get newCounterOfExercise => counter;
+
+  void startTimerOfExercise(int duration) {
+    counter = duration;
+    emit(const TrainerState.startExercise());
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (counter > 1) {
+        counter--;
+        emit(TrainerState.counterChangeOfExercise(exerciseTime: counter));
       } else {
-        timerOfExercise.cancel();
+        counter = 0;
+
+        timer.cancel();
+        exerciseIsDone = true;
         emit(const TrainerState.exerciseFinished());
       }
     });
-
   }
+  void stopTimer() {
+    _timer?.cancel();
+    emit(const TrainerState.exerciseFinished());
+  }
+
+  @override
+  Future<void> close() {
+    _timer?.cancel();
+    return super.close();
+  }
+
+
 
 
   int getTotalMinDuration(List<Day> dayModel) {

@@ -18,10 +18,12 @@ class ExerciseStart extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
-        if(listOfExercise?[index].duration != null){
-          cubit.counterOfExercise == listOfExercise?[index].duration;
-          cubit.startTimerOfExercise();
+
+        if (listOfExercise?[index].duration != null && cubit.counter == 0 && cubit.exerciseIsDone == false) {
+          cubit.startTimerOfExercise(listOfExercise![index].duration!);
         }
+
+
         return Column(
           children: [
             SizedBox(
@@ -37,18 +39,35 @@ class ExerciseStart extends StatelessWidget{
               style: TextStyles.font19White700,
             ),
             verticalSpace(30),
-            if(listOfExercise?[index].duration != null)
-               Text(
-                   ' 00 : ${cubit.newCounterOfExercise}',
-                 style: TextStyles.font19White700,
-               ),
-            if( listOfExercise?[index].reps != null)
-              Text(
-                '${listOfExercise?[index].reps} reps',
-                style: TextStyles.font28White700.copyWith(
-                  color: ColorsManager.lightPurple,
-                ),
+
+            listOfExercise?[index].duration != 0 ?  Text(
+              '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
+
+              // ' 00 : ${cubit.newCounterOfExercise}',
+              style: TextStyles.font19White700,
+            ) :  Text(
+              '${listOfExercise?[index].reps} reps',
+              style: TextStyles.font28White700.copyWith(
+                color: ColorsManager.lightPurple,
               ),
+            ),
+
+            // if(listOfExercise?[index].duration != null)
+            //    Text(
+            //      '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
+            //
+            //      // ' 00 : ${cubit.newCounterOfExercise}',
+            //      style: TextStyles.font19White700,
+            //    ),
+            // if( listOfExercise?[index].reps != null)
+            //   Text(
+            //     '${listOfExercise?[index].reps} reps',
+            //     style: TextStyles.font28White700.copyWith(
+            //       color: ColorsManager.lightPurple,
+            //     ),
+            //   ),
+
+
 
           ],
         );

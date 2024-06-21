@@ -77,6 +77,9 @@ dependencies:
   curved_labeled_navigation_bar: ^2.0.2
   # build highly customisable timelines
   timeline_tile: ^2.0.0
+  #A flutter plugin for Text to Speech
+#  flutter_tts: ^4.0.2
+
 
 
 

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
+import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/my_trainer/data/models/exercise.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -41,7 +42,7 @@ class WarmScreen extends StatelessWidget{
                           backgroundColor: ColorsManager.lightPurple,
                           child: IconButton(
                             onPressed: (){
-                              cubit.startSpeak();
+                              // cubit.startSpeak();
                               // cubit.emitClosingTrainer();
                             },
                             icon: const Icon(Icons.close),
@@ -86,11 +87,15 @@ class WarmScreen extends StatelessWidget{
                       children: [
                         IconButton(
                           onPressed: (){
-                            cubit.warmController.previousPage(
-                              duration: const Duration(
-                                seconds: 1,
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'Unable to come back to completed exercise!',
+                                  style: TextStyles.font16White700,
+                                ),
+                                backgroundColor: ColorsManager.lighterGray,
+                                duration: const Duration(seconds: 5),
                               ),
-                              curve: Curves.decelerate,
                             );
                           },
                           icon: const Icon(Icons.arrow_circle_left_outlined,
@@ -101,6 +106,39 @@ class WarmScreen extends StatelessWidget{
                         IconButton(
                           onPressed: (){
                             cubit.isDone = true;
+                            if(cubit.index == listOfExercise.length - 1){
+                              context.pushReplacementNamed(Routes.completeWorkout);
+                            }else if(state is CounterChangeOfExercise){
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Exercise is not finished yet !',
+                                    style: TextStyles.font16White700,
+                                  ),
+                                  backgroundColor: ColorsManager.lighterGray,
+                                  duration: const Duration(seconds: 5),
+                                ),
+                              );
+                            }else{
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Good, Exercise is done !',
+                                    style: TextStyles.font16White700,
+                                  ),
+                                  backgroundColor: ColorsManager.lighterGray,
+                                  duration: const Duration(seconds: 5),
+                                ),
+                              );
+                              cubit.warmController.nextPage(
+                                duration: const Duration(
+                                  seconds: 1,
+                                ),
+                                curve: Curves.decelerate,
+                              );
+                            }
+
+
                           },
                           icon: const Icon(
                             Icons.check_circle_outline_sharp,
@@ -110,15 +148,16 @@ class WarmScreen extends StatelessWidget{
                         ),
                         IconButton(
                           onPressed: (){
-                            cubit.warmController.nextPage(
-                              duration: const Duration(
-                                seconds: 1,
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'No, Complete exercise first !',
+                                  style: TextStyles.font16White700,
+                                ),
+                                backgroundColor: ColorsManager.lighterGray,
+                                duration: const Duration(seconds: 5),
                               ),
-                              curve: Curves.decelerate,
                             );
-                            if(cubit.index == 3) {
-                              context.pushReplacementNamed(Routes.completeWorkout);
-                            }
                           },
                           icon: const Icon(Icons.arrow_circle_right_outlined,
                             color:ColorsManager.mainPurple,
