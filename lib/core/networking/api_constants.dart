@@ -12,6 +12,8 @@ class ApiConstants{
   static const String templates = "templates";
   static const String todayIntake = "nutri-guide/todays-intake";
   static const String todayMeal = "nutri-guide/today-meals";
+  static const String dailyGoals = "nutri-guide/daily-goals";
+
   static const String ingredients = "ingredients";
   static const String ingredientsSearch = "ingredients/search";
   static const String enrollMeal = "meals/eat-custom-meal";

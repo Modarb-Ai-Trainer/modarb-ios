@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modarb_app/features/nutrition/data/models/daily_goals_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_request_body.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_body.dart';
@@ -179,6 +180,45 @@ class NutritionCubit extends Cubit<NutritionState> {
       print(error.toString());
       emit(const NutritionState.getMealOfWeekError());
     }
+  }
+
+  DailyGoalsResponse? dailyGoalsResponse;
+  int currentWater = 0;
+  int newCurrentWater =0;
+
+  void getDailyGoals() async {
+    emit(const NutritionState.getDailyGoalsLoading());
+    try {
+      dailyGoalsResponse = await _nutritionRepo.getDailyGoals();
+      if(dailyGoalsResponse?.data != null){
+       currentWater = dailyGoalsResponse?.data?.waterConsumed ?? 0;
+       newCurrentWater = dailyGoalsResponse?.data?.waterConsumed ?? 0;
+      }
+
+      emit(NutritionState.getDailyGoalsSuccess(dailyGoalsResponse));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.getDailyGoalsError());
+    }
+  }
+
+  void emitAddWater(value){
+    if(value !=null) {
+      currentWater ++ ;
+    }
+    newCurrentWater = currentWater;
+    emit(NutritionState.updateWaterConsumption(newCurrentWater));
+    print(newCurrentWater);
+
+  }
+  void emitMinusWater(value){
+    if(value !=null) {
+      currentWater -- ;
+    }
+    newCurrentWater = currentWater;
+    emit(NutritionState.updateWaterConsumption(newCurrentWater));
+    print(newCurrentWater);
+
   }
 
 

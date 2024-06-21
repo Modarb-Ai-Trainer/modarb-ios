@@ -52,6 +52,11 @@ mixin _$NutritionState<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -88,6 +93,11 @@ mixin _$NutritionState<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -123,6 +133,11 @@ mixin _$NutritionState<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -163,6 +178,13 @@ mixin _$NutritionState<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -196,6 +218,10 @@ mixin _$NutritionState<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -229,6 +255,10 @@ mixin _$NutritionState<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -325,6 +355,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return initial();
@@ -364,6 +399,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return initial?.call();
@@ -402,6 +442,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -448,6 +493,13 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return initial(this);
@@ -484,6 +536,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return initial?.call(this);
@@ -520,6 +576,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -607,6 +667,11 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeLoading();
@@ -646,6 +711,11 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeLoading?.call();
@@ -684,6 +754,11 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -730,6 +805,13 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeLoading(this);
@@ -766,6 +848,10 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeLoading?.call(this);
@@ -802,6 +888,10 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -916,6 +1006,11 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeSuccess(todayIntakeResponse);
@@ -955,6 +1050,11 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(todayIntakeResponse);
@@ -993,6 +1093,11 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1039,6 +1144,13 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeSuccess(this);
@@ -1075,6 +1187,10 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(this);
@@ -1111,6 +1227,10 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1205,6 +1325,11 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeError();
@@ -1244,6 +1369,11 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeError?.call();
@@ -1282,6 +1412,11 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1328,6 +1463,13 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeError(this);
@@ -1364,6 +1506,10 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeError?.call(this);
@@ -1400,6 +1546,10 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1487,6 +1637,11 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealLoading();
@@ -1526,6 +1681,11 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealLoading?.call();
@@ -1564,6 +1724,11 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1610,6 +1775,13 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealLoading(this);
@@ -1646,6 +1818,10 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealLoading?.call(this);
@@ -1682,6 +1858,10 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1796,6 +1976,11 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealSuccess(todayMealResponse);
@@ -1835,6 +2020,11 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealSuccess?.call(todayMealResponse);
@@ -1873,6 +2063,11 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1919,6 +2114,13 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealSuccess(this);
@@ -1955,6 +2157,10 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealSuccess?.call(this);
@@ -1991,6 +2197,10 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2083,6 +2293,11 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealError();
@@ -2122,6 +2337,11 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealError?.call();
@@ -2160,6 +2380,11 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2206,6 +2431,13 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealError(this);
@@ -2242,6 +2474,10 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealError?.call(this);
@@ -2278,6 +2514,10 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2368,6 +2608,11 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsLoading();
@@ -2407,6 +2652,11 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsLoading?.call();
@@ -2445,6 +2695,11 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2491,6 +2746,13 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsLoading(this);
@@ -2527,6 +2789,10 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsLoading?.call(this);
@@ -2563,6 +2829,10 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2680,6 +2950,11 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSuccess(ingredientsResponse);
@@ -2719,6 +2994,11 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSuccess?.call(ingredientsResponse);
@@ -2757,6 +3037,11 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2803,6 +3088,13 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSuccess(this);
@@ -2839,6 +3131,10 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSuccess?.call(this);
@@ -2875,6 +3171,10 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2969,6 +3269,11 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsError();
@@ -3008,6 +3313,11 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsError?.call();
@@ -3046,6 +3356,11 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3092,6 +3407,13 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsError(this);
@@ -3128,6 +3450,10 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsError?.call(this);
@@ -3164,6 +3490,10 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3255,6 +3585,11 @@ class _$GetIngredientsSearchLoadingImpl<T>
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchLoading();
@@ -3294,6 +3629,11 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchLoading?.call();
@@ -3332,6 +3672,11 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3378,6 +3723,13 @@ class _$GetIngredientsSearchLoadingImpl<T>
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchLoading(this);
@@ -3414,6 +3766,10 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchLoading?.call(this);
@@ -3450,6 +3806,10 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3571,6 +3931,11 @@ class _$GetIngredientsSearchSuccessImpl<T>
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchSuccess(ingredientsSearchResponse);
@@ -3610,6 +3975,11 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchSuccess?.call(ingredientsSearchResponse);
@@ -3648,6 +4018,11 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3694,6 +4069,13 @@ class _$GetIngredientsSearchSuccessImpl<T>
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchSuccess(this);
@@ -3730,6 +4112,10 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchSuccess?.call(this);
@@ -3766,6 +4152,10 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3865,6 +4255,11 @@ class _$GetIngredientsSearchErrorImpl<T>
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchError();
@@ -3904,6 +4299,11 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchError?.call();
@@ -3942,6 +4342,11 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3988,6 +4393,13 @@ class _$GetIngredientsSearchErrorImpl<T>
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchError(this);
@@ -4024,6 +4436,10 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchError?.call(this);
@@ -4060,6 +4476,10 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4148,6 +4568,11 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealLoading();
@@ -4187,6 +4612,11 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealLoading?.call();
@@ -4225,6 +4655,11 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4271,6 +4706,13 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealLoading(this);
@@ -4307,6 +4749,10 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealLoading?.call(this);
@@ -4343,6 +4789,10 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4458,6 +4908,11 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealSuccess(enrollMealResponse);
@@ -4497,6 +4952,11 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealSuccess?.call(enrollMealResponse);
@@ -4535,6 +4995,11 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4581,6 +5046,13 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealSuccess(this);
@@ -4617,6 +5089,10 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealSuccess?.call(this);
@@ -4653,6 +5129,10 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4746,6 +5226,11 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealError();
@@ -4785,6 +5270,11 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealError?.call();
@@ -4823,6 +5313,11 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4869,6 +5364,13 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealError(this);
@@ -4905,6 +5407,10 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealError?.call(this);
@@ -4941,6 +5447,10 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5028,6 +5538,11 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanLoading();
@@ -5067,6 +5582,11 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanLoading?.call();
@@ -5105,6 +5625,11 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5151,6 +5676,13 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanLoading(this);
@@ -5187,6 +5719,10 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanLoading?.call(this);
@@ -5223,6 +5759,10 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5337,6 +5877,11 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanSuccess(mealPlansResponse);
@@ -5376,6 +5921,11 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanSuccess?.call(mealPlansResponse);
@@ -5414,6 +5964,11 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5460,6 +6015,13 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanSuccess(this);
@@ -5496,6 +6058,10 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanSuccess?.call(this);
@@ -5532,6 +6098,10 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5625,6 +6195,11 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanError();
@@ -5664,6 +6239,11 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanError?.call();
@@ -5702,6 +6282,11 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5748,6 +6333,13 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanError(this);
@@ -5784,6 +6376,10 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanError?.call(this);
@@ -5820,6 +6416,10 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5910,6 +6510,11 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanLoading();
@@ -5949,6 +6554,11 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanLoading?.call();
@@ -5987,6 +6597,11 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6033,6 +6648,13 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanLoading(this);
@@ -6069,6 +6691,10 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanLoading?.call(this);
@@ -6105,6 +6731,10 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6223,6 +6853,11 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanSuccess(enrollMealPlansResponse);
@@ -6262,6 +6897,11 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanSuccess?.call(enrollMealPlansResponse);
@@ -6300,6 +6940,11 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6346,6 +6991,13 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanSuccess(this);
@@ -6382,6 +7034,10 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanSuccess?.call(this);
@@ -6418,6 +7074,10 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6512,6 +7172,11 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanError();
@@ -6551,6 +7216,11 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanError?.call();
@@ -6589,6 +7259,11 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6635,6 +7310,13 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanError(this);
@@ -6671,6 +7353,10 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanError?.call(this);
@@ -6707,6 +7393,10 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6795,6 +7485,11 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealOfWeekLoading();
@@ -6834,6 +7529,11 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealOfWeekLoading?.call();
@@ -6872,6 +7572,11 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6918,6 +7623,13 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealOfWeekLoading(this);
@@ -6954,6 +7666,10 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealOfWeekLoading?.call(this);
@@ -6990,6 +7706,10 @@ class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7105,6 +7825,11 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealOfWeekSuccess(mealOfWeekResponse);
@@ -7144,6 +7869,11 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealOfWeekSuccess?.call(mealOfWeekResponse);
@@ -7182,6 +7912,11 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7228,6 +7963,13 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealOfWeekSuccess(this);
@@ -7264,6 +8006,10 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealOfWeekSuccess?.call(this);
@@ -7300,6 +8046,10 @@ class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7394,6 +8144,11 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealOfWeekError();
@@ -7433,6 +8188,11 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealOfWeekError?.call();
@@ -7471,6 +8231,11 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7517,6 +8282,13 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealOfWeekError(this);
@@ -7553,6 +8325,10 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealOfWeekError?.call(this);
@@ -7589,6 +8365,10 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7601,6 +8381,1326 @@ class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
 
 abstract class GetMealOfWeekError<T> implements NutritionState<T> {
   const factory GetMealOfWeekError() = _$GetMealOfWeekErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetDailyGoalsLoadingImplCopyWith<T, $Res> {
+  factory _$$GetDailyGoalsLoadingImplCopyWith(
+          _$GetDailyGoalsLoadingImpl<T> value,
+          $Res Function(_$GetDailyGoalsLoadingImpl<T>) then) =
+      __$$GetDailyGoalsLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetDailyGoalsLoadingImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetDailyGoalsLoadingImpl<T>>
+    implements _$$GetDailyGoalsLoadingImplCopyWith<T, $Res> {
+  __$$GetDailyGoalsLoadingImplCopyWithImpl(_$GetDailyGoalsLoadingImpl<T> _value,
+      $Res Function(_$GetDailyGoalsLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetDailyGoalsLoadingImpl<T> implements GetDailyGoalsLoading<T> {
+  const _$GetDailyGoalsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getDailyGoalsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetDailyGoalsLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getDailyGoalsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getDailyGoalsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsLoading != null) {
+      return getDailyGoalsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getDailyGoalsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getDailyGoalsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsLoading != null) {
+      return getDailyGoalsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetDailyGoalsLoading<T> implements NutritionState<T> {
+  const factory GetDailyGoalsLoading() = _$GetDailyGoalsLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetDailyGoalsSuccessImplCopyWith<T, $Res> {
+  factory _$$GetDailyGoalsSuccessImplCopyWith(
+          _$GetDailyGoalsSuccessImpl<T> value,
+          $Res Function(_$GetDailyGoalsSuccessImpl<T>) then) =
+      __$$GetDailyGoalsSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({DailyGoalsResponse? dailyGoalsResponse});
+}
+
+/// @nodoc
+class __$$GetDailyGoalsSuccessImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetDailyGoalsSuccessImpl<T>>
+    implements _$$GetDailyGoalsSuccessImplCopyWith<T, $Res> {
+  __$$GetDailyGoalsSuccessImplCopyWithImpl(_$GetDailyGoalsSuccessImpl<T> _value,
+      $Res Function(_$GetDailyGoalsSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? dailyGoalsResponse = freezed,
+  }) {
+    return _then(_$GetDailyGoalsSuccessImpl<T>(
+      freezed == dailyGoalsResponse
+          ? _value.dailyGoalsResponse
+          : dailyGoalsResponse // ignore: cast_nullable_to_non_nullable
+              as DailyGoalsResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetDailyGoalsSuccessImpl<T> implements GetDailyGoalsSuccess<T> {
+  const _$GetDailyGoalsSuccessImpl(this.dailyGoalsResponse);
+
+  @override
+  final DailyGoalsResponse? dailyGoalsResponse;
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getDailyGoalsSuccess(dailyGoalsResponse: $dailyGoalsResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetDailyGoalsSuccessImpl<T> &&
+            (identical(other.dailyGoalsResponse, dailyGoalsResponse) ||
+                other.dailyGoalsResponse == dailyGoalsResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, dailyGoalsResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetDailyGoalsSuccessImplCopyWith<T, _$GetDailyGoalsSuccessImpl<T>>
+      get copyWith => __$$GetDailyGoalsSuccessImplCopyWithImpl<T,
+          _$GetDailyGoalsSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getDailyGoalsSuccess(dailyGoalsResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getDailyGoalsSuccess?.call(dailyGoalsResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsSuccess != null) {
+      return getDailyGoalsSuccess(dailyGoalsResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getDailyGoalsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getDailyGoalsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsSuccess != null) {
+      return getDailyGoalsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetDailyGoalsSuccess<T> implements NutritionState<T> {
+  const factory GetDailyGoalsSuccess(
+          final DailyGoalsResponse? dailyGoalsResponse) =
+      _$GetDailyGoalsSuccessImpl<T>;
+
+  DailyGoalsResponse? get dailyGoalsResponse;
+  @JsonKey(ignore: true)
+  _$$GetDailyGoalsSuccessImplCopyWith<T, _$GetDailyGoalsSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetDailyGoalsErrorImplCopyWith<T, $Res> {
+  factory _$$GetDailyGoalsErrorImplCopyWith(_$GetDailyGoalsErrorImpl<T> value,
+          $Res Function(_$GetDailyGoalsErrorImpl<T>) then) =
+      __$$GetDailyGoalsErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetDailyGoalsErrorImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetDailyGoalsErrorImpl<T>>
+    implements _$$GetDailyGoalsErrorImplCopyWith<T, $Res> {
+  __$$GetDailyGoalsErrorImplCopyWithImpl(_$GetDailyGoalsErrorImpl<T> _value,
+      $Res Function(_$GetDailyGoalsErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetDailyGoalsErrorImpl<T> implements GetDailyGoalsError<T> {
+  const _$GetDailyGoalsErrorImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getDailyGoalsError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetDailyGoalsErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getDailyGoalsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getDailyGoalsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsError != null) {
+      return getDailyGoalsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getDailyGoalsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getDailyGoalsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getDailyGoalsError != null) {
+      return getDailyGoalsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetDailyGoalsError<T> implements NutritionState<T> {
+  const factory GetDailyGoalsError() = _$GetDailyGoalsErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$UpdateWaterConsumptionImplCopyWith<T, $Res> {
+  factory _$$UpdateWaterConsumptionImplCopyWith(
+          _$UpdateWaterConsumptionImpl<T> value,
+          $Res Function(_$UpdateWaterConsumptionImpl<T>) then) =
+      __$$UpdateWaterConsumptionImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int currentWater});
+}
+
+/// @nodoc
+class __$$UpdateWaterConsumptionImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res,
+        _$UpdateWaterConsumptionImpl<T>>
+    implements _$$UpdateWaterConsumptionImplCopyWith<T, $Res> {
+  __$$UpdateWaterConsumptionImplCopyWithImpl(
+      _$UpdateWaterConsumptionImpl<T> _value,
+      $Res Function(_$UpdateWaterConsumptionImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentWater = null,
+  }) {
+    return _then(_$UpdateWaterConsumptionImpl<T>(
+      null == currentWater
+          ? _value.currentWater
+          : currentWater // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateWaterConsumptionImpl<T> implements UpdateWaterConsumption<T> {
+  const _$UpdateWaterConsumptionImpl(this.currentWater);
+
+  @override
+  final int currentWater;
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.updateWaterConsumption(currentWater: $currentWater)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateWaterConsumptionImpl<T> &&
+            (identical(other.currentWater, currentWater) ||
+                other.currentWater == currentWater));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currentWater);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateWaterConsumptionImplCopyWith<T, _$UpdateWaterConsumptionImpl<T>>
+      get copyWith => __$$UpdateWaterConsumptionImplCopyWithImpl<T,
+          _$UpdateWaterConsumptionImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return updateWaterConsumption(currentWater);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return updateWaterConsumption?.call(currentWater);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (updateWaterConsumption != null) {
+      return updateWaterConsumption(currentWater);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return updateWaterConsumption(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return updateWaterConsumption?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (updateWaterConsumption != null) {
+      return updateWaterConsumption(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateWaterConsumption<T> implements NutritionState<T> {
+  const factory UpdateWaterConsumption(final int currentWater) =
+      _$UpdateWaterConsumptionImpl<T>;
+
+  int get currentWater;
+  @JsonKey(ignore: true)
+  _$$UpdateWaterConsumptionImplCopyWith<T, _$UpdateWaterConsumptionImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7703,6 +9803,11 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
         getMealOfWeekSuccess,
     required TResult Function() getMealOfWeekError,
+    required TResult Function() getDailyGoalsLoading,
+    required TResult Function(DailyGoalsResponse? dailyGoalsResponse)
+        getDailyGoalsSuccess,
+    required TResult Function() getDailyGoalsError,
+    required TResult Function(int currentWater) updateWaterConsumption,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return changeSelection(newSelect);
@@ -7742,6 +9847,11 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult? Function()? getMealOfWeekError,
+    TResult? Function()? getDailyGoalsLoading,
+    TResult? Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult? Function()? getDailyGoalsError,
+    TResult? Function(int currentWater)? updateWaterConsumption,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return changeSelection?.call(newSelect);
@@ -7780,6 +9890,11 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
         getMealOfWeekSuccess,
     TResult Function()? getMealOfWeekError,
+    TResult Function()? getDailyGoalsLoading,
+    TResult Function(DailyGoalsResponse? dailyGoalsResponse)?
+        getDailyGoalsSuccess,
+    TResult Function()? getDailyGoalsError,
+    TResult Function(int currentWater)? updateWaterConsumption,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -7826,6 +9941,13 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(GetMealOfWeekSuccess<T> value)
         getMealOfWeekSuccess,
     required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(GetDailyGoalsLoading<T> value)
+        getDailyGoalsLoading,
+    required TResult Function(GetDailyGoalsSuccess<T> value)
+        getDailyGoalsSuccess,
+    required TResult Function(GetDailyGoalsError<T> value) getDailyGoalsError,
+    required TResult Function(UpdateWaterConsumption<T> value)
+        updateWaterConsumption,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return changeSelection(this);
@@ -7862,6 +9984,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult? Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult? Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult? Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return changeSelection?.call(this);
@@ -7898,6 +10024,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
     TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
     TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(GetDailyGoalsLoading<T> value)? getDailyGoalsLoading,
+    TResult Function(GetDailyGoalsSuccess<T> value)? getDailyGoalsSuccess,
+    TResult Function(GetDailyGoalsError<T> value)? getDailyGoalsError,
+    TResult Function(UpdateWaterConsumption<T> value)? updateWaterConsumption,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {

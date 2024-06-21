@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:modarb_app/features/nutrition/data/models/daily_goals_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
@@ -51,6 +52,14 @@ class NutritionState <T> with _$NutritionState<T> {
   const factory NutritionState.getMealOfWeekLoading() = GetMealOfWeekLoading;
   const factory NutritionState.getMealOfWeekSuccess( MealOfWeekResponse? mealOfWeekResponse) = GetMealOfWeekSuccess;
   const factory NutritionState.getMealOfWeekError() = GetMealOfWeekError;
+
+
+  const factory NutritionState.getDailyGoalsLoading() = GetDailyGoalsLoading;
+  const factory NutritionState.getDailyGoalsSuccess( DailyGoalsResponse? dailyGoalsResponse) = GetDailyGoalsSuccess;
+  const factory NutritionState.getDailyGoalsError() = GetDailyGoalsError;
+
+
+  const factory NutritionState.updateWaterConsumption(int currentWater) = UpdateWaterConsumption;
 
 
   const factory NutritionState.changeSelection(String? newSelect) = ChangeSelection;

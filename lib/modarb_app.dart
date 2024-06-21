@@ -44,7 +44,7 @@ class ModarbApp extends StatelessWidget{
           create: (context) => getIt<WorkoutCubit>(),
           ),
           BlocProvider(
-          create: (context) => getIt<NutritionCubit>()..getTodayIntake(),
+          create: (context) => getIt<NutritionCubit>()..getTodayIntake()..getDailyGoals(),
           ),
         ],
         child: MaterialApp(
