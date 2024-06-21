@@ -3,6 +3,7 @@ import 'package:modarb_app/features/nutrition/data/models/enroll_meal_plans_resp
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/meal_of_week_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
@@ -46,6 +47,10 @@ class NutritionState <T> with _$NutritionState<T> {
   const factory NutritionState.enrollMealPlanLoading() = EnrollMealPlanLoading;
   const factory NutritionState.enrollMealPlanSuccess(EnrollMealPlansResponse? enrollMealPlansResponse) = EnrollMealPlanSuccess;
   const factory NutritionState.enrollMealPlanError() = EnrollMealPlanError;
+
+  const factory NutritionState.getMealOfWeekLoading() = GetMealOfWeekLoading;
+  const factory NutritionState.getMealOfWeekSuccess( MealOfWeekResponse? mealOfWeekResponse) = GetMealOfWeekSuccess;
+  const factory NutritionState.getMealOfWeekError() = GetMealOfWeekError;
 
 
   const factory NutritionState.changeSelection(String? newSelect) = ChangeSelection;

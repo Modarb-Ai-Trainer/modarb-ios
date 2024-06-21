@@ -12,6 +12,7 @@ import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_bo
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/meal_of_week_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_meal_response.dart';
@@ -105,6 +106,10 @@ abstract class ApiService {
   Future<EnrollMealPlansResponse> enrollMealPlan(
       @Body() EnrollMealPlansRequestBody ?enrollMealPlansRequestBody ,
       );
+
+
+  @GET(ApiConstants.myMealPlanOfWeek)
+  Future<MealOfWeekResponse> getMealOfWeek();
 
 
 }

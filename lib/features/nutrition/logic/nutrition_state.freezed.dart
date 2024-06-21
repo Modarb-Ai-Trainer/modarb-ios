@@ -48,6 +48,10 @@ mixin _$NutritionState<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +84,10 @@ mixin _$NutritionState<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -111,6 +119,10 @@ mixin _$NutritionState<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -146,6 +158,11 @@ mixin _$NutritionState<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -176,6 +193,9 @@ mixin _$NutritionState<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) =>
       throw _privateConstructorUsedError;
@@ -206,6 +226,9 @@ mixin _$NutritionState<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) =>
@@ -298,6 +321,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return initial();
@@ -333,6 +360,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return initial?.call();
@@ -367,6 +398,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -408,6 +443,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return initial(this);
@@ -441,6 +481,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return initial?.call(this);
@@ -474,6 +517,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -557,6 +603,10 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeLoading();
@@ -592,6 +642,10 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeLoading?.call();
@@ -626,6 +680,10 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -667,6 +725,11 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeLoading(this);
@@ -700,6 +763,9 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeLoading?.call(this);
@@ -733,6 +799,9 @@ class _$TodayIntakeLoadingImpl<T> implements TodayIntakeLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -843,6 +912,10 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeSuccess(todayIntakeResponse);
@@ -878,6 +951,10 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(todayIntakeResponse);
@@ -912,6 +989,10 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -953,6 +1034,11 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeSuccess(this);
@@ -986,6 +1072,9 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeSuccess?.call(this);
@@ -1019,6 +1108,9 @@ class _$TodayIntakeSuccessImpl<T> implements TodayIntakeSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1109,6 +1201,10 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayIntakeError();
@@ -1144,6 +1240,10 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayIntakeError?.call();
@@ -1178,6 +1278,10 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1219,6 +1323,11 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayIntakeError(this);
@@ -1252,6 +1361,9 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayIntakeError?.call(this);
@@ -1285,6 +1397,9 @@ class _$TodayIntakeErrorImpl<T> implements TodayIntakeError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1368,6 +1483,10 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealLoading();
@@ -1403,6 +1522,10 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealLoading?.call();
@@ -1437,6 +1560,10 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1478,6 +1605,11 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealLoading(this);
@@ -1511,6 +1643,9 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealLoading?.call(this);
@@ -1544,6 +1679,9 @@ class _$TodayMealLoadingImpl<T> implements TodayMealLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1654,6 +1792,10 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealSuccess(todayMealResponse);
@@ -1689,6 +1831,10 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealSuccess?.call(todayMealResponse);
@@ -1723,6 +1869,10 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1764,6 +1914,11 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealSuccess(this);
@@ -1797,6 +1952,9 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealSuccess?.call(this);
@@ -1830,6 +1988,9 @@ class _$TodayMealSuccessImpl<T> implements TodayMealSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -1918,6 +2079,10 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return todayMealError();
@@ -1953,6 +2118,10 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return todayMealError?.call();
@@ -1987,6 +2156,10 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2028,6 +2201,11 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return todayMealError(this);
@@ -2061,6 +2239,9 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return todayMealError?.call(this);
@@ -2094,6 +2275,9 @@ class _$TodayMealErrorImpl<T> implements TodayMealError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2180,6 +2364,10 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsLoading();
@@ -2215,6 +2403,10 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsLoading?.call();
@@ -2249,6 +2441,10 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2290,6 +2486,11 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsLoading(this);
@@ -2323,6 +2524,9 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsLoading?.call(this);
@@ -2356,6 +2560,9 @@ class _$GetIngredientsLoadingImpl<T> implements GetIngredientsLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2469,6 +2676,10 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSuccess(ingredientsResponse);
@@ -2504,6 +2715,10 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSuccess?.call(ingredientsResponse);
@@ -2538,6 +2753,10 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2579,6 +2798,11 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSuccess(this);
@@ -2612,6 +2836,9 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSuccess?.call(this);
@@ -2645,6 +2872,9 @@ class _$GetIngredientsSuccessImpl<T> implements GetIngredientsSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2735,6 +2965,10 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsError();
@@ -2770,6 +3004,10 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsError?.call();
@@ -2804,6 +3042,10 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2845,6 +3087,11 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsError(this);
@@ -2878,6 +3125,9 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsError?.call(this);
@@ -2911,6 +3161,9 @@ class _$GetIngredientsErrorImpl<T> implements GetIngredientsError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -2998,6 +3251,10 @@ class _$GetIngredientsSearchLoadingImpl<T>
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchLoading();
@@ -3033,6 +3290,10 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchLoading?.call();
@@ -3067,6 +3328,10 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3108,6 +3373,11 @@ class _$GetIngredientsSearchLoadingImpl<T>
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchLoading(this);
@@ -3141,6 +3411,9 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchLoading?.call(this);
@@ -3174,6 +3447,9 @@ class _$GetIngredientsSearchLoadingImpl<T>
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3291,6 +3567,10 @@ class _$GetIngredientsSearchSuccessImpl<T>
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchSuccess(ingredientsSearchResponse);
@@ -3326,6 +3606,10 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchSuccess?.call(ingredientsSearchResponse);
@@ -3360,6 +3644,10 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3401,6 +3689,11 @@ class _$GetIngredientsSearchSuccessImpl<T>
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchSuccess(this);
@@ -3434,6 +3727,9 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchSuccess?.call(this);
@@ -3467,6 +3763,9 @@ class _$GetIngredientsSearchSuccessImpl<T>
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3562,6 +3861,10 @@ class _$GetIngredientsSearchErrorImpl<T>
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getIngredientsSearchError();
@@ -3597,6 +3900,10 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getIngredientsSearchError?.call();
@@ -3631,6 +3938,10 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3672,6 +3983,11 @@ class _$GetIngredientsSearchErrorImpl<T>
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getIngredientsSearchError(this);
@@ -3705,6 +4021,9 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getIngredientsSearchError?.call(this);
@@ -3738,6 +4057,9 @@ class _$GetIngredientsSearchErrorImpl<T>
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3822,6 +4144,10 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealLoading();
@@ -3857,6 +4183,10 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealLoading?.call();
@@ -3891,6 +4221,10 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -3932,6 +4266,11 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealLoading(this);
@@ -3965,6 +4304,9 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealLoading?.call(this);
@@ -3998,6 +4340,9 @@ class _$EnrollMealLoadingImpl<T> implements EnrollMealLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4109,6 +4454,10 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealSuccess(enrollMealResponse);
@@ -4144,6 +4493,10 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealSuccess?.call(enrollMealResponse);
@@ -4178,6 +4531,10 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4219,6 +4576,11 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealSuccess(this);
@@ -4252,6 +4614,9 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealSuccess?.call(this);
@@ -4285,6 +4650,9 @@ class _$EnrollMealSuccessImpl<T> implements EnrollMealSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4374,6 +4742,10 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealError();
@@ -4409,6 +4781,10 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealError?.call();
@@ -4443,6 +4819,10 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4484,6 +4864,11 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealError(this);
@@ -4517,6 +4902,9 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealError?.call(this);
@@ -4550,6 +4938,9 @@ class _$EnrollMealErrorImpl<T> implements EnrollMealError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4633,6 +5024,10 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanLoading();
@@ -4668,6 +5063,10 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanLoading?.call();
@@ -4702,6 +5101,10 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4743,6 +5146,11 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanLoading(this);
@@ -4776,6 +5184,9 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanLoading?.call(this);
@@ -4809,6 +5220,9 @@ class _$GetMealPlanLoadingImpl<T> implements GetMealPlanLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -4919,6 +5333,10 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanSuccess(mealPlansResponse);
@@ -4954,6 +5372,10 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanSuccess?.call(mealPlansResponse);
@@ -4988,6 +5410,10 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5029,6 +5455,11 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanSuccess(this);
@@ -5062,6 +5493,9 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanSuccess?.call(this);
@@ -5095,6 +5529,9 @@ class _$GetMealPlanSuccessImpl<T> implements GetMealPlanSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5184,6 +5621,10 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return getMealPlanError();
@@ -5219,6 +5660,10 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return getMealPlanError?.call();
@@ -5253,6 +5698,10 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5294,6 +5743,11 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return getMealPlanError(this);
@@ -5327,6 +5781,9 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return getMealPlanError?.call(this);
@@ -5360,6 +5817,9 @@ class _$GetMealPlanErrorImpl<T> implements GetMealPlanError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5446,6 +5906,10 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanLoading();
@@ -5481,6 +5945,10 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanLoading?.call();
@@ -5515,6 +5983,10 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5556,6 +6028,11 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanLoading(this);
@@ -5589,6 +6066,9 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanLoading?.call(this);
@@ -5622,6 +6102,9 @@ class _$EnrollMealPlanLoadingImpl<T> implements EnrollMealPlanLoading<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5736,6 +6219,10 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanSuccess(enrollMealPlansResponse);
@@ -5771,6 +6258,10 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanSuccess?.call(enrollMealPlansResponse);
@@ -5805,6 +6296,10 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -5846,6 +6341,11 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanSuccess(this);
@@ -5879,6 +6379,9 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanSuccess?.call(this);
@@ -5912,6 +6415,9 @@ class _$EnrollMealPlanSuccessImpl<T> implements EnrollMealPlanSuccess<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6002,6 +6508,10 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return enrollMealPlanError();
@@ -6037,6 +6547,10 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return enrollMealPlanError?.call();
@@ -6071,6 +6585,10 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6112,6 +6630,11 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return enrollMealPlanError(this);
@@ -6145,6 +6668,9 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return enrollMealPlanError?.call(this);
@@ -6178,6 +6704,9 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6190,6 +6719,888 @@ class _$EnrollMealPlanErrorImpl<T> implements EnrollMealPlanError<T> {
 
 abstract class EnrollMealPlanError<T> implements NutritionState<T> {
   const factory EnrollMealPlanError() = _$EnrollMealPlanErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetMealOfWeekLoadingImplCopyWith<T, $Res> {
+  factory _$$GetMealOfWeekLoadingImplCopyWith(
+          _$GetMealOfWeekLoadingImpl<T> value,
+          $Res Function(_$GetMealOfWeekLoadingImpl<T>) then) =
+      __$$GetMealOfWeekLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetMealOfWeekLoadingImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetMealOfWeekLoadingImpl<T>>
+    implements _$$GetMealOfWeekLoadingImplCopyWith<T, $Res> {
+  __$$GetMealOfWeekLoadingImplCopyWithImpl(_$GetMealOfWeekLoadingImpl<T> _value,
+      $Res Function(_$GetMealOfWeekLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetMealOfWeekLoadingImpl<T> implements GetMealOfWeekLoading<T> {
+  const _$GetMealOfWeekLoadingImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getMealOfWeekLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetMealOfWeekLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getMealOfWeekLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getMealOfWeekLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekLoading != null) {
+      return getMealOfWeekLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getMealOfWeekLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getMealOfWeekLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekLoading != null) {
+      return getMealOfWeekLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetMealOfWeekLoading<T> implements NutritionState<T> {
+  const factory GetMealOfWeekLoading() = _$GetMealOfWeekLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetMealOfWeekSuccessImplCopyWith<T, $Res> {
+  factory _$$GetMealOfWeekSuccessImplCopyWith(
+          _$GetMealOfWeekSuccessImpl<T> value,
+          $Res Function(_$GetMealOfWeekSuccessImpl<T>) then) =
+      __$$GetMealOfWeekSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({MealOfWeekResponse? mealOfWeekResponse});
+}
+
+/// @nodoc
+class __$$GetMealOfWeekSuccessImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetMealOfWeekSuccessImpl<T>>
+    implements _$$GetMealOfWeekSuccessImplCopyWith<T, $Res> {
+  __$$GetMealOfWeekSuccessImplCopyWithImpl(_$GetMealOfWeekSuccessImpl<T> _value,
+      $Res Function(_$GetMealOfWeekSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mealOfWeekResponse = freezed,
+  }) {
+    return _then(_$GetMealOfWeekSuccessImpl<T>(
+      freezed == mealOfWeekResponse
+          ? _value.mealOfWeekResponse
+          : mealOfWeekResponse // ignore: cast_nullable_to_non_nullable
+              as MealOfWeekResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetMealOfWeekSuccessImpl<T> implements GetMealOfWeekSuccess<T> {
+  const _$GetMealOfWeekSuccessImpl(this.mealOfWeekResponse);
+
+  @override
+  final MealOfWeekResponse? mealOfWeekResponse;
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getMealOfWeekSuccess(mealOfWeekResponse: $mealOfWeekResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetMealOfWeekSuccessImpl<T> &&
+            (identical(other.mealOfWeekResponse, mealOfWeekResponse) ||
+                other.mealOfWeekResponse == mealOfWeekResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, mealOfWeekResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetMealOfWeekSuccessImplCopyWith<T, _$GetMealOfWeekSuccessImpl<T>>
+      get copyWith => __$$GetMealOfWeekSuccessImplCopyWithImpl<T,
+          _$GetMealOfWeekSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getMealOfWeekSuccess(mealOfWeekResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getMealOfWeekSuccess?.call(mealOfWeekResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekSuccess != null) {
+      return getMealOfWeekSuccess(mealOfWeekResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getMealOfWeekSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getMealOfWeekSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekSuccess != null) {
+      return getMealOfWeekSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetMealOfWeekSuccess<T> implements NutritionState<T> {
+  const factory GetMealOfWeekSuccess(
+          final MealOfWeekResponse? mealOfWeekResponse) =
+      _$GetMealOfWeekSuccessImpl<T>;
+
+  MealOfWeekResponse? get mealOfWeekResponse;
+  @JsonKey(ignore: true)
+  _$$GetMealOfWeekSuccessImplCopyWith<T, _$GetMealOfWeekSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetMealOfWeekErrorImplCopyWith<T, $Res> {
+  factory _$$GetMealOfWeekErrorImplCopyWith(_$GetMealOfWeekErrorImpl<T> value,
+          $Res Function(_$GetMealOfWeekErrorImpl<T>) then) =
+      __$$GetMealOfWeekErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetMealOfWeekErrorImplCopyWithImpl<T, $Res>
+    extends _$NutritionStateCopyWithImpl<T, $Res, _$GetMealOfWeekErrorImpl<T>>
+    implements _$$GetMealOfWeekErrorImplCopyWith<T, $Res> {
+  __$$GetMealOfWeekErrorImplCopyWithImpl(_$GetMealOfWeekErrorImpl<T> _value,
+      $Res Function(_$GetMealOfWeekErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetMealOfWeekErrorImpl<T> implements GetMealOfWeekError<T> {
+  const _$GetMealOfWeekErrorImpl();
+
+  @override
+  String toString() {
+    return 'NutritionState<$T>.getMealOfWeekError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetMealOfWeekErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() todayIntakeLoading,
+    required TResult Function(TodayIntakeResponse? todayIntakeResponse)
+        todayIntakeSuccess,
+    required TResult Function() todayIntakeError,
+    required TResult Function() todayMealLoading,
+    required TResult Function(TodayMealResponse? todayMealResponse)
+        todayMealSuccess,
+    required TResult Function() todayMealError,
+    required TResult Function() getIngredientsLoading,
+    required TResult Function(IngredientsResponse? ingredientsResponse)
+        getIngredientsSuccess,
+    required TResult Function() getIngredientsError,
+    required TResult Function() getIngredientsSearchLoading,
+    required TResult Function(
+            IngredientsSearchResponse? ingredientsSearchResponse)
+        getIngredientsSearchSuccess,
+    required TResult Function() getIngredientsSearchError,
+    required TResult Function() enrollMealLoading,
+    required TResult Function(EnrollMealResponse? enrollMealResponse)
+        enrollMealSuccess,
+    required TResult Function() enrollMealError,
+    required TResult Function() getMealPlanLoading,
+    required TResult Function(MealPlansResponse? mealPlansResponse)
+        getMealPlanSuccess,
+    required TResult Function() getMealPlanError,
+    required TResult Function() enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
+        enrollMealPlanSuccess,
+    required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
+    required TResult Function(String? newSelect) changeSelection,
+  }) {
+    return getMealOfWeekError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? todayIntakeLoading,
+    TResult? Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult? Function()? todayIntakeError,
+    TResult? Function()? todayMealLoading,
+    TResult? Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult? Function()? todayMealError,
+    TResult? Function()? getIngredientsLoading,
+    TResult? Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult? Function()? getIngredientsError,
+    TResult? Function()? getIngredientsSearchLoading,
+    TResult? Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult? Function()? getIngredientsSearchError,
+    TResult? Function()? enrollMealLoading,
+    TResult? Function(EnrollMealResponse? enrollMealResponse)?
+        enrollMealSuccess,
+    TResult? Function()? enrollMealError,
+    TResult? Function()? getMealPlanLoading,
+    TResult? Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult? Function()? getMealPlanError,
+    TResult? Function()? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
+    TResult? Function(String? newSelect)? changeSelection,
+  }) {
+    return getMealOfWeekError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? todayIntakeLoading,
+    TResult Function(TodayIntakeResponse? todayIntakeResponse)?
+        todayIntakeSuccess,
+    TResult Function()? todayIntakeError,
+    TResult Function()? todayMealLoading,
+    TResult Function(TodayMealResponse? todayMealResponse)? todayMealSuccess,
+    TResult Function()? todayMealError,
+    TResult Function()? getIngredientsLoading,
+    TResult Function(IngredientsResponse? ingredientsResponse)?
+        getIngredientsSuccess,
+    TResult Function()? getIngredientsError,
+    TResult Function()? getIngredientsSearchLoading,
+    TResult Function(IngredientsSearchResponse? ingredientsSearchResponse)?
+        getIngredientsSearchSuccess,
+    TResult Function()? getIngredientsSearchError,
+    TResult Function()? enrollMealLoading,
+    TResult Function(EnrollMealResponse? enrollMealResponse)? enrollMealSuccess,
+    TResult Function()? enrollMealError,
+    TResult Function()? getMealPlanLoading,
+    TResult Function(MealPlansResponse? mealPlansResponse)? getMealPlanSuccess,
+    TResult Function()? getMealPlanError,
+    TResult Function()? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
+        enrollMealPlanSuccess,
+    TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
+    TResult Function(String? newSelect)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekError != null) {
+      return getMealOfWeekError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(TodayIntakeLoading<T> value) todayIntakeLoading,
+    required TResult Function(TodayIntakeSuccess<T> value) todayIntakeSuccess,
+    required TResult Function(TodayIntakeError<T> value) todayIntakeError,
+    required TResult Function(TodayMealLoading<T> value) todayMealLoading,
+    required TResult Function(TodayMealSuccess<T> value) todayMealSuccess,
+    required TResult Function(TodayMealError<T> value) todayMealError,
+    required TResult Function(GetIngredientsLoading<T> value)
+        getIngredientsLoading,
+    required TResult Function(GetIngredientsSuccess<T> value)
+        getIngredientsSuccess,
+    required TResult Function(GetIngredientsError<T> value) getIngredientsError,
+    required TResult Function(GetIngredientsSearchLoading<T> value)
+        getIngredientsSearchLoading,
+    required TResult Function(GetIngredientsSearchSuccess<T> value)
+        getIngredientsSearchSuccess,
+    required TResult Function(GetIngredientsSearchError<T> value)
+        getIngredientsSearchError,
+    required TResult Function(EnrollMealLoading<T> value) enrollMealLoading,
+    required TResult Function(EnrollMealSuccess<T> value) enrollMealSuccess,
+    required TResult Function(EnrollMealError<T> value) enrollMealError,
+    required TResult Function(GetMealPlanLoading<T> value) getMealPlanLoading,
+    required TResult Function(GetMealPlanSuccess<T> value) getMealPlanSuccess,
+    required TResult Function(GetMealPlanError<T> value) getMealPlanError,
+    required TResult Function(EnrollMealPlanLoading<T> value)
+        enrollMealPlanLoading,
+    required TResult Function(EnrollMealPlanSuccess<T> value)
+        enrollMealPlanSuccess,
+    required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+  }) {
+    return getMealOfWeekError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult? Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult? Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult? Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult? Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult? Function(TodayMealError<T> value)? todayMealError,
+    TResult? Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult? Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult? Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult? Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult? Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult? Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult? Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult? Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult? Function(EnrollMealError<T> value)? enrollMealError,
+    TResult? Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult? Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult? Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+  }) {
+    return getMealOfWeekError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(TodayIntakeLoading<T> value)? todayIntakeLoading,
+    TResult Function(TodayIntakeSuccess<T> value)? todayIntakeSuccess,
+    TResult Function(TodayIntakeError<T> value)? todayIntakeError,
+    TResult Function(TodayMealLoading<T> value)? todayMealLoading,
+    TResult Function(TodayMealSuccess<T> value)? todayMealSuccess,
+    TResult Function(TodayMealError<T> value)? todayMealError,
+    TResult Function(GetIngredientsLoading<T> value)? getIngredientsLoading,
+    TResult Function(GetIngredientsSuccess<T> value)? getIngredientsSuccess,
+    TResult Function(GetIngredientsError<T> value)? getIngredientsError,
+    TResult Function(GetIngredientsSearchLoading<T> value)?
+        getIngredientsSearchLoading,
+    TResult Function(GetIngredientsSearchSuccess<T> value)?
+        getIngredientsSearchSuccess,
+    TResult Function(GetIngredientsSearchError<T> value)?
+        getIngredientsSearchError,
+    TResult Function(EnrollMealLoading<T> value)? enrollMealLoading,
+    TResult Function(EnrollMealSuccess<T> value)? enrollMealSuccess,
+    TResult Function(EnrollMealError<T> value)? enrollMealError,
+    TResult Function(GetMealPlanLoading<T> value)? getMealPlanLoading,
+    TResult Function(GetMealPlanSuccess<T> value)? getMealPlanSuccess,
+    TResult Function(GetMealPlanError<T> value)? getMealPlanError,
+    TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
+    TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
+    TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    required TResult orElse(),
+  }) {
+    if (getMealOfWeekError != null) {
+      return getMealOfWeekError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetMealOfWeekError<T> implements NutritionState<T> {
+  const factory GetMealOfWeekError() = _$GetMealOfWeekErrorImpl<T>;
 }
 
 /// @nodoc
@@ -6288,6 +7699,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)
         enrollMealPlanSuccess,
     required TResult Function() enrollMealPlanError,
+    required TResult Function() getMealOfWeekLoading,
+    required TResult Function(MealOfWeekResponse? mealOfWeekResponse)
+        getMealOfWeekSuccess,
+    required TResult Function() getMealOfWeekError,
     required TResult Function(String? newSelect) changeSelection,
   }) {
     return changeSelection(newSelect);
@@ -6323,6 +7738,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult? Function()? enrollMealPlanError,
+    TResult? Function()? getMealOfWeekLoading,
+    TResult? Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult? Function()? getMealOfWeekError,
     TResult? Function(String? newSelect)? changeSelection,
   }) {
     return changeSelection?.call(newSelect);
@@ -6357,6 +7776,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(EnrollMealPlansResponse? enrollMealPlansResponse)?
         enrollMealPlanSuccess,
     TResult Function()? enrollMealPlanError,
+    TResult Function()? getMealOfWeekLoading,
+    TResult Function(MealOfWeekResponse? mealOfWeekResponse)?
+        getMealOfWeekSuccess,
+    TResult Function()? getMealOfWeekError,
     TResult Function(String? newSelect)? changeSelection,
     required TResult orElse(),
   }) {
@@ -6398,6 +7821,11 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(EnrollMealPlanSuccess<T> value)
         enrollMealPlanSuccess,
     required TResult Function(EnrollMealPlanError<T> value) enrollMealPlanError,
+    required TResult Function(GetMealOfWeekLoading<T> value)
+        getMealOfWeekLoading,
+    required TResult Function(GetMealOfWeekSuccess<T> value)
+        getMealOfWeekSuccess,
+    required TResult Function(GetMealOfWeekError<T> value) getMealOfWeekError,
     required TResult Function(ChangeSelection<T> value) changeSelection,
   }) {
     return changeSelection(this);
@@ -6431,6 +7859,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult? Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult? Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult? Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult? Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult? Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult? Function(ChangeSelection<T> value)? changeSelection,
   }) {
     return changeSelection?.call(this);
@@ -6464,6 +7895,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(EnrollMealPlanLoading<T> value)? enrollMealPlanLoading,
     TResult Function(EnrollMealPlanSuccess<T> value)? enrollMealPlanSuccess,
     TResult Function(EnrollMealPlanError<T> value)? enrollMealPlanError,
+    TResult Function(GetMealOfWeekLoading<T> value)? getMealOfWeekLoading,
+    TResult Function(GetMealOfWeekSuccess<T> value)? getMealOfWeekSuccess,
+    TResult Function(GetMealOfWeekError<T> value)? getMealOfWeekError,
     TResult Function(ChangeSelection<T> value)? changeSelection,
     required TResult orElse(),
   }) {

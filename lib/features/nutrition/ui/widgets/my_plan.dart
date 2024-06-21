@@ -15,6 +15,9 @@ class MyPlan extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
      builder: (context,state){
        final cubit = context.read<NutritionCubit>();
+       if(cubit.mealOfWeekResponse == null){
+         cubit.getMealOfWeek();
+       }
        return  CustomScrollView(
          slivers: [
            SliverToBoxAdapter(
@@ -44,27 +47,9 @@ class MyPlan extends StatelessWidget{
                ],
              ),
            ),
-           SliverList(
-             delegate: SliverChildBuilderDelegate((context,index) => Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
-               children: [
-                 Padding(
-                   padding: EdgeInsets.only(left: 20.h),
-                   child: Text(cubit.nameOfDays[index],
-                     style: TextStyles.font16White700,),
-                 ),
-                 SizedBox(
-                   height: 230.h,
-                   child: ListView.builder(
-                     scrollDirection: Axis.horizontal,
-                     itemCount: 4,
-                     itemBuilder: (context, index) {
-                       return itemOfDay(index,cubit);
-                     },
-                   ),
-                 ),
-               ],
-             ),
+           if(cubit.mealOfWeekResponse != null)
+             SliverList(
+             delegate: SliverChildBuilderDelegate((context,index) => rowOfDay(cubit,index),
                childCount: 6,
              ),
            ),
@@ -74,36 +59,69 @@ class MyPlan extends StatelessWidget{
     );
   }
 
-  Widget itemOfDay(index,cubit){
+  Widget rowOfDay(cubit,index){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 20.h),
+          child: Text(cubit.nameOfDays[index],
+            style: TextStyles.font16White700,),
+        ),
+        SizedBox(
+          height: 230.h,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 4,
+            itemBuilder: (context, indexx) {
+              return itemOfDay(index,indexx,cubit);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+  Widget itemOfDay(int dayIndex, int mealIndex,cubit){
+    final days = cubit.mealOfWeekResponse.data.days;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Stack(
         children: [
-          SvgPicture.asset(cubit.imageOfContainer[index],
-            fit: BoxFit.fill,
-            placeholderBuilder: (context) => const CircularProgressIndicator(),
+          SizedBox(
+            height: 250.h,
+            child: SvgPicture.asset(cubit.imageOfContainer[mealIndex],
+              fit: BoxFit.fill,
+              placeholderBuilder: (context) => const CircularProgressIndicator(),
 
+            ),
           ),
           Positioned(
             top: 60.h,
-            left: 15.h,
+            left: 10.h,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(cubit.nameOfMeals[index],
-                    style: TextStyles.font16White700.copyWith(
-                      fontSize: 14.sp,
-                    )
+                Text(
+                  '${cubit.nameOfMeals[mealIndex]}',
+                    style: TextStyles.font13White700.copyWith(
+                      fontSize: 14.sp
+                    ),
+
                 ),
                 verticalSpace(10),
-                Text('Bread',
-                    style: TextStyles.font13White600
+                Text(
+                  '${days[dayIndex].meals[mealIndex].name}',
+                  style: TextStyles.font13White600,
+                  overflow: TextOverflow.fade,
+                  maxLines: 2,
                 ),
-                verticalSpace(10),
-                Text('300 kcal',
+                verticalSpace(15),
+                Text('${days[dayIndex].meals[mealIndex].calories} kcal',
                     style: TextStyles.font13White600
                 ),
               ],
             ),
+
           ),
         ],
       ),

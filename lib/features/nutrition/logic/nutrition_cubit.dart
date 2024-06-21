@@ -6,6 +6,7 @@ import 'package:modarb_app/features/nutrition/data/models/enroll_meal_request_bo
 import 'package:modarb_app/features/nutrition/data/models/enroll_meal_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/ingredients_search_response.dart';
+import 'package:modarb_app/features/nutrition/data/models/meal_of_week_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/meal_plans_response.dart';
 import 'package:modarb_app/features/nutrition/data/models/today_intake_response.dart';
 import 'package:modarb_app/features/nutrition/data/repos/nutrition_repo.dart';
@@ -164,6 +165,19 @@ class NutritionCubit extends Cubit<NutritionState> {
     } catch (error) {
       print(error.toString());
       emit(const NutritionState.enrollMealPlanError());
+    }
+  }
+
+  MealOfWeekResponse? mealOfWeekResponse;
+  void getMealOfWeek() async {
+    emit(const NutritionState.getMealOfWeekLoading());
+    try {
+      mealOfWeekResponse = await _nutritionRepo.getMealOfWeek();
+
+      emit(NutritionState.getMealOfWeekSuccess(mealOfWeekResponse));
+    } catch (error) {
+      print(error.toString());
+      emit(const NutritionState.getMealOfWeekError());
     }
   }
 
