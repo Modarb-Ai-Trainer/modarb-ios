@@ -37,6 +37,7 @@ class GenderAndAge extends StatelessWidget{
                      ),
                      verticalSpace(30),
                      TextFormField(
+
                        onTap: () => cubit.selectOfDate(context),
                        decoration: InputDecoration(
                          hintText: cubit.selectedDate != null
@@ -45,25 +46,6 @@ class GenderAndAge extends StatelessWidget{
                        ),
                      ),
 
-                     // SizedBox(
-                     //   height: 250.h,
-                     //   child: CupertinoPicker(
-                     //     itemExtent: 32.0,
-                     //     squeeze: .8,
-                     //     scrollController: FixedExtentScrollController(initialItem: cubit.selectedAge),
-                     //     onSelectedItemChanged: (int index) {
-                     //       cubit.onAgeChange(index);
-                     //     },
-                     //     children: List.generate(100, (index) {
-                     //       return Center(
-                     //         child: Text(
-                     //           (index + 1).toString(),
-                     //           style: TextStyles.font20White600,
-                     //         ),
-                     //       );
-                     //     }),
-                     //   ),
-                     // ),
                    ],
                  ),
                ),

@@ -97,44 +97,44 @@ class _FitnessChoiceState extends State<FitnessChoice> {
 
     switch (index) {
       case 0:
-        if (cubit.selectedGoal == null) {
+        if (cubit.selectedGoal == '') {
           _showValidationMessage(context, 'Please select a fitness goal');
           return false;
         }
         break;
       case 1:
-        if (cubit.selectedGender == null || cubit.selectedDateString == null) {
+        if (cubit.selectedGender == '' || cubit.selectedDateString == '') {
           _showValidationMessage(context, 'Please select your gender and age');
           return false;
         }
         break;
       case 2:
-        if (cubit.rulerOfHeight == null || cubit.rulerOfWeight == null) {
+        if (cubit.rulerOfHeight.value == 0 || cubit.rulerOfWeight.value == 0) {
           _showValidationMessage(context, 'Please enter your height and weight');
           return false;
         }
         break;
         case 4:
-        if (cubit.selectedLevel == null ) {
+        if (cubit.selectedLevel == '' ) {
           _showValidationMessage(context, 'Please enter your level');
           return false;
         }
         break;
         case 5:
-        if (cubit.selectedLocation == null ) {
+        if (cubit.selectedLocation == '' ) {
           _showValidationMessage(context, 'Please enter your location');
           return false;
         }
         break;
         case 6:
-        if (cubit.selectedEquipments == null ) {
-          _showValidationMessage(context, 'Please enter your equipment');
+        if (cubit.selectedEquipments.isEmpty ) {
+          _showValidationMessage(context, 'Please select your equipment');
           return false;
         }
         break;
         case 7:
-        if (cubit.selectedInjuries == null ) {
-          _showValidationMessage(context, 'Please enter your Injuries');
+        if (cubit.selectedInjuries.isEmpty ) {
+          _showValidationMessage(context, 'Please select your Injuries');
           return false;
         }
         break;

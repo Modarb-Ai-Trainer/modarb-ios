@@ -28,7 +28,7 @@ class FitnessInjury extends StatelessWidget{
                     children: [
                       Text(
                         'Do you currently experience any pain or discomfort in your body',
-                        style: TextStyles.font28White700,
+                        style: TextStyles.font23White700,
                         textAlign: TextAlign.center,
                       ),
                       verticalSpace(15),

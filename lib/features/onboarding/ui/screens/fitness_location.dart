@@ -28,7 +28,7 @@ class FitnessLocation extends StatelessWidget{
                       Text(
                         'Where do you exercise ?',
                         textAlign: TextAlign.center,
-                        style: TextStyles.font28White700,
+                        style: TextStyles.font23White700,
                       ),
                       verticalSpace(90),
                       ListView.builder(

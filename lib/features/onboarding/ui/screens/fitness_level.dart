@@ -27,7 +27,7 @@ class FitnessLevel extends StatelessWidget{
                      Text(
                        'What’s Your Fitness level ?',
                        textAlign: TextAlign.center,
-                       style: TextStyles.font28White700,
+                       style: TextStyles.font23White700,
                      ),
                      verticalSpace(30),
                      ListView.builder(

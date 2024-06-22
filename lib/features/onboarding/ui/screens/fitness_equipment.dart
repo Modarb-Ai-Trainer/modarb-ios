@@ -20,7 +20,7 @@ class FitnessEquipment extends StatelessWidget{
                 children: [
                   Text(
                     'What Equipment do you have available to you?',
-                    style: TextStyles.font28White700,
+                    style: TextStyles.font23White700,
                     textAlign: TextAlign.center,
                   ),
                   verticalSpace(20),
