@@ -18,9 +18,9 @@ class ExerciseOfCategory extends StatelessWidget{
     return BlocBuilder<WorkoutCubit,WorkoutState>(
       builder: (context,state) {
         final cubit = context.read<WorkoutCubit>();
-        if(cubit.allExerciseResponse == null ) {
-          cubit.getExerciseByCategory(nameOfCategory);
-        }
+        // if(cubit.allExerciseResponse == null ) {
+        //   cubit.getExerciseByCategory(nameOfCategory);
+        // }
         cubit.nameOfCategory = nameOfCategory;
         return Scaffold(
           appBar: AppBar(
@@ -37,6 +37,9 @@ class ExerciseOfCategory extends StatelessWidget{
                       children: [
                         TextFormField(
                           controller: cubit.searchController,
+                          onTap: (){
+                            cubit.getSearchExercise();
+                          },
                           onChanged: (value) {
                             cubit.getSearchExercise();
                           },
@@ -91,7 +94,7 @@ class ExerciseOfCategory extends StatelessWidget{
                       childAspectRatio: 0.7,
                     ),
                     delegate: SliverChildBuilderDelegate(
-                          (BuildContext context, int index) => itemOfList(context,cubit.searchExercise?.data?[index],index),
+                          (BuildContext context, int index) => itemOfList(context,cubit.searchExercise?.data,index),
                       childCount: cubit.searchExercise?.data?.length,
                     ),
                   ),
@@ -128,12 +131,15 @@ class ExerciseOfCategory extends StatelessWidget{
         ),
         child: Column(
           children: [
-            Image.asset('assets/images/test.png'),
+            Image.network('${model[index].coverImage}'),
+            verticalSpace(7),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.w),
               child: Text(
                 model[index].name,
                 style:TextStyles.font13White700,
+                overflow: TextOverflow.fade,
+                maxLines: 2,
               ),
             ),
           ],

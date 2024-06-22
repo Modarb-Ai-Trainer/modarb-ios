@@ -22,6 +22,7 @@ class WorkoutProgramEnroll extends StatelessWidget{
       builder: (context,state){
         var cubit = context.read<WorkoutCubit>();
         return Scaffold(
+          appBar: AppBar(),
           body: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(

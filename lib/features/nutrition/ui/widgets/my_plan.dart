@@ -15,9 +15,6 @@ class MyPlan extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
      builder: (context,state){
        final cubit = context.read<NutritionCubit>();
-       if(cubit.mealOfWeekResponse == null){
-         cubit.getMealOfWeek();
-       }
        return  CustomScrollView(
          slivers: [
            SliverToBoxAdapter(
@@ -47,7 +44,11 @@ class MyPlan extends StatelessWidget{
                ],
              ),
            ),
-           if(cubit.mealOfWeekResponse != null)
+           if(cubit.mealOfWeekResponse == null)
+             const SliverToBoxAdapter(
+               child: Center(child: CircularProgressIndicator()),
+             ),
+             if(cubit.mealOfWeekResponse != null)
              SliverList(
              delegate: SliverChildBuilderDelegate((context,index) => rowOfDay(cubit,index),
                childCount: 6,

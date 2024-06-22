@@ -17,9 +17,6 @@ class CustomWorkoutTab extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
      builder: (context,state){
        var cubit = context.read<TrainerCubit>();
-       if(cubit.allTemplateResponse?.data == null) {
-         cubit.getCustomPlan();
-       }
        return Scaffold(
          body: CustomScrollView(
           slivers: [
@@ -37,6 +34,13 @@ class CustomWorkoutTab extends StatelessWidget{
                 ),
               ),
             ),
+            if(state is GetCustomPlanLoading)
+              const SliverToBoxAdapter(
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+
+              ),
             if( state is CreateCustomPlanSuccess || cubit.allTemplateResponse?.data != null)
               SliverList(
                   delegate: SliverChildBuilderDelegate(
@@ -44,13 +48,6 @@ class CustomWorkoutTab extends StatelessWidget{
               childCount: cubit.allTemplateResponse?.data.length,
 
             ),
-              ),
-            if(state is GetCustomPlanLoading)
-              const SliverToBoxAdapter(
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
-
               ),
             if(cubit.allTemplateResponse?.data == null )
               SliverToBoxAdapter(

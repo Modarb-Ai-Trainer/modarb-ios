@@ -15,10 +15,6 @@ class WorkoutProgramsTab extends StatelessWidget{
     return BlocBuilder<WorkoutCubit,WorkoutState>(
       builder: (context,state){
         var cubit = context.read<WorkoutCubit>();
-
-        if(cubit.workoutProgramResponse == null) {
-          cubit.getWorkoutPrograms();
-        }
         return Scaffold(
           body: CustomScrollView(
             slivers: [
@@ -64,7 +60,7 @@ class WorkoutProgramsTab extends StatelessWidget{
         );
       },
       child: Padding(
-        padding: EdgeInsets.all(8.h),
+        padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 10.h),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -72,7 +68,7 @@ class WorkoutProgramsTab extends StatelessWidget{
               height: 150.h,
              width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(20.r),
               ),
               child: Image.asset(
                 'assets/images/plans.png',

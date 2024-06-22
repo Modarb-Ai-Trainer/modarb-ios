@@ -18,6 +18,7 @@ class FormOfLogin extends StatelessWidget{
       builder: (context, state){
         final cubit = context.read<LoginCubit>();
         return Container(
+          height: 550.h,
           padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 35.h),
           child: Form(
             key: cubit.formKey,

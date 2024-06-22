@@ -29,27 +29,30 @@ class DetailsOfPlan extends StatelessWidget{
                   SizedBox(
                     height: 250.h,
                     width: double.infinity,
-                    child: Image.asset('assets/images/nutrition_plan.png',
-                      fit: BoxFit.cover,
+                    child: Image.network('${cubit.mealPlansResponse?.data[index].image}',
+                        fit: BoxFit.cover
+                    )
                     ),
-                  ),
                   Positioned(
                     top: 30,
                     child: IconButton(
                       onPressed: (){
                         context.pop();
                       },
-                      icon: const Icon(Icons.arrow_back,
-                        size: 30,
+                      icon: Icon(Icons.arrow_back,
+                        size: 30.sp,
+                        color: Colors.white,
                       ),
                     ),
                   ),
                   Positioned(
-                    bottom: 60.h,
+                    bottom: 40.h,
                     left: 10.h,
                     child:Text(
                       '${cubit.mealPlansResponse?.data[index].description}',
-                      style: TextStyles.font16White700,
+                      style: TextStyles.font16White700.copyWith(
+                          color: Colors.white
+                      ),
                       overflow: TextOverflow.ellipsis,
                     ),
 
@@ -62,13 +65,17 @@ class DetailsOfPlan extends StatelessWidget{
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('About the plan',style: TextStyles.font16White700,),
+                    Text('About the plan',style: TextStyles.font16White700.copyWith(
+                      color: Colors.white
+                    ),
+                    ),
                     verticalSpace(10),
                     Text('${cubit.mealPlansResponse?.data[index].description}',
                       style: TextStyles.font13White600,),
                     verticalSpace(20),
-
-                    Text('Your Journey :',style: TextStyles.font16White700,),
+                    Text('Your Journey :',style: TextStyles.font16White700.copyWith(
+                        color: Colors.white
+                    ),),
                     verticalSpace(10),
                     Text('${cubit.mealPlansResponse?.data[index].yourJourney}',
                       style: TextStyles.font13White600,),

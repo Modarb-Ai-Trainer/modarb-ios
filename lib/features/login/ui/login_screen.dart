@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget{
           'Your Personal Fitness Journey\nBegins',
           textAlign: TextAlign.center,
           style: TextStyles.font16White700.copyWith(
-            height: 1.4,
+            height: 1.4.h,
             decoration: TextDecoration.none,
           ),
         ),
@@ -41,15 +41,13 @@ class LoginScreen extends StatelessWidget{
           bottom: 120.h,
           right: 15.h,
           left: 15.h,
-          child: const HorizontalLine(
+          child: HorizontalLine(
             text: 'Already a user ?',
-            height: 10,
+            height: 10.h,
           ),
          ),
         Positioned(
           bottom: 90.h,
-          // right: 50.h,
-          // left: 50.h,
           child: const TextAndBottomSheet(),
         ),
       ],

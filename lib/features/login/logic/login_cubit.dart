@@ -39,7 +39,6 @@ class LoginCubit extends Cubit<LoginState> {
       String? userToken = loginResponse?.data?.token;
       if (userToken != null) {
         await saveUserToken(userToken);
-
       }
 
       emit(LoginState.success(loginResponse!));

@@ -38,13 +38,13 @@ class ModarbApp extends StatelessWidget{
           create: (context) => getIt<HomeCubit>(),
           ),
           BlocProvider(
-          create: (context) => getIt<TrainerCubit>()..getWorkoutData(),
+          create: (context) => getIt<TrainerCubit>()..getWorkoutData()..getCustomPlan(),
           ),
           BlocProvider(
-          create: (context) => getIt<WorkoutCubit>(),
+          create: (context) => getIt<WorkoutCubit>()..getWorkoutPrograms(),
           ),
           BlocProvider(
-          create: (context) => getIt<NutritionCubit>()..getTodayIntake()..getDailyGoals(),
+          create: (context) => getIt<NutritionCubit>()..getTodayIntake()..getDailyGoals()..getMealOfWeek(),
           ),
         ],
         child: MaterialApp(
@@ -66,8 +66,8 @@ class ModarbApp extends StatelessWidget{
             ),
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: userToken != null ?  Routes.homePage : Routes.firstSplash,
-          // initialRoute: Routes.firstSplash,
+          // initialRoute: userToken != null ?  Routes.homePage : Routes.firstSplash,
+          initialRoute: Routes.firstSplash,
           onGenerateRoute: appRouter.generateRoute,
         ),
       ),

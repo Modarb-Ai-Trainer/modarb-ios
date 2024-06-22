@@ -84,6 +84,7 @@ class LoginBlocListener extends StatelessWidget {
           duration: const Duration(seconds: 5),
         ),
       );
+
       context.pop();
       context.pushNamedAndRemoveUntil(Routes.homePage, predicate: (Route<dynamic> route) => false);
     }else{

@@ -27,7 +27,6 @@ class ExerciseInDetails extends StatelessWidget{
               toolbarHeight: 80.h,
               title: Text(
                 '${model?[index].name}',
-                // '${listOfExercise?[index!].name}',
                 style: TextStyles.font19White700,
               ),
             ),
@@ -37,8 +36,8 @@ class ExerciseInDetails extends StatelessWidget{
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    child: Image.asset(
-                      'assets/images/MusclesWorked.png',
+                    child: Image.network(
+                      '${model?[index].coverImage}',
                       fit: BoxFit.fill,
                     ),
                   ),

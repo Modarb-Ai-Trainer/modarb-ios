@@ -44,15 +44,19 @@ class OtherPlans extends StatelessWidget{
                     child: Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset('assets/images/nutrition_plan.png'),
+                          padding: EdgeInsets.all(15.h),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                              child: Image.network('${cubit.mealPlansResponse?.data[index].image}',)),
                         ),
                         Positioned(
                           bottom: 30.h,
                           left: 20.h,
                           child: Text(
                             '${cubit.mealPlansResponse?.data[index].description}',
-                            style: TextStyles.font16White700,
+                            style: TextStyles.font16White700.copyWith(
+                                color: Colors.white
+                            ),
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),

@@ -56,9 +56,7 @@ class ExerciseLibraryTab extends StatelessWidget{
             'nameOfCategory': list[index],
           }
       );
-
-
-
+      cubit.getExerciseByCategory(list[index]);
     },
     child: Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),

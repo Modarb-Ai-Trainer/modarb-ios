@@ -26,9 +26,9 @@ class TargetTab extends StatelessWidget{
               padding: EdgeInsets.symmetric (horizontal: 10.w, vertical: 15.h),
               child: Container(
                 width: double.infinity,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: ColorsManager.lighterGray,
-                  borderRadius: BorderRadius.all(Radius.circular(16.0),),
+                  borderRadius: BorderRadius.all(Radius.circular(16.r),),
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
@@ -68,8 +68,6 @@ class TargetTab extends StatelessWidget{
                               ),
                             ],
                           ),
-
-
                         ],
                       ),
                       verticalSpace(30),
