@@ -4,12 +4,15 @@ class ApiConstants{
   static const String register = "auth/register";
   static const String login = "auth/login";
   static const String homePage = "homePage";
+
   static const String myWorkoutsWithId = "myWorkouts/{id}";
   static const String workouts = "workouts";
   static const String myWorkouts = "myWorkouts";
+  static const String myWorkoutsProgress = "myWorkouts";
   static const String allExercise = "exercises";
   static const String exercisesSearch = "exercises/search";
   static const String templates = "templates";
+
   static const String todayIntake = "nutri-guide/todays-intake";
   static const String todayMeal = "nutri-guide/today-meals";
   static const String dailyGoals = "nutri-guide/daily-goals";

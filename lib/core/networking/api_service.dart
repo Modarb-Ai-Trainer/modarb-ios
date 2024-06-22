@@ -4,6 +4,7 @@ import 'package:modarb_app/features/login/data/models/login_request_body.dart';
 import 'package:modarb_app/features/login/data/models/login_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/progress_of_workout_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 import 'package:modarb_app/features/nutrition/data/models/daily_goals_response.dart';
@@ -32,6 +33,8 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
+
+  /// Auth
   @POST(ApiConstants.register)
   Future<RegisterResponse> register(
       @Body() RegisterRequestBody registerRequestBody,
@@ -47,8 +50,18 @@ abstract class ApiService {
   @GET(ApiConstants.homePage)
   Future<HomeResponse> getHome();
 
+
+  /// Workouts
   @GET(ApiConstants.myWorkoutsWithId)
   Future<WorkoutResponse> getWorkout(@Path("id") String workoutId);
+
+
+ @PATCH(ApiConstants.myWorkoutsProgress)
+  Future<ProgressOfWorkoutResponse> workoutProgress(
+     @Path("id") String workoutId,
+     @Path("week") int week,
+     @Path("day") int day,
+     );
 
   @GET(ApiConstants.workouts)
   Future<WorkoutProgramResponse> getWorkoutPrograms();
@@ -81,6 +94,8 @@ abstract class ApiService {
   @GET(ApiConstants.templates)
   Future<AllTemplateResponse> getCustomPlan();
 
+
+  /// Nutrition
   @GET(ApiConstants.todayIntake)
   Future<TodayIntakeResponse> getTodayIntake();
 
@@ -107,7 +122,6 @@ abstract class ApiService {
   Future<EnrollMealPlansResponse> enrollMealPlan(
       @Body() EnrollMealPlansRequestBody ?enrollMealPlansRequestBody ,
       );
-
 
   @GET(ApiConstants.myMealPlanOfWeek)
   Future<MealOfWeekResponse> getMealOfWeek();

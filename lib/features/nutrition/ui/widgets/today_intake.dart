@@ -21,6 +21,16 @@ class TodayIntake extends StatelessWidget{
             (cubit.todayIntakeResponse?.data?.caloriesGoal ?? 1);
         final num remaining = (cubit.todayIntakeResponse?.data?.caloriesGoal ?? 0) -
             (cubit.todayIntakeResponse?.data?.caloriesBurned ?? 0);
+
+        double carbsConsumed = cubit.todayIntakeResponse?.data?.carbsConsumed?.toDouble() ?? 0.0;
+        double carbsGoal = cubit.todayIntakeResponse?.data?.carbsGoal?.toDouble() ?? 0.0;
+
+        double proteinConsumed = cubit.todayIntakeResponse?.data?.proteinConsumed?.toDouble() ?? 0.0;
+        double proteinGoal = cubit.todayIntakeResponse?.data?.proteinGoal?.toDouble() ?? 0.0;
+
+        double fatConsumed = cubit.todayIntakeResponse?.data?.fatConsumed?.toDouble() ?? 0.0;
+        double fatGoal = cubit.todayIntakeResponse?.data?.fatGoal?.toDouble() ?? 0.0;
+
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -74,7 +84,7 @@ class TodayIntake extends StatelessWidget{
                             style: TextStyles.font13White700,
                           ),
                           Text(
-                            '$remaining',
+                            '${cubit.todayIntakeResponse?.data?.caloriesIntake?.toInt() ?? 0.0}',
                             style: TextStyles.font16White700,
                           ),
                           Text(
@@ -92,20 +102,20 @@ class TodayIntake extends StatelessWidget{
                   child: Column(
                     children: [
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.carbsConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.carbsGoal?.toDouble() ?? 0.0,
+                        value:  carbsConsumed > carbsGoal ? carbsGoal : carbsConsumed,
+                        all:  carbsGoal,
                         onChanged: (value) {},
                         labelText: 'Carbs',
                       ),
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.proteinConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.proteinGoal?.toDouble() ?? 0.0,
+                        value:  proteinConsumed > proteinGoal ? proteinGoal : proteinConsumed,
+                        all: proteinGoal,
                         onChanged: (value) {},
                         labelText: 'Protein ',
                       ),
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.fatConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.fatGoal?.toDouble() ?? 0.0,
+                        value: fatConsumed > fatGoal ? fatGoal : fatConsumed,
+                        all: fatGoal ,
                         onChanged: (value) {},
                         labelText: 'Fats',
                       ),

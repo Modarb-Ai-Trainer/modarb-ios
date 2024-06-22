@@ -191,8 +191,8 @@ class NutritionCubit extends Cubit<NutritionState> {
     try {
       dailyGoalsResponse = await _nutritionRepo.getDailyGoals();
       if(dailyGoalsResponse?.data != null){
-       currentWater = dailyGoalsResponse?.data?.waterConsumed ?? 0;
-       newCurrentWater = dailyGoalsResponse?.data?.waterConsumed ?? 0;
+       currentWater = dailyGoalsResponse?.data?.waterConsumed?.toInt() ?? 0;
+       newCurrentWater = dailyGoalsResponse?.data?.waterConsumed?.toInt() ?? 0;
       }
 
       emit(NutritionState.getDailyGoalsSuccess(dailyGoalsResponse));

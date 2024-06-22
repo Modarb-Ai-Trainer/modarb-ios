@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/progress_of_workout_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
 part 'trainer_states.freezed.dart';
@@ -12,8 +13,7 @@ class TrainerState <T> with _$TrainerState<T> {
 
   const factory TrainerState.initial() = _Initial;
 
-  // const factory TrainerState.counterChange({required int savedCounter}) = CounterChange;
-  // const factory TrainerState.counterChangeOfWarming({required int newCounter}) = CounterChangeOfWarming;
+
   const factory TrainerState.closingTraining() = ClosingTraining;
 
   const factory TrainerState.startExercise() = StartExercise;
@@ -26,6 +26,10 @@ class TrainerState <T> with _$TrainerState<T> {
   const factory TrainerState.workoutLoading() = WorkoutLoading;
   const factory TrainerState.workoutSuccess(WorkoutResponse workoutResponse) = WorkoutSuccess;
   const factory TrainerState.workoutError() = WorkoutError;
+
+  const factory TrainerState.workoutProgressLoading() = WorkoutProgressLoading;
+  const factory TrainerState.workoutProgressSuccess(ProgressOfWorkoutResponse ?progressOfWorkoutResponse) = WorkoutProgressSuccess;
+  const factory TrainerState.workoutProgressError() = WorkoutProgressError;
 
 
   const factory TrainerState.getExerciseLoading() = GetExerciseLoading;

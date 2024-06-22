@@ -79,7 +79,6 @@ class TodayWorkoutWidget extends StatelessWidget{
                       buttonHeight: 30.h,
                       colorOfSide: ColorsManager.mainPurple,
                       backgroundColor: Colors.transparent,
-                      // backgroundColor: ColorsManager.lighterWhite,
                       textColor: ColorsManager.mainPurple,
                       onPressed: (){
                         context.pushNamed(

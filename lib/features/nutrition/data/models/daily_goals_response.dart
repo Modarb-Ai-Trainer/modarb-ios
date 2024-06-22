@@ -37,14 +37,14 @@ class Data {
     required this.sleepDone,
   });
 
-  final int? waterGoal;
-  final int? waterConsumed;
-  final int? stepsGoal;
-  final int? stepsDone;
-  final int? exercisesCals;
-  final int? exercisesHours;
-  final int? sleepGoal;
-  final int? sleepDone;
+  final num? waterGoal;
+  final num? waterConsumed;
+  final num? stepsGoal;
+  final num? stepsDone;
+  final num? exercisesCals;
+  final num? exercisesHours;
+  final num? sleepGoal;
+  final num? sleepDone;
 
   factory Data.fromJson(Map<String, dynamic> json){
     return Data(

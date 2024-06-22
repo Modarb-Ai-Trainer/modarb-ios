@@ -5,7 +5,6 @@ import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
 import 'package:modarb_app/features/home/logic/home_cubit.dart';
 import 'package:modarb_app/features/home/logic/home_states.dart';
-import 'package:modarb_app/features/home/ui/widgets/container_of_weeks.dart';
 import 'package:modarb_app/features/home/ui/widgets/daily_goals.dart';
 import 'package:modarb_app/features/home/ui/widgets/daily_intake.dart';
 import 'package:modarb_app/features/home/ui/widgets/list_of_plans.dart';
@@ -54,7 +53,6 @@ class HomeScreen extends StatelessWidget{
               padding: EdgeInsets.all(16.h),
               child: const Column(
                 children: [
-                  ContainerOfWeeks(),
                   ListOfPlans(),
                   TodayWorkoutWidget( ),
                   TodayDiet(),

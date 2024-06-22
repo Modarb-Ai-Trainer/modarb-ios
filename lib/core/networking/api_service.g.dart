@@ -132,6 +132,37 @@ class _ApiService implements ApiService {
   }
 
   @override
+  Future<ProgressOfWorkoutResponse> workoutProgress(
+    String workoutId,
+    int week,
+    int day,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ProgressOfWorkoutResponse>(Options(
+      method: 'PATCH',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'myWorkouts',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ProgressOfWorkoutResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
   Future<WorkoutProgramResponse> getWorkoutPrograms() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

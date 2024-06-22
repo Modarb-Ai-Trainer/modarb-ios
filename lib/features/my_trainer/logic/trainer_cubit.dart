@@ -5,6 +5,7 @@ import 'package:modarb_app/core/helper/constant.dart';
 import 'package:modarb_app/core/networking/shared_pref_helper.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_exercise_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/all_template_response.dart';
+import 'package:modarb_app/features/my_trainer/data/models/progress_of_workout_response.dart';
 import 'package:modarb_app/features/my_trainer/data/models/templateResponse.dart';
 import 'package:modarb_app/features/my_trainer/data/models/template_request_body.dart';
 import 'package:modarb_app/features/my_trainer/data/models/workout_response_model.dart';
@@ -114,6 +115,19 @@ class TrainerCubit extends Cubit<TrainerState> {
     } catch (error) {
       print(error.toString());
       emit(const TrainerState.workoutError());
+    }
+  }
+  ProgressOfWorkoutResponse ?progressOfWorkoutResponse;
+  void workoutProgress(int week,int day) async {
+    emit(const TrainerState.workoutProgressLoading());
+    try {
+      final myWorkoutId = await SharedPrefHelper.getString(SharedPrefKeys.myWorkoutId);
+      progressOfWorkoutResponse = await _trainerRepo.workoutProgress(myWorkoutId,week,day);
+
+      emit(TrainerState.workoutProgressSuccess(progressOfWorkoutResponse!));
+    } catch (error) {
+      print(error.toString());
+      emit(const TrainerState.workoutProgressError());
     }
   }
 

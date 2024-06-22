@@ -16,10 +16,21 @@ class DailyIntake extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
     builder: (context,state) {
       final cubit = context.read<NutritionCubit>();
-      final double progressValue = (cubit.todayIntakeResponse?.data?.caloriesBurned ?? 0) /
-          (cubit.todayIntakeResponse?.data?.caloriesGoal ?? 1);
-      final num remaining = (cubit.todayIntakeResponse?.data?.caloriesGoal ?? 0) -
-          (cubit.todayIntakeResponse?.data?.caloriesBurned ?? 0);
+      final double progressValue = (cubit.todayIntakeResponse?.data?.caloriesBurned?.toInt() ?? 0) /
+          (cubit.todayIntakeResponse?.data?.caloriesGoal?.toInt() ?? 1);
+      final num remaining = (cubit.todayIntakeResponse?.data?.caloriesGoal?.toInt() ?? 0) -
+          (cubit.todayIntakeResponse?.data?.caloriesBurned?.toInt() ?? 0);
+
+      double carbsConsumed = cubit.todayIntakeResponse?.data?.carbsConsumed?.toDouble() ?? 0.0;
+      double carbsGoal = cubit.todayIntakeResponse?.data?.carbsGoal?.toDouble() ?? 0.0;
+
+      double proteinConsumed = cubit.todayIntakeResponse?.data?.proteinConsumed?.toDouble() ?? 0.0;
+      double proteinGoal = cubit.todayIntakeResponse?.data?.proteinGoal?.toDouble() ?? 0.0;
+
+      double fatConsumed = cubit.todayIntakeResponse?.data?.fatConsumed?.toDouble() ?? 0.0;
+      double fatGoal = cubit.todayIntakeResponse?.data?.fatGoal?.toDouble() ?? 0.0;
+
+
       return Padding(
         padding: EdgeInsets.symmetric(vertical: 20.h),
         child: Column(
@@ -47,7 +58,7 @@ class DailyIntake extends StatelessWidget{
                   child: Row(
                     children: [
                       Text(
-                        '${cubit.todayIntakeResponse?.data?.caloriesLeft} \nleft ',
+                        '${cubit.todayIntakeResponse?.data?.caloriesLeft?.toInt()} \nleft ',
                         style: TextStyles.font16White700,
                       ),
                       horizontalSpace(30),
@@ -80,7 +91,7 @@ class DailyIntake extends StatelessWidget{
                                 style: TextStyles.font13White700,
                               ),
                               Text(
-                                '$remaining',
+                                '${cubit.todayIntakeResponse?.data?.caloriesIntake?.toInt() ?? 0.0}',
                                 style: TextStyles.font16White700,
                               ),
                               Text(
@@ -93,7 +104,7 @@ class DailyIntake extends StatelessWidget{
                       ),
                       horizontalSpace(30),
                       Text(
-                        '${cubit.todayIntakeResponse?.data?.caloriesBurned} \nburned ',
+                        '${cubit.todayIntakeResponse?.data?.caloriesBurned?.toInt()} \nburned ',
                         style: TextStyles.font16White700,
                       ),
                     ],
@@ -106,20 +117,20 @@ class DailyIntake extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.carbsConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.carbsGoal?.toDouble() ?? 0.0,
+                        value:  carbsConsumed > carbsGoal ? carbsGoal : carbsConsumed,
+                        all:  carbsGoal,
                         onChanged: (value) {},
                         labelText: 'Carbs',
                       ),
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.proteinConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.proteinGoal?.toDouble() ?? 0.0,
+                        value:  proteinConsumed > proteinGoal ? proteinGoal : proteinConsumed,
+                        all: proteinGoal,
                         onChanged: (value) {},
                         labelText: 'Protein ',
                       ),
                       BuildSliderWithText(
-                        value: cubit.todayIntakeResponse?.data?.fatConsumed?.toDouble() ?? 0.0,
-                        all: cubit.todayIntakeResponse?.data?.fatGoal?.toDouble() ?? 0.0,
+                        value: fatConsumed > fatGoal ? fatGoal : fatConsumed,
+                        all: fatGoal ,
                         onChanged: (value) {},
                         labelText: 'Fats',
                       ),

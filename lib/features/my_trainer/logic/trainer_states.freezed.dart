@@ -27,6 +27,11 @@ mixin _$TrainerState<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -57,6 +62,10 @@ mixin _$TrainerState<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -87,6 +96,10 @@ mixin _$TrainerState<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -119,6 +132,12 @@ mixin _$TrainerState<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -154,6 +173,9 @@ mixin _$TrainerState<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -184,6 +206,9 @@ mixin _$TrainerState<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -269,6 +294,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -302,6 +332,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -335,6 +369,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -373,6 +411,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -411,6 +455,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -444,6 +491,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -519,6 +569,11 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -552,6 +607,10 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -585,6 +644,10 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -623,6 +686,12 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -661,6 +730,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -694,6 +766,9 @@ class _$ClosingTrainingImpl<T> implements ClosingTraining<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -769,6 +844,11 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -802,6 +882,10 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -835,6 +919,10 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -873,6 +961,12 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -911,6 +1005,9 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -944,6 +1041,9 @@ class _$StartExerciseImpl<T> implements StartExercise<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -1050,6 +1150,11 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -1083,6 +1188,10 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1116,6 +1225,10 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1154,6 +1267,12 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -1192,6 +1311,9 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -1225,6 +1347,9 @@ class _$CounterChangeOfExerciseImpl<T> implements CounterChangeOfExercise<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -1307,6 +1432,11 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -1340,6 +1470,10 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1373,6 +1507,10 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1411,6 +1549,12 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -1449,6 +1593,9 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -1482,6 +1629,9 @@ class _$ExerciseFinishedImpl<T> implements ExerciseFinished<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -1585,6 +1735,11 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -1618,6 +1773,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1651,6 +1810,10 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1689,6 +1852,12 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -1727,6 +1896,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -1760,6 +1932,9 @@ class _$ChangeSelectionImpl<T> implements ChangeSelection<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -1841,6 +2016,11 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -1874,6 +2054,10 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1907,6 +2091,10 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -1945,6 +2133,12 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -1983,6 +2177,9 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -2016,6 +2213,9 @@ class _$WorkoutLoadingImpl<T> implements WorkoutLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -2119,6 +2319,11 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -2152,6 +2357,10 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2185,6 +2394,10 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2223,6 +2436,12 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -2261,6 +2480,9 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -2294,6 +2516,9 @@ class _$WorkoutSuccessImpl<T> implements WorkoutSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -2375,6 +2600,11 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -2408,6 +2638,10 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2441,6 +2675,10 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2479,6 +2717,12 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -2517,6 +2761,9 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -2550,6 +2797,9 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -2576,6 +2826,874 @@ class _$WorkoutErrorImpl<T> implements WorkoutError<T> {
 
 abstract class WorkoutError<T> implements TrainerState<T> {
   const factory WorkoutError() = _$WorkoutErrorImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgressLoadingImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgressLoadingImplCopyWith(
+          _$WorkoutProgressLoadingImpl<T> value,
+          $Res Function(_$WorkoutProgressLoadingImpl<T>) then) =
+      __$$WorkoutProgressLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutProgressLoadingImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutProgressLoadingImpl<T>>
+    implements _$$WorkoutProgressLoadingImplCopyWith<T, $Res> {
+  __$$WorkoutProgressLoadingImplCopyWithImpl(
+      _$WorkoutProgressLoadingImpl<T> _value,
+      $Res Function(_$WorkoutProgressLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutProgressLoadingImpl<T> implements WorkoutProgressLoading<T> {
+  const _$WorkoutProgressLoadingImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutProgressLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgressLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() closingTraining,
+    required TResult Function() startExercise,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+  }) {
+    return workoutProgressLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? closingTraining,
+    TResult? Function()? startExercise,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+  }) {
+    return workoutProgressLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? closingTraining,
+    TResult Function()? startExercise,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressLoading != null) {
+      return workoutProgressLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(StartExercise<T> value) startExercise,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+  }) {
+    return workoutProgressLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(StartExercise<T> value)? startExercise,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+  }) {
+    return workoutProgressLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(StartExercise<T> value)? startExercise,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressLoading != null) {
+      return workoutProgressLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgressLoading<T> implements TrainerState<T> {
+  const factory WorkoutProgressLoading() = _$WorkoutProgressLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgressSuccessImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgressSuccessImplCopyWith(
+          _$WorkoutProgressSuccessImpl<T> value,
+          $Res Function(_$WorkoutProgressSuccessImpl<T>) then) =
+      __$$WorkoutProgressSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({ProgressOfWorkoutResponse? progressOfWorkoutResponse});
+}
+
+/// @nodoc
+class __$$WorkoutProgressSuccessImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutProgressSuccessImpl<T>>
+    implements _$$WorkoutProgressSuccessImplCopyWith<T, $Res> {
+  __$$WorkoutProgressSuccessImplCopyWithImpl(
+      _$WorkoutProgressSuccessImpl<T> _value,
+      $Res Function(_$WorkoutProgressSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? progressOfWorkoutResponse = freezed,
+  }) {
+    return _then(_$WorkoutProgressSuccessImpl<T>(
+      freezed == progressOfWorkoutResponse
+          ? _value.progressOfWorkoutResponse
+          : progressOfWorkoutResponse // ignore: cast_nullable_to_non_nullable
+              as ProgressOfWorkoutResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkoutProgressSuccessImpl<T> implements WorkoutProgressSuccess<T> {
+  const _$WorkoutProgressSuccessImpl(this.progressOfWorkoutResponse);
+
+  @override
+  final ProgressOfWorkoutResponse? progressOfWorkoutResponse;
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutProgressSuccess(progressOfWorkoutResponse: $progressOfWorkoutResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgressSuccessImpl<T> &&
+            (identical(other.progressOfWorkoutResponse,
+                    progressOfWorkoutResponse) ||
+                other.progressOfWorkoutResponse == progressOfWorkoutResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, progressOfWorkoutResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkoutProgressSuccessImplCopyWith<T, _$WorkoutProgressSuccessImpl<T>>
+      get copyWith => __$$WorkoutProgressSuccessImplCopyWithImpl<T,
+          _$WorkoutProgressSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() closingTraining,
+    required TResult Function() startExercise,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+  }) {
+    return workoutProgressSuccess(progressOfWorkoutResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? closingTraining,
+    TResult? Function()? startExercise,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+  }) {
+    return workoutProgressSuccess?.call(progressOfWorkoutResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? closingTraining,
+    TResult Function()? startExercise,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressSuccess != null) {
+      return workoutProgressSuccess(progressOfWorkoutResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(StartExercise<T> value) startExercise,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+  }) {
+    return workoutProgressSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(StartExercise<T> value)? startExercise,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+  }) {
+    return workoutProgressSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(StartExercise<T> value)? startExercise,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressSuccess != null) {
+      return workoutProgressSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgressSuccess<T> implements TrainerState<T> {
+  const factory WorkoutProgressSuccess(
+          final ProgressOfWorkoutResponse? progressOfWorkoutResponse) =
+      _$WorkoutProgressSuccessImpl<T>;
+
+  ProgressOfWorkoutResponse? get progressOfWorkoutResponse;
+  @JsonKey(ignore: true)
+  _$$WorkoutProgressSuccessImplCopyWith<T, _$WorkoutProgressSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkoutProgressErrorImplCopyWith<T, $Res> {
+  factory _$$WorkoutProgressErrorImplCopyWith(
+          _$WorkoutProgressErrorImpl<T> value,
+          $Res Function(_$WorkoutProgressErrorImpl<T>) then) =
+      __$$WorkoutProgressErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$WorkoutProgressErrorImplCopyWithImpl<T, $Res>
+    extends _$TrainerStateCopyWithImpl<T, $Res, _$WorkoutProgressErrorImpl<T>>
+    implements _$$WorkoutProgressErrorImplCopyWith<T, $Res> {
+  __$$WorkoutProgressErrorImplCopyWithImpl(_$WorkoutProgressErrorImpl<T> _value,
+      $Res Function(_$WorkoutProgressErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WorkoutProgressErrorImpl<T> implements WorkoutProgressError<T> {
+  const _$WorkoutProgressErrorImpl();
+
+  @override
+  String toString() {
+    return 'TrainerState<$T>.workoutProgressError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkoutProgressErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() closingTraining,
+    required TResult Function() startExercise,
+    required TResult Function(int exerciseTime) counterChangeOfExercise,
+    required TResult Function() exerciseFinished,
+    required TResult Function(String? newSelect) changeSelection,
+    required TResult Function() workoutLoading,
+    required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
+    required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
+    required TResult Function() getExerciseLoading,
+    required TResult Function(AllExerciseResponse allExerciseResponse)
+        getExerciseSuccess,
+    required TResult Function() getExerciseError,
+    required TResult Function() getSearchExerciseLoading,
+    required TResult Function(AllExerciseResponse searchExercise)
+        getSearchExerciseSuccess,
+    required TResult Function() getSearchExerciseError,
+    required TResult Function() createCustomPlanLoading,
+    required TResult Function(TemplateResponse templateResponse)
+        createCustomPlanSuccess,
+    required TResult Function() createCustomPlanError,
+    required TResult Function() getCustomPlanLoading,
+    required TResult Function(AllTemplateResponse allTemplateResponse)
+        getCustomPlanSuccess,
+    required TResult Function() getCustomPlanError,
+    required TResult Function(List<String> exercises) exerciseUpdated,
+  }) {
+    return workoutProgressError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? closingTraining,
+    TResult? Function()? startExercise,
+    TResult? Function(int exerciseTime)? counterChangeOfExercise,
+    TResult? Function()? exerciseFinished,
+    TResult? Function(String? newSelect)? changeSelection,
+    TResult? Function()? workoutLoading,
+    TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
+    TResult? Function()? getExerciseLoading,
+    TResult? Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult? Function()? getExerciseError,
+    TResult? Function()? getSearchExerciseLoading,
+    TResult? Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult? Function()? getSearchExerciseError,
+    TResult? Function()? createCustomPlanLoading,
+    TResult? Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult? Function()? createCustomPlanError,
+    TResult? Function()? getCustomPlanLoading,
+    TResult? Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult? Function()? getCustomPlanError,
+    TResult? Function(List<String> exercises)? exerciseUpdated,
+  }) {
+    return workoutProgressError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? closingTraining,
+    TResult Function()? startExercise,
+    TResult Function(int exerciseTime)? counterChangeOfExercise,
+    TResult Function()? exerciseFinished,
+    TResult Function(String? newSelect)? changeSelection,
+    TResult Function()? workoutLoading,
+    TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
+    TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
+    TResult Function()? getExerciseLoading,
+    TResult Function(AllExerciseResponse allExerciseResponse)?
+        getExerciseSuccess,
+    TResult Function()? getExerciseError,
+    TResult Function()? getSearchExerciseLoading,
+    TResult Function(AllExerciseResponse searchExercise)?
+        getSearchExerciseSuccess,
+    TResult Function()? getSearchExerciseError,
+    TResult Function()? createCustomPlanLoading,
+    TResult Function(TemplateResponse templateResponse)?
+        createCustomPlanSuccess,
+    TResult Function()? createCustomPlanError,
+    TResult Function()? getCustomPlanLoading,
+    TResult Function(AllTemplateResponse allTemplateResponse)?
+        getCustomPlanSuccess,
+    TResult Function()? getCustomPlanError,
+    TResult Function(List<String> exercises)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressError != null) {
+      return workoutProgressError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ClosingTraining<T> value) closingTraining,
+    required TResult Function(StartExercise<T> value) startExercise,
+    required TResult Function(CounterChangeOfExercise<T> value)
+        counterChangeOfExercise,
+    required TResult Function(ExerciseFinished<T> value) exerciseFinished,
+    required TResult Function(ChangeSelection<T> value) changeSelection,
+    required TResult Function(WorkoutLoading<T> value) workoutLoading,
+    required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
+    required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
+    required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
+    required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
+    required TResult Function(GetExerciseError<T> value) getExerciseError,
+    required TResult Function(GetSearchExerciseLoading<T> value)
+        getSearchExerciseLoading,
+    required TResult Function(GetSearchExerciseSuccess<T> value)
+        getSearchExerciseSuccess,
+    required TResult Function(GetSearchExerciseError<T> value)
+        getSearchExerciseError,
+    required TResult Function(CreateCustomPlanLoading<T> value)
+        createCustomPlanLoading,
+    required TResult Function(CreateCustomPlanSuccess<T> value)
+        createCustomPlanSuccess,
+    required TResult Function(CreateCustomPlanError<T> value)
+        createCustomPlanError,
+    required TResult Function(GetCustomPlanLoading<T> value)
+        getCustomPlanLoading,
+    required TResult Function(GetCustomPlanSuccess<T> value)
+        getCustomPlanSuccess,
+    required TResult Function(GetCustomPlanError<T> value) getCustomPlanError,
+    required TResult Function(ExerciseUpdated<T> value) exerciseUpdated,
+  }) {
+    return workoutProgressError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ClosingTraining<T> value)? closingTraining,
+    TResult? Function(StartExercise<T> value)? startExercise,
+    TResult? Function(CounterChangeOfExercise<T> value)?
+        counterChangeOfExercise,
+    TResult? Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult? Function(ChangeSelection<T> value)? changeSelection,
+    TResult? Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult? Function(GetExerciseError<T> value)? getExerciseError,
+    TResult? Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult? Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult? Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult? Function(CreateCustomPlanLoading<T> value)?
+        createCustomPlanLoading,
+    TResult? Function(CreateCustomPlanSuccess<T> value)?
+        createCustomPlanSuccess,
+    TResult? Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult? Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult? Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult? Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult? Function(ExerciseUpdated<T> value)? exerciseUpdated,
+  }) {
+    return workoutProgressError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ClosingTraining<T> value)? closingTraining,
+    TResult Function(StartExercise<T> value)? startExercise,
+    TResult Function(CounterChangeOfExercise<T> value)? counterChangeOfExercise,
+    TResult Function(ExerciseFinished<T> value)? exerciseFinished,
+    TResult Function(ChangeSelection<T> value)? changeSelection,
+    TResult Function(WorkoutLoading<T> value)? workoutLoading,
+    TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
+    TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
+    TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
+    TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
+    TResult Function(GetExerciseError<T> value)? getExerciseError,
+    TResult Function(GetSearchExerciseLoading<T> value)?
+        getSearchExerciseLoading,
+    TResult Function(GetSearchExerciseSuccess<T> value)?
+        getSearchExerciseSuccess,
+    TResult Function(GetSearchExerciseError<T> value)? getSearchExerciseError,
+    TResult Function(CreateCustomPlanLoading<T> value)? createCustomPlanLoading,
+    TResult Function(CreateCustomPlanSuccess<T> value)? createCustomPlanSuccess,
+    TResult Function(CreateCustomPlanError<T> value)? createCustomPlanError,
+    TResult Function(GetCustomPlanLoading<T> value)? getCustomPlanLoading,
+    TResult Function(GetCustomPlanSuccess<T> value)? getCustomPlanSuccess,
+    TResult Function(GetCustomPlanError<T> value)? getCustomPlanError,
+    TResult Function(ExerciseUpdated<T> value)? exerciseUpdated,
+    required TResult orElse(),
+  }) {
+    if (workoutProgressError != null) {
+      return workoutProgressError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WorkoutProgressError<T> implements TrainerState<T> {
+  const factory WorkoutProgressError() = _$WorkoutProgressErrorImpl<T>;
 }
 
 /// @nodoc
@@ -2626,6 +3744,11 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -2659,6 +3782,10 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2692,6 +3819,10 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2730,6 +3861,12 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -2768,6 +3905,9 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -2801,6 +3941,9 @@ class _$GetExerciseLoadingImpl<T> implements GetExerciseLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -2904,6 +4047,11 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -2937,6 +4085,10 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -2970,6 +4122,10 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3008,6 +4164,12 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -3046,6 +4208,9 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -3079,6 +4244,9 @@ class _$GetExerciseSuccessImpl<T> implements GetExerciseSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -3162,6 +4330,11 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -3195,6 +4368,10 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3228,6 +4405,10 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3266,6 +4447,12 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -3304,6 +4491,9 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -3337,6 +4527,9 @@ class _$GetExerciseErrorImpl<T> implements GetExerciseError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -3416,6 +4609,11 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -3449,6 +4647,10 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3482,6 +4684,10 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3520,6 +4726,12 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -3558,6 +4770,9 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -3591,6 +4806,9 @@ class _$GetSearchExerciseLoadingImpl<T> implements GetSearchExerciseLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -3697,6 +4915,11 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -3730,6 +4953,10 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3763,6 +4990,10 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -3801,6 +5032,12 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -3839,6 +5076,9 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -3872,6 +5112,9 @@ class _$GetSearchExerciseSuccessImpl<T> implements GetSearchExerciseSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -3957,6 +5200,11 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -3990,6 +5238,10 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4023,6 +5275,10 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4061,6 +5317,12 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -4099,6 +5361,9 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -4132,6 +5397,9 @@ class _$GetSearchExerciseErrorImpl<T> implements GetSearchExerciseError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -4211,6 +5479,11 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -4244,6 +5517,10 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4277,6 +5554,10 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4315,6 +5596,12 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -4353,6 +5640,9 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -4386,6 +5676,9 @@ class _$CreateCustomPlanLoadingImpl<T> implements CreateCustomPlanLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -4492,6 +5785,11 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -4525,6 +5823,10 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4558,6 +5860,10 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4596,6 +5902,12 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -4634,6 +5946,9 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -4667,6 +5982,9 @@ class _$CreateCustomPlanSuccessImpl<T> implements CreateCustomPlanSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -4752,6 +6070,11 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -4785,6 +6108,10 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4818,6 +6145,10 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -4856,6 +6187,12 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -4894,6 +6231,9 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -4927,6 +6267,9 @@ class _$CreateCustomPlanErrorImpl<T> implements CreateCustomPlanError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -5004,6 +6347,11 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -5037,6 +6385,10 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5070,6 +6422,10 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5108,6 +6464,12 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -5146,6 +6508,9 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -5179,6 +6544,9 @@ class _$GetCustomPlanLoadingImpl<T> implements GetCustomPlanLoading<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -5283,6 +6651,11 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -5316,6 +6689,10 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5349,6 +6726,10 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5387,6 +6768,12 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -5425,6 +6812,9 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -5458,6 +6848,9 @@ class _$GetCustomPlanSuccessImpl<T> implements GetCustomPlanSuccess<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -5541,6 +6934,11 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -5574,6 +6972,10 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5607,6 +7009,10 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5645,6 +7051,12 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -5683,6 +7095,9 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -5716,6 +7131,9 @@ class _$GetCustomPlanErrorImpl<T> implements GetCustomPlanError<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,
@@ -5826,6 +7244,11 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     required TResult Function() workoutLoading,
     required TResult Function(WorkoutResponse workoutResponse) workoutSuccess,
     required TResult Function() workoutError,
+    required TResult Function() workoutProgressLoading,
+    required TResult Function(
+            ProgressOfWorkoutResponse? progressOfWorkoutResponse)
+        workoutProgressSuccess,
+    required TResult Function() workoutProgressError,
     required TResult Function() getExerciseLoading,
     required TResult Function(AllExerciseResponse allExerciseResponse)
         getExerciseSuccess,
@@ -5859,6 +7282,10 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function()? workoutLoading,
     TResult? Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult? Function()? workoutError,
+    TResult? Function()? workoutProgressLoading,
+    TResult? Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult? Function()? workoutProgressError,
     TResult? Function()? getExerciseLoading,
     TResult? Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5892,6 +7319,10 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function()? workoutLoading,
     TResult Function(WorkoutResponse workoutResponse)? workoutSuccess,
     TResult Function()? workoutError,
+    TResult Function()? workoutProgressLoading,
+    TResult Function(ProgressOfWorkoutResponse? progressOfWorkoutResponse)?
+        workoutProgressSuccess,
+    TResult Function()? workoutProgressError,
     TResult Function()? getExerciseLoading,
     TResult Function(AllExerciseResponse allExerciseResponse)?
         getExerciseSuccess,
@@ -5930,6 +7361,12 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     required TResult Function(WorkoutLoading<T> value) workoutLoading,
     required TResult Function(WorkoutSuccess<T> value) workoutSuccess,
     required TResult Function(WorkoutError<T> value) workoutError,
+    required TResult Function(WorkoutProgressLoading<T> value)
+        workoutProgressLoading,
+    required TResult Function(WorkoutProgressSuccess<T> value)
+        workoutProgressSuccess,
+    required TResult Function(WorkoutProgressError<T> value)
+        workoutProgressError,
     required TResult Function(GetExerciseLoading<T> value) getExerciseLoading,
     required TResult Function(GetExerciseSuccess<T> value) getExerciseSuccess,
     required TResult Function(GetExerciseError<T> value) getExerciseError,
@@ -5968,6 +7405,9 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult? Function(WorkoutLoading<T> value)? workoutLoading,
     TResult? Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult? Function(WorkoutError<T> value)? workoutError,
+    TResult? Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult? Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult? Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult? Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult? Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult? Function(GetExerciseError<T> value)? getExerciseError,
@@ -6001,6 +7441,9 @@ class _$ExerciseUpdatedImpl<T> implements ExerciseUpdated<T> {
     TResult Function(WorkoutLoading<T> value)? workoutLoading,
     TResult Function(WorkoutSuccess<T> value)? workoutSuccess,
     TResult Function(WorkoutError<T> value)? workoutError,
+    TResult Function(WorkoutProgressLoading<T> value)? workoutProgressLoading,
+    TResult Function(WorkoutProgressSuccess<T> value)? workoutProgressSuccess,
+    TResult Function(WorkoutProgressError<T> value)? workoutProgressError,
     TResult Function(GetExerciseLoading<T> value)? getExerciseLoading,
     TResult Function(GetExerciseSuccess<T> value)? getExerciseSuccess,
     TResult Function(GetExerciseError<T> value)? getExerciseError,

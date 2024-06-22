@@ -72,7 +72,7 @@ class RowOfIntakedAndBurned extends StatelessWidget{
                             ),
                           ),
                         ),
-                         Text('$intaked\n Kcal'),
+                         Text('${intaked.toInt()}\n Kcal'),
                       ],
                     ),
                   ],
@@ -128,7 +128,7 @@ class RowOfIntakedAndBurned extends StatelessWidget{
                             ),
                           ),
                         ),
-                        Text('${cubit.todayIntakeResponse?.data?.caloriesBurned}\n Kcal')
+                        Text('${cubit.todayIntakeResponse?.data?.caloriesBurned?.toInt()}\n Kcal')
                       ],
                     ),
                   ],

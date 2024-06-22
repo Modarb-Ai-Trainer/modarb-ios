@@ -45,7 +45,7 @@ class BuildSliderWithText extends StatelessWidget{
             ),
           ),
           Text(
-            ' $value / $all g ',
+            ' ${value.toInt()} / ${all.toInt()} g ',
             style: TextStyles.font13White600,
           ),
         ],

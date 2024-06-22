@@ -70,11 +70,11 @@ class DailyGoals extends StatelessWidget{
                                 Column(
                                   children: [
                                     Text(
-                                      '${cubit.newCurrentWater} cl',
+                                      '${cubit.newCurrentWater.toInt()} cl',
                                       style: TextStyles.font13White700,
                                     ),
                                     Text(
-                                      '/ ${cubit.dailyGoalsResponse?.data?.waterGoal} cL',
+                                      '/ ${cubit.dailyGoalsResponse?.data?.waterGoal?.toInt()} cL',
                                       style: TextStyles.font13White700,
                                     ),
                                   ],
@@ -90,107 +90,73 @@ class DailyGoals extends StatelessWidget{
                     ],
                   ),
                   horizontalSpace(30),
-                  Column(
-                    children: [
-                      Container(
-                          width: 150.w,
-                          height: 90.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.r),
-                            color: ColorsManager.darkGray,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.5),
-                                spreadRadius: 3,
-                                blurRadius: 10,
-                                offset: const Offset(0, 3), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Steps',
-                                style: TextStyles.font19White700,
-                              ),
-                              verticalSpace(10),
-                              Text(
-                                '  ${cubit.dailyGoalsResponse?.data?.stepsDone}\n/ ${cubit.dailyGoalsResponse?.data?.stepsGoal}',
-                                style: TextStyles.font13White700,
-                              ),
-                            ],
-                          )
-
-                      ),
-                      verticalSpace(15),
-                      Container(
-                        width: 150.w,
-                        height: 90.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.r),
-                          color: ColorsManager.darkGray,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.5),
-                              spreadRadius: 3,
-                              blurRadius: 10,
-                              offset: const Offset(0, 3), // changes position of shadow
-                            ),
-                          ],
+                  Container(
+                    width: 140.w,
+                    height: 200.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.r),
+                      color: ColorsManager.darkGray,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 10,
+                          offset: const Offset(0, 3), // changes position of shadow
                         ),
-                        child: Column(
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Exercises',
+                          style: TextStyles.font19White700,
+                        ),
+                        verticalSpace(20),
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Icon(
+                              Icons.local_fire_department_sharp,
+                              color: ColorsManager.mainYellow,
+                              size: 20.sp,),
+                            horizontalSpace(5),
                             Text(
-                              'Exercises',
-                              style: TextStyles.font19White700,
+                              '${cubit.dailyGoalsResponse?.data?.exercisesCals?.toInt()}',
+                              style: TextStyles.font16White700,
                             ),
-                            verticalSpace(10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.local_fire_department_sharp,
-                                  color: ColorsManager.mainYellow,
-                                  size: 20.sp,),
-                                horizontalSpace(2),
-                                Text(
-                                  '${cubit.dailyGoalsResponse?.data?.exercisesCals?.toInt()}',
-                                  style: TextStyles.font16White700,
-                                ),
-                                horizontalSpace(5),
-                                Text(
-                                  'kcal',
-                                  style: TextStyles.font13White400,
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.alarm,
-                                  color: ColorsManager.mainYellow,
-                                  size: 20.sp,),
-                                horizontalSpace(5),
-
-                                Text(
-                                  '${cubit.dailyGoalsResponse?.data?.exercisesHours}',
-                                  style: TextStyles.font16White700,
-                                ),
-                                horizontalSpace(5),
-                                Text(
-                                  'min',
-                                  style: TextStyles.font13White400,
-                                ),
-                              ],
+                            horizontalSpace(5),
+                            Text(
+                              'kcal',
+                              style: TextStyles.font13White400,
                             ),
                           ],
                         ),
+                        verticalSpace(20),
 
-                      ),
-                    ],
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.alarm,
+                              color: ColorsManager.mainYellow,
+                              size: 20.sp,),
+                            horizontalSpace(5),
+
+                            Text(
+                              '${cubit.dailyGoalsResponse?.data?.exercisesHours?.toInt()}',
+                              style: TextStyles.font16White700,
+                            ),
+                            horizontalSpace(5),
+                            Text(
+                              'min',
+                              style: TextStyles.font13White400,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+
                   ),
                 ],
               ),

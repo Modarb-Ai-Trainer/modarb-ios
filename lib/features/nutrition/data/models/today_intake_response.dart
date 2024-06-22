@@ -30,6 +30,7 @@ class Data {
     required this.caloriesGoal,
     required this.caloriesLeft,
     required this.caloriesBurned,
+    required this.caloriesIntake,
     required this.carbsGoal,
     required this.carbsConsumed,
     required this.proteinGoal,
@@ -38,21 +39,23 @@ class Data {
     required this.fatConsumed,
   });
 
-  final int? caloriesGoal;
-  final int? caloriesLeft;
-  final int? caloriesBurned;
-  final int? carbsGoal;
-  final int? carbsConsumed;
-  final int? proteinGoal;
-  final int? proteinConsumed;
-  final int? fatGoal;
-  final int? fatConsumed;
+  final num? caloriesGoal;
+  final num? caloriesLeft;
+  final num? caloriesBurned;
+  final num? caloriesIntake;
+  final num? carbsGoal;
+  final num? carbsConsumed;
+  final num? proteinGoal;
+  final num? proteinConsumed;
+  final num? fatGoal;
+  final num? fatConsumed;
 
   factory Data.fromJson(Map<String, dynamic> json){
     return Data(
       caloriesGoal: json["caloriesGoal"],
       caloriesLeft: json["caloriesLeft"],
       caloriesBurned: json["caloriesBurned"],
+      caloriesIntake: json["caloriesIntake"],
       carbsGoal: json["carbsGoal"],
       carbsConsumed: json["carbsConsumed"],
       proteinGoal: json["proteinGoal"],
@@ -66,6 +69,7 @@ class Data {
     "caloriesGoal": caloriesGoal,
     "caloriesLeft": caloriesLeft,
     "caloriesBurned": caloriesBurned,
+    "caloriesIntake": caloriesIntake,
     "carbsGoal": carbsGoal,
     "carbsConsumed": carbsConsumed,
     "proteinGoal": proteinGoal,

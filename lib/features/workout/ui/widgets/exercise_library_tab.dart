@@ -38,7 +38,7 @@ class ExerciseLibraryTab extends StatelessWidget{
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                 ),
-                delegate: SliverChildBuilderDelegate((BuildContext context, int index) => itemOfList(context,cubit.itemsExercisesList,index,cubit),
+                delegate: SliverChildBuilderDelegate((BuildContext context, int index) => itemOfList(context,cubit.itemsExercisesList,index,cubit,cubit.imageList),
                   childCount: cubit.itemsExercisesList.length,
                 ),
               ),
@@ -49,7 +49,7 @@ class ExerciseLibraryTab extends StatelessWidget{
     );
   }
 
-  Widget itemOfList(BuildContext context, list,index,cubit) =>  GestureDetector(
+  Widget itemOfList(BuildContext context, list,index,cubit,imageList) =>  GestureDetector(
     onTap: () {
       context.pushNamed(Routes.exerciseOfCategory,
           arguments:{
@@ -67,7 +67,7 @@ class ExerciseLibraryTab extends StatelessWidget{
         ),
         child: Column(
           children: [
-            Image.asset('assets/images/test.png'),
+            Image.asset(imageList[index]),
             verticalSpace(10),
             Text(
               list[index],
