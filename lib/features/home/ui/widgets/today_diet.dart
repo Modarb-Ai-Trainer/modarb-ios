@@ -81,13 +81,11 @@ class TodayDiet extends StatelessWidget{
                       buttonText: 'view',
                       buttonWidth: 120.w,
                       buttonHeight: 30.h,
-
                       colorOfSide: ColorsManager.mainPurple,
                       backgroundColor: Colors.transparent,
                       textColor: ColorsManager.mainPurple,
                       onPressed: (){
                         context.pushNamed(Routes.nutritionScreen);
-
                       },
                     ),
                   )

@@ -32,6 +32,8 @@ class Board2 extends StatelessWidget{
                     style: TextStyles.font23White700.copyWith(
                       height: 1.5,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                   ),
                   verticalSpace(8),
                   Text(
@@ -40,6 +42,8 @@ class Board2 extends StatelessWidget{
                     style: TextStyles.font13White400.copyWith(
                       height: 1.5,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
                   ),
                 ],
               ),

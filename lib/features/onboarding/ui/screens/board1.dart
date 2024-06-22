@@ -24,6 +24,7 @@ class Board1 extends StatelessWidget{
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.h),
               child: Column(
+                
                 children: [
                   Text(
                     'Tailored Workouts and \n Nutrition Plans',
@@ -38,6 +39,8 @@ class Board1 extends StatelessWidget{
                     style: TextStyles.font13White400.copyWith(
                       height: 1.5,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
                   ),
                 ],
               ),

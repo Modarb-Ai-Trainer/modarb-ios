@@ -12,43 +12,49 @@ class HeightAndWeight extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Text(
-                  'What’s Your height?',
-                style: TextStyles.font19White700,
-                textAlign: TextAlign.center,
-              ),
-            ),
-            verticalSpace(20),
-             const RulerOfHeight(),
-            verticalSpace(40),
-            Center(
-              child: Text(
-                  'What’s Your Weight?',
-                style: TextStyles.font19White700,
-                textAlign: TextAlign.center,
-              ),
-            ),
-            verticalSpace(20),
-            const RulerOfWeight(),
-            verticalSpace(40),
-            Center(
-              child: Text(
-                  'What’s Your Target weight?',
-                style: TextStyles.font19White700,
-                textAlign: TextAlign.center,
-              ),
-            ),
-            verticalSpace(20),
-            const RulerOfTargetWeight(),
-          ],
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      'What’s Your height?',
+                      style: TextStyles.font19White700,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  verticalSpace(20),
+                  const RulerOfHeight(),
+                  verticalSpace(40),
+                  Center(
+                    child: Text(
+                      'What’s Your Weight?',
+                      style: TextStyles.font19White700,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  verticalSpace(20),
+                  const RulerOfWeight(),
+                  verticalSpace(40),
+                  Center(
+                    child: Text(
+                      'What’s Your Target weight?',
+                      style: TextStyles.font19White700,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  verticalSpace(20),
+                  const RulerOfTargetWeight(),
+                ],
 
-        ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

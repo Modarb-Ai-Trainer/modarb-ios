@@ -10,22 +10,28 @@ class FitnessEquipment extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              'What Equipment do you have available to you?',
-              style: TextStyles.font28White700,
-              textAlign: TextAlign.center,
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'What Equipment do you have available to you?',
+                    style: TextStyles.font28White700,
+                    textAlign: TextAlign.center,
+                  ),
+                  verticalSpace(20),
+                  const CheckboxList(),
+
+
+                ],
+              ),
             ),
-            verticalSpace(20),
-            const CheckboxList(),
-
-
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -63,7 +63,7 @@ class TodayWorkoutScreen extends StatelessWidget {
                                   style:TextStyles.font13White700,
                                 ),
                                 Text(
-                                  'Duration Range\n ${listOfDay?[0].exercises[0].duration} s',
+                                  'Duration Range\n ${listOfDay?[0].exercises[0].duration} min',
                                   style: TextStyles.font13White700,
                                 ),
                               ],

@@ -29,7 +29,6 @@ class RegisterCubit extends Cubit<RegisterState> {
   double currentHeight = 100 ;
   double currentWeight = 10 ;
   double currentTargetWeight = 10 ;
-  // int selectedAge = 0;
   String selectedGoal = '';
   String selectedGender = '';
   String selectedLevel = '';
@@ -79,12 +78,6 @@ class RegisterCubit extends Cubit<RegisterState> {
     }
   }
 
-  // void onAgeChange(int value) {
-  //   final updatedAge = value + 1;
-  //   emit(RegisterState.ageChangeSuccess(currentValue: updatedAge));
-  //   selectedAge = updatedAge;
-  //   print(selectedAge);
-  // }
 
   void onHeightRulerChange(num value) {
     emit(RegisterState.rulerOfHeightChangeSuccess(currentValue: value));
@@ -110,7 +103,6 @@ class RegisterCubit extends Cubit<RegisterState> {
 
     double weight = currentWeight;
     double height = currentHeight ;
-    // Convert height from cm to meters
     double heightInMeters = height / 100.0;
 
     // Calculate BMI

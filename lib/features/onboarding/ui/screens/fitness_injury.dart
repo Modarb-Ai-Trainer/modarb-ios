@@ -19,34 +19,40 @@ class FitnessInjury extends StatelessWidget{
       builder: (context,state){
         final cubit = context.read<RegisterCubit>();
         return Scaffold(
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.h),
-            child: Column(
-              children: [
-                Text(
-                  'Do you currently experience any pain or discomfort in your body',
-                  style: TextStyles.font28White700,
-                  textAlign: TextAlign.center,
-                ),
-                verticalSpace(15),
-                ListView.builder(
-                  itemCount: injuryItems.length,
-                  shrinkWrap: true,
-                  itemBuilder: (BuildContext context, int index) {
-                    bool isSelected = cubit.checkedInjuries[index];
-                    return  ItemOfList(
-                      model: injuryItems[index],
-                      isSelected: isSelected,
-                      onSelect: (){
-                        cubit.onSelectedInjury(injuryItems[index].title, !isSelected, index);
-                        // selectedItems[index] = !selectedItems[index];
-                      },
-                    );
-                  }
+          body: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child:  Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.h),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Do you currently experience any pain or discomfort in your body',
+                        style: TextStyles.font28White700,
+                        textAlign: TextAlign.center,
+                      ),
+                      verticalSpace(15),
+                      ListView.builder(
+                          itemCount: injuryItems.length,
+                          shrinkWrap: true,
+                          itemBuilder: (BuildContext context, int index) {
+                            bool isSelected = cubit.checkedInjuries[index];
+                            return  ItemOfList(
+                              model: injuryItems[index],
+                              isSelected: isSelected,
+                              onSelect: (){
+                                cubit.onSelectedInjury(injuryItems[index].title, !isSelected, index);
+                                // selectedItems[index] = !selectedItems[index];
+                              },
+                            );
+                          }
 
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },

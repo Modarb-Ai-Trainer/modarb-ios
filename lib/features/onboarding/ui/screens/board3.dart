@@ -24,7 +24,7 @@ class Board3 extends StatelessWidget{
                 scale: 4,
               ),
             ),
-            verticalSpace(30),
+            verticalSpace(20),
             Column(
               children: [
                 Text(
@@ -39,8 +39,10 @@ class Board3 extends StatelessWidget{
                   'Meet your new workout companion – your smart\n personal trainer. Ready to guide you every step of\n the way. Let\'s make every workout count!',
                   textAlign: TextAlign.center,
                   style: TextStyles.font13White400.copyWith(
-                    height: 1.5,
+                    height: 1.25,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 3,
                 ),
               ],
             ),

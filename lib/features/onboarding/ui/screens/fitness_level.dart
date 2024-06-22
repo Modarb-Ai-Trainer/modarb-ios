@@ -17,31 +17,37 @@ class FitnessLevel extends StatelessWidget{
      builder: (context,state){
        final cubit = context.read<RegisterCubit>();
        return Scaffold(
-         body: Padding(
-           padding: EdgeInsets.symmetric(horizontal: 20.h),
-           child: Column(
-             children: [
-               Text(
-                 'What’s Your Fitness level ?',
-                 textAlign: TextAlign.center,
-                 style: TextStyles.font28White700,
-               ),
-               verticalSpace(30),
-               ListView.builder(
-                 itemBuilder: (BuildContext context, int index) => ContainerOfGoal(
-                   model: levelItems[index],
-                   isSelected: cubit.selectedLevel == levelItems[index].title,
-                   onSelect: (){
-                     cubit.onSelectedLevel(levelItems[index].title);
+         body: CustomScrollView(
+           slivers: [
+             SliverToBoxAdapter(
+               child: Padding(
+                 padding: EdgeInsets.symmetric(horizontal: 20.h),
+                 child: Column(
+                   children: [
+                     Text(
+                       'What’s Your Fitness level ?',
+                       textAlign: TextAlign.center,
+                       style: TextStyles.font28White700,
+                     ),
+                     verticalSpace(30),
+                     ListView.builder(
+                       itemBuilder: (BuildContext context, int index) => ContainerOfGoal(
+                         model: levelItems[index],
+                         isSelected: cubit.selectedLevel == levelItems[index].title,
+                         onSelect: (){
+                           cubit.onSelectedLevel(levelItems[index].title);
 
-                   },
+                         },
+                       ),
+                       itemCount: levelItems.length,
+                       shrinkWrap: true,
+                     ),
+
+                   ],
                  ),
-                 itemCount: levelItems.length,
-                 shrinkWrap: true,
                ),
-
-             ],
-           ),
+             ),
+           ],
          ),
        );
      },

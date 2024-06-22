@@ -66,8 +66,8 @@ class ExerciseDetails extends StatelessWidget{
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    child: Image.asset(
-                      'assets/images/MusclesWorked.png',
+                    child: Image.network(
+                      '${listOfExercise?[index!].coverImage}',
                       fit: BoxFit.fill,
                     ),
                   ),

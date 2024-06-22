@@ -13,6 +13,7 @@ class Exercise {
     required this.instructions,
     required this.benefits,
     required this.equipments,
+    required this.coverImage,
     required this.v,
   });
 
@@ -28,6 +29,8 @@ class Exercise {
   final String? instructions;
   final String? benefits;
   final List<Equipment> equipments;
+  final String? coverImage;
+
   final int? v;
 
   factory Exercise.fromJson(Map<String, dynamic> json){
@@ -44,6 +47,7 @@ class Exercise {
       instructions: json["instructions"],
       benefits: json["benefits"],
       equipments: json["equipments"] == null ? [] : List<Equipment>.from(json["equipments"]!.map((x) => Equipment.fromJson(x))),
+      coverImage: json["coverImage"],
       v: json["__v"],
     );
   }
@@ -61,6 +65,7 @@ class Exercise {
     "instructions": instructions,
     "benefits": benefits,
     "equipments": equipments.map((x) => x.toJson()).toList(),
+    "coverImage":coverImage,
     "__v": v,
   };
 

@@ -36,9 +36,8 @@ class EquipmentTab extends StatelessWidget{
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(16.r),
-                        child: Image.asset(
-                          'assets/images/Muscles1.png',
-                          // '${listOfExercise[index].equipments[index].image}',
+                        child: Image.network(
+                          '${listOfExercise[index].equipments[index].image}',
                           scale: 1,
                         ),
                       ),

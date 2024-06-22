@@ -18,29 +18,35 @@ class FitnessLocation extends StatelessWidget{
       builder: (context,state){
         final cubit = context.read<RegisterCubit>();
         return Scaffold(
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.h),
-            child: Column(
-              children: [
-                Text(
-                  'Where do you exercise ?',
-                  textAlign: TextAlign.center,
-                  style: TextStyles.font28White700,
-                ),
-                verticalSpace(90),
-                ListView.builder(
-                  itemBuilder: (BuildContext context, int index) => ItemOfList(
-                    model: locationItems[index],
-                    isSelected: cubit.selectedLocation == locationItems[index].title,
-                    onSelect: (){
-                      cubit.onSelectedLocation(locationItems[index].title);
-                    },
+          body: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.h),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Where do you exercise ?',
+                        textAlign: TextAlign.center,
+                        style: TextStyles.font28White700,
+                      ),
+                      verticalSpace(90),
+                      ListView.builder(
+                        itemBuilder: (BuildContext context, int index) => ItemOfList(
+                          model: locationItems[index],
+                          isSelected: cubit.selectedLocation == locationItems[index].title,
+                          onSelect: (){
+                            cubit.onSelectedLocation(locationItems[index].title);
+                          },
+                        ),
+                        itemCount: locationItems.length,
+                        shrinkWrap: true,
+                      ),
+                    ],
                   ),
-                  itemCount: locationItems.length,
-                  shrinkWrap: true,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },

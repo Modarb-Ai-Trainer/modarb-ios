@@ -18,18 +18,16 @@ class ExerciseStart extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
-
         if (listOfExercise?[index].duration != null && cubit.counter == 0 && cubit.exerciseIsDone == false) {
           cubit.startTimerOfExercise(listOfExercise![index].duration!);
         }
-
 
         return Column(
           children: [
             SizedBox(
               width: double.infinity,
-              child: Image.asset(
-                'assets/images/MusclesWorked.png',
+              child: Image.network(
+                '${listOfExercise?[index].coverImage}',
                 fit: BoxFit.fill,
               ),
             ),

@@ -46,8 +46,8 @@ class ListViewOfWorkout extends StatelessWidget{
               height: 60.h,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10.r),
-                child: Image.asset(
-                  'assets/images/Muscles1.png',
+                child: Image.network(
+                  '${listOfExercise[index].coverImage}',
                   fit: BoxFit.fill,
 
                 ),

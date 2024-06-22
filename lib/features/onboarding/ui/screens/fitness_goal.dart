@@ -17,29 +17,35 @@ class FitnessGoal extends StatelessWidget{
      builder: (context,state){
        final cubit = context.read<RegisterCubit>();
        return Scaffold(
-         body: Padding(
-           padding: EdgeInsets.symmetric(horizontal: 20.h),
-           child: Column(
-             children: [
-               Text(
-                 'What’s Your Fitness goal ?',
-                 textAlign: TextAlign.center,
-                 style: TextStyles.font28White700,
-               ),
-               verticalSpace(30),
-               ListView.builder(
-                 itemBuilder: (BuildContext context, int index) => ContainerOfGoal(
-                   model: goalItems[index],
-                   isSelected: cubit.selectedGoal == goalItems[index].title,
-                   onSelect: (){
-                     cubit.onSelectedGoal(goalItems[index].title);
-                   },
-                 ),
-                 itemCount: goalItems.length,
-                 shrinkWrap: true,
-               ),
-             ],
-           ),
+         body: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.h),
+                child: Column(
+                  children: [
+                    Text(
+                      'What’s Your Fitness goal ?',
+                      textAlign: TextAlign.center,
+                      style: TextStyles.font23White700,
+                    ),
+                    verticalSpace(30),
+                    ListView.builder(
+                      itemBuilder: (BuildContext context, int index) => ContainerOfGoal(
+                        model: goalItems[index],
+                        isSelected: cubit.selectedGoal == goalItems[index].title,
+                        onSelect: (){
+                          cubit.onSelectedGoal(goalItems[index].title);
+                        },
+                      ),
+                      itemCount: goalItems.length,
+                      shrinkWrap: true,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
          ),
        );
      },
