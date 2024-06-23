@@ -45,7 +45,6 @@ class TrainerCubit extends Cubit<TrainerState> {
         emit(TrainerState.counterChangeOfExercise(exerciseTime: counter));
       } else {
         timer.cancel();
-        // counter = 0;
         exerciseIsDone = true;
         emit(const TrainerState.exerciseFinished());
       }

@@ -41,8 +41,6 @@ class ExerciseStart extends StatelessWidget{
               maxLines: 1,
             ),
             verticalSpace(20),
-
-
             listOfExercise?[index].duration != 0 ?  Text(
               '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
               style: TextStyles.font19White700,

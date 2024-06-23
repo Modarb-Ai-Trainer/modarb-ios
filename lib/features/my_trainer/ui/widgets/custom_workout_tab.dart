@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,7 +35,7 @@ class CustomWorkoutTab extends StatelessWidget{
                 ),
               ),
             ),
-            if(state is GetCustomPlanLoading)
+            if(state is GetCustomPlanLoading || state is CreateCustomPlanLoading)
               const SliverToBoxAdapter(
                 child: Center(
                   child: CircularProgressIndicator(),
