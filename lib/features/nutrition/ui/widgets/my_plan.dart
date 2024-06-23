@@ -89,7 +89,7 @@ class MyPlan extends StatelessWidget{
       child: Stack(
         children: [
           SizedBox(
-            height: 250.h,
+            height: 230.h,
             child: SvgPicture.asset(cubit.imageOfContainer[mealIndex],
               fit: BoxFit.fill,
               placeholderBuilder: (context) => const CircularProgressIndicator(),
@@ -109,12 +109,12 @@ class MyPlan extends StatelessWidget{
                     ),
 
                 ),
-                verticalSpace(10),
+                verticalSpace(15),
                 Text(
                   '${days[dayIndex].meals[mealIndex].name}',
                   style: TextStyles.font13White600,
-                  overflow: TextOverflow.fade,
-                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
                 verticalSpace(15),
                 Text('${days[dayIndex].meals[mealIndex].calories} kcal',

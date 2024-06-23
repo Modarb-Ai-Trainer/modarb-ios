@@ -31,15 +31,19 @@ class WorkoutScreen extends StatelessWidget{
             ),
             tabs: [
               Tab(
-                child: Text(
-                  'Exercise library',
-                  style: TextStyles.font13White700,
+                child: Center(
+                  child: Text(
+                    'Exercise library',
+                    style: TextStyles.font13White700,
+                  ),
                 ),
               ),
               Tab(
-                child: Text(
-                  'Workout programs',
-                  style: TextStyles.font13White700,
+                child: Center(
+                  child: Text(
+                    'Workout programs',
+                    style: TextStyles.font13White700,
+                  ),
                 ),
               ),
             ],

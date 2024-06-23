@@ -81,7 +81,9 @@ class TodayIntake extends StatelessWidget{
                         children: [
                           Text(
                             'Remaining',
-                            style: TextStyles.font13White700,
+                            style: TextStyles.font12White600.copyWith(
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                           Text(
                             '${cubit.todayIntakeResponse?.data?.caloriesIntake?.toInt() ?? 0.0}',

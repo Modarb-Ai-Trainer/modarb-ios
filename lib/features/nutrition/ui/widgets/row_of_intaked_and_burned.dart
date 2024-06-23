@@ -18,12 +18,12 @@ class RowOfIntakedAndBurned extends StatelessWidget{
         final num intaked = (cubit.todayIntakeResponse?.data?.caloriesGoal ?? 0) -
             (cubit.todayIntakeResponse?.data?.caloriesLeft ?? 0);
         return Padding(
-          padding: EdgeInsets.symmetric(vertical: 20.h),
+          padding: EdgeInsets.symmetric(vertical: 20.h,horizontal: 10.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 150.w,
+                width: 140.w,
                 height: 140.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
