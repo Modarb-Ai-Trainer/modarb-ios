@@ -20,9 +20,7 @@ class DailyRoutineTab extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
       builder: (context,state){
         final cubit = context.read<NutritionCubit>();
-        if(cubit.todayMealResponse ==null){
-          cubit.getTodayMeal();
-        }
+
         final model = cubit.todayMealResponse?.data;
 
         return Scaffold(

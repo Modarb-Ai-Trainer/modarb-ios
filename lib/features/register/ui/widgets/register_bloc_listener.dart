@@ -15,30 +15,48 @@ class RegisterBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = context.read<RegisterCubit>();
     return BlocListener<RegisterCubit,RegisterState>(
-    listenWhen: (previous, current) =>
-      current is RegisterLoading || current is RegisterSuccess || current is RegisterError,
-      listener: (context, state) {
-        state.whenOrNull(
-          registerLoading: () {
-            showDialog(
-              context: context,
-              builder: (context) =>  const Center(
-                child: CircularProgressIndicator(
-                  color: ColorsManager.mainPurple,
-                ),
+      listener: (context,state){
+        if(state is RegisterLoading){
+          showDialog(
+            context: context,
+            builder: (context) =>  const Center(
+              child: CircularProgressIndicator(
+                color: ColorsManager.mainPurple,
               ),
-            );
-          },
-          registerSuccess: (signupResponse) {
-            context.pop();
-            showSuccessDialog(context);
-          },
-          registerError: () {
-            setupErrorState(context,cubit);
-          },
-        );
+            ),
+          );
+        }else if(state is RegisterSuccess || cubit.registerResponse?.status == 200){
+          showSuccessDialog(context);
+
+        }else if (state is RegisterError || cubit.registerResponse?.status == 422){
+          setupErrorState(context,cubit);
+        }
       },
       child: const SizedBox.shrink(),
+    // listenWhen: (previous, current) =>
+    //   current is RegisterLoading || current is RegisterSuccess || current is RegisterError,
+    //   listener: (context, state) {
+    //     state.whenOrNull(
+    //       registerLoading: () {
+    //         showDialog(
+    //           context: context,
+    //           builder: (context) =>  const Center(
+    //             child: CircularProgressIndicator(
+    //               color: ColorsManager.mainPurple,
+    //             ),
+    //           ),
+    //         );
+    //       },
+    //       registerSuccess: (registerResponse) {
+    //         context.pop();
+    //         showSuccessDialog(context);
+    //       },
+    //       registerError: () {
+    //         setupErrorState(context,cubit);
+    //       },
+    //     );
+    //   },
+    //   child: const SizedBox.shrink(),
     );
   }
 
@@ -58,10 +76,12 @@ class RegisterBlocListener extends StatelessWidget {
   }
 
   void setupErrorState(BuildContext context,cubit) {
+    final message = cubit.registerResponse?.message ?? 'An unknown error occurred';
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          '${cubit.registerResponse.message}',
+          message,
           style: TextStyles.font16White700,
         ),
         backgroundColor: ColorsManager.lighterGray,

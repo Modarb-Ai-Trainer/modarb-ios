@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/theming/styles.dart';
@@ -18,8 +16,8 @@ class MyPlanTab extends StatelessWidget {
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
-
-        return CustomScrollView(
+        if(cubit.workoutResponse?.data?.weeks != null) {
+          return CustomScrollView(
           slivers: [
             const SliverToBoxAdapter(child: OverViewWidget()),
             const SliverToBoxAdapter(child: ImageOfPlanWidget()),
@@ -32,7 +30,8 @@ class MyPlanTab extends StatelessWidget {
                 ),
               ),
             ),
-            SliverList(
+            if(cubit.workoutResponse?.data?.weeks != null)
+              SliverList(
               delegate: SliverChildBuilderDelegate(
                     (context, index) => BuildWeekOfPlan(
                       index: index,
@@ -40,8 +39,14 @@ class MyPlanTab extends StatelessWidget {
                 childCount: cubit.workoutResponse?.data?.weeks.length,
               ),
             ),
+            if(cubit.workoutResponse?.data?.weeks == null)
+              const Center(child: CircularProgressIndicator()),
           ],
         );
+        }else{
+          cubit.getWorkoutData();
+          return const Center(child: CircularProgressIndicator());
+        }
       },
     );
 

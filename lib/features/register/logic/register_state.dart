@@ -20,6 +20,7 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:modarb_app/core/networking/api_error_handler.dart';
+import 'package:modarb_app/features/register/data/models/register_response.dart';
 
 part 'register_state.freezed.dart';
 
@@ -28,7 +29,7 @@ class RegisterState<T> with _$RegisterState<T> {
   const factory RegisterState.initial() = _Initial;
 
   const factory RegisterState.registerLoading() = RegisterLoading;
-  const factory RegisterState.registerSuccess(T data) = RegisterSuccess<T>;
+  const factory RegisterState.registerSuccess(RegisterResponse ?registerResponse) = RegisterSuccess;
   const factory RegisterState.registerError() = RegisterError;
 
   const factory RegisterState.toggleObscureText(bool isObscureText) = ToggleObscureText;

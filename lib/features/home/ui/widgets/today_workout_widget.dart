@@ -81,10 +81,10 @@ class TodayWorkoutWidget extends StatelessWidget{
                       backgroundColor: Colors.transparent,
                       textColor: ColorsManager.mainPurple,
                       onPressed: (){
-                        context.pushNamed(
-                            Routes.todayWorkoutScreen,
-
-                        );
+                        if(cubit.workoutResponse?.data?.weeks != null ) {
+                          context.pushNamed(
+                            Routes.todayWorkoutScreen,);
+                        }
                       },
                     ),
                   ),

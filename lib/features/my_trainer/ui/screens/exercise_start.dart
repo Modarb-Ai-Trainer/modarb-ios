@@ -18,7 +18,9 @@ class ExerciseStart extends StatelessWidget{
     return BlocBuilder<TrainerCubit,TrainerState>(
       builder: (context,state) {
         final cubit = context.read<TrainerCubit>();
-        if (listOfExercise?[index].duration != null && cubit.counter == 0 ) {
+        final exercise = listOfExercise?[index];
+
+        if (listOfExercise?[index].duration != null && cubit.counter ==0 ) {
           cubit.startTimerOfExercise(listOfExercise![index].duration!);
         }
 
@@ -40,12 +42,14 @@ class ExerciseStart extends StatelessWidget{
             ),
             verticalSpace(20),
 
+
             listOfExercise?[index].duration != 0 ?  Text(
               '00:${state is CounterChangeOfExercise ? state.exerciseTime.toString().padLeft(2, '0') : 0}',
               style: TextStyles.font19White700,
             ) :  Text(
-              '${listOfExercise?[index].reps} reps',
-              style: TextStyles.font28White700.copyWith(
+              // '${listOfExercise?[index].reps} reps',
+              ' ${listOfExercise?[index].sets} sets * ${listOfExercise?[index].reps} reps ',
+              style: TextStyles.font19White700.copyWith(
                 color: ColorsManager.lightPurple,
               ),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_cubit.dart';
 import 'package:modarb_app/features/my_trainer/logic/trainer_states.dart';
@@ -41,8 +42,10 @@ class TrainingBlocListener extends StatelessWidget{
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AppTextButton(
+
           buttonText: 'Resume',
           onPressed: (){
+            context.pop();
           },
         ),
         verticalSpace(20),
@@ -58,8 +61,7 @@ class TrainingBlocListener extends StatelessWidget{
           backgroundColor: Colors.transparent,
           textColor: ColorsManager.mainPurple,
           onPressed: () {
-            context.pop();
-
+            context.pushNamedAndRemoveUntil(Routes.homePage, predicate: (Route<dynamic> route) => false);
           },
 
 

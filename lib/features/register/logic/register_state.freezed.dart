@@ -20,7 +20,8 @@ mixin _$RegisterState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -40,7 +41,7 @@ mixin _$RegisterState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -59,7 +60,7 @@ mixin _$RegisterState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -205,7 +206,8 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -228,7 +230,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -250,7 +252,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -398,7 +400,8 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -421,7 +424,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -443,7 +446,7 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -557,7 +560,7 @@ abstract class _$$RegisterSuccessImplCopyWith<T, $Res> {
           $Res Function(_$RegisterSuccessImpl<T>) then) =
       __$$RegisterSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({RegisterResponse? registerResponse});
 }
 
 /// @nodoc
@@ -571,13 +574,13 @@ class __$$RegisterSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? registerResponse = freezed,
   }) {
     return _then(_$RegisterSuccessImpl<T>(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
+      freezed == registerResponse
+          ? _value.registerResponse
+          : registerResponse // ignore: cast_nullable_to_non_nullable
+              as RegisterResponse?,
     ));
   }
 }
@@ -585,14 +588,14 @@ class __$$RegisterSuccessImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
-  const _$RegisterSuccessImpl(this.data);
+  const _$RegisterSuccessImpl(this.registerResponse);
 
   @override
-  final T data;
+  final RegisterResponse? registerResponse;
 
   @override
   String toString() {
-    return 'RegisterState<$T>.registerSuccess(data: $data)';
+    return 'RegisterState<$T>.registerSuccess(registerResponse: $registerResponse)';
   }
 
   @override
@@ -600,12 +603,12 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegisterSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.registerResponse, registerResponse) ||
+                other.registerResponse == registerResponse));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, registerResponse);
 
   @JsonKey(ignore: true)
   @override
@@ -619,7 +622,8 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -634,7 +638,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function(String selectedEquipments) equipmentSelected,
     required TResult Function(String selectedInjury) injurySelected,
   }) {
-    return registerSuccess(data);
+    return registerSuccess(registerResponse);
   }
 
   @override
@@ -642,7 +646,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -656,7 +660,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function(String selectedEquipments)? equipmentSelected,
     TResult? Function(String selectedInjury)? injurySelected,
   }) {
-    return registerSuccess?.call(data);
+    return registerSuccess?.call(registerResponse);
   }
 
   @override
@@ -664,7 +668,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -680,7 +684,7 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult orElse(),
   }) {
     if (registerSuccess != null) {
-      return registerSuccess(data);
+      return registerSuccess(registerResponse);
     }
     return orElse();
   }
@@ -769,9 +773,10 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
 }
 
 abstract class RegisterSuccess<T> implements RegisterState<T> {
-  const factory RegisterSuccess(final T data) = _$RegisterSuccessImpl<T>;
+  const factory RegisterSuccess(final RegisterResponse? registerResponse) =
+      _$RegisterSuccessImpl<T>;
 
-  T get data;
+  RegisterResponse? get registerResponse;
   @JsonKey(ignore: true)
   _$$RegisterSuccessImplCopyWith<T, _$RegisterSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -817,7 +822,8 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -840,7 +846,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -862,7 +868,7 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -1039,7 +1045,8 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -1062,7 +1069,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -1084,7 +1091,7 @@ class _$ToggleObscureTextImpl<T> implements ToggleObscureText<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -1266,7 +1273,8 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -1289,7 +1297,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -1311,7 +1319,7 @@ class _$GoalSelectedImpl<T> implements GoalSelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -1491,7 +1499,8 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -1514,7 +1523,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -1536,7 +1545,7 @@ class _$GenderSelectedImpl<T> implements GenderSelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -1720,7 +1729,8 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -1743,7 +1753,7 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -1765,7 +1775,7 @@ class _$DateOfBirthChangeSuccessImpl<T> implements DateOfBirthChangeSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -1953,7 +1963,8 @@ class _$RulerOfHeightChangeSuccessImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -1976,7 +1987,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -1998,7 +2009,7 @@ class _$RulerOfHeightChangeSuccessImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -2186,7 +2197,8 @@ class _$RulerOfWeightChangeSuccessImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -2209,7 +2221,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -2231,7 +2243,7 @@ class _$RulerOfWeightChangeSuccessImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -2419,7 +2431,8 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -2442,7 +2455,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -2464,7 +2477,7 @@ class _$RulerOfTargetWeightChangeSuccessImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -2648,7 +2661,8 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -2671,7 +2685,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -2693,7 +2707,7 @@ class _$LevelSelectedImpl<T> implements LevelSelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -2875,7 +2889,8 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -2898,7 +2913,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -2920,7 +2935,7 @@ class _$LocationSelectedImpl<T> implements LocationSelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -3103,7 +3118,8 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -3126,7 +3142,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -3148,7 +3164,7 @@ class _$EquipmentSelectedImpl<T> implements EquipmentSelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
@@ -3330,7 +3346,8 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function(T data) registerSuccess,
+    required TResult Function(RegisterResponse? registerResponse)
+        registerSuccess,
     required TResult Function() registerError,
     required TResult Function(bool isObscureText) toggleObscureText,
     required TResult Function(String selectedGoal) goalSelected,
@@ -3353,7 +3370,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function(T data)? registerSuccess,
+    TResult? Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult? Function()? registerError,
     TResult? Function(bool isObscureText)? toggleObscureText,
     TResult? Function(String selectedGoal)? goalSelected,
@@ -3375,7 +3392,7 @@ class _$InjurySelectedImpl<T> implements InjurySelected<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function(T data)? registerSuccess,
+    TResult Function(RegisterResponse? registerResponse)? registerSuccess,
     TResult Function()? registerError,
     TResult Function(bool isObscureText)? toggleObscureText,
     TResult Function(String selectedGoal)? goalSelected,
