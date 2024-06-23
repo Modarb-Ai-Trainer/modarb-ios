@@ -8,7 +8,7 @@ class ApiConstants{
   static const String myWorkoutsWithId = "myWorkouts/{id}";
   static const String workouts = "workouts";
   static const String myWorkouts = "myWorkouts";
-  static const String myWorkoutsProgress = "myWorkouts";
+  static const String myWorkoutsProgress = "myWorkouts/{id}/progress/{week}/{day}";
   static const String allExercise = "exercises";
   static const String exercisesSearch = "exercises/search";
   static const String templates = "templates";

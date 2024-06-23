@@ -29,7 +29,8 @@ class RegisterState<T> with _$RegisterState<T> {
 
   const factory RegisterState.registerLoading() = RegisterLoading;
   const factory RegisterState.registerSuccess(T data) = RegisterSuccess<T>;
-  const factory RegisterState.registerError(ErrorHandler errorHandler) = RegisterError;
+  const factory RegisterState.registerError() = RegisterError;
+
   const factory RegisterState.toggleObscureText(bool isObscureText) = ToggleObscureText;
 
 

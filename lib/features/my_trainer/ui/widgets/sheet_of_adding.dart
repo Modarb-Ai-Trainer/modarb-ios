@@ -166,7 +166,7 @@ class SheetOfAdding extends StatelessWidget{
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.r),
             child: Image.asset(
-              'assets/images/Muscles1.png',
+              'assets/images/2.jpg',
               fit: BoxFit.fill,
             ),
           ),

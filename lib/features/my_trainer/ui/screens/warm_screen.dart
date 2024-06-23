@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/helper/extension.dart';
+import 'package:modarb_app/core/helper/spacing.dart';
 import 'package:modarb_app/core/routing/routes.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/core/theming/styles.dart';
@@ -50,17 +52,20 @@ class WarmScreen extends StatelessWidget{
                             icon: const Icon(Icons.close),
                           ),
                         ),
-                        SmoothPageIndicator(
-                          controller: cubit.warmController,
-                          effect:  const ExpandingDotsEffect(
-                            dotHeight: 8,
-                            expansionFactor: 1.5,
-                            spacing: 15 ,
-                            dotWidth: 60,
-                            dotColor: Colors.grey,
-                            activeDotColor: ColorsManager.mainPurple,
+                        horizontalSpace(20),
+                        Expanded(
+                          child: SmoothPageIndicator(
+                            controller: cubit.warmController,
+                            effect:  const ExpandingDotsEffect(
+                              dotHeight: 8,
+                              expansionFactor: 1.5,
+                              spacing: 15 ,
+                              dotWidth: 25,
+                              dotColor: Colors.grey,
+                              activeDotColor: ColorsManager.mainPurple,
+                            ),
+                            count: listOfExercise.length,
                           ),
-                          count: listOfExercise.length,
                         ),
                       ],
                     ),
@@ -123,6 +128,8 @@ class WarmScreen extends StatelessWidget{
                           onPressed: (){
                             cubit.isDone = true;
                             if(cubit.index == listOfExercise.length - 1){
+                              cubit.workoutProgress(1,listOfDay[index].dayNumber);
+
                               context.pushNamedAndRemoveUntil(Routes.completeWorkout,
                                   arguments: {
                                     'index' : index,
@@ -153,6 +160,7 @@ class WarmScreen extends StatelessWidget{
                                   duration: const Duration(seconds: 5),
                                 ),
                               );
+                              cubit.workoutProgress(1,listOfDay[index].dayNumber);
                               cubit.warmController.nextPage(
                                 duration: const Duration(
                                   seconds: 1,

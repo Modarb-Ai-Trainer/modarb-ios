@@ -16,9 +16,7 @@ class OtherPlans extends StatelessWidget{
     return BlocBuilder<NutritionCubit,NutritionState>(
       builder: (context,state) {
         final cubit = context.read<NutritionCubit>();
-        if(cubit.mealPlansResponse?.data == null){
-          cubit.getMealPlan();
-        }
+
         return Scaffold(
           body:  CustomScrollView(
             slivers: [

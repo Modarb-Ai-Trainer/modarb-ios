@@ -67,7 +67,18 @@ class ExerciseLibraryTab extends StatelessWidget{
         ),
         child: Column(
           children: [
-            Image.asset(imageList[index]),
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+               topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
+                child: SizedBox(
+                  height: 150.h,
+                    width: double.infinity,
+                    child: Image.asset(imageList[index],
+                    fit: BoxFit.fill,
+                    ),
+                )),
             verticalSpace(10),
             Text(
               list[index],

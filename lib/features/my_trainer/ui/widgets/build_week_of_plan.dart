@@ -42,7 +42,8 @@ class BuildWeekOfPlan extends StatelessWidget{
                 fontSize: 26.sp,
               ),
             ),
-            endChild: buildItemOfWeekOpen(context,index,cubit.workoutResponse?.data?.weeks,cubit.workoutResponse?.data?.weeks[index].days),
+            endChild: buildItemOfWeekOpen(context,index,cubit.workoutResponse?.data?.weeks,cubit.workoutResponse?.data?.weeks[index].days) ,
+            // endChild: cubit.workoutResponse?.data?.weeks[index].isDone == true ? buildItemOfWeekOpen(context,index,cubit.workoutResponse?.data?.weeks,cubit.workoutResponse?.data?.weeks[index].days) :buildItemOfWeekClosed(context,index,cubit.workoutResponse?.data?.weeks,cubit.workoutResponse?.data?.weeks[index].days),
           ),
         );
       },
@@ -127,81 +128,64 @@ class BuildWeekOfPlan extends StatelessWidget{
       ),
     );
   }
-
-  Widget buildItemOfWeekClosed() {
-    return Container(
-      width: double.infinity,
-      height: 180.h,
-      decoration: BoxDecoration(
-        color: ColorsManager.lighterGray,
-        borderRadius: BorderRadius.circular(16.r),
-        border: Border.all(
-            color: ColorsManager.lightPurple,
-            width: 2
+  Widget buildItemOfWeekClosed(BuildContext context,index,listOfWeek,listOfDay) {
+    return GestureDetector(
+      onTap: () {
+        // context.pushNamed(
+        //     Routes.weekOfPlanScreen,
+        //   arguments:{
+        //     'index': index,
+        //     'listOfWeek': listOfWeek,
+        //     'listOfDay': listOfDay,
+        //   }
+        //
+        // );
+      },
+      child: Container(
+        width: double.infinity,
+        height: 180.h,
+        decoration: BoxDecoration(
+          color: ColorsManager.lighterGray,
+          borderRadius: BorderRadius.circular(16.r),
+          border: Border.all(
+              color: ColorsManager.lightPurple,
+              width: 2
+          ),
         ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.all(18.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                const AppVerticalDivider(),
-                horizontalSpace(10),
-                Text(
-                  'Week 1 : Foundation',
-                  style: TextStyles.font16White700,
-                ),
-              ],
-            ),
-            verticalSpace(20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CircleAvatar(
-                  radius: 15.r,
-                  backgroundColor: ColorsManager.lightPurple,
-                  child: Text(
-                    'D1',
+        child: Padding(
+          padding: EdgeInsets.all(18.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const AppVerticalDivider(),
+                  horizontalSpace(10),
+                  Text(
+                    'Week ${index + 1} : ${listOfWeek[index].weekName}',
                     style: TextStyles.font16White700,
                   ),
+                ],
+              ),
+              verticalSpace(20),
+              SizedBox(
+                height: 30.h,
+                width: double.infinity,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder:(context,index) => buildItemOfDay(listOfDay,index),
+                  itemCount: listOfDay.length,
+                  scrollDirection: Axis.horizontal,
                 ),
-                horizontalSpace(5),
-                CircleAvatar(
-                  radius: 15.r,
-                  backgroundColor: ColorsManager.lightPurple,
-                  child: Text(
-                    'D1',
-                    style: TextStyles.font16White700,
-                  ),
-                ),
-                horizontalSpace(5),
-                CircleAvatar(
-                  radius: 15.r,
-                  backgroundColor: ColorsManager.lightPurple,
-                  child: Text(
-                    'D1',
-                    style: TextStyles.font16White700,
-                  ),
-                ),
-                horizontalSpace(5),
-                CircleAvatar(
-                  radius: 15.r,
-                  backgroundColor: ColorsManager.lightPurple,
-                  child: Text(
-                    'D1',
-                    style: TextStyles.font16White700,
-                  ),
-                ),
-
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+
 
   Widget buildItemOfDay(listOfDay,index) => CircleAvatar(
     radius: 20.r,

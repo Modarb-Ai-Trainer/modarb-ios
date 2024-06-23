@@ -13,11 +13,10 @@ class RegisterBlocListener extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = context.read<RegisterCubit>();
     return BlocListener<RegisterCubit,RegisterState>(
-      listenWhen: (previous, current) =>
-      current is RegisterLoading ||
-          current is RegisterSuccess ||
-          current is RegisterSuccess,
+    listenWhen: (previous, current) =>
+      current is RegisterLoading || current is RegisterSuccess || current is RegisterError,
       listener: (context, state) {
         state.whenOrNull(
           registerLoading: () {
@@ -34,8 +33,8 @@ class RegisterBlocListener extends StatelessWidget {
             context.pop();
             showSuccessDialog(context);
           },
-          registerError: (error) {
-            // setupErrorState(context, error);
+          registerError: () {
+            setupErrorState(context,cubit);
           },
         );
       },
@@ -44,62 +43,31 @@ class RegisterBlocListener extends StatelessWidget {
   }
 
   void showSuccessDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Register Successful'),
-          content: const SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text('Congratulations, you have signed up successfully!'),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.blue,
-                disabledForegroundColor: Colors.grey.withOpacity(0.38),
-              ),
-              onPressed: () {
-                context.pushNamed(Routes.loginScreen);
-              },
-              child: const Text('Continue'),
-            ),
-          ],
-        );
-      },
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          'Register successfully, go to login',
+          style: TextStyles.font16White700,
+        ),
+        backgroundColor: ColorsManager.lighterGray,
+        duration: const Duration(seconds: 5),
+      ),
     );
+    context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (Route<dynamic> route) => false);
+
   }
 
-  void setupErrorState(BuildContext context, String error) {
-    context.pop();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: const Icon(
-          Icons.error,
-          color: Colors.red,
-          size: 32,
-        ),
+  void setupErrorState(BuildContext context,cubit) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
         content: Text(
-          error,
-          style: TextStyles.font20White600,
+          '${cubit.registerResponse.message}',
+          style: TextStyles.font16White700,
         ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              context.pop();
-            },
-            child: Text(
-              'Got it',
-              style: TextStyles.font20White600,
-            ),
-          ),
-        ],
+        backgroundColor: ColorsManager.lighterGray,
+        duration: const Duration(seconds: 5),
       ),
     );
   }
+
 }

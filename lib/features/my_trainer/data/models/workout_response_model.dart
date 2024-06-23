@@ -168,7 +168,7 @@ class Day {
     required this.isDone,
   });
 
-  final int? dayNumber;
+  final int dayNumber;
   final int? totalNumberExercises;
   final String? dayType;
   final List<Exercise> exercises;

@@ -48,6 +48,8 @@ class ImageOfPlanWidget extends StatelessWidget{
                     Text(
                       '${cubit.workoutResponse?.data?.workout?.name}',
                       style: TextStyles.font13White700,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
                     verticalSpace(15),
                     AppTextContainer(

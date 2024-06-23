@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ruler_picker/flutter_ruler_picker.dart';
+import 'package:modarb_app/features/register/data/models/register_response.dart';
 import 'package:modarb_app/features/register/logic/register_state.dart';
 import '../data/models/register_request_body.dart';
 import '../data/repos/register_repo.dart';
@@ -163,11 +164,14 @@ class RegisterCubit extends Cubit<RegisterState> {
     emit(RegisterState.toggleObscureText(isObscureText2));
   }
 
+
+
+  RegisterResponse ?registerResponse;
   void emitRegisterStates() async {
     emit(const RegisterState.registerLoading());
 
     try {
-      final response = await _registerRepo.register(
+      registerResponse = await _registerRepo.register(
         RegisterRequestBody(
           name: nameController.text,
           email: emailController.text,
@@ -175,30 +179,32 @@ class RegisterCubit extends Cubit<RegisterState> {
           confirmPassword: confirmPasswordController.text,
           gender: selectedGender,
           height: rulerOfHeight.value.toInt(),
-          weight: rulerOfWeight.value.toDouble(),
+          weight: rulerOfWeight.value.toInt(),
           dob: selectedDateString,
           fitnessLevel: selectedLevel.toLowerCase(),
           injuries:selectedInjuries,
           preferences: PreferencesModel(
+            workoutFrequency: 3,
             fitnessGoal: selectedGoal.toLowerCase(),
             workoutPlace: selectedLocation.toLowerCase(),
             preferredEquipment: selectedEquipments,
             targetWeight: currentTargetWeight.toInt(),
+            preferredDays: [
+              'sunday'
+            ],
 
           ),
+          role: 'user',
 
         ),
       );
+      emit(RegisterState.registerSuccess(registerResponse));
 
-      response.when(success: (signupResponse) {
-        emit(RegisterState.registerSuccess(signupResponse));
-      }, failure: (error) {
-        // emit(RegisterState.registerError(networkExceptions ));
-      });
     } catch (e) {
-      // Handle any caught exceptions here
       print('An error occurred during registration: $e');
-      // emit(const RegisterState.registerError(error: 'An error occurred during registration.'));
+      emit(const RegisterState.registerError());
+
+
     }
   }
 

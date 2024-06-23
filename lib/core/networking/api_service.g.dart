@@ -149,7 +149,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'myWorkouts',
+              'myWorkouts/${workoutId}/progress/${week}/${day}',
               queryParameters: queryParameters,
               data: _data,
             )

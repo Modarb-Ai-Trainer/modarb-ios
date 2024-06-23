@@ -13,7 +13,7 @@ class ListOfPlans extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20.h),
+      padding: EdgeInsets.symmetric(vertical: 5.h),
       child: SizedBox(
         height: 200.h,
         child: Column(

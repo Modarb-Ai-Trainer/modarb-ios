@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -73,9 +74,13 @@ class OverViewWidget extends StatelessWidget{
                 children: [
                   const AppVerticalDivider(),
                   horizontalSpace(7),
-                  Text(
-                    '${cubit.workoutResponse?.data?.workout?.name}',
-                    style: TextStyles.font16White700,
+                  Expanded(
+                    child: Text(
+                      '${cubit.workoutResponse?.data?.workout?.name}',
+                      style: TextStyles.font16White700,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
                   ),
 
                 ],
@@ -86,6 +91,8 @@ class OverViewWidget extends StatelessWidget{
                 style: TextStyles.font13White400.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 3,
               ),
               verticalSpace(35),
               Row(

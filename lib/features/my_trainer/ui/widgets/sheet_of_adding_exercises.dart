@@ -153,8 +153,8 @@ class _SheetOfAddingExercisesState extends State<SheetOfAddingExercises> {
           height: 60.h,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.r),
-            child: Image.asset(
-              'assets/images/Muscles1.png',
+            child: Image.network(
+              '${exercise.coverImage}',
               fit: BoxFit.fill,
             ),
           ),

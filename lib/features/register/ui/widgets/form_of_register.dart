@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modarb_app/core/theming/colors.dart';
 import 'package:modarb_app/features/register/logic/register_cubit.dart';
 import 'package:modarb_app/features/register/logic/register_state.dart';
+import 'package:modarb_app/features/register/ui/widgets/register_bloc_listener.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
@@ -108,6 +109,7 @@ class FormOfRegister extends StatelessWidget{
                          validateThenDoRegister(context);
                        },
                      ),
+                     const RegisterBlocListener(),
                    ],
                  ),
                ),
@@ -122,6 +124,7 @@ class FormOfRegister extends StatelessWidget{
      if (context.read<RegisterCubit>().formKey.currentState!.validate()) {
        context.read<RegisterCubit>().emitRegisterStates();
      }
+
    }
 
 }
