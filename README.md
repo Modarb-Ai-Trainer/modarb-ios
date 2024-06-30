@@ -23,8 +23,8 @@ Modarb app offers tailored workout and nutrition plans, providing users with a g
 | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout1.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout2.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout3.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout4.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout5.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/workout6.jpeg" width="200"/> |
 
 ### Nutrition Process
-| | | | | | |
-|--------------|--------------|--------------|--------------|--------------|--------------|
+| | | | | | 
+|--------------|--------------|--------------|--------------|--------------|
 | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/nutrition1.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/nutrition2.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/nutrition3.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/nutrition4.jpeg" width="200"/> | <img src="https://github.com/Modarb-Ai-Trainer/modarb-ios/blob/main/screenShot/nutrition5.jpeg" width="200"/> |
 
 ## Building the Modarb AI Android / IOS App
